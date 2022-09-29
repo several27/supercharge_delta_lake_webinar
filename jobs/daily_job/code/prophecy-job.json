@@ -33,21 +33,21 @@
     } ]
   },
   "processes" : {
-    "IoOmt7RB3YU_4PEDFeOz-$$dtznb1B7HhKw3bvpjPjWr" : {
-      "id" : "IoOmt7RB3YU_4PEDFeOz-$$dtznb1B7HhKw3bvpjPjWr",
+    "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL" : {
+      "id" : "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL",
       "component" : "Pipeline",
       "metadata" : {
-        "label" : "ingest_customers",
-        "slug" : "ingest_customers",
-        "x" : -347.6000061035156,
-        "y" : -111.5999984741211
+        "label" : "cleanup_orders",
+        "slug" : "cleanup_orders",
+        "x" : -130,
+        "y" : 66
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "gE32j_u6G5977QG9E2pMb$$mLVQA8kNyHzIK5KdJgxY3"
+          "id" : "uLOshaetBNxvfjU_03cCJ$$NJ2KgZEgSIXdsyvvWVM_v"
         } ],
         "outputs" : [ {
-          "id" : "EdvV9_IbvVojpdyVn3Ndn$$nptqba_ifDVmbAUdavL6I"
+          "id" : "amZAQaZKtmOUb9SxKi-EY$$J7yHVdugxy1-WMWSszzDB"
         } ]
       },
       "settings" : {
@@ -60,7 +60,7 @@
         }
       },
       "properties" : {
-        "pipelineId" : "3436/pipelines/ingest_customers",
+        "pipelineId" : "3436/pipelines/cleanup_orders",
         "configurations" : {
           "schema" : [ ],
           "instances" : [ "default" ],
@@ -105,21 +105,21 @@
         }
       }
     },
-    "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL" : {
-      "id" : "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL",
+    "z4YLv_BuKO1qNuPCgQqvp$$ZFO5uD66VX-_1J9TcqDmY" : {
+      "id" : "z4YLv_BuKO1qNuPCgQqvp$$ZFO5uD66VX-_1J9TcqDmY",
       "component" : "Pipeline",
       "metadata" : {
-        "label" : "cleanup_orders",
-        "slug" : "cleanup_orders",
-        "x" : -130,
-        "y" : 66
+        "label" : "gold_mrr_1",
+        "slug" : "gold_mrr",
+        "x" : 141.93333435058594,
+        "y" : -38.766666412353516
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "uLOshaetBNxvfjU_03cCJ$$NJ2KgZEgSIXdsyvvWVM_v"
+          "id" : "n0Sgzmv65KuX-Kp4Ez5EK$$XnrztWUcEwdDPXrGpC7ri"
         } ],
         "outputs" : [ {
-          "id" : "amZAQaZKtmOUb9SxKi-EY$$J7yHVdugxy1-WMWSszzDB"
+          "id" : "i5c-277awbgYfBoHjuluV$$e6xa3q7mhLfgkNFEFJS8O"
         } ]
       },
       "settings" : {
@@ -132,7 +132,7 @@
         }
       },
       "properties" : {
-        "pipelineId" : "3436/pipelines/cleanup_orders",
+        "pipelineId" : "3436/pipelines/gold_mrr",
         "configurations" : {
           "schema" : [ ],
           "instances" : [ "default" ],
@@ -176,6 +176,42 @@
           "selectedInstance" : "default"
         }
       }
+    },
+    "IoOmt7RB3YU_4PEDFeOz-$$dtznb1B7HhKw3bvpjPjWr" : {
+      "id" : "IoOmt7RB3YU_4PEDFeOz-$$dtznb1B7HhKw3bvpjPjWr",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "ingest_customers",
+        "slug" : "ingest_customers",
+        "x" : -347.6000061035156,
+        "y" : -111.5999984741211
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gE32j_u6G5977QG9E2pMb$$mLVQA8kNyHzIK5KdJgxY3"
+        } ],
+        "outputs" : [ {
+          "id" : "EdvV9_IbvVojpdyVn3Ndn$$nptqba_ifDVmbAUdavL6I"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "3436/pipelines/ingest_customers",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : [ "default" ],
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
     }
   },
   "connections" : [ {
@@ -190,5 +226,17 @@
     "target" : "2M0tSVe4al4RwltAcK-SU",
     "sourcePort" : "EdvV9_IbvVojpdyVn3Ndn$$nptqba_ifDVmbAUdavL6I",
     "targetPort" : "in"
+  }, {
+    "id" : "wxxZ4niZVLCZLWS97Dxe-",
+    "source" : "2M0tSVe4al4RwltAcK-SU",
+    "target" : "z4YLv_BuKO1qNuPCgQqvp$$ZFO5uD66VX-_1J9TcqDmY",
+    "sourcePort" : "out",
+    "targetPort" : "n0Sgzmv65KuX-Kp4Ez5EK$$XnrztWUcEwdDPXrGpC7ri"
+  }, {
+    "id" : "go7DhRjo_YWyMzYtV3A9e",
+    "source" : "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL",
+    "target" : "z4YLv_BuKO1qNuPCgQqvp$$ZFO5uD66VX-_1J9TcqDmY",
+    "sourcePort" : "amZAQaZKtmOUb9SxKi-EY$$J7yHVdugxy1-WMWSszzDB",
+    "targetPort" : "n0Sgzmv65KuX-Kp4Ez5EK$$XnrztWUcEwdDPXrGpC7ri"
   } ]
 }

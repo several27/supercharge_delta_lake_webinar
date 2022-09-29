@@ -4,5 +4,5 @@ from pyspark.sql.types import *
 from gold_mrr.config.ConfigStore import *
 from gold_mrr.udfs.UDFs import *
 
-def nation(spark: SparkSession) -> DataFrame:
-    return spark.read.format("delta").load("dbfs:/databricks-datasets/tpch/delta-001/nation/")
+def gold_report(spark: SparkSession, in0: DataFrame):
+    in0.write.format("delta").mode("overwrite").saveAsTable("lakehouse.gold_report")

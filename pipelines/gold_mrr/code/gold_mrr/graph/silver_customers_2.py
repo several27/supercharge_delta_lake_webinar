@@ -4,5 +4,5 @@ from pyspark.sql.types import *
 from gold_mrr.config.ConfigStore import *
 from gold_mrr.udfs.UDFs import *
 
-def nation(spark: SparkSession) -> DataFrame:
-    return spark.read.format("delta").load("dbfs:/databricks-datasets/tpch/delta-001/nation/")
+def silver_customers_2(spark: SparkSession) -> DataFrame:
+    return spark.read.table(f"lakehouse.silver_customers")
