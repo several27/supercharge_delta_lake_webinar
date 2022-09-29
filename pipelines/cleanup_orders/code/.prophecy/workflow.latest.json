@@ -1,0 +1,107 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "1034",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default"
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "cleanup_orders"
+  },
+  "connections" : [ {
+    "id" : "NKG-OpmOJ2ca5aBHWQ1xY",
+    "source" : "m1Ojl6InEnK-v3E5HplZK$$mEbX0MX7Hq3FcYHJDVomk",
+    "sourcePort" : "R4dR44ma6oCTNlyuxNGM_$$d3kTKys_5VisMr8t1nbN-",
+    "target" : "525DN_VSEYq2jfoH8IlGH$$If9xdiuI2tp7JBaKNoVCR",
+    "targetPort" : "cfq3cHOn0igOrnHCdkTR7$$fAbaiADwaHpJHxC5hJgQY"
+  } ],
+  "processes" : {
+    "m1Ojl6InEnK-v3E5HplZK$$mEbX0MX7Hq3FcYHJDVomk" : {
+      "id" : "m1Ojl6InEnK-v3E5HplZK$$mEbX0MX7Hq3FcYHJDVomk",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "bronze_orders",
+        "slug" : "bronze_orders",
+        "x" : 198,
+        "y" : 265.2,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "R4dR44ma6oCTNlyuxNGM_$$d3kTKys_5VisMr8t1nbN-",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "3436/datasets/bronze_orders"
+      }
+    },
+    "525DN_VSEYq2jfoH8IlGH$$If9xdiuI2tp7JBaKNoVCR" : {
+      "id" : "525DN_VSEYq2jfoH8IlGH$$If9xdiuI2tp7JBaKNoVCR",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "silver_orders",
+        "slug" : "silver_orders",
+        "x" : 395.6,
+        "y" : 260.8,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "cfq3cHOn0igOrnHCdkTR7$$fAbaiADwaHpJHxC5hJgQY",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "3436/datasets/silver_orders"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}

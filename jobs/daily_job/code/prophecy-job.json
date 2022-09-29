@@ -1,0 +1,194 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "1034",
+    "jobId" : "3436/jobs/daily_job",
+    "name" : "daily_job",
+    "schedule" : "0 0 0 * * ? *",
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "maciej@prophecy.io",
+      "onStart" : true,
+      "onSuccess" : false,
+      "onFailure" : true
+    },
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "1034",
+      "name" : "dev",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      }
+    } ]
+  },
+  "processes" : {
+    "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL" : {
+      "id" : "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "cleanup_orders_1",
+        "slug" : "cleanup_orders",
+        "x" : -130,
+        "y" : 66
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "uLOshaetBNxvfjU_03cCJ$$NJ2KgZEgSIXdsyvvWVM_v"
+        } ],
+        "outputs" : [ {
+          "id" : "amZAQaZKtmOUb9SxKi-EY$$J7yHVdugxy1-WMWSszzDB"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "3436/pipelines/cleanup_orders",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : [ "default" ],
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    },
+    "2M0tSVe4al4RwltAcK-SU" : {
+      "id" : "2M0tSVe4al4RwltAcK-SU",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "cleanup_customers",
+        "slug" : "cleanup_customers",
+        "x" : -142.39999389648438,
+        "y" : -111.19999694824219
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "out"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "3436/pipelines/cleanup_customers",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : [ "default" ],
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    },
+    "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf" : {
+      "id" : "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "ingest_orders_1",
+        "slug" : "ingest_orders",
+        "x" : -340.79998779296875,
+        "y" : 66
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "okn39YBoCLUajVq3fjJU5$$enxluIM2UoXRVbTP6qLa4"
+        } ],
+        "outputs" : [ {
+          "id" : "8SY1RcD5gZz9lEYNC93-J$$os5dldqF3o-JBYks20Mxt"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "3436/pipelines/ingest_orders",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : [ "default" ],
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    },
+    "IoOmt7RB3YU_4PEDFeOz-$$dtznb1B7HhKw3bvpjPjWr" : {
+      "id" : "IoOmt7RB3YU_4PEDFeOz-$$dtznb1B7HhKw3bvpjPjWr",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "ingest_customers_1",
+        "slug" : "ingest_customers",
+        "x" : -347.6000061035156,
+        "y" : -111.5999984741211
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gE32j_u6G5977QG9E2pMb$$mLVQA8kNyHzIK5KdJgxY3"
+        } ],
+        "outputs" : [ {
+          "id" : "EdvV9_IbvVojpdyVn3Ndn$$nptqba_ifDVmbAUdavL6I"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "3436/pipelines/ingest_customers",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : [ "default" ],
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "ZTsoiITJGuMeeVKG1fXjz",
+    "source" : "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf",
+    "target" : "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL",
+    "sourcePort" : "8SY1RcD5gZz9lEYNC93-J$$os5dldqF3o-JBYks20Mxt",
+    "targetPort" : "uLOshaetBNxvfjU_03cCJ$$NJ2KgZEgSIXdsyvvWVM_v"
+  }, {
+    "id" : "QAryasySluTyoI9eVnhJf",
+    "source" : "IoOmt7RB3YU_4PEDFeOz-$$dtznb1B7HhKw3bvpjPjWr",
+    "target" : "2M0tSVe4al4RwltAcK-SU",
+    "sourcePort" : "EdvV9_IbvVojpdyVn3Ndn$$nptqba_ifDVmbAUdavL6I",
+    "targetPort" : "in"
+  } ]
+}

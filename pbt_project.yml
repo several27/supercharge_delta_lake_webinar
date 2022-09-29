@@ -1,0 +1,163 @@
+name: supercharge_delta_lake
+description: ''
+version: 0.0.1
+author: maciej+webinar-2022@prophecy.io
+language: python
+buildSystem: wheel
+pipelines:
+  pipelines/ingest_orders:
+    name: ingest_orders
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    mode: batch
+    language: python
+    createdAt: '2022-09-29 01:28:58'
+    datasets:
+      inputs:
+      - 3436/datasets/raw_orders
+      outputs:
+      - 3436/datasets/bronze_orders
+    dependencies: {}
+  pipelines/cleanup_orders:
+    name: cleanup_orders
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    mode: batch
+    language: python
+    createdAt: '2022-09-29 01:31:06'
+    datasets:
+      inputs:
+      - 3436/datasets/bronze_orders
+      outputs:
+      - 3436/datasets/silver_orders
+    dependencies: {}
+  pipelines/cleanup_customers:
+    name: cleanup_customers
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    mode: batch
+    language: python
+    createdAt: '2022-09-29 01:33:01'
+    datasets:
+      inputs:
+      - 3436/datasets/bronze_customers
+      outputs:
+      - 3436/datasets/silver_customers
+    dependencies: {}
+  pipelines/ingest_customers:
+    name: ingest_customers
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    mode: batch
+    language: python
+    createdAt: '2022-09-29 01:19:30'
+    datasets:
+      inputs:
+      - 3436/datasets/raw_customers
+      outputs:
+      - 3436/datasets/bronze_customers
+    dependencies: {}
+datasets:
+  datasets/silver_customers:
+    name: silver_customers
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-09-29 01:33:40'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: File
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-09-29 01:33:40'
+  datasets/raw_customers:
+    name: raw_customers
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-09-29 01:28:34'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: File
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-09-29 01:28:34'
+  datasets/raw_orders:
+    name: raw_orders
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-09-29 01:30:06'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: File
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-09-29 01:30:06'
+  datasets/silver_orders:
+    name: silver_orders
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-09-29 01:32:05'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: File
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-09-29 01:32:05'
+  datasets/bronze_customers:
+    name: bronze_customers
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-09-29 01:27:10'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: File
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-09-29 01:27:10'
+  datasets/bronze_orders:
+    name: bronze_orders
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-09-29 01:30:31'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: File
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-09-29 01:30:31'
+templates: {}
+jobs:
+  jobs/daily_job:
+    name: daily_job
+    description: ''
+    fabricUID: 1034
+    scheduler:
+      Databricks: {}
+    jobSize: small
+    scheduleCron: 0 0 0 * * ? *
+    timeout: null
+    alerting:
+      emails: maciej@prophecy.io
+      onStart: true
+      onSuccess: false
+      onFailure: true
+    pipelines:
+    - 3436/pipelines/cleanup_orders
+    - 3436/pipelines/cleanup_customers
+    - 3436/pipelines/ingest_customers
+    - 3436/pipelines/ingest_orders
+    jobClusterMode:
+      clusterMode:
+        Multi: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2022-09-29 01:34:28'
+    author: maciej+webinar-2022@prophecy.io
+libraries: []
+subgraphs: {}
+dependencies: '[]'
