@@ -1,0 +1,805 @@
+{
+  "id" : "Q_QsK83A0auLuJ4sSjFKL",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "tvZKte3CQLK3Li8SMvUeF",
+      "slug" : "in0"
+    } ],
+    "outputs" : [ {
+      "id" : "qXtxy441k4pcX3aLaORLS",
+      "slug" : "out0"
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : {
+    "packageName" : "enrich_customers"
+  },
+  "connections" : [ {
+    "id" : "Rxx8Rth0A_mjs4pVcHMxC",
+    "source" : "Q_QsK83A0auLuJ4sSjFKL",
+    "sourcePort" : "tvZKte3CQLK3Li8SMvUeF",
+    "target" : "POGYtsQcVRaz-XBh40WU7",
+    "targetPort" : "l4ydD2E8oaVegeOayhb_Z"
+  }, {
+    "id" : "K4-6tHhj4qTNYkRHGlm-u",
+    "source" : "8eOw1j3e3CItKTNmDDtQC",
+    "sourcePort" : "baY66HN4wc4uXEqdGmmMz",
+    "target" : "POGYtsQcVRaz-XBh40WU7",
+    "targetPort" : "Wab1XHZdecPHVYfGPvR5h"
+  }, {
+    "id" : "-Zc-fkU4bpoPwPHmhKRCM",
+    "source" : "Qi9M0IReFG82IosR2-wvm",
+    "sourcePort" : "_2-MowCcC6LB7xy-ervYI",
+    "target" : "POGYtsQcVRaz-XBh40WU7",
+    "targetPort" : "995x_Meu_IePSxRnCWOIO"
+  }, {
+    "id" : "QSuUUjTLVYG13wzCxW2-U",
+    "source" : "wBzXOsVm1Ims8PFu5uirM",
+    "sourcePort" : "IVsTJWG5L38m_YcVGnxAp",
+    "target" : "POGYtsQcVRaz-XBh40WU7",
+    "targetPort" : "4jzP4BxIlNzll7uhXo70A"
+  }, {
+    "id" : "GCOjmyXbXN8ns7nbgzhyE",
+    "source" : "CctApCXIwu-ZGepAFrzZ6",
+    "sourcePort" : "hutovkFDE9e5a1ulh67aD",
+    "target" : "Q_QsK83A0auLuJ4sSjFKL",
+    "targetPort" : "qXtxy441k4pcX3aLaORLS"
+  }, {
+    "id" : "sJ0PE68jjYF7xSU4288WY",
+    "source" : "POGYtsQcVRaz-XBh40WU7",
+    "sourcePort" : "5LNDDnlNXCSiiCfhTIIAT",
+    "target" : "CctApCXIwu-ZGepAFrzZ6",
+    "targetPort" : "ONgzseq5exaxU9nXExHrf"
+  } ],
+  "processes" : {
+    "POGYtsQcVRaz-XBh40WU7" : {
+      "id" : "POGYtsQcVRaz-XBh40WU7",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "with_nations_regions",
+        "slug" : "with_nations_regions",
+        "x" : 361.5999999999998,
+        "y" : 704.4000000000002,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "l4ydD2E8oaVegeOayhb_Z",
+          "slug" : "in0"
+        }, {
+          "id" : "Wab1XHZdecPHVYfGPvR5h",
+          "slug" : "in1"
+        }, {
+          "id" : "995x_Meu_IePSxRnCWOIO",
+          "slug" : "in2"
+        }, {
+          "id" : "4jzP4BxIlNzll7uhXo70A",
+          "slug" : "in3"
+        } ],
+        "outputs" : [ {
+          "id" : "5LNDDnlNXCSiiCfhTIIAT",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.c_custkey = in1.c_custkey"
+          },
+          "joinType" : "inner"
+        }, {
+          "alias" : "in2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in2.n_nationkey = in1.c_nationkey"
+          },
+          "joinType" : "inner"
+        }, {
+          "alias" : "in3",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in3.r_regionkey = in2.n_regionkey"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "target" : "c_custkey",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.c_custkey"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "r_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in3.r_name"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "n_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in2.n_name"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "amounts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.amounts"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "month",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.month"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "l4ydD2E8oaVegeOayhb_Z$$Z5DOCtlhJiA3rG7HS3tV2",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "Wab1XHZdecPHVYfGPvR5h$$iqx-F9_wxdbpRcf8dyn5e",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "995x_Meu_IePSxRnCWOIO$$eQjy_ZTIj8MtLBzPUaViL",
+          "alias" : "in2",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "4jzP4BxIlNzll7uhXo70A$$TodWxEAz1-hQgoPjrXEz5",
+          "alias" : "in3",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "Wab1XHZdecPHVYfGPvR5h$$iqx-F9_wxdbpRcf8dyn5e##c_custkey", "995x_Meu_IePSxRnCWOIO$$eQjy_ZTIj8MtLBzPUaViL##n_regionkey", "995x_Meu_IePSxRnCWOIO$$eQjy_ZTIj8MtLBzPUaViL##n_nationkey", "l4ydD2E8oaVegeOayhb_Z$$Z5DOCtlhJiA3rG7HS3tV2##c_custkey", "Wab1XHZdecPHVYfGPvR5h$$iqx-F9_wxdbpRcf8dyn5e##c_nationkey", "4jzP4BxIlNzll7uhXo70A$$TodWxEAz1-hQgoPjrXEz5##r_regionkey", "l4ydD2E8oaVegeOayhb_Z$$Z5DOCtlhJiA3rG7HS3tV2##month", "4jzP4BxIlNzll7uhXo70A$$TodWxEAz1-hQgoPjrXEz5##r_name", "l4ydD2E8oaVegeOayhb_Z$$Z5DOCtlhJiA3rG7HS3tV2##amounts", "995x_Meu_IePSxRnCWOIO$$eQjy_ZTIj8MtLBzPUaViL##n_name", "l4ydD2E8oaVegeOayhb_Z$$Z5DOCtlhJiA3rG7HS3tV2##c_custkey" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      }
+    },
+    "Qi9M0IReFG82IosR2-wvm" : {
+      "id" : "Qi9M0IReFG82IosR2-wvm",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "nation",
+        "slug" : "nation",
+        "x" : 90,
+        "y" : 936,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "_2-MowCcC6LB7xy-ervYI",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "format" : "delta",
+        "refreshDataset" : false,
+        "datasetTypes" : [ {
+          "label" : "FILE",
+          "value" : "File",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "WAREHOUSE",
+          "value" : "Warehouse",
+          "icon" : "Database",
+          "width" : "220px"
+        }, {
+          "label" : "CATALOG TABLE",
+          "value" : "Database",
+          "icon" : "Table",
+          "width" : "220px"
+        } ],
+        "dataFormats" : [ {
+          "label" : "PARQUET",
+          "value" : "parquet",
+          "icon" : "Parquet",
+          "width" : "220px"
+        }, {
+          "label" : "AVRO",
+          "value" : "avro",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "TEXT",
+          "value" : "text",
+          "icon" : "Document",
+          "width" : "220px"
+        }, {
+          "label" : "DELTA",
+          "value" : "delta",
+          "icon" : "Delta",
+          "width" : "220px"
+        }, {
+          "label" : "JSON",
+          "value" : "json",
+          "icon" : "Json",
+          "width" : "220px"
+        }, {
+          "label" : "ORC",
+          "value" : "orc",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "KAFKASTREAM",
+          "value" : "KafkaStream",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "CSV",
+          "value" : "csv",
+          "icon" : "Csv",
+          "width" : "220px"
+        }, {
+          "label" : "XML",
+          "value" : "xml",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "XLSX",
+          "value" : "xlsx",
+          "icon" : "File",
+          "width" : "220px"
+        } ],
+        "datasetId" : "3436/datasets/nation",
+        "updated" : true,
+        "currentDatasetId" : "3436/datasets/nation",
+        "dataset" : {
+          "mergeCondition" : null,
+          "minFlagCol" : null,
+          "path" : "dbfs:/databricks-datasets/tpch/delta-001/nation/",
+          "mergeTargetAlias" : "target",
+          "overwriteSchema" : null,
+          "flagValue" : "integer",
+          "versionAsOf" : null,
+          "writeMode" : null,
+          "description" : "",
+          "replaceWhere" : null,
+          "historicColumns" : [ ],
+          "mergeSourceAlias" : "source",
+          "notMatchedTable" : [ ],
+          "fromTimeCol" : null,
+          "notMatchedCondition" : null,
+          "matchedTable" : [ ],
+          "notMatchedAction" : "insert",
+          "partitionColumns" : null,
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "n_nationkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "n_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "n_regionkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "n_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "activeTab" : "whenMatched",
+          "maxFlagCol" : null,
+          "matchedConditionDelete" : null,
+          "matchedActionDelete" : "ignore",
+          "timestampAsOf" : null,
+          "mergeSchema" : null,
+          "toTimeCol" : null,
+          "optimizeWrite" : null,
+          "keyColumns" : [ ],
+          "matchedCondition" : null,
+          "matchedAction" : "update"
+        },
+        "isNewDataset" : false,
+        "disabled" : false,
+        "datasetType" : "File"
+      }
+    },
+    "CctApCXIwu-ZGepAFrzZ6" : {
+      "id" : "CctApCXIwu-ZGepAFrzZ6",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cleanup",
+        "slug" : "cleanup",
+        "x" : 616.0999999999999,
+        "y" : 708.8,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ONgzseq5exaxU9nXExHrf",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "hutovkFDE9e5a1ulh67aD",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "ONgzseq5exaxU9nXExHrf$$CzuUpS479SjbYBfvnByOO##c_custkey", "ONgzseq5exaxU9nXExHrf$$CzuUpS479SjbYBfvnByOO##n_name", "ONgzseq5exaxU9nXExHrf$$CzuUpS479SjbYBfvnByOO##r_name", "ONgzseq5exaxU9nXExHrf$$CzuUpS479SjbYBfvnByOO##month", "ONgzseq5exaxU9nXExHrf$$CzuUpS479SjbYBfvnByOO##amounts" ],
+        "expressions" : [ {
+          "target" : "c_custkey",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_custkey"
+          },
+          "description" : "",
+          "_row_id" : "7256617185341760079"
+        }, {
+          "target" : "region",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "r_name"
+          },
+          "description" : "",
+          "_row_id" : "1441459692485903388"
+        }, {
+          "target" : "nation",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "n_name"
+          },
+          "description" : "",
+          "_row_id" : "452167873884562649"
+        }, {
+          "target" : "amounts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat(format_number(amounts, 2), 'zł')"
+          },
+          "description" : "",
+          "_row_id" : "3151924647430953915"
+        }, {
+          "target" : "month",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "case \n    when month = 1 then 'January'\n    when month = 2 then 'February'\n    when month = 3 then 'March'\n    when month = 4 then 'April'\n    when month = 5 then 'May'\n    when month = 6 then 'June'\n    when month = 7 then 'July'\n    when month = 8 then 'August'\n    when month = 9 then 'September'\n    when month = 10 then 'October'\n    when month = 11 then 'November'\n    else 'December' \nend"
+          },
+          "description" : "",
+          "_row_id" : "4033432994837260750"
+        } ]
+      }
+    },
+    "8eOw1j3e3CItKTNmDDtQC" : {
+      "id" : "8eOw1j3e3CItKTNmDDtQC",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "customer_nations",
+        "slug" : "customer_nations",
+        "x" : -34.399999999999636,
+        "y" : 787.2000000000002,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "baY66HN4wc4uXEqdGmmMz",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "format" : "delta",
+        "refreshDataset" : false,
+        "datasetTypes" : [ {
+          "label" : "FILE",
+          "value" : "File",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "WAREHOUSE",
+          "value" : "Warehouse",
+          "icon" : "Database",
+          "width" : "220px"
+        }, {
+          "label" : "CATALOG TABLE",
+          "value" : "Database",
+          "icon" : "Table",
+          "width" : "220px"
+        } ],
+        "dataFormats" : [ {
+          "label" : "PARQUET",
+          "value" : "parquet",
+          "icon" : "Parquet",
+          "width" : "220px"
+        }, {
+          "label" : "AVRO",
+          "value" : "avro",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "TEXT",
+          "value" : "text",
+          "icon" : "Document",
+          "width" : "220px"
+        }, {
+          "label" : "DELTA",
+          "value" : "delta",
+          "icon" : "Delta",
+          "width" : "220px"
+        }, {
+          "label" : "JSON",
+          "value" : "json",
+          "icon" : "Json",
+          "width" : "220px"
+        }, {
+          "label" : "ORC",
+          "value" : "orc",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "KAFKASTREAM",
+          "value" : "KafkaStream",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "CSV",
+          "value" : "csv",
+          "icon" : "Csv",
+          "width" : "220px"
+        }, {
+          "label" : "XML",
+          "value" : "xml",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "XLSX",
+          "value" : "xlsx",
+          "icon" : "File",
+          "width" : "220px"
+        } ],
+        "datasetId" : "3436/datasets/customer_nations",
+        "updated" : true,
+        "currentDatasetId" : "3436/datasets/customer_nations",
+        "dataset" : {
+          "mergeCondition" : null,
+          "minFlagCol" : null,
+          "path" : "dbfs:/databricks-datasets/tpch/delta-001/customer/",
+          "mergeTargetAlias" : "target",
+          "overwriteSchema" : null,
+          "flagValue" : "integer",
+          "versionAsOf" : null,
+          "writeMode" : null,
+          "description" : "",
+          "replaceWhere" : null,
+          "historicColumns" : [ ],
+          "mergeSourceAlias" : "source",
+          "notMatchedTable" : [ ],
+          "fromTimeCol" : null,
+          "notMatchedCondition" : null,
+          "matchedTable" : [ ],
+          "notMatchedAction" : "insert",
+          "partitionColumns" : null,
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_address",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_nationkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_acctbal",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_mktsegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "activeTab" : "whenMatched",
+          "maxFlagCol" : null,
+          "matchedConditionDelete" : null,
+          "matchedActionDelete" : "ignore",
+          "timestampAsOf" : null,
+          "mergeSchema" : null,
+          "toTimeCol" : null,
+          "optimizeWrite" : null,
+          "keyColumns" : [ ],
+          "matchedCondition" : null,
+          "matchedAction" : "update"
+        },
+        "isNewDataset" : false,
+        "disabled" : false,
+        "datasetType" : "File"
+      }
+    },
+    "wBzXOsVm1Ims8PFu5uirM" : {
+      "id" : "wBzXOsVm1Ims8PFu5uirM",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "regions",
+        "slug" : "regions",
+        "x" : 166,
+        "y" : 1124.3999999999996,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "IVsTJWG5L38m_YcVGnxAp",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "format" : "delta",
+        "refreshDataset" : false,
+        "datasetTypes" : [ {
+          "label" : "FILE",
+          "value" : "File",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "WAREHOUSE",
+          "value" : "Warehouse",
+          "icon" : "Database",
+          "width" : "220px"
+        }, {
+          "label" : "CATALOG TABLE",
+          "value" : "Database",
+          "icon" : "Table",
+          "width" : "220px"
+        } ],
+        "dataFormats" : [ {
+          "label" : "PARQUET",
+          "value" : "parquet",
+          "icon" : "Parquet",
+          "width" : "220px"
+        }, {
+          "label" : "AVRO",
+          "value" : "avro",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "TEXT",
+          "value" : "text",
+          "icon" : "Document",
+          "width" : "220px"
+        }, {
+          "label" : "DELTA",
+          "value" : "delta",
+          "icon" : "Delta",
+          "width" : "220px"
+        }, {
+          "label" : "JSON",
+          "value" : "json",
+          "icon" : "Json",
+          "width" : "220px"
+        }, {
+          "label" : "ORC",
+          "value" : "orc",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "KAFKASTREAM",
+          "value" : "KafkaStream",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "CSV",
+          "value" : "csv",
+          "icon" : "Csv",
+          "width" : "220px"
+        }, {
+          "label" : "XML",
+          "value" : "xml",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
+          "label" : "XLSX",
+          "value" : "xlsx",
+          "icon" : "File",
+          "width" : "220px"
+        } ],
+        "datasetId" : "3436/datasets/regions",
+        "updated" : true,
+        "currentDatasetId" : "3436/datasets/regions",
+        "dataset" : {
+          "mergeCondition" : null,
+          "minFlagCol" : null,
+          "path" : "dbfs:/databricks-datasets/tpch/delta-001/region/",
+          "mergeTargetAlias" : "target",
+          "overwriteSchema" : null,
+          "flagValue" : "integer",
+          "versionAsOf" : null,
+          "writeMode" : null,
+          "description" : "",
+          "replaceWhere" : null,
+          "historicColumns" : [ ],
+          "mergeSourceAlias" : "source",
+          "notMatchedTable" : [ ],
+          "fromTimeCol" : null,
+          "notMatchedCondition" : null,
+          "matchedTable" : [ ],
+          "notMatchedAction" : "insert",
+          "partitionColumns" : null,
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "r_regionkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "r_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "r_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "activeTab" : "whenMatched",
+          "maxFlagCol" : null,
+          "matchedConditionDelete" : null,
+          "matchedActionDelete" : "ignore",
+          "timestampAsOf" : null,
+          "mergeSchema" : null,
+          "toTimeCol" : null,
+          "optimizeWrite" : null,
+          "keyColumns" : [ ],
+          "matchedCondition" : null,
+          "matchedAction" : "update"
+        },
+        "isNewDataset" : false,
+        "disabled" : false,
+        "datasetType" : "File"
+      }
+    }
+  }
+}

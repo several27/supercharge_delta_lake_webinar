@@ -5,4 +5,4 @@ from cleanup_orders.config.ConfigStore import *
 from cleanup_orders.udfs.UDFs import *
 
 def bronze_orders(spark: SparkSession) -> DataFrame:
-    return spark.read.format("delta").load("dbfs:/Prophecy/maciej+webinar-2022@prophecy.io/bronze_orders/")
+    return spark.read.table(f"lakehouse.bronze_orders")
