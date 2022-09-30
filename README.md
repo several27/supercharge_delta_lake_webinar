@@ -19,3 +19,7 @@ Demo
 *** Release notes for version: 5.0 ***
 
 Pipeline push
+
+*** Release notes for version: 6.0 ***
+
+Rlease
