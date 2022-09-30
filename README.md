@@ -11,3 +11,7 @@ With reusable cleanup logic
 *** Release notes for version: 3.0 ***
 
 Fun demo!
+
+*** Release notes for version: 4.0 ***
+
+Demo
