@@ -8,8 +8,8 @@ from mrr_reporting.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_silver_orders_0 = silver_orders_0(spark)
-    df_silver_customers_3 = silver_customers_3(spark)
-    df_by_customer_id = by_customer_id(spark, df_silver_orders_0, df_silver_customers_3)
+    df_silver_customers = silver_customers(spark)
+    df_by_customer_id = by_customer_id(spark, df_silver_orders_0, df_silver_customers)
     df_sum_amounts = sum_amounts(spark, df_by_customer_id)
     df_enrich_customers_1 = enrich_customers_1(spark, df_sum_amounts)
     gold_report_2(spark, df_enrich_customers_1)

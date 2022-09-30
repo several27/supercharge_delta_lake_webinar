@@ -4,5 +4,5 @@ from pyspark.sql.types import *
 from mrr_reporting.config.ConfigStore import *
 from mrr_reporting.udfs.UDFs import *
 
-def silver_customers_3(spark: SparkSession) -> DataFrame:
+def silver_customers(spark: SparkSession) -> DataFrame:
     return spark.read.table(f"lakehouse.silver_customers")
