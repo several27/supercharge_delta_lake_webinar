@@ -44,22 +44,22 @@ pipelines:
       outputs:
       - 3436/datasets/silver_customers
     dependencies: {}
-  pipelines/gold_mrr:
-    name: gold_mrr
+  pipelines/mrr_reporting:
+    name: mrr_reporting
     description: ''
     author: maciej+webinar-2022@prophecy.io
     mode: batch
     language: python
-    createdAt: '2022-09-29 17:35:00'
+    createdAt: '2022-09-30 14:16:09'
     datasets:
       inputs:
       - 3436/datasets/silver_orders
-      - 3436/datasets/silver_customers_2
+      - 3436/datasets/silver_customers_3
       - 3436/datasets/customer_nations
       - 3436/datasets/regions
       - 3436/datasets/nation
       outputs:
-      - 3436/datasets/gold_report
+      - 3436/datasets/gold_report_2
     dependencies: {}
   pipelines/cleanup_orders:
     name: cleanup_orders
@@ -99,6 +99,18 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 03:35:00'
+  datasets/gold_report_2:
+    name: gold_report_2
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-09-30 14:26:39'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: Database
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-09-30 14:26:39'
   datasets/silver_customers_2:
     name: silver_customers_2
     description: ''
@@ -123,6 +135,18 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:28:34'
+  datasets/silver_customers_3:
+    name: silver_customers_3
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-09-30 14:20:16'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: Database
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-09-30 14:20:16'
   datasets/raw_orders:
     name: raw_orders
     description: ''
@@ -225,9 +249,9 @@ jobs:
       onFailure: true
     pipelines:
     - 3436/pipelines/cleanup_orders
+    - 3436/pipelines/mrr_reporting
     - 3436/pipelines/ingest_customers
     - 3436/pipelines/cleanup_customers
-    - 3436/pipelines/gold_mrr
     - 3436/pipelines/ingest_orders
     jobClusterMode:
       clusterMode:

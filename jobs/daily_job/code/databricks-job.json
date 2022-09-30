@@ -30,9 +30,9 @@
     }
   }, {
     "PipelineComponent" : {
-      "id" : "3436/pipelines/gold_mrr",
-      "nodeName" : "gold_mrr_1",
-      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/__PROJECT_ID_PLACEHOLDER__/gold_mrr-1.0-py3-none-any.whl",
+      "id" : "3436/pipelines/mrr_reporting",
+      "nodeName" : "mrr_reporting_1",
+      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/__PROJECT_ID_PLACEHOLDER__/mrr_reporting-1.0-py3-none-any.whl",
       "language" : "python"
     }
   } ],
@@ -203,7 +203,7 @@
         "email_notifications" : { },
         "max_retries" : 0
       }, {
-        "task_key" : "gold_mrr_1",
+        "task_key" : "mrr_reporting_1",
         "depends_on" : [ {
           "task_key" : "cleanup_customers"
         }, {
@@ -223,7 +223,7 @@
           "driver_node_type_id" : "i3.xlarge"
         },
         "python_wheel_task" : {
-          "package_name" : "gold_mrr",
+          "package_name" : "mrr_reporting",
           "entry_point" : "main",
           "parameters" : [ "-i", "default" ]
         },
@@ -237,7 +237,7 @@
             "package" : "prophecy-libs==1.3.5"
           }
         }, {
-          "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/__PROJECT_ID_PLACEHOLDER__/gold_mrr-1.0-py3-none-any.whl"
+          "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/__PROJECT_ID_PLACEHOLDER__/mrr_reporting-1.0-py3-none-any.whl"
         } ],
         "email_notifications" : { },
         "max_retries" : 0

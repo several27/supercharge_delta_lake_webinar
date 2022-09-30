@@ -105,42 +105,6 @@
         }
       }
     },
-    "z4YLv_BuKO1qNuPCgQqvp$$ZFO5uD66VX-_1J9TcqDmY" : {
-      "id" : "z4YLv_BuKO1qNuPCgQqvp$$ZFO5uD66VX-_1J9TcqDmY",
-      "component" : "Pipeline",
-      "metadata" : {
-        "label" : "gold_mrr_1",
-        "slug" : "gold_mrr",
-        "x" : 141.93333435058594,
-        "y" : -38.766666412353516
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "n0Sgzmv65KuX-Kp4Ez5EK$$XnrztWUcEwdDPXrGpC7ri"
-        } ],
-        "outputs" : [ {
-          "id" : "i5c-277awbgYfBoHjuluV$$e6xa3q7mhLfgkNFEFJS8O"
-        } ]
-      },
-      "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false
-        }
-      },
-      "properties" : {
-        "pipelineId" : "3436/pipelines/gold_mrr",
-        "configurations" : {
-          "schema" : [ ],
-          "instances" : [ "default" ],
-          "overrides" : { },
-          "selectedInstance" : "default"
-        }
-      }
-    },
     "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf" : {
       "id" : "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf",
       "component" : "Pipeline",
@@ -212,6 +176,42 @@
           "selectedInstance" : "default"
         }
       }
+    },
+    "ITNNfIvPpxiC3JZHJZvcC$$XswSjojOJkdKlWBdQqEYn" : {
+      "id" : "ITNNfIvPpxiC3JZHJZvcC$$XswSjojOJkdKlWBdQqEYn",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "mrr_reporting_1",
+        "slug" : "mrr_reporting",
+        "x" : 213.23887634277344,
+        "y" : -1.2666645050048828
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8jDvuCKtiqseTZtpojoGo$$mqlQ4D_bECq7kkGJPtwcZ"
+        } ],
+        "outputs" : [ {
+          "id" : "8GA1yNNvR8yOht0tDV1bT$$oMKaDIMevh38WsjALjum1"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "3436/pipelines/mrr_reporting",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : [ "default" ],
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
     }
   },
   "connections" : [ {
@@ -227,16 +227,16 @@
     "sourcePort" : "EdvV9_IbvVojpdyVn3Ndn$$nptqba_ifDVmbAUdavL6I",
     "targetPort" : "in"
   }, {
-    "id" : "wxxZ4niZVLCZLWS97Dxe-",
+    "id" : "sWlAx_PkI9MBMbYoyrMBr",
     "source" : "2M0tSVe4al4RwltAcK-SU",
-    "target" : "z4YLv_BuKO1qNuPCgQqvp$$ZFO5uD66VX-_1J9TcqDmY",
+    "target" : "ITNNfIvPpxiC3JZHJZvcC$$XswSjojOJkdKlWBdQqEYn",
     "sourcePort" : "out",
-    "targetPort" : "n0Sgzmv65KuX-Kp4Ez5EK$$XnrztWUcEwdDPXrGpC7ri"
+    "targetPort" : "8jDvuCKtiqseTZtpojoGo$$mqlQ4D_bECq7kkGJPtwcZ"
   }, {
-    "id" : "go7DhRjo_YWyMzYtV3A9e",
+    "id" : "F5F1vMUxrhZbW92iSM87d",
     "source" : "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL",
-    "target" : "z4YLv_BuKO1qNuPCgQqvp$$ZFO5uD66VX-_1J9TcqDmY",
+    "target" : "ITNNfIvPpxiC3JZHJZvcC$$XswSjojOJkdKlWBdQqEYn",
     "sourcePort" : "amZAQaZKtmOUb9SxKi-EY$$J7yHVdugxy1-WMWSszzDB",
-    "targetPort" : "n0Sgzmv65KuX-Kp4Ez5EK$$XnrztWUcEwdDPXrGpC7ri"
+    "targetPort" : "8jDvuCKtiqseTZtpojoGo$$mqlQ4D_bECq7kkGJPtwcZ"
   } ]
 }
