@@ -23,3 +23,7 @@ Pipeline push
 *** Release notes for version: 6.0 ***
 
 Rlease
+
+*** Release notes for version: 7.0 ***
+
+Production release
