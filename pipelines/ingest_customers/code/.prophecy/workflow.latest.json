@@ -51,8 +51,8 @@
       "metadata" : {
         "label" : "raw_customers",
         "slug" : "raw_customers",
-        "x" : 140,
-        "y" : 160,
+        "x" : 126.80000000000001,
+        "y" : 164.8,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,

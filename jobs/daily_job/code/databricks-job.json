@@ -205,9 +205,9 @@
       }, {
         "task_key" : "mrr_reporting_1",
         "depends_on" : [ {
-          "task_key" : "cleanup_customers"
-        }, {
           "task_key" : "cleanup_orders"
+        }, {
+          "task_key" : "cleanup_customers"
         } ],
         "new_cluster" : {
           "spark_version" : "10.4.x-scala2.12",

@@ -4,5 +4,5 @@ from pyspark.sql.types import *
 from mrr_reporting.config.ConfigStore import *
 from mrr_reporting.udfs.UDFs import *
 
-def final_report(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("overwrite").saveAsTable("lakehouse.gold_report_demo_2")
+def Limit_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.limit(1000)
