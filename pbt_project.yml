@@ -99,6 +99,18 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 03:35:00'
+  datasets/text_input:
+    name: text_input
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-10-07 04:18:52'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: File
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-10-07 04:18:53'
   datasets/report_gold:
     name: report_gold
     description: ''
