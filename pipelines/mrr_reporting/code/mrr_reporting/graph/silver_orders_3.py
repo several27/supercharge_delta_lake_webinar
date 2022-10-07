@@ -4,5 +4,5 @@ from pyspark.sql.types import *
 from mrr_reporting.config.ConfigStore import *
 from mrr_reporting.udfs.UDFs import *
 
-def Limit_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.limit(1000)
+def silver_orders_3(spark: SparkSession) -> DataFrame:
+    return spark.read.format("delta").load("dbfs:/databricks-datasets/tpch/delta-001/orders/")

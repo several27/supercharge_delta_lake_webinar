@@ -50,16 +50,16 @@ pipelines:
     author: maciej+webinar-2022@prophecy.io
     mode: batch
     language: python
-    createdAt: '2022-10-05 16:27:56'
+    createdAt: '2022-10-07 03:49:13'
     datasets:
       inputs:
-      - 3436/datasets/silver_orders
       - 3436/datasets/silver_customers_2
+      - 3436/datasets/silver_orders_3
       - 3436/datasets/customer_nations
       - 3436/datasets/regions
       - 3436/datasets/nation
       outputs:
-      - 3436/datasets/gold_report
+      - 3436/datasets/report_gold
     dependencies: {}
   pipelines/cleanup_orders:
     name: cleanup_orders
@@ -99,18 +99,18 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 03:35:00'
-  datasets/silver_customers_2:
-    name: silver_customers_2
+  datasets/report_gold:
+    name: report_gold
     description: ''
     author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-05 16:31:43'
+    createdAt: '2022-10-07 04:03:31'
     physicalDatasets:
       dev:
         fabricId: 1034
         datasetType: Database
         description: ''
         author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-05 16:31:43'
+        createdAt: '2022-10-07 04:03:31'
   datasets/raw_customers:
     name: raw_customers
     description: ''
@@ -195,6 +195,30 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:33:40'
+  datasets/silver_customers_2:
+    name: silver_customers_2
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-10-05 16:31:43'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: Database
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-10-05 16:31:43'
+  datasets/silver_orders_3:
+    name: silver_orders_3
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-10-07 03:55:20'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: File
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-10-07 03:55:20'
   datasets/bronze_customers:
     name: bronze_customers
     description: ''
