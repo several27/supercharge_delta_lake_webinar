@@ -27,3 +27,7 @@ Rlease
 *** Release notes for version: 7.0 ***
 
 Production release
+
+*** Release notes for version: 8.0 ***
+
+Release
