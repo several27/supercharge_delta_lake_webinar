@@ -35,3 +35,7 @@ Release
 *** Release notes for version: 9.0 ***
 
 Release 
+
+*** Release notes for version: 10.0 ***
+
+Latest and greatest release
