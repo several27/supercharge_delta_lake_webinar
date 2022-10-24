@@ -123,6 +123,18 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-07 04:03:31'
+  datasets/report:
+    name: report
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-10-24 16:12:02'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: Warehouse
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-10-24 16:12:02'
   datasets/raw_customers:
     name: raw_customers
     description: ''

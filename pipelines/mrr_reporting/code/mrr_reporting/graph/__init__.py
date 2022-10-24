@@ -4,3 +4,4 @@ from .final_report import *
 from .silvers_orders_1 import *
 from .by_customer_id import *
 from .silver_customers_0 import *
+from .floor_amounts import *

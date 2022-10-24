@@ -82,8 +82,7 @@
         },
         "libraries" : [ {
           "maven" : {
-            "coordinates" : "io.prophecy:prophecy-libs_2.12:5.2.4-3.2.0",
-            "repo" : "https://prophecyio.jfrog.io/artifactory/default-sbt-release/"
+            "coordinates" : "io.prophecy:prophecy-libs_2.12:5.2.7-3.2.0"
           }
         }, {
           "pypi" : {
@@ -119,8 +118,7 @@
         },
         "libraries" : [ {
           "maven" : {
-            "coordinates" : "io.prophecy:prophecy-libs_2.12:5.2.4-3.2.0",
-            "repo" : "https://prophecyio.jfrog.io/artifactory/default-sbt-release/"
+            "coordinates" : "io.prophecy:prophecy-libs_2.12:5.2.7-3.2.0"
           }
         }, {
           "pypi" : {
@@ -153,8 +151,7 @@
         },
         "libraries" : [ {
           "maven" : {
-            "coordinates" : "io.prophecy:prophecy-libs_2.12:5.2.4-3.2.0",
-            "repo" : "https://prophecyio.jfrog.io/artifactory/default-sbt-release/"
+            "coordinates" : "io.prophecy:prophecy-libs_2.12:5.2.7-3.2.0"
           }
         }, {
           "pypi" : {
@@ -190,8 +187,7 @@
         },
         "libraries" : [ {
           "maven" : {
-            "coordinates" : "io.prophecy:prophecy-libs_2.12:5.2.4-3.2.0",
-            "repo" : "https://prophecyio.jfrog.io/artifactory/default-sbt-release/"
+            "coordinates" : "io.prophecy:prophecy-libs_2.12:5.2.7-3.2.0"
           }
         }, {
           "pypi" : {
@@ -229,8 +225,7 @@
         },
         "libraries" : [ {
           "maven" : {
-            "coordinates" : "io.prophecy:prophecy-libs_2.12:5.2.4-3.2.0",
-            "repo" : "https://prophecyio.jfrog.io/artifactory/default-sbt-release/"
+            "coordinates" : "io.prophecy:prophecy-libs_2.12:5.2.7-3.2.0"
           }
         }, {
           "pypi" : {
