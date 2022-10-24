@@ -43,3 +43,7 @@ Latest and greatest release
 *** Release notes for version: 11.0 ***
 
 New pipeline
+
+*** Release notes for version: 12.0 ***
+
+My new changes to the pipeline
