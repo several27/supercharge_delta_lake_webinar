@@ -39,3 +39,7 @@ Release
 *** Release notes for version: 10.0 ***
 
 Latest and greatest release
+
+*** Release notes for version: 11.0 ***
+
+New pipeline
