@@ -47,3 +47,7 @@ New pipeline
 *** Release notes for version: 12.0 ***
 
 My new changes to the pipeline
+
+*** Release notes for version: 13.0 ***
+
+Release
