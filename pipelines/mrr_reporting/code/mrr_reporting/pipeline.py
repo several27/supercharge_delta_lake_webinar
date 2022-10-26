@@ -7,12 +7,11 @@ from prophecy.utils import *
 from mrr_reporting.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_silver_customers_0 = silver_customers_0(spark)
     df_silvers_orders_1 = silvers_orders_1(spark)
+    df_silver_customers_0 = silver_customers_0(spark)
     df_by_customer_id = by_customer_id(spark, df_silver_customers_0, df_silvers_orders_1)
     df_sum_amounts = sum_amounts(spark, df_by_customer_id)
-    df_Reformat_1 = Reformat_1(spark, df_sum_amounts)
-    df_enrich_customers_1 = enrich_customers_1(spark, df_Reformat_1)
+    df_enrich_customers_1 = enrich_customers_1(spark, df_sum_amounts)
     final_report(spark, df_enrich_customers_1)
 
 def main():
@@ -24,8 +23,12 @@ def main():
                 .getOrCreate()\
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
-    spark.conf.set("prophecy.metadata.pipeline.uri", "3436/pipelines/mrr_reporting")
-    MetricsCollector.start(spark = spark, pipelineId = "3436/pipelines/mrr_reporting")
+    spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/mrr_reporting")
+    
+    MetricsCollector.start(
+        spark = spark,
+        pipelineId = spark.conf.get("prophecy.project.id") + "/" + "pipelines/mrr_reporting"
+    )
     pipeline(spark)
     MetricsCollector.end(spark)
 

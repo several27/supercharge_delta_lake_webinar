@@ -2,7 +2,7 @@
   "metainfo" : {
     "type" : "Databricks",
     "fabricId" : "1034",
-    "jobId" : "3436/jobs/daily_job",
+    "jobId" : "jobs/daily_job",
     "name" : "daily_job",
     "schedule" : "0 0 0 * * ? *",
     "enabled" : false,
@@ -60,7 +60,7 @@
         }
       },
       "properties" : {
-        "pipelineId" : "3436/pipelines/cleanup_orders",
+        "pipelineId" : "pipelines/cleanup_orders",
         "configurations" : {
           "schema" : [ ],
           "instances" : [ "default" ],
@@ -96,7 +96,7 @@
         }
       },
       "properties" : {
-        "pipelineId" : "3436/pipelines/cleanup_customers",
+        "pipelineId" : "pipelines/cleanup_customers",
         "configurations" : {
           "schema" : [ ],
           "instances" : [ "default" ],
@@ -132,7 +132,7 @@
         }
       },
       "properties" : {
-        "pipelineId" : "3436/pipelines/mrr_reporting",
+        "pipelineId" : "pipelines/mrr_reporting",
         "configurations" : {
           "schema" : [ ],
           "instances" : [ "default" ],
@@ -168,7 +168,7 @@
         }
       },
       "properties" : {
-        "pipelineId" : "3436/pipelines/ingest_orders",
+        "pipelineId" : "pipelines/ingest_orders",
         "configurations" : {
           "schema" : [ ],
           "instances" : [ "default" ],
@@ -204,7 +204,7 @@
         }
       },
       "properties" : {
-        "pipelineId" : "3436/pipelines/ingest_customers",
+        "pipelineId" : "pipelines/ingest_customers",
         "configurations" : {
           "schema" : [ ],
           "instances" : [ "default" ],
