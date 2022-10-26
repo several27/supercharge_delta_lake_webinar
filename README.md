@@ -51,3 +51,7 @@ My new changes to the pipeline
 *** Release notes for version: 13.0 ***
 
 Release
+
+*** Release notes for version: 14.0 ***
+
+New release
