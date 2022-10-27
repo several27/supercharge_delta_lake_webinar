@@ -63,3 +63,7 @@ Test
 *** Release notes for version: 0.16 ***
 
 Production release
+
+*** Release notes for version: 50.0 ***
+
+Release
