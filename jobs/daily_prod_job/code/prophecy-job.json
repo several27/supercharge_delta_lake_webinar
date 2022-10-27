@@ -33,13 +33,6 @@
         "default" : "small",
         "availableClusterSizes" : [ "small" ]
       }
-    }, {
-      "id" : "1132",
-      "name" : "prod",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      }
     } ]
   },
   "processes" : {
@@ -144,7 +137,14 @@
       "properties" : {
         "pipelineId" : "pipelines/mrr_reporting",
         "configurations" : {
-          "schema" : [ ],
+          "schema" : [ {
+            "name" : "filterExpression",
+            "optional" : false,
+            "kind" : {
+              "type" : "spark_expression",
+              "value" : "in0.c_custkey = 1"
+            }
+          } ],
           "instances" : [ "default" ],
           "overrides" : { },
           "selectedInstance" : "default"
