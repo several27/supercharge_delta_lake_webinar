@@ -59,3 +59,7 @@ New release
 *** Release notes for version: 15.0 ***
 
 Test
+
+*** Release notes for version: 0.16 ***
+
+Production release
