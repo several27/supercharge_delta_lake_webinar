@@ -163,31 +163,34 @@
           "_row_id" : null
         } ],
         "hints" : [ {
-          "id" : "l4ydD2E8oaVegeOayhb_Z$$Z5DOCtlhJiA3rG7HS3tV2",
+          "id" : "l4ydD2E8oaVegeOayhb_Z$$VqTrS6nIddVMUusJKmd0n",
           "alias" : "in0",
           "hintType" : "none",
           "propagateColumns" : false
         }, {
-          "id" : "Wab1XHZdecPHVYfGPvR5h$$iqx-F9_wxdbpRcf8dyn5e",
+          "id" : "Wab1XHZdecPHVYfGPvR5h$$gs_CSTUQXw8gov-Jk7qfO",
           "alias" : "in1",
           "hintType" : "none",
           "propagateColumns" : false
         }, {
-          "id" : "995x_Meu_IePSxRnCWOIO$$eQjy_ZTIj8MtLBzPUaViL",
+          "id" : "995x_Meu_IePSxRnCWOIO$$-O-LY9aFHEaK5t0QkXuuL",
           "alias" : "in2",
           "hintType" : "none",
           "propagateColumns" : false
         }, {
-          "id" : "4jzP4BxIlNzll7uhXo70A$$TodWxEAz1-hQgoPjrXEz5",
+          "id" : "4jzP4BxIlNzll7uhXo70A$$TVkLZzn4pScvGFW5j7is_",
           "alias" : "in3",
           "hintType" : "none",
           "propagateColumns" : false
         } ],
         "allIn1" : null,
-        "activeTab" : "expressions",
-        "columnsSelector" : [ "Wab1XHZdecPHVYfGPvR5h$$iqx-F9_wxdbpRcf8dyn5e##c_custkey", "995x_Meu_IePSxRnCWOIO$$eQjy_ZTIj8MtLBzPUaViL##n_regionkey", "995x_Meu_IePSxRnCWOIO$$eQjy_ZTIj8MtLBzPUaViL##n_nationkey", "l4ydD2E8oaVegeOayhb_Z$$Z5DOCtlhJiA3rG7HS3tV2##c_custkey", "Wab1XHZdecPHVYfGPvR5h$$iqx-F9_wxdbpRcf8dyn5e##c_nationkey", "4jzP4BxIlNzll7uhXo70A$$TodWxEAz1-hQgoPjrXEz5##r_regionkey", "l4ydD2E8oaVegeOayhb_Z$$Z5DOCtlhJiA3rG7HS3tV2##month", "4jzP4BxIlNzll7uhXo70A$$TodWxEAz1-hQgoPjrXEz5##r_name", "l4ydD2E8oaVegeOayhb_Z$$Z5DOCtlhJiA3rG7HS3tV2##amounts", "995x_Meu_IePSxRnCWOIO$$eQjy_ZTIj8MtLBzPUaViL##n_name", "l4ydD2E8oaVegeOayhb_Z$$Z5DOCtlhJiA3rG7HS3tV2##c_custkey" ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "Wab1XHZdecPHVYfGPvR5h$$gs_CSTUQXw8gov-Jk7qfO##c_custkey", "995x_Meu_IePSxRnCWOIO$$-O-LY9aFHEaK5t0QkXuuL##n_regionkey", "Wab1XHZdecPHVYfGPvR5h$$gs_CSTUQXw8gov-Jk7qfO##c_nationkey", "995x_Meu_IePSxRnCWOIO$$-O-LY9aFHEaK5t0QkXuuL##n_nationkey", "4jzP4BxIlNzll7uhXo70A$$TVkLZzn4pScvGFW5j7is_##r_regionkey", "l4ydD2E8oaVegeOayhb_Z$$VqTrS6nIddVMUusJKmd0n##c_custkey", "4jzP4BxIlNzll7uhXo70A$$TVkLZzn4pScvGFW5j7is_##r_name", "995x_Meu_IePSxRnCWOIO$$-O-LY9aFHEaK5t0QkXuuL##n_name", "l4ydD2E8oaVegeOayhb_Z$$VqTrS6nIddVMUusJKmd0n##amounts", "l4ydD2E8oaVegeOayhb_Z$$VqTrS6nIddVMUusJKmd0n##month", "l4ydD2E8oaVegeOayhb_Z$$VqTrS6nIddVMUusJKmd0n##c_custkey" ],
         "allIn0" : null,
-        "whereClause" : null,
+        "whereClause" : {
+          "format" : "sql",
+          "expression" : "expr('$filterExpression')"
+        },
         "headAlias" : "in0"
       }
     },
@@ -283,7 +286,7 @@
           "icon" : "File",
           "width" : "220px"
         } ],
-        "datasetId" : "3436/datasets/nation",
+        "datasetId" : "datasets/nation",
         "updated" : true,
         "currentDatasetId" : "3436/datasets/nation",
         "dataset" : {
@@ -568,7 +571,7 @@
           "icon" : "File",
           "width" : "220px"
         } ],
-        "datasetId" : "3436/datasets/customer_nations",
+        "datasetId" : "datasets/customer_nations",
         "updated" : true,
         "currentDatasetId" : "3436/datasets/customer_nations",
         "dataset" : {
@@ -775,7 +778,7 @@
           "icon" : "File",
           "width" : "220px"
         } ],
-        "datasetId" : "3436/datasets/regions",
+        "datasetId" : "datasets/regions",
         "updated" : true,
         "currentDatasetId" : "3436/datasets/regions",
         "dataset" : {

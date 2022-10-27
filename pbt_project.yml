@@ -299,6 +299,7 @@ jobs:
     fabricUID: 1034
     scheduler:
       Databricks: {}
+    cloudProvider: null
     jobSize: small
     scheduleCron: 0 0 0 * * ? *
     timeout: null
@@ -328,4 +329,6 @@ subgraphs:
     author: maciej+webinar-2022@prophecy.io
     language: python
     createdAt: '2022-09-29 03:48:30'
+sqlModels: {}
+sqlPipeline: null
 dependencies: []
