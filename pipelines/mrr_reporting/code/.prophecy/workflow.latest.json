@@ -550,8 +550,8 @@
       "metadata" : {
         "label" : "sum_amounts",
         "slug" : "sum_amounts",
-        "x" : 885.2000000000003,
-        "y" : 341.1999999999998,
+        "x" : 884.0000000000002,
+        "y" : 272.7999999999998,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -585,7 +585,7 @@
         "pivotColumn" : null,
         "pivotValues" : [ ],
         "activeTab" : "aggregate",
-        "columnsSelector" : [ "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##o_orderdate", "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##c_custkey", "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##o_totalprice" ],
+        "columnsSelector" : [ "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##o_orderdate", "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##o_totalprice", "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##c_custkey" ],
         "groupBy" : [ {
           "target" : "c_custkey",
           "expression" : {
