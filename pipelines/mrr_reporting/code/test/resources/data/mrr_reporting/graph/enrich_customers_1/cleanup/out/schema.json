@@ -1,1 +1,49 @@
-{"type":"struct","fields":[{"name":"c_custkey","type":"long","nullable":true,"metadata":{"description":"","mappings":[],"tags":[]}},{"name":"region","type":"string","nullable":true,"metadata":{"description":"","mappings":[],"tags":[]}},{"name":"nation","type":"string","nullable":true,"metadata":{"description":"","mappings":[],"tags":[]}},{"name":"amounts","type":"string","nullable":true,"metadata":{"description":"","mappings":[],"tags":[]}},{"name":"month","type":"string","nullable":false,"metadata":{"description":"","mappings":[],"tags":[]}}]}
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "c_custkey",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : {
+      "description" : "",
+      "mappings" : [ ],
+      "tags" : [ ]
+    }
+  }, {
+    "name" : "region",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : {
+      "description" : "",
+      "mappings" : [ ],
+      "tags" : [ ]
+    }
+  }, {
+    "name" : "nation",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : {
+      "description" : "",
+      "mappings" : [ ],
+      "tags" : [ ]
+    }
+  }, {
+    "name" : "amounts",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : {
+      "description" : "",
+      "mappings" : [ ],
+      "tags" : [ ]
+    }
+  }, {
+    "name" : "month",
+    "type" : "string",
+    "nullable" : false,
+    "metadata" : {
+      "description" : "",
+      "mappings" : [ ],
+      "tags" : [ ]
+    }
+  } ]
+}
