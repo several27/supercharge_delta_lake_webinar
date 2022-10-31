@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 from mrr_reporting.config.ConfigStore import *
 from mrr_reporting.udfs.UDFs import *
 
-def cleanup(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def cleanup_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
     return in0.select(
         col("c_custkey"), 
         col("r_name").alias("region"), 
