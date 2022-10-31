@@ -67,3 +67,7 @@ Production release
 *** Release notes for version: 50.0 ***
 
 Release
+
+*** Release notes for version: 51.0 ***
+
+Latest release
