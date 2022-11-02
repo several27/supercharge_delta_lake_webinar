@@ -75,3 +75,7 @@ Latest release
 *** Release notes for version: 52.0 ***
 
 Latest release version
+
+*** Release notes for version: 53.0 ***
+
+This is my latest pipeline
