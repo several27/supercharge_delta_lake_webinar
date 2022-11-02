@@ -69,73 +69,13 @@
     "target" : "Rpvl6jvtf_w6aIiXt2rzp$$ZzebL3UCq6dvHxHzcRsO0",
     "targetPort" : "x4p0lYOIzMZWlOrk2iRK-$$G4IidmmJUpLdOfufmGcXs"
   }, {
-    "id" : "lVYvLTcQzqLJfN8WKhcxY",
+    "id" : "BbhRmXDZp2NPyyGlpYjAO",
     "source" : "urVJdBBIEYpCk0PkpqCm1$$difqmdwahAy-afB84jxkn",
     "sourcePort" : "XcyFSeJ2VCva9n_Ns02_i$$z45J0EiNa6_9WMmqi0Axr",
-    "target" : "61uW0yY_SrjqRdnBNL05e$$YJ5-9cwBNK6nOrBVSBxQu",
-    "targetPort" : "qb_FDwHZG0fdWoKax1kid$$Q2yrdBoM550Qb6YYtUN5Z"
-  }, {
-    "id" : "fNI5XwaM-xQMmc8T0oX3M",
-    "source" : "61uW0yY_SrjqRdnBNL05e$$YJ5-9cwBNK6nOrBVSBxQu",
-    "sourcePort" : "916o-dkGcAP0NulPtNt8l$$CRFA-N_ObLts2guGylUSj",
     "target" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
     "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$WTBPFzItS138klJwhpc7H"
   } ],
   "processes" : {
-    "61uW0yY_SrjqRdnBNL05e$$YJ5-9cwBNK6nOrBVSBxQu" : {
-      "id" : "61uW0yY_SrjqRdnBNL05e$$YJ5-9cwBNK6nOrBVSBxQu",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "formatAmounts",
-        "slug" : "formatAmounts",
-        "x" : 1133.1,
-        "y" : 460.20000000000005,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "qb_FDwHZG0fdWoKax1kid$$Q2yrdBoM550Qb6YYtUN5Z",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "916o-dkGcAP0NulPtNt8l$$CRFA-N_ObLts2guGylUSj",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "importLanguage" : "python",
-        "expressions" : [ {
-          "target" : "c_custkey",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "c_custkey"
-          },
-          "description" : ""
-        }, {
-          "target" : "month",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "month"
-          },
-          "description" : ""
-        }, {
-          "target" : "amounts",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "format_number(amounts, 2)"
-          },
-          "description" : ""
-        } ],
-        "importString" : "",
-        "activeTab" : "expressions",
-        "columnsSelector" : [ "qb_FDwHZG0fdWoKax1kid$$Q2yrdBoM550Qb6YYtUN5Z##c_custkey", "qb_FDwHZG0fdWoKax1kid$$Q2yrdBoM550Qb6YYtUN5Z##amounts", "qb_FDwHZG0fdWoKax1kid$$Q2yrdBoM550Qb6YYtUN5Z##month" ]
-      }
-    },
     "pO5YHh3nZnXt-eVREgBwa$$wwag5Zt9iWd0hs9tAbgd7" : {
       "id" : "pO5YHh3nZnXt-eVREgBwa$$wwag5Zt9iWd0hs9tAbgd7",
       "component" : "Source",
