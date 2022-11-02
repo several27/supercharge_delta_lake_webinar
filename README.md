@@ -71,3 +71,7 @@ Release
 *** Release notes for version: 51.0 ***
 
 Latest release
+
+*** Release notes for version: 52.0 ***
+
+Latest release version

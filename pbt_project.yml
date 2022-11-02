@@ -1,6 +1,6 @@
 name: supercharge_delta_lake
 description: ''
-version: '51.0'
+version: '52.0'
 author: maciej+webinar-2022@prophecy.io
 language: python
 buildSystem: wheel
