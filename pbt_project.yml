@@ -16,8 +16,16 @@ pipelines:
       inputs:
       - 3436/datasets/raw_customers
       outputs:
-      - 3436/datasets/bronze_customers
-    dependencies: {}
+      - gitUri=http://gitserver:3000/rLVau1rx_team_2256/3XBvMBpy_project_3887.git&subPath=&tag=data_platform/1.0&projectSubscriptionProjectId=3887&path=datasets/bronze_customers
+    dependencies:
+      project/3887:
+        name: project/3887
+        projectUID: 3887
+        projectName: data_platform
+        version: data_platform/1.0
+        author: null
+        repositoryPath: gitUri=http://gitserver:3000/rLVau1rx_team_2256/3XBvMBpy_project_3887.git&subPath=
+        createdAt: '2022-11-03 05:18:20'
   pipelines/ingest_orders:
     name: ingest_orders
     description: ''
@@ -40,10 +48,18 @@ pipelines:
     createdAt: '2022-09-29 01:33:01'
     datasets:
       inputs:
-      - 3436/datasets/bronze_customers
+      - gitUri=http://gitserver:3000/rLVau1rx_team_2256/3XBvMBpy_project_3887.git&subPath=&tag=data_platform/1.0&projectSubscriptionProjectId=3887&path=datasets/bronze_customers
       outputs:
       - 3436/datasets/silver_customers
-    dependencies: {}
+    dependencies:
+      project/3887:
+        name: project/3887
+        projectUID: 3887
+        projectName: data_platform
+        version: data_platform/1.0
+        author: null
+        repositoryPath: gitUri=http://gitserver:3000/rLVau1rx_team_2256/3XBvMBpy_project_3887.git&subPath=
+        createdAt: '2022-11-03 05:18:59'
   pipelines/mrr_reporting:
     name: mrr_reporting
     description: ''
@@ -54,13 +70,22 @@ pipelines:
     datasets:
       inputs:
       - 3436/datasets/silver_customers
-      - 3436/datasets/silvers_orders_1
       - 3436/datasets/customer_nations
       - 3436/datasets/regions
       - 3436/datasets/nation
+      - gitUri=http://gitserver:3000/8irjlvCW_team_2255/8irjlvCW_project_3433.git&subPath=&tag=HelloWorld/0.1&projectSubscriptionProjectId=3433&path=datasets/orders
+      - datasets/silver_orders
       outputs:
       - 3436/datasets/final_report
-    dependencies: {}
+    dependencies:
+      project/3433:
+        name: project/3433
+        projectUID: 3433
+        projectName: HelloWorld
+        version: HelloWorld/0.1
+        author: null
+        repositoryPath: gitUri=http://gitserver:3000/8irjlvCW_team_2255/8irjlvCW_project_3433.git&subPath=
+        createdAt: '2022-11-03 05:16:54'
   pipelines/cleanup_orders:
     name: cleanup_orders
     description: ''
@@ -207,6 +232,18 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-04 15:53:56'
+  datasets/orders_merge:
+    name: orders_merge
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-11-09 16:35:17'
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: Database
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-11-09 16:35:17'
   datasets/silvers_orders_1:
     name: silvers_orders_1
     description: ''

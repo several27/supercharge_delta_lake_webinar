@@ -68,7 +68,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "datasetId" : "3436/datasets/silver_customers"
+        "datasetId" : "datasets/silver_customers"
       }
     },
     "pQBrKiM5-Ryvf5OtXJGor$$k1UxAeFXVDVAoDISPX-bH" : {
@@ -94,7 +94,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "datasetId" : "3436/datasets/bronze_customers"
+        "datasetId" : "gitUri=http://gitserver:3000/rLVau1rx_team_2256/3XBvMBpy_project_3887.git&subPath=&tag=data_platform/1.0&projectSubscriptionProjectId=3887&path=datasets/bronze_customers"
       }
     }
   },

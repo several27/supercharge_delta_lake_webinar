@@ -1,0 +1,67 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: o_orderkey
+    type: long
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: o_custkey
+    type: long
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: o_orderstatus
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: o_totalprice
+    type: decimal(18,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: o_orderdate
+    type: date
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: o_orderpriority
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: o_clerk
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: o_shippriority
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: o_comment
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

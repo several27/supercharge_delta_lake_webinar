@@ -45,32 +45,6 @@
     "targetPort" : "kyf8OTLSO76IHV2oKkVlz$$J3zovZ00CrvdeJRQ3uQK9"
   } ],
   "processes" : {
-    "eqXOHVUaU09AhJMs6ptq5$$P658ZXZk4u5TzMro0lS4m" : {
-      "id" : "eqXOHVUaU09AhJMs6ptq5$$P658ZXZk4u5TzMro0lS4m",
-      "component" : "Target",
-      "metadata" : {
-        "label" : "bronze_customers_1",
-        "slug" : "bronze_customers_1",
-        "x" : 364,
-        "y" : 163.59999999999997,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "kyf8OTLSO76IHV2oKkVlz$$J3zovZ00CrvdeJRQ3uQK9",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/bronze_customers"
-      }
-    },
     "aN9lO2s97l9CREFrAIj_v$$ASMcodbtDMqWOb3oaXKqf" : {
       "id" : "aN9lO2s97l9CREFrAIj_v$$ASMcodbtDMqWOb3oaXKqf",
       "component" : "Source",
@@ -95,6 +69,32 @@
       },
       "properties" : {
         "datasetId" : "datasets/raw_customers"
+      }
+    },
+    "eqXOHVUaU09AhJMs6ptq5$$P658ZXZk4u5TzMro0lS4m" : {
+      "id" : "eqXOHVUaU09AhJMs6ptq5$$P658ZXZk4u5TzMro0lS4m",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "bronze_customers_1",
+        "slug" : "bronze_customers_1",
+        "x" : 364,
+        "y" : 163.59999999999997,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "kyf8OTLSO76IHV2oKkVlz$$J3zovZ00CrvdeJRQ3uQK9",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "gitUri=http://gitserver:3000/rLVau1rx_team_2256/3XBvMBpy_project_3887.git&subPath=&tag=data_platform/1.0&projectSubscriptionProjectId=3887&path=datasets/bronze_customers"
       }
     }
   },

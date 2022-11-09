@@ -68,7 +68,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "datasetId" : "3436/datasets/bronze_orders"
+        "datasetId" : "datasets/bronze_orders"
       }
     },
     "525DN_VSEYq2jfoH8IlGH$$If9xdiuI2tp7JBaKNoVCR" : {
@@ -77,8 +77,8 @@
       "metadata" : {
         "label" : "silver_orders",
         "slug" : "silver_orders",
-        "x" : 395.6,
-        "y" : 260.8,
+        "x" : 420.79999999999995,
+        "y" : 264.40000000000003,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -94,7 +94,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "datasetId" : "3436/datasets/silver_orders"
+        "datasetId" : "datasets/silver_orders"
       }
     }
   },
