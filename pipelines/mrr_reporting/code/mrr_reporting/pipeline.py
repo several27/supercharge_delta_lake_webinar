@@ -7,8 +7,8 @@ from prophecy.utils import *
 from mrr_reporting.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_silver_customers_0 = silver_customers_0(spark)
     df_silvers_orders = silvers_orders(spark)
+    df_silver_customers_0 = silver_customers_0(spark)
     df_by_customer_id = by_customer_id(spark, df_silver_customers_0, df_silvers_orders)
     df_sum_amounts = sum_amounts(spark, df_by_customer_id)
     df_Reformat_1 = Reformat_1(spark, df_sum_amounts)

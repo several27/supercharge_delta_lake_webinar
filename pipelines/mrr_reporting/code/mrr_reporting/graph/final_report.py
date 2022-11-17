@@ -5,4 +5,4 @@ from mrr_reporting.config.ConfigStore import *
 from mrr_reporting.udfs.UDFs import *
 
 def final_report(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("overwrite").saveAsTable("lakehouse.final_report")
+    in0.write.format("delta").mode("overwrite").saveAsTable(f"lakehouse.final_report")

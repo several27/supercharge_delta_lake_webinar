@@ -69,23 +69,14 @@ pipelines:
     createdAt: '2022-10-11 23:15:32'
     datasets:
       inputs:
-      - 3436/datasets/silver_customers
-      - 3436/datasets/customer_nations
-      - 3436/datasets/regions
-      - 3436/datasets/nation
-      - gitUri=http://gitserver:3000/8irjlvCW_team_2255/8irjlvCW_project_3433.git&subPath=&tag=HelloWorld/0.1&projectSubscriptionProjectId=3433&path=datasets/orders
+      - datasets/customer_nations
+      - datasets/nation
+      - datasets/regions
+      - datasets/silver_customers
       - datasets/silver_orders
       outputs:
-      - 3436/datasets/final_report
-    dependencies:
-      project/3433:
-        name: project/3433
-        projectUID: 3433
-        projectName: HelloWorld
-        version: HelloWorld/0.1
-        author: ''
-        repositoryPath: gitUri=http://gitserver:3000/8irjlvCW_team_2255/8irjlvCW_project_3433.git&subPath=
-        createdAt: '2022-11-03 05:16:54'
+      - datasets/final_report
+    dependencies: {}
   pipelines/cleanup_orders:
     name: cleanup_orders
     description: ''

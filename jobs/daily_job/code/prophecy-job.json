@@ -5,6 +5,9 @@
     "jobId" : "jobs/daily_job",
     "name" : "daily_job",
     "schedule" : "0 0 0 * * ? *",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
     "enabled" : false,
     "defaultClusterSize" : "small",
     "alerting" : {
