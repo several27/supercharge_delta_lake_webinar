@@ -83,3 +83,7 @@ This is my latest pipeline
 *** Release notes for version: 54.0 ***
 
 Production push
+
+*** Release notes for version: 55.0 ***
+
+This is a new release
