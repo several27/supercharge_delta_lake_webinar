@@ -87,3 +87,7 @@ Production push
 *** Release notes for version: 55.0 ***
 
 This is a new release
+
+*** Release notes for version: 56.0 ***
+
+New version of the project
