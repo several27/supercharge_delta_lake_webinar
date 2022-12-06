@@ -42,7 +42,7 @@
       "metadata" : {
         "label" : "cleanup_orders",
         "slug" : "cleanup_orders",
-        "x" : -130,
+        "x" : -134.8000030517578,
         "y" : 66
       },
       "ports" : {
@@ -66,7 +66,9 @@
         "pipelineId" : "pipelines/cleanup_orders",
         "configurations" : {
           "schema" : [ ],
-          "instances" : [ "default" ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default" ]
+          },
           "overrides" : { },
           "selectedInstance" : "default"
         }
@@ -102,7 +104,9 @@
         "pipelineId" : "pipelines/cleanup_customers",
         "configurations" : {
           "schema" : [ ],
-          "instances" : [ "default" ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default" ]
+          },
           "overrides" : { },
           "selectedInstance" : "default"
         }
@@ -145,7 +149,9 @@
               "value" : "in0.c_custkey = 1"
             }
           } ],
-          "instances" : [ "default" ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default" ]
+          },
           "overrides" : { },
           "selectedInstance" : "default"
         }
@@ -157,7 +163,7 @@
       "metadata" : {
         "label" : "ingest_orders",
         "slug" : "ingest_orders",
-        "x" : -340.79998779296875,
+        "x" : -345.5999755859375,
         "y" : 66
       },
       "ports" : {
@@ -181,7 +187,9 @@
         "pipelineId" : "pipelines/ingest_orders",
         "configurations" : {
           "schema" : [ ],
-          "instances" : [ "default" ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default" ]
+          },
           "overrides" : { },
           "selectedInstance" : "default"
         }
@@ -217,7 +225,9 @@
         "pipelineId" : "pipelines/ingest_customers",
         "configurations" : {
           "schema" : [ ],
-          "instances" : [ "default" ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default" ]
+          },
           "overrides" : { },
           "selectedInstance" : "default"
         }

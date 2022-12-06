@@ -14,18 +14,10 @@ pipelines:
     createdAt: '2022-09-29 01:19:30'
     datasets:
       inputs:
-      - 3436/datasets/raw_customers
+      - datasets/raw_customers
       outputs:
-      - gitUri=http://gitserver:3000/rLVau1rx_team_2256/3XBvMBpy_project_3887.git&subPath=&tag=data_platform/1.0&projectSubscriptionProjectId=3887&path=datasets/bronze_customers
-    dependencies:
-      project/3887:
-        name: project/3887
-        projectUID: 3887
-        projectName: data_platform
-        version: data_platform/1.0
-        author: ''
-        repositoryPath: gitUri=http://gitserver:3000/rLVau1rx_team_2256/3XBvMBpy_project_3887.git&subPath=
-        createdAt: '2022-11-03 05:18:20'
+      - datasets/bronze_customers
+    dependencies: {}
   pipelines/ingest_orders:
     name: ingest_orders
     description: ''
@@ -48,18 +40,10 @@ pipelines:
     createdAt: '2022-09-29 01:33:01'
     datasets:
       inputs:
-      - gitUri=http://gitserver:3000/rLVau1rx_team_2256/3XBvMBpy_project_3887.git&subPath=&tag=data_platform/1.0&projectSubscriptionProjectId=3887&path=datasets/bronze_customers
+      - datasets/bronze_customers
       outputs:
-      - 3436/datasets/silver_customers
-    dependencies:
-      project/3887:
-        name: project/3887
-        projectUID: 3887
-        projectName: data_platform
-        version: data_platform/1.0
-        author: ''
-        repositoryPath: gitUri=http://gitserver:3000/rLVau1rx_team_2256/3XBvMBpy_project_3887.git&subPath=
-        createdAt: '2022-11-03 05:18:59'
+      - datasets/silver_customers
+    dependencies: {}
   pipelines/mrr_reporting:
     name: mrr_reporting
     description: ''
@@ -388,3 +372,5 @@ subgraphs:
 sqlModels: {}
 sqlPipeline: null
 dependencies: []
+projectDependencies: {}
+pipelineConfigurations: {}
