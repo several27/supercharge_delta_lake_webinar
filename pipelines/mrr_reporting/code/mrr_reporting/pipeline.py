@@ -7,16 +7,13 @@ from prophecy.utils import *
 from mrr_reporting.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_silver_customers_0 = silver_customers_0(spark)
     df_silvers_orders = silvers_orders(spark)
+    df_silver_customers_0 = silver_customers_0(spark)
     df_by_customer_id = by_customer_id(spark, df_silver_customers_0, df_silvers_orders)
     df_sum_amounts = sum_amounts(spark, df_by_customer_id)
-    Target_1(spark, df_sum_amounts)
-    df_enrich_customers_1 = enrich_customers_1(spark, df_sum_amounts)
+    df_floor_amounts = floor_amounts(spark, df_sum_amounts)
+    df_enrich_customers_1 = enrich_customers_1(spark, df_floor_amounts)
     final_report(spark, df_enrich_customers_1)
-    df_RowDistributor_1_out0, df_RowDistributor_1_out1 = RowDistributor_1(spark)
-    df_Join_1 = Join_1(spark, df_RowDistributor_1_out1, df_RowDistributor_1_out0)
-    df_Filter_1 = Filter_1(spark)
 
 def main():
     spark = SparkSession.builder\

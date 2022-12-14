@@ -143,11 +143,11 @@
         "configurations" : {
           "schema" : [ {
             "name" : "filterExpression",
-            "optional" : false,
             "kind" : {
               "type" : "spark_expression",
               "value" : "in0.c_custkey = 1"
-            }
+            },
+            "optional" : false
           } ],
           "instances" : {
             "supercharge_delta_lake" : [ "default" ]
