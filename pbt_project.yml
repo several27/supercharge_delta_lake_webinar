@@ -369,6 +369,12 @@ subgraphs:
     author: maciej+webinar-2022@prophecy.io
     language: python
     createdAt: '2022-09-29 03:48:30'
+  subgraphs/customers_orders:
+    name: customers_orders
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    language: python
+    createdAt: '2022-12-14 21:18:35'
 sqlModels: {}
 sqlPipeline: null
 dependencies: []

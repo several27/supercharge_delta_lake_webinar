@@ -2,12 +2,12 @@
   "unitTests" : [ {
     "data" : {
       "ONgzseq5exaxU9nXExHrf$$mNwvp0pFWdHH5Our2D5WU" : {
-        "values" : [ [ "128354.27" ], [ "296974.61" ], [ "121186.07" ], [ "101461.58" ], [ "46975.08" ], [ "279623.29" ], [ "85783.61" ], [ "256564.37" ], [ "322106.45" ], [ "242901.89" ] ],
+        "values" : [ [ "1" ], [ "2" ], [ "3" ] ],
         "schema" : {
           "type" : "struct",
           "fields" : [ {
-            "name" : "amounts",
-            "type" : "decimal(28,2)",
+            "name" : "month",
+            "type" : "integer",
             "nullable" : true,
             "metadata" : {
               "description" : "",
@@ -19,13 +19,13 @@
         "predicates" : [ ]
       },
       "hutovkFDE9e5a1ulh67aD$$i1I1hs2mGSAuDC0LnbxXB" : {
-        "values" : [ [ "128,354.27zł" ], [ "296,974.61zł" ], [ "121,186.07zł" ], [ "101,461.58zł" ], [ "46,975.08zł" ], [ "279,623.29zł" ], [ "85,783.61zł" ], [ "256,564.37zł" ], [ "322,106.45zł" ], [ "242,901.89zł" ] ],
+        "values" : [ [ "January" ], [ "February" ], [ "June" ] ],
         "schema" : {
           "type" : "struct",
           "fields" : [ {
-            "name" : "amounts",
+            "name" : "month",
             "type" : "string",
-            "nullable" : true,
+            "nullable" : false,
             "metadata" : {
               "description" : "",
               "mappings" : [ ],
@@ -36,7 +36,7 @@
         "predicates" : [ ]
       }
     },
-    "name" : "Unit Test 0",
+    "name" : "Unit Test 1",
     "testType" : "outputRow",
     "language" : "python"
   } ],

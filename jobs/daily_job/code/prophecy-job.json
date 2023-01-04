@@ -201,8 +201,8 @@
       "metadata" : {
         "label" : "ingest_customers",
         "slug" : "ingest_customers",
-        "x" : -347.6000061035156,
-        "y" : -111.5999984741211
+        "x" : -345.20001220703125,
+        "y" : -108
       },
       "ports" : {
         "inputs" : [ {
@@ -241,12 +241,6 @@
     "sourcePort" : "8SY1RcD5gZz9lEYNC93-J$$os5dldqF3o-JBYks20Mxt",
     "targetPort" : "uLOshaetBNxvfjU_03cCJ$$NJ2KgZEgSIXdsyvvWVM_v"
   }, {
-    "id" : "QAryasySluTyoI9eVnhJf",
-    "source" : "IoOmt7RB3YU_4PEDFeOz-$$dtznb1B7HhKw3bvpjPjWr",
-    "target" : "2M0tSVe4al4RwltAcK-SU",
-    "sourcePort" : "EdvV9_IbvVojpdyVn3Ndn$$nptqba_ifDVmbAUdavL6I",
-    "targetPort" : "in"
-  }, {
     "id" : "iP4cc-k56_uaze_gY-iRX",
     "source" : "2M0tSVe4al4RwltAcK-SU",
     "target" : "Np4bZSoaA-LVJ8mN8XR4C$$bGRtAuPy--voJZBLDvfrI",
@@ -258,5 +252,11 @@
     "target" : "Np4bZSoaA-LVJ8mN8XR4C$$bGRtAuPy--voJZBLDvfrI",
     "sourcePort" : "amZAQaZKtmOUb9SxKi-EY$$J7yHVdugxy1-WMWSszzDB",
     "targetPort" : "MEwrcFReN4gqyDyvPkR2a$$LoH4B38LacxmC1_evB4xi"
+  }, {
+    "id" : "SvFuXqQYcWaAhyXQVQ43C",
+    "source" : "IoOmt7RB3YU_4PEDFeOz-$$dtznb1B7HhKw3bvpjPjWr",
+    "target" : "2M0tSVe4al4RwltAcK-SU",
+    "sourcePort" : "EdvV9_IbvVojpdyVn3Ndn$$nptqba_ifDVmbAUdavL6I",
+    "targetPort" : "in"
   } ]
 }
