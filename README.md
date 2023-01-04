@@ -95,3 +95,7 @@ New version of the project
 *** Release notes for version: 57.0 ***
 
 Demo release
+
+*** Release notes for version: 58.0 ***
+
+Release notes
