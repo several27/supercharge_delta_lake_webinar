@@ -99,3 +99,7 @@ Demo release
 *** Release notes for version: 58.0 ***
 
 Release notes
+
+*** Release notes for version: 59.0 ***
+
+Demo changes relase
