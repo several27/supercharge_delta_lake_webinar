@@ -32,6 +32,12 @@
       "clusterSizes" : {
         "default" : "small",
         "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
       }
     } ]
   },
@@ -201,8 +207,8 @@
       "metadata" : {
         "label" : "ingest_customers",
         "slug" : "ingest_customers",
-        "x" : -345.20001220703125,
-        "y" : -108
+        "x" : -342.8000183105469,
+        "y" : -110.4000015258789
       },
       "ports" : {
         "inputs" : [ {

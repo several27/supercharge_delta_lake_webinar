@@ -42,7 +42,7 @@
     "job_clusters" : [ {
       "job_cluster_key" : "daily_job_default_small",
       "new_cluster" : {
-        "spark_version" : "10.4.x-scala2.12",
+        "spark_version" : "11.3.x-scala2.12",
         "node_type_id" : "i3.xlarge",
         "spark_conf" : {
           "prophecy.metadata.job.uri" : "__PROJECT_ID_PLACEHOLDER__/jobs/daily_job",
@@ -72,7 +72,7 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:6.2.11-3.2.0"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:6.2.14-3.3.0"
         }
       }, {
         "pypi" : {
@@ -96,7 +96,7 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:6.2.11-3.2.0"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:6.2.14-3.3.0"
         }
       }, {
         "pypi" : {
@@ -117,7 +117,7 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:6.2.11-3.2.0"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:6.2.14-3.3.0"
         }
       }, {
         "pypi" : {
@@ -141,7 +141,7 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:6.2.11-3.2.0"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:6.2.14-3.3.0"
         }
       }, {
         "pypi" : {
@@ -167,7 +167,7 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:6.2.11-3.2.0"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:6.2.14-3.3.0"
         }
       }, {
         "pypi" : {
