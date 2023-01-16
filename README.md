@@ -103,3 +103,7 @@ Release notes
 *** Release notes for version: 59.0 ***
 
 Demo changes relase
+
+*** Release notes for version: 60.0 ***
+
+Release
