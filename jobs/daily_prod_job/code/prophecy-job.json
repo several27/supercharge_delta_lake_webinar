@@ -39,6 +39,19 @@
       "scalalibsResolutionMode" : {
         "PublicCentral" : { }
       }
+    }, {
+      "id" : "1394",
+      "name" : "dev-uc",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
     } ]
   },
   "processes" : {

@@ -45,7 +45,7 @@
     "interimModeEnabled" : true,
     "visualCodeInterimMode" : "Disabled",
     "recordsLimit" : {
-      "enabled" : false,
+      "enabled" : true,
       "value" : 10000
     },
     "topLevelPackage" : "mrr_reporting"
@@ -678,7 +678,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "2RNHVIKAO0DKPn4Gij1SX$$6nZkYHIsHBYFSOPQ_9-e5##amounts", "2RNHVIKAO0DKPn4Gij1SX$$6nZkYHIsHBYFSOPQ_9-e5##c_custkey", "2RNHVIKAO0DKPn4Gij1SX$$6nZkYHIsHBYFSOPQ_9-e5##month" ]
+        "columnsSelector" : [ "2RNHVIKAO0DKPn4Gij1SX$$6nZkYHIsHBYFSOPQ_9-e5##month", "2RNHVIKAO0DKPn4Gij1SX$$6nZkYHIsHBYFSOPQ_9-e5##c_custkey", "2RNHVIKAO0DKPn4Gij1SX$$6nZkYHIsHBYFSOPQ_9-e5##amounts" ]
       }
     }
   },
