@@ -24,25 +24,25 @@
     "packageName" : "customers_orders"
   },
   "connections" : [ {
-    "id" : "4vGW7dXqkt3Y0Fa4-Miis",
+    "id" : "4m9s2IsuD8zM8HZDKGQng",
     "source" : "kdwIGRQ7fZiuwHO_7ihig",
     "sourcePort" : "jthw3ZX_Ll0V4MG5WuKgw",
     "target" : "XDCIJEeD8TCeI6XK4nOoS",
     "targetPort" : "unqaHvaO2vrOM14D6BBpP"
   }, {
-    "id" : "CHVSIXetkRa67iqsw5o6k",
+    "id" : "nafGp3E_n0Vk_c8KVF7Tf",
     "source" : "QMUItH6yWpR_7GUl9jrb1",
     "sourcePort" : "b2-7m88i2LymcD4WAvt0H",
     "target" : "XDCIJEeD8TCeI6XK4nOoS",
     "targetPort" : "Z3gZ8YP56Qs_lqjoQpaTv"
   }, {
-    "id" : "wq25O-JdQWzRo7TVHUrDH",
+    "id" : "nVpUT-zFunMro0uUScIfK",
     "source" : "XDCIJEeD8TCeI6XK4nOoS",
     "sourcePort" : "QAnxfhY_IDJf1QWf2qvoG",
     "target" : "CgpabChXR8XdIdSKTzjhS",
     "targetPort" : "ksDeVsrI1BNwkGQlox0nI"
   }, {
-    "id" : "_PIAL49UGVfZ74EIT7_tv",
+    "id" : "5apu4AOVdXYoYb-qk36fG",
     "source" : "CgpabChXR8XdIdSKTzjhS",
     "sourcePort" : "6KQpFx508hZ8x6fMg9Ulb",
     "target" : "_84uNtRofsH2rEIXg_Qps",
@@ -55,8 +55,8 @@
       "metadata" : {
         "label" : "silvers_orders_1",
         "slug" : "silvers_orders_1",
-        "x" : 160.00075721668668,
-        "y" : 360,
+        "x" : 180.00075721668668,
+        "y" : 380,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -233,8 +233,8 @@
       "metadata" : {
         "label" : "by_customer_id_1",
         "slug" : "by_customer_id_1",
-        "x" : 405.0003331579282,
-        "y" : 260,
+        "x" : 425.0003331579282,
+        "y" : 280,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -290,8 +290,8 @@
       "metadata" : {
         "label" : "silver_customers_0_1",
         "slug" : "silver_customers_0_1",
-        "x" : 160.00027976117462,
-        "y" : 160,
+        "x" : 180.00027976117462,
+        "y" : 180,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -459,8 +459,8 @@
       "metadata" : {
         "label" : "sum_amounts_1",
         "slug" : "sum_amounts_1",
-        "x" : 666.0006023002996,
-        "y" : 260.4,
+        "x" : 686.0006023002996,
+        "y" : 280.4,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,

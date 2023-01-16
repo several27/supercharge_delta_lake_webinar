@@ -45,7 +45,7 @@
     "interimModeEnabled" : true,
     "visualCodeInterimMode" : "Disabled",
     "recordsLimit" : {
-      "enabled" : true,
+      "enabled" : false,
       "value" : 10000
     },
     "topLevelPackage" : "mrr_reporting"
@@ -94,8 +94,8 @@
       "metadata" : {
         "label" : "silvers_orders",
         "slug" : "silvers_orders",
-        "x" : 120.00075721668667,
-        "y" : 320,
+        "x" : 126.00096689639656,
+        "y" : 378,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -120,8 +120,8 @@
       "metadata" : {
         "label" : "enrich_customers_1",
         "slug" : "enrich_customers_1",
-        "x" : 1102.6003806049187,
-        "y" : 218.8,
+        "x" : 920.000478152732,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -319,7 +319,7 @@
               "target" : "month",
               "expression" : {
                 "format" : "sql",
-                "expression" : "CASE WHEN (month = 1) THEN 'January' WHEN (month = 2) THEN 'February' WHEN (month = 3) THEN 'March' WHEN (month = 4) THEN 'April' WHEN (month = 5) THEN 'May' WHEN (month = 6) THEN 'June' WHEN (month = 7) THEN 'July' WHEN (month = 8) THEN 'August' WHEN (month = 9) THEN 'September' WHEN (month = 10) THEN 'October' WHEN (month = 11) THEN 'November' ELSE 'December' END"
+                "expression" : "case \n    when month = 1 then 'January'\n    when month = 2 then 'February'\n    when month = 3 then 'March'\n    when month = 4 then 'April'\n    when month = 5 then 'May'\n    when month = 6 then 'June'\n    when month = 7 then 'July'\n    when month = 8 then 'August'\n    when month = 9 then 'September'\n    when month = 10 then 'October'\n    when month = 11 then 'November'\n    else 'December' \nend"
               },
               "description" : ""
             } ]
@@ -364,21 +364,21 @@
               "alias" : "in1",
               "expression" : {
                 "format" : "sql",
-                "expression" : "(in0.c_custkey = in1.c_custkey)"
+                "expression" : "in0.c_custkey = in1.c_custkey"
               },
               "joinType" : "inner"
             }, {
               "alias" : "in2",
               "expression" : {
                 "format" : "sql",
-                "expression" : "(in2.n_nationkey = in1.c_nationkey)"
+                "expression" : "in2.n_nationkey = in1.c_nationkey"
               },
               "joinType" : "inner"
             }, {
               "alias" : "in3",
               "expression" : {
                 "format" : "sql",
-                "expression" : "(in3.r_regionkey = in2.n_regionkey)"
+                "expression" : "in3.r_regionkey = in2.n_regionkey"
               },
               "joinType" : "inner"
             } ],
@@ -463,8 +463,8 @@
       "metadata" : {
         "label" : "final_report",
         "slug" : "final_report",
-        "x" : 1404.400465475421,
-        "y" : 218.80000000000007,
+        "x" : 1120.000013751573,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -489,7 +489,7 @@
       "metadata" : {
         "label" : "by_customer_id",
         "slug" : "by_customer_id",
-        "x" : 365.0003331579282,
+        "x" : 320.0004457168635,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
@@ -546,8 +546,8 @@
       "metadata" : {
         "label" : "silver_customers_0",
         "slug" : "silver_customers_0",
-        "x" : 120.00027976117461,
-        "y" : 120,
+        "x" : 120.00030474618049,
+        "y" : 102.79999999999995,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -572,8 +572,8 @@
       "metadata" : {
         "label" : "sum_amounts",
         "slug" : "sum_amounts",
-        "x" : 626.0006023002996,
-        "y" : 220.39999999999998,
+        "x" : 520.0005257842217,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -633,8 +633,8 @@
       "metadata" : {
         "label" : "cleanup_amounts",
         "slug" : "cleanup_amounts",
-        "x" : 869.0003726182977,
-        "y" : 224.4,
+        "x" : 720.0002921869169,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
