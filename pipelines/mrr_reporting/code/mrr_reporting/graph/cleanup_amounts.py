@@ -5,4 +5,9 @@ from mrr_reporting.config.ConfigStore import *
 from mrr_reporting.udfs.UDFs import *
 
 def cleanup_amounts(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.select(col("c_custkey"), col("month"), floor(col("amounts")).alias("amounts"))
+    return in0.select(
+        col("c_custkey"), 
+        col("month"), 
+        floor(col("amounts")).alias("amounts"), 
+        concat(col("month"), col("amounts")).alias("unique_id")
+    )

@@ -675,6 +675,13 @@
             "expression" : "floor(amounts)"
           },
           "description" : ""
+        }, {
+          "target" : "unique_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat(month, amounts)"
+          },
+          "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
