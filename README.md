@@ -107,3 +107,7 @@ Demo changes relase
 *** Release notes for version: 60.0 ***
 
 Release
+
+*** Release notes for version: 61.0 ***
+
+This is a new release
