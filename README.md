@@ -111,3 +111,7 @@ Release
 *** Release notes for version: 61.0 ***
 
 This is a new release
+
+*** Release notes for version: 62.0 ***
+
+New release with some changes
