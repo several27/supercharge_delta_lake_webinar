@@ -3,10 +3,10 @@ from prophecy.config import ConfigBase
 
 class Config(ConfigBase):
 
-    def __init__(self, filterExpression: str=None):
+    def __init__(self, user_name: str=None):
         self.spark = None
-        self.update(filterExpression)
+        self.update(user_name)
 
-    def update(self, filterExpression: str="in0.c_custkey = 1"):
-        self.filterExpression = filterExpression
+    def update(self, user_name: str="enter_your_user_name"):
+        self.user_name = user_name
         pass

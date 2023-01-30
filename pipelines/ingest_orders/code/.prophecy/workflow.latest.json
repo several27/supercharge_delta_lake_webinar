@@ -18,9 +18,15 @@
         "type" : "record",
         "fields" : [ ]
       },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
       "fabrics" : { },
       "instances" : { },
-      "selected" : "default"
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
     },
     "sparkConf" : [ ],
     "hadoopConf" : [ ],
@@ -68,7 +74,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "datasetId" : "3436/datasets/bronze_orders"
+        "datasetId" : "datasets/bronze_orders"
       }
     },
     "gHAvlF8rwVBLip9Misf8v$$hczG1MJG1U6ygf5CBJV53" : {
@@ -94,7 +100,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "datasetId" : "3436/datasets/raw_orders"
+        "datasetId" : "datasets/raw_orders"
       }
     }
   },
