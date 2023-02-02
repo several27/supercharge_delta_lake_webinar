@@ -56,7 +56,7 @@ pipelines:
       - datasets/customer_nations
       - datasets/nation
       - datasets/regions
-      - datasets/silver_customers
+      - datasets/silver_customers_2
       - datasets/silver_orders
       outputs:
       - datasets/final_report
@@ -322,6 +322,32 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:30:31'
+  datasets/maciej_customer_spendings:
+    name: maciej_customer_spendings
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2023-01-30 23:31:14'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: Database
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2023-01-30 23:31:14'
+  datasets/qwe:
+    name: qwe
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2023-01-31 06:33:38'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: Warehouse
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2023-01-31 06:33:38'
 templates: {}
 jobs:
   jobs/daily_job:

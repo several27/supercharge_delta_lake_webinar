@@ -69,46 +69,42 @@
     "target" : "urVJdBBIEYpCk0PkpqCm1$$difqmdwahAy-afB84jxkn",
     "targetPort" : "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY"
   }, {
-    "id" : "XqbKRcd5_37bGygmCBWVY",
-    "source" : "YA-t-ZHI0P9S3UJ8Krc08$$oXlhjRvSIPP6H9VAbtrs8",
-    "sourcePort" : "-OzQ5iCnhblX5NPqdE6en$$eXr0ItnlWeJaMETgcQwgF",
+    "id" : "Hd24xhzDYrqaj06Yq1PJd",
+    "source" : "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy",
+    "sourcePort" : "iG3b_lBYNrvozN1jayuau$$OImvC0aVAhhf3irvxPGZu",
     "target" : "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc",
     "targetPort" : "rO09ozwMBm_SlbxvVxHYc$$1fOOHaegJlTT04hywlsDb"
   }, {
-    "id" : "7gRaiBL8-DpPigjujqzmO",
+    "id" : "4xXaPao6UQOcP6oo0QiuF",
     "source" : "urVJdBBIEYpCk0PkpqCm1$$difqmdwahAy-afB84jxkn",
     "sourcePort" : "XcyFSeJ2VCva9n_Ns02_i$$z45J0EiNa6_9WMmqi0Axr",
-    "target" : "hhDHsKjpZ0yJ-I4t4dKQg$$BNNnCBLf-AMLjvWAFSNPT",
-    "targetPort" : "oMs0fSlhStt7f8KyGe4fM$$DSXgqAXZBRIgNxi7WcqS8"
+    "target" : "7fAoM-nYxBcHDFk8596Qb$$a1ZbbvZzyTo3SpsTRBbJk",
+    "targetPort" : "S9uq54to6tUE0Vmkhi6tr$$VfuUXWv0F8ncBMkJAoyfq"
   }, {
-    "id" : "rAzz73KTLY7l6dVP7WP8L",
-    "source" : "hhDHsKjpZ0yJ-I4t4dKQg$$BNNnCBLf-AMLjvWAFSNPT",
-    "sourcePort" : "mZTlSS_FZo7_e3hNFeAYr$$cQ0cYAJNbkhUYe3RIKHER",
+    "id" : "4rHJKqkVruBNiHxnzfFtO",
+    "source" : "7fAoM-nYxBcHDFk8596Qb$$a1ZbbvZzyTo3SpsTRBbJk",
+    "sourcePort" : "MUKxYErn8oXhKMHYynvsT$$27AvleST2qnc4rJ6jZtbZ",
     "target" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
     "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$WTBPFzItS138klJwhpc7H"
   } ],
   "processes" : {
-    "hhDHsKjpZ0yJ-I4t4dKQg$$BNNnCBLf-AMLjvWAFSNPT" : {
-      "id" : "hhDHsKjpZ0yJ-I4t4dKQg$$BNNnCBLf-AMLjvWAFSNPT",
-      "component" : "Reformat",
+    "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy" : {
+      "id" : "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy",
+      "component" : "Source",
       "metadata" : {
-        "label" : "clear_amounts",
-        "slug" : "clear_amounts",
-        "x" : 700,
-        "y" : 220,
+        "label" : "silver_customers_2_1",
+        "slug" : "silver_customers_2_1",
+        "x" : 120,
+        "y" : 100,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false
       },
       "ports" : {
-        "inputs" : [ {
-          "id" : "oMs0fSlhStt7f8KyGe4fM$$DSXgqAXZBRIgNxi7WcqS8",
-          "slug" : "in0",
-          "isStreaming" : false
-        } ],
+        "inputs" : [ ],
         "outputs" : [ {
-          "id" : "mZTlSS_FZo7_e3hNFeAYr$$cQ0cYAJNbkhUYe3RIKHER",
+          "id" : "iG3b_lBYNrvozN1jayuau$$OImvC0aVAhhf3irvxPGZu",
           "slug" : "out",
           "isStreaming" : false
         } ],
@@ -116,32 +112,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "importLanguage" : "python",
-        "expressions" : [ {
-          "target" : "c_custkey",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "c_custkey"
-          },
-          "description" : ""
-        }, {
-          "target" : "month",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "month"
-          },
-          "description" : ""
-        }, {
-          "target" : "amounts",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "floor(amounts)"
-          },
-          "description" : ""
-        } ],
-        "importString" : "",
-        "activeTab" : "expressions",
-        "columnsSelector" : [ "oMs0fSlhStt7f8KyGe4fM$$DSXgqAXZBRIgNxi7WcqS8##amounts", "oMs0fSlhStt7f8KyGe4fM$$DSXgqAXZBRIgNxi7WcqS8##month", "oMs0fSlhStt7f8KyGe4fM$$DSXgqAXZBRIgNxi7WcqS8##c_custkey" ]
+        "datasetId" : "datasets/silver_customers_2"
       }
     },
     "pO5YHh3nZnXt-eVREgBwa$$wwag5Zt9iWd0hs9tAbgd7" : {
@@ -177,7 +148,7 @@
       "metadata" : {
         "label" : "enrich_customers_1",
         "slug" : "enrich_customers_1",
-        "x" : 900,
+        "x" : 960,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
@@ -529,7 +500,7 @@
       "metadata" : {
         "label" : "final_report",
         "slug" : "final_report",
-        "x" : 1120.000013751573,
+        "x" : 1180,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
@@ -603,30 +574,34 @@
           "propagateColumns" : false
         } ],
         "allIn1" : null,
-        "activeTab" : "expressions",
+        "activeTab" : "conditions",
         "columnsSelector" : [ "rO09ozwMBm_SlbxvVxHYc$$1fOOHaegJlTT04hywlsDb##c_custkey", "rxD22Q4qOC90N0Zmua4pL$$f9Klkw_MyTM6m9EueTx67##o_custkey" ],
         "allIn0" : null,
         "whereClause" : null,
         "headAlias" : "in0"
       }
     },
-    "YA-t-ZHI0P9S3UJ8Krc08$$oXlhjRvSIPP6H9VAbtrs8" : {
-      "id" : "YA-t-ZHI0P9S3UJ8Krc08$$oXlhjRvSIPP6H9VAbtrs8",
-      "component" : "Source",
+    "7fAoM-nYxBcHDFk8596Qb$$a1ZbbvZzyTo3SpsTRBbJk" : {
+      "id" : "7fAoM-nYxBcHDFk8596Qb$$a1ZbbvZzyTo3SpsTRBbJk",
+      "component" : "Reformat",
       "metadata" : {
-        "label" : "silver_customers_0",
-        "slug" : "silver_customers_0",
-        "x" : 120.00030474618049,
-        "y" : 102.79999999999995,
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 760,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false
       },
       "ports" : {
-        "inputs" : [ ],
+        "inputs" : [ {
+          "id" : "S9uq54to6tUE0Vmkhi6tr$$VfuUXWv0F8ncBMkJAoyfq",
+          "slug" : "in0",
+          "isStreaming" : false
+        } ],
         "outputs" : [ {
-          "id" : "-OzQ5iCnhblX5NPqdE6en$$eXr0ItnlWeJaMETgcQwgF",
+          "id" : "MUKxYErn8oXhKMHYynvsT$$27AvleST2qnc4rJ6jZtbZ",
           "slug" : "out",
           "isStreaming" : false
         } ],
@@ -634,7 +609,32 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "datasetId" : "datasets/silver_customers"
+        "importLanguage" : "python",
+        "expressions" : [ {
+          "target" : "c_custkey",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_custkey"
+          },
+          "description" : ""
+        }, {
+          "target" : "month",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "month"
+          },
+          "description" : ""
+        }, {
+          "target" : "amounts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "floor(amounts)"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "S9uq54to6tUE0Vmkhi6tr$$VfuUXWv0F8ncBMkJAoyfq##month", "S9uq54to6tUE0Vmkhi6tr$$VfuUXWv0F8ncBMkJAoyfq##amounts", "S9uq54to6tUE0Vmkhi6tr$$VfuUXWv0F8ncBMkJAoyfq##c_custkey" ]
       }
     },
     "urVJdBBIEYpCk0PkpqCm1$$difqmdwahAy-afB84jxkn" : {
@@ -643,7 +643,7 @@
       "metadata" : {
         "label" : "sum_amounts",
         "slug" : "sum_amounts",
-        "x" : 520.0005257842217,
+        "x" : 560,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
@@ -680,7 +680,7 @@
         "pivotColumn" : null,
         "pivotValues" : [ ],
         "activeTab" : "aggregate",
-        "columnsSelector" : [ "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##o_orderdate", "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##o_totalprice", "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##c_custkey" ],
+        "columnsSelector" : [ "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##o_totalprice", "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##c_custkey", "bUlkEJlyTO54Tgfl0Fqt5$$K57LIBXZdWJAZYOig5uhY##o_orderdate" ],
         "groupBy" : [ {
           "target" : "c_custkey",
           "expression" : {
