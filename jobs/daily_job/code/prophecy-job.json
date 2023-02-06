@@ -61,8 +61,8 @@
       "metadata" : {
         "label" : "cleanup_orders",
         "slug" : "cleanup_orders",
-        "x" : -134.8000030517578,
-        "y" : 66
+        "x" : -140,
+        "y" : 60
       },
       "ports" : {
         "inputs" : [ {
@@ -99,8 +99,8 @@
       "metadata" : {
         "label" : "cleanup_customers",
         "slug" : "cleanup_customers",
-        "x" : -142.39999389648438,
-        "y" : -111.19999694824219
+        "x" : -140,
+        "y" : -120
       },
       "ports" : {
         "inputs" : [ {
@@ -137,8 +137,8 @@
       "metadata" : {
         "label" : "mrr_reporting_1",
         "slug" : "mrr_reporting",
-        "x" : 82.48123931884766,
-        "y" : -30.399999618530273
+        "x" : 80,
+        "y" : -40
       },
       "ports" : {
         "inputs" : [ {
@@ -161,10 +161,10 @@
         "pipelineId" : "pipelines/mrr_reporting",
         "configurations" : {
           "schema" : [ {
-            "name" : "filterExpression",
+            "name" : "user_name",
             "kind" : {
-              "type" : "spark_expression",
-              "value" : "in0.c_custkey = 1"
+              "type" : "string",
+              "value" : "enter_your_user_name"
             },
             "optional" : false
           } ],
@@ -182,8 +182,8 @@
       "metadata" : {
         "label" : "ingest_orders",
         "slug" : "ingest_orders",
-        "x" : -345.5999755859375,
-        "y" : 66
+        "x" : -340,
+        "y" : 60
       },
       "ports" : {
         "inputs" : [ {
@@ -220,8 +220,8 @@
       "metadata" : {
         "label" : "ingest_customers",
         "slug" : "ingest_customers",
-        "x" : -342.8000183105469,
-        "y" : -110.4000015258789
+        "x" : -340,
+        "y" : -120
       },
       "ports" : {
         "inputs" : [ {
