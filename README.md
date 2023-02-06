@@ -123,3 +123,7 @@ Demo release
 *** Release notes for version: 64.0 ***
 
 Some release notes
+
+*** Release notes for version: 65.0 ***
+
+Next release
