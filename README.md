@@ -119,3 +119,7 @@ New release with some changes
 *** Release notes for version: 63.0 ***
 
 Demo release 
+
+*** Release notes for version: 64.0 ***
+
+Some release notes
