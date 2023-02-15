@@ -1,0 +1,220 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "language" : "python",
+    "fabricId" : "1034",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "sl_conversion_use_cases"
+  },
+  "connections" : [ {
+    "id" : "tPkbHPiYUoHmIR5BVw_tu",
+    "source" : "3yIJziHrivR_eGyMFL53Z$$sHBGAAZvKAjLmw2_2L9UQ",
+    "sourcePort" : "BiZRJPEOepIMwYBNDaUbA$$I2GgYNO4Em3u8ibzRcM_F",
+    "target" : "gEQaxVha7nauyVQJl-dqf$$i6hr2Wcnp-BZP6Ldw4UKj",
+    "targetPort" : "JaVLXOR1F3pxHa7mVtLyU$$0rMUkGjdqbgavJc_of45N"
+  }, {
+    "id" : "9acenPe8JrSp8ANZbbjMm",
+    "source" : "3yIJziHrivR_eGyMFL53Z$$sHBGAAZvKAjLmw2_2L9UQ",
+    "sourcePort" : "BiZRJPEOepIMwYBNDaUbA$$I2GgYNO4Em3u8ibzRcM_F",
+    "target" : "tGh8lwkNrlLSvGOizwwrN$$7cpA8CyOniOm-Ymv7oDUy",
+    "targetPort" : "E5GDhN8nLMouRt_sTlVFY$$x29NQq8jN_T5STsMyl1iX"
+  }, {
+    "id" : "_Cj5dSRn8pwuecyNeMa8B",
+    "source" : "3yIJziHrivR_eGyMFL53Z$$sHBGAAZvKAjLmw2_2L9UQ",
+    "sourcePort" : "BiZRJPEOepIMwYBNDaUbA$$I2GgYNO4Em3u8ibzRcM_F",
+    "target" : "A3Wr7zuokQri-9mN1p9yP$$T1KMzr430ICtHdoh7FpEw",
+    "targetPort" : "KsHEsvMZEWNhtA0ts283M$$UKBjqAq5_5kZlc4O0YDdU"
+  }, {
+    "id" : "s4lK5HirpMk-OYoweIUAg",
+    "source" : "A3Wr7zuokQri-9mN1p9yP$$T1KMzr430ICtHdoh7FpEw",
+    "sourcePort" : "20eM_K7QklEPvIBRrTsr9$$MSsQGay3vKxKkrnAeRp6t",
+    "target" : "494m5A9Z7T-t-GQg4ojof$$LKJPszZLGf9qh1ihueMfl",
+    "targetPort" : "7me26wm2GmU3NIBuoSkHQ$$cMpsIGxnnWDDtOEn5RPTP"
+  } ],
+  "processes" : {
+    "494m5A9Z7T-t-GQg4ojof$$LKJPszZLGf9qh1ihueMfl" : {
+      "id" : "494m5A9Z7T-t-GQg4ojof$$LKJPszZLGf9qh1ihueMfl",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "CustomEmail_1",
+        "slug" : "CustomEmail_1",
+        "x" : 720,
+        "y" : 600,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "7me26wm2GmU3NIBuoSkHQ$$cMpsIGxnnWDDtOEn5RPTP",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> None:",
+        "scriptMethodFooter" : "    return "
+      }
+    },
+    "gEQaxVha7nauyVQJl-dqf$$i6hr2Wcnp-BZP6Ldw4UKj" : {
+      "id" : "gEQaxVha7nauyVQJl-dqf$$i6hr2Wcnp-BZP6Ldw4UKj",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "CustomEmail",
+        "slug" : "CustomEmail",
+        "x" : 520,
+        "y" : 160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JaVLXOR1F3pxHa7mVtLyU$$0rMUkGjdqbgavJc_of45N",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "TLAQ7hqD38NvcikUUBvhd$$cYbATy8VLggJFzGa8XWHU",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "script" : "",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "A3Wr7zuokQri-9mN1p9yP$$T1KMzr430ICtHdoh7FpEw" : {
+      "id" : "A3Wr7zuokQri-9mN1p9yP$$T1KMzr430ICtHdoh7FpEw",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "PipelineCall",
+        "slug" : "PipelineCall",
+        "x" : 520,
+        "y" : 600,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KsHEsvMZEWNhtA0ts283M$$UKBjqAq5_5kZlc4O0YDdU",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "20eM_K7QklEPvIBRrTsr9$$MSsQGay3vKxKkrnAeRp6t",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "import requests\n\n# STEP 1: Enter your workspace ID here\ndomain = 'https://dbc-147abc45-b6c7.cloud.databricks.com'\n# STEP 2: Ensure you have a workspace.token secret created and accessible\ntoken = dbutils.secrets.get(scope='workspace', key='token')\n\nresponse = requests.post(\n    '%s/api/2.1/jobs/run-now' % (domain),\n    headers={'Authorization': 'Bearer %s' % token},\n    # STEP 3: Enter a job_id you'd like to trigger\n    json={'job_id': '549136548916411'}\n)\n\nif response.status_code == 200:\n    print(response.json())\nelse:\n    raise Exception('An error occurred triggering the job. Complete error: %s' % (response.json()))\n    \n\nout0 = spark.read.table(\"metadat\")",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "tGh8lwkNrlLSvGOizwwrN$$7cpA8CyOniOm-Ymv7oDUy" : {
+      "id" : "tGh8lwkNrlLSvGOizwwrN$$7cpA8CyOniOm-Ymv7oDUy",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "UpsertSQL",
+        "slug" : "UpsertSQL",
+        "x" : 600,
+        "y" : 380,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "E5GDhN8nLMouRt_sTlVFY$$x29NQq8jN_T5STsMyl1iX",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : { }
+    },
+    "3yIJziHrivR_eGyMFL53Z$$sHBGAAZvKAjLmw2_2L9UQ" : {
+      "id" : "3yIJziHrivR_eGyMFL53Z$$sHBGAAZvKAjLmw2_2L9UQ",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "silver_customers_0",
+        "slug" : "silver_customers_0",
+        "x" : 200,
+        "y" : 360,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "BiZRJPEOepIMwYBNDaUbA$$I2GgYNO4Em3u8ibzRcM_F",
+          "slug" : "out",
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/silver_customers"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}

@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 setup(
-    name = 'ingest_orders',
+    name = 'sl_conversion_use_cases',
     version = '1.0',
-    packages = find_packages(include = ('ingest_orders*', )) + ["prophecy_config_instances"],
+    packages = find_packages(include = ('sl_conversion_use_cases*', )) + ["prophecy_config_instances"],
     package_dir = {'prophecy_config_instances' : 'configs/resources/config'},
     package_data = {'prophecy_config_instances' : ['*.json', '*.py']},
     description = 'workflow',
@@ -10,7 +10,7 @@ setup(
 'prophecy-libs==1.3.22'],
     entry_points = {
 'console_scripts' : [
-'main = ingest_orders.pipeline:main'], },
+'main = sl_conversion_use_cases.pipeline:main'], },
     data_files = [(".prophecy", [".prophecy/workflow.latest.json"])],
     extras_require = {
 'test' : ['pytest', 'pytest-html'], }
