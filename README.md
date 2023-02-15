@@ -127,3 +127,7 @@ Some release notes
 *** Release notes for version: 65.0 ***
 
 Next release
+
+*** Release notes for version: 66.0 ***
+
+Some new release
