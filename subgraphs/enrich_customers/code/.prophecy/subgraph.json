@@ -265,6 +265,11 @@
           "icon" : "File",
           "width" : "220px"
         }, {
+          "label" : "RANDOMDATACREATOR",
+          "value" : "RandomDataCreator",
+          "icon" : "File",
+          "width" : "220px"
+        }, {
           "label" : "KAFKASTREAM",
           "value" : "KafkaStream",
           "icon" : "File",
@@ -287,7 +292,7 @@
         } ],
         "datasetId" : "datasets/nation",
         "updated" : true,
-        "currentDatasetId" : "3436/datasets/nation",
+        "currentDatasetId" : "datasets/nation",
         "dataset" : {
           "mergeCondition" : null,
           "minFlagCol" : null,

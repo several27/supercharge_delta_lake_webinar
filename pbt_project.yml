@@ -434,6 +434,13 @@ subgraphs:
     language: python
     mode: batch
     createdAt: '2022-12-14 21:18:35'
+  subgraphs/data_cleanup:
+    name: data_cleanup
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    language: python
+    mode: batch
+    createdAt: '2023-02-17 04:35:57'
 sqlModels: {}
 sqlPipeline: null
 dependencies: []

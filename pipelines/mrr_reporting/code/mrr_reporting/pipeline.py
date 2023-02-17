@@ -10,10 +10,10 @@ def pipeline(spark: SparkSession) -> None:
     df_silvers_orders = silvers_orders(spark)
     df_silver_customers_2_1 = silver_customers_2_1(spark)
     df_by_customer_id = by_customer_id(spark, df_silver_customers_2_1, df_silvers_orders)
-    df_sum_amounts = sum_amounts(spark, df_by_customer_id)
-    df_cleanup_amounts = cleanup_amounts(spark, df_sum_amounts)
-    df_enrich_customers_1 = enrich_customers_1(spark, df_cleanup_amounts)
+    df_data_cleanup = data_cleanup(spark, df_by_customer_id)
+    df_enrich_customers_1 = enrich_customers_1(spark, df_data_cleanup)
     final_report(spark, df_enrich_customers_1)
+    df_data_cleanup_1 = data_cleanup_1(spark)
 
 def main():
     spark = SparkSession.builder\
