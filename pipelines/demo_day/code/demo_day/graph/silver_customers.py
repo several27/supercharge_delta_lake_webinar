@@ -5,5 +5,5 @@ from prophecy.libs import typed_lit
 from demo_day.config.ConfigStore import *
 from demo_day.udfs.UDFs import *
 
-def nation_1(spark: SparkSession) -> DataFrame:
-    return spark.read.format("delta").load("dbfs:/databricks-datasets/tpch/delta-001/nation/")
+def silver_customers(spark: SparkSession) -> DataFrame:
+    return spark.read.table(f"lakehouse.silver_customers")

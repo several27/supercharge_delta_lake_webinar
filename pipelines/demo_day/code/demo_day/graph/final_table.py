@@ -5,5 +5,5 @@ from prophecy.libs import typed_lit
 from demo_day.config.ConfigStore import *
 from demo_day.udfs.UDFs import *
 
-def nation_1(spark: SparkSession) -> DataFrame:
-    return spark.read.format("delta").load("dbfs:/databricks-datasets/tpch/delta-001/nation/")
+def final_table(spark: SparkSession, in0: DataFrame):
+    in0.write.format("delta").mode("overwrite").saveAsTable(f"lakehouse.final_table")
