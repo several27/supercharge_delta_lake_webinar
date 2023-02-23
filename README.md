@@ -143,3 +143,7 @@ New subgraph for data cleanup published
 *** Release notes for version: 69.0 ***
 
 Release notes
+
+*** Release notes for version: 70.0 ***
+
+Release
