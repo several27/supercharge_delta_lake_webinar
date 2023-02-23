@@ -135,3 +135,7 @@ Some new release
 *** Release notes for version: 67.0 ***
 
 release
+
+*** Release notes for version: 68.0 ***
+
+New subgraph for data cleanup published
