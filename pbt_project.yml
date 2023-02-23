@@ -101,19 +101,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 03:35:00'
-  datasets/text_input:
-    name: text_input
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-07 04:18:52'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: File
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-07 04:18:53'
   datasets/report_gold:
     name: report_gold
     description: ''
@@ -205,19 +192,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:32:05'
-  datasets/silver_orders_1:
-    name: silver_orders_1
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-04 15:53:56'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-04 15:53:56'
   datasets/orders_merge:
     name: orders_merge
     description: ''
@@ -231,19 +205,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-11-09 16:35:17'
-  datasets/silvers_orders_1:
-    name: silvers_orders_1
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-11 23:22:30'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-11 23:22:30'
   datasets/nation:
     name: nation
     description: ''
@@ -270,32 +231,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:33:40'
-  datasets/silver_customers_2:
-    name: silver_customers_2
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-05 16:31:43'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-05 16:31:43'
-  datasets/silver_orders_3:
-    name: silver_orders_3
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-07 03:55:20'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: File
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-07 03:55:20'
   datasets/bronze_customers:
     name: bronze_customers
     description: ''
@@ -335,19 +270,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2023-01-30 23:31:14'
-  datasets/qwe:
-    name: qwe
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2023-01-31 06:33:38'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Warehouse
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2023-01-31 06:33:38'
 templates: {}
 jobs:
   jobs/daily_job:

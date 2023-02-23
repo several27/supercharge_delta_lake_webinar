@@ -29,37 +29,37 @@
     "packageName" : "enrich_customers"
   },
   "connections" : [ {
-    "id" : "9KzGLieDf0PWn0FPXJWxm",
+    "id" : "CDC3loWeLvS_o48zjIhV8",
     "source" : "Q_QsK83A0auLuJ4sSjFKL",
     "sourcePort" : "tvZKte3CQLK3Li8SMvUeF",
     "target" : "POGYtsQcVRaz-XBh40WU7",
     "targetPort" : "l4ydD2E8oaVegeOayhb_Z"
   }, {
-    "id" : "nGLv91ep_ACk3ptAkThQt",
+    "id" : "iiocps-ouljozRqoENqkH",
     "source" : "8eOw1j3e3CItKTNmDDtQC",
     "sourcePort" : "baY66HN4wc4uXEqdGmmMz",
     "target" : "POGYtsQcVRaz-XBh40WU7",
     "targetPort" : "Wab1XHZdecPHVYfGPvR5h"
   }, {
-    "id" : "-WYVPxYHE791dkxZMQjjS",
+    "id" : "PIXYVLaZnut6nJLFJzNDy",
     "source" : "Qi9M0IReFG82IosR2-wvm",
     "sourcePort" : "_2-MowCcC6LB7xy-ervYI",
     "target" : "POGYtsQcVRaz-XBh40WU7",
     "targetPort" : "995x_Meu_IePSxRnCWOIO"
   }, {
-    "id" : "Sx0s4qvKUqAo3zMzR7QGn",
+    "id" : "-6e1xcfE1q7_LKHodorAP",
     "source" : "wBzXOsVm1Ims8PFu5uirM",
     "sourcePort" : "IVsTJWG5L38m_YcVGnxAp",
     "target" : "POGYtsQcVRaz-XBh40WU7",
     "targetPort" : "4jzP4BxIlNzll7uhXo70A"
   }, {
-    "id" : "Cp3OCytsr40iI5bT-i8hI",
+    "id" : "cyZ7dYYG477e-f2Ije-Ss",
     "source" : "CctApCXIwu-ZGepAFrzZ6",
     "sourcePort" : "hutovkFDE9e5a1ulh67aD",
     "target" : "Q_QsK83A0auLuJ4sSjFKL",
     "targetPort" : "qXtxy441k4pcX3aLaORLS"
   }, {
-    "id" : "0Vpe67Zr0KfMI4fitcocN",
+    "id" : "HeHJnbv_lFZwnU6Y8AISG",
     "source" : "POGYtsQcVRaz-XBh40WU7",
     "sourcePort" : "5LNDDnlNXCSiiCfhTIIAT",
     "target" : "CctApCXIwu-ZGepAFrzZ6",

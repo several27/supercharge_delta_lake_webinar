@@ -1,1 +1,2 @@
-from .enrich_customers_1 import *
+
+from .enrich_customers import enrich_customers
