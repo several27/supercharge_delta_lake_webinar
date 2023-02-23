@@ -139,3 +139,7 @@ release
 *** Release notes for version: 68.0 ***
 
 New subgraph for data cleanup published
+
+*** Release notes for version: 69.0 ***
+
+Release notes
