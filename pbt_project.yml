@@ -378,34 +378,6 @@ jobs:
     enabled: null
     createdAt: '2022-09-29 01:34:28'
     author: maciej+webinar-2022@prophecy.io
-  jobs/daily_prod_job:
-    name: daily_prod_job
-    description: ''
-    fabricUID: 1132
-    scheduler:
-      Databricks: {}
-    cloudProvider: null
-    jobSize: small
-    scheduleCron: 0 0 0 * * ? *
-    timeout: null
-    alerting:
-      emails: ''
-      onStart: false
-      onSuccess: false
-      onFailure: false
-    pipelines:
-    - pipelines/ingest_customers
-    - pipelines/ingest_orders
-    - pipelines/cleanup_customers
-    - pipelines/mrr_reporting
-    - pipelines/cleanup_orders
-    jobClusterMode:
-      clusterMode:
-        Multi: {}
-      clusterId: null
-    enabled: false
-    createdAt: '2022-10-27 16:49:30'
-    author: maciej+webinar-admin-2022@prophecy.io
 libraries: []
 subgraphs:
   subgraphs/enrich_customers:

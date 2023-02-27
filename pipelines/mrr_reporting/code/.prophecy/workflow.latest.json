@@ -3,7 +3,7 @@
     "id" : "1",
     "language" : "python",
     "fabricId" : "1034",
-    "frontEndLanguage" : "python",
+    "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "python",
@@ -75,15 +75,9 @@
     "target" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "targetPort" : "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B"
   }, {
-    "id" : "s46T-ZVy-oXgrnIJYJfBR$$54kwzYwzm_X1DRqG07eT-",
+    "id" : "CuDhcjPXV5HhOdolWZ0Mf",
     "source" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "sourcePort" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
-    "target" : "MkwLP2yqjO-MxgmqH08Tv$$1W_6Nqf8mT5Wi5b7Ks88H",
-    "targetPort" : "tXZXZ_z8xqi8m6nHknipG$$jqk9emT8wmcuCTGsye-GK"
-  }, {
-    "id" : "WZkTmcq0Vp4BEEohMR7TI",
-    "source" : "MkwLP2yqjO-MxgmqH08Tv$$1W_6Nqf8mT5Wi5b7Ks88H",
-    "sourcePort" : "cbQeoxp7YmBw0eDIYjQXj$$WUyfIsY1JUe486ko5VR4E",
     "target" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
     "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$WTBPFzItS138klJwhpc7H"
   } ],
@@ -175,37 +169,37 @@
         "name" : "enrich_customers"
       },
       "connections" : [ {
-        "id" : "9KzGLieDf0PWn0FPXJWxm",
+        "id" : "unI0HAIK6cjo9wEAxGTom",
         "source" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
         "sourcePort" : "tvZKte3CQLK3Li8SMvUeF$$WTBPFzItS138klJwhpc7H",
         "target" : "POGYtsQcVRaz-XBh40WU7$$ZtwXsgJJNhZIP5gUAMa__",
         "targetPort" : "l4ydD2E8oaVegeOayhb_Z$$VqTrS6nIddVMUusJKmd0n"
       }, {
-        "id" : "nGLv91ep_ACk3ptAkThQt",
+        "id" : "q1aVP26zoYhJjMwt3HW1u",
         "source" : "8eOw1j3e3CItKTNmDDtQC$$_qH94s1qnb5HgN8IU3is7",
         "sourcePort" : "baY66HN4wc4uXEqdGmmMz$$IKkUMN8q6pZS5VkeDrjXi",
         "target" : "POGYtsQcVRaz-XBh40WU7$$ZtwXsgJJNhZIP5gUAMa__",
         "targetPort" : "Wab1XHZdecPHVYfGPvR5h$$gs_CSTUQXw8gov-Jk7qfO"
       }, {
-        "id" : "-WYVPxYHE791dkxZMQjjS",
+        "id" : "_hWiuGgUTcmUXIrQB3GbO",
         "source" : "Qi9M0IReFG82IosR2-wvm$$rswB4E7h2DaVOQjqvXHpK",
         "sourcePort" : "_2-MowCcC6LB7xy-ervYI$$G8CRr0xWwAoFRxCmxVa6k",
         "target" : "POGYtsQcVRaz-XBh40WU7$$ZtwXsgJJNhZIP5gUAMa__",
         "targetPort" : "995x_Meu_IePSxRnCWOIO$$-O-LY9aFHEaK5t0QkXuuL"
       }, {
-        "id" : "Sx0s4qvKUqAo3zMzR7QGn",
+        "id" : "0h0tNsuMDiRBJuc35cd-f",
         "source" : "wBzXOsVm1Ims8PFu5uirM$$IQHN5s6b4Rlek4RfEoocH",
         "sourcePort" : "IVsTJWG5L38m_YcVGnxAp$$7f0nV0cqTFY_A9YsTeoBT",
         "target" : "POGYtsQcVRaz-XBh40WU7$$ZtwXsgJJNhZIP5gUAMa__",
         "targetPort" : "4jzP4BxIlNzll7uhXo70A$$TVkLZzn4pScvGFW5j7is_"
       }, {
-        "id" : "Cp3OCytsr40iI5bT-i8hI",
+        "id" : "fr2uJCd5QBh7z0b5cTbF_",
         "source" : "CctApCXIwu-ZGepAFrzZ6$$y1fiQKZMvdXPUjFjJxCBC",
         "sourcePort" : "hutovkFDE9e5a1ulh67aD$$i1I1hs2mGSAuDC0LnbxXB",
         "target" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
         "targetPort" : "qXtxy441k4pcX3aLaORLS$$apj-BRM7Z-kLZSGvoiUNK"
       }, {
-        "id" : "0Vpe67Zr0KfMI4fitcocN",
+        "id" : "AJEeJRmyXEh-oFJMIRMDI",
         "source" : "POGYtsQcVRaz-XBh40WU7$$ZtwXsgJJNhZIP5gUAMa__",
         "sourcePort" : "5LNDDnlNXCSiiCfhTIIAT$$I5Fm7zlToXU_p6hEpbzBM",
         "target" : "CctApCXIwu-ZGepAFrzZ6$$y1fiQKZMvdXPUjFjJxCBC",
@@ -325,36 +319,36 @@
             "expressions" : [ {
               "target" : "c_custkey",
               "expression" : {
-                "format" : "python",
-                "expression" : "col(\"c_custkey\")"
+                "format" : "sql",
+                "expression" : "c_custkey"
               },
               "description" : ""
             }, {
               "target" : "region",
               "expression" : {
-                "format" : "python",
-                "expression" : "col(\"r_name\")"
+                "format" : "sql",
+                "expression" : "r_name"
               },
               "description" : ""
             }, {
               "target" : "nation",
               "expression" : {
-                "format" : "python",
-                "expression" : "col(\"n_name\")"
+                "format" : "sql",
+                "expression" : "n_name"
               },
               "description" : ""
             }, {
               "target" : "amounts",
               "expression" : {
-                "format" : "python",
-                "expression" : "concat(format_number(col(\"amounts\"), 2), lit(\"z\\u0142\"))"
+                "format" : "sql",
+                "expression" : "concat(format_number(amounts, 2), 'zł')"
               },
               "description" : ""
             }, {
               "target" : "month",
               "expression" : {
-                "format" : "python",
-                "expression" : "when((col(\"month\") == lit(1)), lit(\"January\")).when((col(\"month\") == lit(2)), lit(\"February\")).when((col(\"month\") == lit(3)), lit(\"March\")).when((col(\"month\") == lit(4)), lit(\"April\")).when((col(\"month\") == lit(5)), lit(\"May\")).when((col(\"month\") == lit(6)), lit(\"June\")).when((col(\"month\") == lit(7)), lit(\"July\")).when((col(\"month\") == lit(8)), lit(\"August\")).when((col(\"month\") == lit(9)), lit(\"September\")).when((col(\"month\") == lit(10)), lit(\"October\")).when((col(\"month\") == lit(11)), lit(\"November\")).otherwise(lit(\"December\"))"
+                "format" : "sql",
+                "expression" : "CASE WHEN (month = 1) THEN 'January' WHEN (month = 2) THEN 'February' WHEN (month = 3) THEN 'March' WHEN (month = 4) THEN 'April' WHEN (month = 5) THEN 'May' WHEN (month = 6) THEN 'June' WHEN (month = 7) THEN 'July' WHEN (month = 8) THEN 'August' WHEN (month = 9) THEN 'September' WHEN (month = 10) THEN 'October' WHEN (month = 11) THEN 'November' ELSE 'December' END"
               },
               "description" : ""
             } ],
@@ -524,62 +518,6 @@
         "datasetId" : "datasets/final_report"
       }
     },
-    "MkwLP2yqjO-MxgmqH08Tv$$1W_6Nqf8mT5Wi5b7Ks88H" : {
-      "id" : "MkwLP2yqjO-MxgmqH08Tv$$1W_6Nqf8mT5Wi5b7Ks88H",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "cleanup_amounts",
-        "slug" : "cleanup_amounts",
-        "x" : 580,
-        "y" : 220,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "tXZXZ_z8xqi8m6nHknipG$$jqk9emT8wmcuCTGsye-GK",
-          "slug" : "in0",
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "cbQeoxp7YmBw0eDIYjQXj$$WUyfIsY1JUe486ko5VR4E",
-          "slug" : "out",
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "importLanguage" : "python",
-        "expressions" : [ {
-          "target" : "c_custkey",
-          "expression" : {
-            "format" : "python",
-            "expression" : "col(\"c_custkey\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "month",
-          "expression" : {
-            "format" : "python",
-            "expression" : "col(\"month\")"
-          },
-          "description" : ""
-        }, {
-          "target" : "amounts",
-          "expression" : {
-            "format" : "python",
-            "expression" : "floor(col(\"amounts\"))"
-          },
-          "description" : ""
-        } ],
-        "importString" : "",
-        "activeTab" : "expressions",
-        "columnsSelector" : [ "tXZXZ_z8xqi8m6nHknipG$$jqk9emT8wmcuCTGsye-GK##month", "tXZXZ_z8xqi8m6nHknipG$$jqk9emT8wmcuCTGsye-GK##amounts", "tXZXZ_z8xqi8m6nHknipG$$jqk9emT8wmcuCTGsye-GK##c_custkey" ]
-      }
-    },
     "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc" : {
       "id" : "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc",
       "component" : "Join",
@@ -615,8 +553,8 @@
         "conditions" : [ {
           "alias" : "in1",
           "expression" : {
-            "format" : "python",
-            "expression" : "(col(\"in0.c_custkey\") == col(\"in1.o_custkey\"))"
+            "format" : "sql",
+            "expression" : "(in0.c_custkey = in1.o_custkey)"
           },
           "joinType" : "inner"
         } ],
@@ -673,8 +611,8 @@
         "aggregate" : [ {
           "target" : "amounts",
           "expression" : {
-            "format" : "python",
-            "expression" : "sum(col(\"o_totalprice\"))"
+            "format" : "sql",
+            "expression" : "sum(o_totalprice)"
           },
           "description" : "",
           "_row_id" : null
@@ -687,16 +625,16 @@
         "groupBy" : [ {
           "target" : "c_custkey",
           "expression" : {
-            "format" : "python",
-            "expression" : "col(\"c_custkey\")"
+            "format" : "sql",
+            "expression" : "c_custkey"
           },
           "description" : "",
           "_row_id" : null
         }, {
           "target" : "month",
           "expression" : {
-            "format" : "python",
-            "expression" : "month(col(\"o_orderdate\"))"
+            "format" : "sql",
+            "expression" : "month(o_orderdate)"
           },
           "description" : "",
           "_row_id" : null

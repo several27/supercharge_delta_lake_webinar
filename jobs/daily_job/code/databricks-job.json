@@ -54,7 +54,7 @@
           "prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
           "prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__"
         },
-        "num_workers" : 1,
+        "num_workers" : 2,
         "aws_attributes" : {
           "first_on_demand" : 1,
           "availability" : "SPOT_WITH_FALLBACK"
@@ -72,7 +72,7 @@
       "python_wheel_task" : {
         "package_name" : "ingest_orders",
         "entry_point" : "main",
-        "parameters" : [ "-i", "default", "-O", "{}" ]
+        "parameters" : [ "-i", "default" ]
       },
       "libraries" : [ {
         "maven" : {
@@ -96,7 +96,7 @@
       "python_wheel_task" : {
         "package_name" : "cleanup_orders",
         "entry_point" : "main",
-        "parameters" : [ "-i", "default", "-O", "{}" ]
+        "parameters" : [ "-i", "default" ]
       },
       "libraries" : [ {
         "maven" : {
@@ -117,7 +117,7 @@
       "python_wheel_task" : {
         "package_name" : "ingest_customers",
         "entry_point" : "main",
-        "parameters" : [ "-i", "default", "-O", "{}" ]
+        "parameters" : [ "-i", "default" ]
       },
       "libraries" : [ {
         "maven" : {
@@ -141,7 +141,7 @@
       "python_wheel_task" : {
         "package_name" : "cleanup_customers",
         "entry_point" : "main",
-        "parameters" : [ "-i", "default", "-O", "{}" ]
+        "parameters" : [ "-i", "default" ]
       },
       "libraries" : [ {
         "maven" : {
@@ -167,7 +167,7 @@
       "python_wheel_task" : {
         "package_name" : "mrr_reporting",
         "entry_point" : "main",
-        "parameters" : [ "-i", "default", "-O", "{}" ]
+        "parameters" : [ "-i", "default" ]
       },
       "libraries" : [ {
         "maven" : {
