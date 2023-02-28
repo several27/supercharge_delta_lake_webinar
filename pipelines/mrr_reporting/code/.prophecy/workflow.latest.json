@@ -75,9 +75,15 @@
     "target" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "targetPort" : "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B"
   }, {
-    "id" : "CuDhcjPXV5HhOdolWZ0Mf",
+    "id" : "l1WlOqZ5ndxMTn_N4NQ96$$jyyK9T7s9UynWWQVeU9QZ",
     "source" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "sourcePort" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
+    "target" : "kU8MFSgALsCThEIjE8WwD$$_uND13aHFUKSJ_Z8SHOQP",
+    "targetPort" : "8nmCCai29qvUqsN4_wiRN$$nh0L3efQku_bWAmbqG8Y9"
+  }, {
+    "id" : "_TWoVilaiPsF4gKf7i7bc",
+    "source" : "kU8MFSgALsCThEIjE8WwD$$_uND13aHFUKSJ_Z8SHOQP",
+    "sourcePort" : "LNlDnNy5wYP69AnvU4D4C$$8I-oyHcq1mpuFZVk9Qfcj",
     "target" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
     "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$WTBPFzItS138klJwhpc7H"
   } ],
@@ -639,6 +645,62 @@
           "description" : "",
           "_row_id" : null
         } ]
+      }
+    },
+    "kU8MFSgALsCThEIjE8WwD$$_uND13aHFUKSJ_Z8SHOQP" : {
+      "id" : "kU8MFSgALsCThEIjE8WwD$$_uND13aHFUKSJ_Z8SHOQP",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "clean",
+        "slug" : "clean",
+        "x" : 600,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8nmCCai29qvUqsN4_wiRN$$nh0L3efQku_bWAmbqG8Y9",
+          "slug" : "in0",
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "LNlDnNy5wYP69AnvU4D4C$$8I-oyHcq1mpuFZVk9Qfcj",
+          "slug" : "out",
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "importLanguage" : "python",
+        "expressions" : [ {
+          "target" : "c_custkey",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_custkey"
+          },
+          "description" : ""
+        }, {
+          "target" : "month",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "month"
+          },
+          "description" : ""
+        }, {
+          "target" : "amounts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "floor(amounts)"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "8nmCCai29qvUqsN4_wiRN$$nh0L3efQku_bWAmbqG8Y9##amounts", "8nmCCai29qvUqsN4_wiRN$$nh0L3efQku_bWAmbqG8Y9##month", "8nmCCai29qvUqsN4_wiRN$$nh0L3efQku_bWAmbqG8Y9##c_custkey" ]
       }
     }
   },

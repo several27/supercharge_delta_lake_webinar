@@ -11,7 +11,8 @@ def pipeline(spark: SparkSession) -> None:
     df_silvers_orders = silvers_orders(spark)
     df_by_customer_id = by_customer_id(spark, df_silver_customers_2_1, df_silvers_orders)
     df_sum_amounts = sum_amounts(spark, df_by_customer_id)
-    df_enrich_customers_1 = enrich_customers_1(spark, df_sum_amounts)
+    df_clean = clean(spark, df_sum_amounts)
+    df_enrich_customers_1 = enrich_customers_1(spark, df_clean)
     final_report(spark, df_enrich_customers_1)
 
 def main():

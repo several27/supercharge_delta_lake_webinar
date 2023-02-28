@@ -4,3 +4,4 @@ from .final_report import *
 from .silver_customers_2_1 import *
 from .by_customer_id import *
 from .silvers_orders import *
+from .clean import *
