@@ -147,3 +147,7 @@ Release notes
 *** Release notes for version: 70.0 ***
 
 Release
+
+*** Release notes for version: 71.0 ***
+
+Release notes
