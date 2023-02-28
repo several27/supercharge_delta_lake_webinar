@@ -56,7 +56,7 @@ pipelines:
       - datasets/customer_nations
       - datasets/nation
       - datasets/regions
-      - datasets/silver_customers_2
+      - datasets/silver_customers
       - datasets/silver_orders
       outputs:
       - datasets/final_report
