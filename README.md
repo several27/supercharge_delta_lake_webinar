@@ -151,3 +151,7 @@ Release
 *** Release notes for version: 71.0 ***
 
 Release notes
+
+*** Release notes for version: 72.0 ***
+
+Simple demo
