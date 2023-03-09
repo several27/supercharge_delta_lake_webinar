@@ -68,7 +68,8 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "0pPZ21sT7V129_sKXhSYU$$mnH85sjvuLP31QW3BQcZH",
-          "slug" : "out"
+          "slug" : "out",
+          "isStreaming" : false
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
@@ -93,7 +94,8 @@
       "ports" : {
         "inputs" : [ {
           "id" : "kyf8OTLSO76IHV2oKkVlz$$J3zovZ00CrvdeJRQ3uQK9",
-          "slug" : "in0"
+          "slug" : "in0",
+          "isStreaming" : false
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
