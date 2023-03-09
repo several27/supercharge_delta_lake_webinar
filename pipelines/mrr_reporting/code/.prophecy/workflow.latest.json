@@ -621,7 +621,7 @@
         "pivotColumn" : null,
         "pivotValues" : [ ],
         "activeTab" : "groupBy",
-        "columnsSelector" : [ "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_totalprice", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_orderdate", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##c_custkey" ],
+        "columnsSelector" : [ "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_orderdate", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##c_custkey", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_totalprice" ],
         "groupBy" : [ {
           "target" : "c_custkey",
           "expression" : {
