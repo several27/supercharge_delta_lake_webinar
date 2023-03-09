@@ -75,15 +75,9 @@
     "target" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "targetPort" : "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B"
   }, {
-    "id" : "l1WlOqZ5ndxMTn_N4NQ96$$jyyK9T7s9UynWWQVeU9QZ",
+    "id" : "_l9iWFfgxf6IailCFdgyf",
     "source" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "sourcePort" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
-    "target" : "kU8MFSgALsCThEIjE8WwD$$_uND13aHFUKSJ_Z8SHOQP",
-    "targetPort" : "8nmCCai29qvUqsN4_wiRN$$nh0L3efQku_bWAmbqG8Y9"
-  }, {
-    "id" : "_TWoVilaiPsF4gKf7i7bc",
-    "source" : "kU8MFSgALsCThEIjE8WwD$$_uND13aHFUKSJ_Z8SHOQP",
-    "sourcePort" : "LNlDnNy5wYP69AnvU4D4C$$8I-oyHcq1mpuFZVk9Qfcj",
     "target" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
     "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$WTBPFzItS138klJwhpc7H"
   } ],
@@ -175,37 +169,37 @@
         "name" : "enrich_customers"
       },
       "connections" : [ {
-        "id" : "m6QsOImS8SNX9i7nKnwTW",
+        "id" : "Ssh1wq0VQkxo-9WkiE1MO",
         "source" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
         "sourcePort" : "tvZKte3CQLK3Li8SMvUeF$$WTBPFzItS138klJwhpc7H",
         "target" : "POGYtsQcVRaz-XBh40WU7$$ZtwXsgJJNhZIP5gUAMa__",
         "targetPort" : "l4ydD2E8oaVegeOayhb_Z$$VqTrS6nIddVMUusJKmd0n"
       }, {
-        "id" : "GjzE66Cu56fmocrOXejYQ",
+        "id" : "k4Xq4oVaTuIZgbZeWtD71",
         "source" : "8eOw1j3e3CItKTNmDDtQC$$_qH94s1qnb5HgN8IU3is7",
         "sourcePort" : "baY66HN4wc4uXEqdGmmMz$$IKkUMN8q6pZS5VkeDrjXi",
         "target" : "POGYtsQcVRaz-XBh40WU7$$ZtwXsgJJNhZIP5gUAMa__",
         "targetPort" : "Wab1XHZdecPHVYfGPvR5h$$gs_CSTUQXw8gov-Jk7qfO"
       }, {
-        "id" : "jQLMWa1h2yXekn9qCxTfi",
+        "id" : "GIgdftA2cFvOr0yUtP9yf",
         "source" : "Qi9M0IReFG82IosR2-wvm$$rswB4E7h2DaVOQjqvXHpK",
         "sourcePort" : "_2-MowCcC6LB7xy-ervYI$$G8CRr0xWwAoFRxCmxVa6k",
         "target" : "POGYtsQcVRaz-XBh40WU7$$ZtwXsgJJNhZIP5gUAMa__",
         "targetPort" : "995x_Meu_IePSxRnCWOIO$$-O-LY9aFHEaK5t0QkXuuL"
       }, {
-        "id" : "9DGYROJkqC24ayCuwhaUr",
+        "id" : "h9WpJwxbuMlKrPjdGiSQU",
         "source" : "wBzXOsVm1Ims8PFu5uirM$$IQHN5s6b4Rlek4RfEoocH",
         "sourcePort" : "IVsTJWG5L38m_YcVGnxAp$$7f0nV0cqTFY_A9YsTeoBT",
         "target" : "POGYtsQcVRaz-XBh40WU7$$ZtwXsgJJNhZIP5gUAMa__",
         "targetPort" : "4jzP4BxIlNzll7uhXo70A$$TVkLZzn4pScvGFW5j7is_"
       }, {
-        "id" : "9KYe8KfGlu9rNX_rSh3yn",
+        "id" : "J8Fd7n340YaynxFueD3ug",
         "source" : "CctApCXIwu-ZGepAFrzZ6$$y1fiQKZMvdXPUjFjJxCBC",
         "sourcePort" : "hutovkFDE9e5a1ulh67aD$$i1I1hs2mGSAuDC0LnbxXB",
         "target" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
         "targetPort" : "qXtxy441k4pcX3aLaORLS$$apj-BRM7Z-kLZSGvoiUNK"
       }, {
-        "id" : "yyh8MX5pUXuqAgfbT2zkl",
+        "id" : "t4AvuCQlo-32mu1QNDaYG",
         "source" : "POGYtsQcVRaz-XBh40WU7$$ZtwXsgJJNhZIP5gUAMa__",
         "sourcePort" : "5LNDDnlNXCSiiCfhTIIAT$$I5Fm7zlToXU_p6hEpbzBM",
         "target" : "CctApCXIwu-ZGepAFrzZ6$$y1fiQKZMvdXPUjFjJxCBC",
@@ -645,62 +639,6 @@
           "description" : "",
           "_row_id" : null
         } ]
-      }
-    },
-    "kU8MFSgALsCThEIjE8WwD$$_uND13aHFUKSJ_Z8SHOQP" : {
-      "id" : "kU8MFSgALsCThEIjE8WwD$$_uND13aHFUKSJ_Z8SHOQP",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "clean",
-        "slug" : "clean",
-        "x" : 600,
-        "y" : 220,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "8nmCCai29qvUqsN4_wiRN$$nh0L3efQku_bWAmbqG8Y9",
-          "slug" : "in0",
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "LNlDnNy5wYP69AnvU4D4C$$8I-oyHcq1mpuFZVk9Qfcj",
-          "slug" : "out",
-          "isStreaming" : false
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "importLanguage" : "python",
-        "expressions" : [ {
-          "target" : "c_custkey",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "c_custkey"
-          },
-          "description" : ""
-        }, {
-          "target" : "month",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "month"
-          },
-          "description" : ""
-        }, {
-          "target" : "amounts",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "floor(amounts)"
-          },
-          "description" : ""
-        } ],
-        "importString" : "",
-        "activeTab" : "expressions",
-        "columnsSelector" : [ "8nmCCai29qvUqsN4_wiRN$$nh0L3efQku_bWAmbqG8Y9##amounts", "8nmCCai29qvUqsN4_wiRN$$nh0L3efQku_bWAmbqG8Y9##month", "8nmCCai29qvUqsN4_wiRN$$nh0L3efQku_bWAmbqG8Y9##c_custkey" ]
       }
     }
   },

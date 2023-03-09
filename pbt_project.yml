@@ -12,6 +12,7 @@ pipelines:
     mode: batch
     language: python
     createdAt: '2022-09-29 01:19:30'
+    modifiedAt: '2022-09-29 01:19:30'
     datasets:
       inputs:
       - datasets/raw_customers
@@ -25,6 +26,7 @@ pipelines:
     mode: batch
     language: python
     createdAt: '2022-09-29 01:28:58'
+    modifiedAt: '2022-09-29 01:28:58'
     datasets:
       inputs:
       - datasets/raw_orders
@@ -38,6 +40,7 @@ pipelines:
     mode: batch
     language: python
     createdAt: '2022-09-29 01:33:01'
+    modifiedAt: '2022-09-29 01:33:01'
     datasets:
       inputs:
       - datasets/bronze_customers
@@ -51,6 +54,7 @@ pipelines:
     mode: batch
     language: python
     createdAt: '2022-10-11 23:15:32'
+    modifiedAt: '2023-03-09 13:25:38'
     datasets:
       inputs:
       - datasets/customer_nations
@@ -68,6 +72,7 @@ pipelines:
     mode: batch
     language: python
     createdAt: '2022-09-29 01:31:06'
+    modifiedAt: '2022-09-29 01:31:06'
     datasets:
       inputs:
       - 3436/datasets/bronze_orders
@@ -81,6 +86,7 @@ pipelines:
     mode: batch
     language: python
     createdAt: '2023-02-23 18:44:09'
+    modifiedAt: '2023-02-23 18:44:09'
     datasets:
       inputs:
       - datasets/customer_nations
@@ -97,6 +103,7 @@ datasets:
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-09-29 03:37:12'
+    modifiedAt: '2022-09-29 03:37:12'
     mode: batch
     physicalDatasets:
       dev:
@@ -105,11 +112,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 03:37:12'
+        modifiedAt: '2022-09-29 03:37:12'
   datasets/regions:
     name: regions
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-09-29 03:35:00'
+    modifiedAt: '2022-09-29 03:35:00'
     mode: batch
     physicalDatasets:
       dev:
@@ -118,11 +127,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 03:35:00'
+        modifiedAt: '2022-09-29 03:35:00'
   datasets/report_gold:
     name: report_gold
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-10-07 04:03:31'
+    modifiedAt: '2022-10-07 04:03:31'
     mode: batch
     physicalDatasets:
       dev:
@@ -131,11 +142,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-07 04:03:31'
+        modifiedAt: '2022-10-07 04:03:31'
   datasets/report:
     name: report
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-10-24 16:12:02'
+    modifiedAt: '2022-10-24 16:12:02'
     mode: batch
     physicalDatasets:
       dev:
@@ -144,11 +157,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-24 16:12:02'
+        modifiedAt: '2022-10-24 16:12:02'
   datasets/raw_customers:
     name: raw_customers
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-09-29 01:28:34'
+    modifiedAt: '2022-09-29 01:28:34'
     mode: batch
     physicalDatasets:
       dev:
@@ -157,11 +172,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:28:34'
+        modifiedAt: '2022-09-29 01:28:34'
   datasets/raw_orders:
     name: raw_orders
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-09-29 01:30:06'
+    modifiedAt: '2022-09-29 01:30:06'
     mode: batch
     physicalDatasets:
       dev:
@@ -170,11 +187,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:30:06'
+        modifiedAt: '2022-09-29 01:30:06'
   datasets/gold_report:
     name: gold_report
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-10-04 16:02:40'
+    modifiedAt: '2022-10-04 16:02:40'
     mode: batch
     physicalDatasets:
       dev:
@@ -183,11 +202,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-04 16:02:40'
+        modifiedAt: '2022-10-04 16:02:40'
   datasets/final_report:
     name: final_report
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-10-11 23:29:28'
+    modifiedAt: '2022-10-11 23:29:28'
     mode: batch
     physicalDatasets:
       dev:
@@ -196,11 +217,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-11 23:29:29'
+        modifiedAt: '2022-10-11 23:29:29'
   datasets/silver_orders:
     name: silver_orders
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-09-29 01:32:05'
+    modifiedAt: '2022-09-29 01:32:05'
     mode: batch
     physicalDatasets:
       dev:
@@ -209,11 +232,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:32:05'
+        modifiedAt: '2022-09-29 01:32:05'
   datasets/orders_merge:
     name: orders_merge
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-11-09 16:35:17'
+    modifiedAt: '2022-11-09 16:35:17'
     mode: batch
     physicalDatasets:
       dev:
@@ -222,11 +247,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-11-09 16:35:17'
+        modifiedAt: '2022-11-09 16:35:17'
   datasets/nation:
     name: nation
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-09-29 03:35:31'
+    modifiedAt: '2022-09-29 03:35:31'
     mode: batch
     physicalDatasets:
       dev:
@@ -235,11 +262,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 03:35:31'
+        modifiedAt: '2022-09-29 03:35:31'
   datasets/silver_customers:
     name: silver_customers
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-09-29 01:33:40'
+    modifiedAt: '2022-09-29 01:33:40'
     mode: batch
     physicalDatasets:
       dev:
@@ -248,11 +277,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:33:40'
+        modifiedAt: '2022-09-29 01:33:40'
   datasets/bronze_customers:
     name: bronze_customers
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-09-29 01:27:10'
+    modifiedAt: '2022-09-29 01:27:10'
     mode: batch
     physicalDatasets:
       dev:
@@ -261,11 +292,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:27:10'
+        modifiedAt: '2022-09-29 01:27:10'
   datasets/bronze_orders:
     name: bronze_orders
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-09-29 01:30:31'
+    modifiedAt: '2022-09-29 01:30:31'
     mode: batch
     physicalDatasets:
       dev:
@@ -274,11 +307,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:30:31'
+        modifiedAt: '2022-09-29 01:30:31'
   datasets/maciej_customer_spendings:
     name: maciej_customer_spendings
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2023-01-30 23:31:14'
+    modifiedAt: '2023-01-30 23:31:14'
     mode: batch
     physicalDatasets:
       dev:
@@ -287,11 +322,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2023-01-30 23:31:14'
+        modifiedAt: '2023-01-30 23:31:14'
   datasets/final_table:
     name: final_table
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2023-02-23 18:52:08'
+    modifiedAt: '2023-02-23 18:52:08'
     mode: batch
     physicalDatasets:
       dev:
@@ -300,11 +337,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2023-02-23 18:52:08'
+        modifiedAt: '2023-02-23 18:52:08'
   datasets/text_input:
     name: text_input
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-10-07 04:18:52'
+    modifiedAt: '2022-10-07 04:18:52'
     mode: batch
     physicalDatasets:
       dev:
@@ -313,11 +352,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-07 04:18:53'
+        modifiedAt: '2022-10-07 04:18:53'
   datasets/silver_orders_1:
     name: silver_orders_1
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-10-04 15:53:56'
+    modifiedAt: '2022-10-04 15:53:56'
     mode: batch
     physicalDatasets:
       dev:
@@ -326,11 +367,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-04 15:53:56'
+        modifiedAt: '2022-10-04 15:53:56'
   datasets/silvers_orders_1:
     name: silvers_orders_1
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-10-11 23:22:30'
+    modifiedAt: '2022-10-11 23:22:30'
     mode: batch
     physicalDatasets:
       dev:
@@ -339,11 +382,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-11 23:22:30'
+        modifiedAt: '2022-10-11 23:22:30'
   datasets/silver_customers_2:
     name: silver_customers_2
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-10-05 16:31:43'
+    modifiedAt: '2022-10-05 16:31:43'
     mode: batch
     physicalDatasets:
       dev:
@@ -352,11 +397,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-05 16:31:43'
+        modifiedAt: '2022-10-05 16:31:43'
   datasets/silver_orders_3:
     name: silver_orders_3
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-10-07 03:55:20'
+    modifiedAt: '2022-10-07 03:55:20'
     mode: batch
     physicalDatasets:
       dev:
@@ -365,11 +412,13 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-07 03:55:20'
+        modifiedAt: '2022-10-07 03:55:20'
   datasets/qwe:
     name: qwe
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2023-01-31 06:33:38'
+    modifiedAt: '2023-01-31 06:33:38'
     mode: batch
     physicalDatasets:
       dev:
@@ -378,6 +427,22 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2023-01-31 06:33:38'
+        modifiedAt: '2023-01-31 06:33:38'
+  datasets/random_data:
+    name: random_data
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2023-03-01 20:12:37'
+    modifiedAt: '2023-03-01 20:12:37'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: File
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2023-03-01 20:12:37'
+        modifiedAt: '2023-03-01 20:12:37'
 templates: {}
 jobs:
   jobs/daily_job:
@@ -407,6 +472,7 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2022-09-29 01:34:28'
+    modifiedAt: '2022-09-29 01:34:28'
     author: maciej+webinar-2022@prophecy.io
   jobs/daily_prod_job:
     name: daily_prod_job
@@ -435,6 +501,7 @@ jobs:
       clusterId: null
     enabled: false
     createdAt: '2022-10-27 16:49:30'
+    modifiedAt: '2022-10-27 16:49:30'
     author: maciej+webinar-admin-2022@prophecy.io
   jobs/monthly_schedule:
     name: monthly_schedule
@@ -461,6 +528,7 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2023-02-23 18:53:26'
+    modifiedAt: '2023-02-23 18:53:26'
     author: maciej+webinar-2022@prophecy.io
 libraries: []
 subgraphs:
@@ -471,6 +539,7 @@ subgraphs:
     language: python
     mode: batch
     createdAt: '2022-09-29 03:48:30'
+    modifiedAt: '2023-03-09 13:25:22'
   subgraphs/customers_orders:
     name: customers_orders
     description: ''
@@ -478,6 +547,7 @@ subgraphs:
     language: python
     mode: batch
     createdAt: '2022-12-14 21:18:35'
+    modifiedAt: '2022-12-14 21:18:35'
   subgraphs/data_cleanup:
     name: data_cleanup
     description: ''
@@ -485,6 +555,7 @@ subgraphs:
     language: python
     mode: batch
     createdAt: '2023-02-17 04:35:57'
+    modifiedAt: '2023-02-17 04:35:57'
 sqlModels: {}
 sqlPipeline: null
 dependencies: []
