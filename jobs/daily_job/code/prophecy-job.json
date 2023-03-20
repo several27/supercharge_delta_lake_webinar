@@ -176,6 +176,124 @@
         }
       }
     },
+    "TryzwNcmeGLSisowbDk-7$$TxzvwNLCHjPDXjNCYush5" : {
+      "id" : "TryzwNcmeGLSisowbDk-7$$TxzvwNLCHjPDXjNCYush5",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "mrr_reporting_config_1",
+        "slug" : "mrr_reporting_config",
+        "x" : -660,
+        "y" : -180
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9QtnLnii2r01MaoAE1_l8$$k29YGqi0PCIM7HvdIhcpU"
+        } ],
+        "outputs" : [ {
+          "id" : "_cnEQvJtwkCx0MFlTfzWv$$EdzZzvXE9H2vmkVWRc5e9"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/mrr_reporting_config",
+        "configurations" : {
+          "schema" : [ {
+            "name" : "department",
+            "kind" : {
+              "type" : "string",
+              "value" : "marketing"
+            },
+            "optional" : false
+          }, {
+            "name" : "filter_condition",
+            "kind" : {
+              "type" : "spark_expression",
+              "value" : "c_mktsegment = 'marketing'"
+            },
+            "optional" : false
+          }, {
+            "name" : "discount",
+            "kind" : {
+              "type" : "float",
+              "value" : 0.1
+            },
+            "optional" : false
+          } ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default", "furniture" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    },
+    "VCGeEPpEyACdcvDr026bh$$pJswJJzQHeqCLgyU_YqAV" : {
+      "id" : "VCGeEPpEyACdcvDr026bh$$pJswJJzQHeqCLgyU_YqAV",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "mrr_reporting_config",
+        "slug" : "mrr_reporting_config",
+        "x" : -660,
+        "y" : -340
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FNypbt-WNGiYojZ_4S-9f$$OZaQMrtaXuHNacOmYXc3U"
+        } ],
+        "outputs" : [ {
+          "id" : "AFdXLeVZzrZg2DTJIciSD$$Ljcp555HWy_nQU3dof16Q"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/mrr_reporting_config",
+        "configurations" : {
+          "schema" : [ {
+            "name" : "department",
+            "kind" : {
+              "type" : "string",
+              "value" : "furniture"
+            },
+            "optional" : false
+          }, {
+            "name" : "filter_condition",
+            "kind" : {
+              "type" : "spark_expression",
+              "value" : "c_mktsegment = 'furniture'"
+            },
+            "optional" : false
+          }, {
+            "name" : "discount",
+            "kind" : {
+              "type" : "float",
+              "value" : 0.1
+            },
+            "optional" : false
+          } ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default", "furniture" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "furniture"
+        }
+      }
+    },
     "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf" : {
       "id" : "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf",
       "component" : "Pipeline",

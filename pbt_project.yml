@@ -54,7 +54,7 @@ pipelines:
     mode: batch
     language: python
     createdAt: '2022-10-11 23:15:32'
-    modifiedAt: '2023-03-09 13:58:34'
+    modifiedAt: '2023-03-20 15:33:20'
     datasets:
       inputs:
       - datasets/customer_nations
@@ -208,7 +208,7 @@ datasets:
     description: ''
     author: maciej+webinar-2022@prophecy.io
     createdAt: '2022-10-11 23:29:28'
-    modifiedAt: '2023-03-09 13:58:34'
+    modifiedAt: '2023-03-15 14:44:02'
     mode: batch
     physicalDatasets:
       dev:
@@ -443,6 +443,21 @@ datasets:
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2023-03-01 20:12:37'
         modifiedAt: '2023-03-01 20:12:37'
+  datasets/configurable_report:
+    name: configurable_report
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2023-03-13 20:27:58'
+    modifiedAt: '2023-03-13 20:27:58'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: File
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2023-03-13 20:27:58'
+        modifiedAt: '2023-03-13 20:27:58'
 templates: {}
 jobs:
   jobs/daily_job:
@@ -461,18 +476,19 @@ jobs:
       onSuccess: false
       onFailure: true
     pipelines:
-    - 3436/pipelines/cleanup_orders
-    - 3436/pipelines/mrr_reporting
-    - 3436/pipelines/ingest_customers
-    - 3436/pipelines/cleanup_customers
-    - 3436/pipelines/ingest_orders
+    - pipelines/ingest_customers
+    - pipelines/ingest_orders
+    - pipelines/mrr_reporting_config
+    - pipelines/cleanup_customers
+    - pipelines/mrr_reporting
+    - pipelines/cleanup_orders
     jobClusterMode:
       clusterMode:
         Multi: {}
       clusterId: null
     enabled: null
     createdAt: '2022-09-29 01:34:28'
-    modifiedAt: '2022-09-29 01:34:28'
+    modifiedAt: '2023-03-13 20:31:12'
     author: maciej+webinar-2022@prophecy.io
   jobs/daily_prod_job:
     name: daily_prod_job
@@ -539,7 +555,7 @@ subgraphs:
     language: python
     mode: batch
     createdAt: '2022-09-29 03:48:30'
-    modifiedAt: '2023-03-09 13:56:06'
+    modifiedAt: '2023-03-20 15:28:07'
   subgraphs/customers_orders:
     name: customers_orders
     description: ''
