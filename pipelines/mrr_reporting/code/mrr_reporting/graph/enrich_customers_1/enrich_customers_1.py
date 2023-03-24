@@ -3,8 +3,10 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from prophecy.utils import *
 from . import *
+from .config import *
 
-def enrich_customers_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def enrich_customers_1(spark: SparkSession, config: SubgraphConfig, in0: DataFrame) -> DataFrame:
+    Config.update(config)
     df_nation_1 = nation_1(spark)
     df_regions_1 = regions_1(spark)
     df_customer_nations_1 = customer_nations_1(spark)

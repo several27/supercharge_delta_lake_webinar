@@ -5,7 +5,7 @@ from argparse import Namespace
 from prophecy.test import BaseTestCase
 from prophecy.test.utils import *
 from mrr_reporting.graph.enrich_customers_1.cleanup_1 import *
-import mrr_reporting.config.ConfigStore as ConfigStore
+from mrr_reporting.config.ConfigStore import *
 
 
 class cleanup_1Test(BaseTestCase):
@@ -30,7 +30,12 @@ class cleanup_1Test(BaseTestCase):
         BaseTestCase.setUp(self)
         import os
         fabricName = os.environ['FABRIC_NAME']
-        ConfigStore.Utils.initializeFromArgs(
+        Utils.initializeFromArgs(
             self.spark,
-            Namespace(file = f"configs/resources/config/{fabricName}.json", config = None, overrideJson = None)
+            Namespace(
+              file = f"configs/resources/config/{fabricName}.json",
+              config = None,
+              overrideJson = None,
+              defaultConfFile = None
+            )
         )

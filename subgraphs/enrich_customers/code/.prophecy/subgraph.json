@@ -9,7 +9,21 @@
     "phase" : 0,
     "cache" : false,
     "detailedStats" : false,
-    "isImported" : false
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "user_name",
+          "kind" : {
+            "type" : "string",
+            "value" : "enter_your_user_name"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false
+        } ]
+      }
+    }
   },
   "ports" : {
     "inputs" : [ {
@@ -855,5 +869,6 @@
         "datasetType" : "File"
       }
     }
-  }
+  },
+  "externalDependencies" : [ ]
 }
