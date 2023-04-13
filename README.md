@@ -159,3 +159,7 @@ Simple demo
 *** Release notes for version: 73.0 ***
 
 Release notes
+
+*** Release notes for version: 74.0 ***
+
+Release
