@@ -68,7 +68,7 @@ pipelines:
     artefactID: ''
     language: python
     createdAt: '2022-10-11 23:15:32'
-    modifiedAt: '2023-03-24 19:20:49'
+    modifiedAt: '2023-04-13 22:09:23'
     datasets:
       inputs:
       - datasets/customer_nations
@@ -498,7 +498,6 @@ jobs:
     pipelines:
     - pipelines/ingest_customers
     - pipelines/ingest_orders
-    - pipelines/mrr_reporting_config
     - pipelines/cleanup_customers
     - pipelines/mrr_reporting
     - pipelines/cleanup_orders
@@ -508,7 +507,7 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2022-09-29 01:34:28'
-    modifiedAt: '2023-03-13 20:31:12'
+    modifiedAt: '2023-04-12 16:22:54'
     author: maciej+webinar-2022@prophecy.io
   jobs/daily_prod_job:
     name: daily_prod_job
@@ -583,7 +582,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2022-09-29 03:48:30'
-    modifiedAt: '2023-03-24 19:20:49'
+    modifiedAt: '2023-04-12 16:08:53'
   subgraphs/customers_orders:
     name: customers_orders
     description: ''

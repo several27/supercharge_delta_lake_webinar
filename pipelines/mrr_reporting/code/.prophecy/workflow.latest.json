@@ -66,7 +66,7 @@
     "visualCodeInterimMode" : "Disabled",
     "recordsLimit" : {
       "enabled" : true,
-      "value" : 100
+      "value" : 10000
     },
     "topLevelPackage" : "mrr_reporting",
     "configurationVersion" : "v1"
@@ -96,26 +96,26 @@
     "target" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "targetPort" : "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B"
   }, {
-    "id" : "m9qO5AKkqqJ-6GZLtURZ2",
-    "source" : "9jOE2huDiNNPWQFeBEDDN$$6a1a3P7KptqaKPgttFSVX",
-    "sourcePort" : "d3Y3tGj8_E09h7mS1qmO8$$kNRcy3Enj6oMkT6G-igiO",
-    "target" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
-    "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$WTBPFzItS138klJwhpc7H"
-  }, {
-    "id" : "TZKoTRbGVCcysjiK2K0Cb",
+    "id" : "qY8xpdQzs5FWvEyJlP9fV$$TmWOK3GYy6iBCLGtS4szT",
     "source" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "sourcePort" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
-    "target" : "9jOE2huDiNNPWQFeBEDDN$$6a1a3P7KptqaKPgttFSVX",
-    "targetPort" : "usiitdm2U8UFhF572wvIL$$i6ciNb2fbLejr35ZCuMpJ"
+    "target" : "BibnMSlUmqWqEjeoBlseO$$xrCOvXLic3vTSO4bkLomB",
+    "targetPort" : "_k483FVZpSoRb_QqY1YIe$$lPV7pPDevrsSP2Wy2gK7W"
+  }, {
+    "id" : "hGZHTk6KAxF-JwtkjEaJc",
+    "source" : "BibnMSlUmqWqEjeoBlseO$$xrCOvXLic3vTSO4bkLomB",
+    "sourcePort" : "7kh57VdE2TNJztwgMIei0$$eWteUN4TmPb5oDQe9pa5O",
+    "target" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
+    "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$WTBPFzItS138klJwhpc7H"
   } ],
   "processes" : {
-    "9jOE2huDiNNPWQFeBEDDN$$6a1a3P7KptqaKPgttFSVX" : {
-      "id" : "9jOE2huDiNNPWQFeBEDDN$$6a1a3P7KptqaKPgttFSVX",
+    "BibnMSlUmqWqEjeoBlseO$$xrCOvXLic3vTSO4bkLomB" : {
+      "id" : "BibnMSlUmqWqEjeoBlseO$$xrCOvXLic3vTSO4bkLomB",
       "component" : "Reformat",
       "metadata" : {
-        "label" : "round_amounts",
-        "slug" : "round_amounts",
-        "x" : 560,
+        "label" : "clean_amounts",
+        "slug" : "clean_amounts",
+        "x" : 580,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
@@ -124,7 +124,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "usiitdm2U8UFhF572wvIL$$i6ciNb2fbLejr35ZCuMpJ",
+          "id" : "_k483FVZpSoRb_QqY1YIe$$lPV7pPDevrsSP2Wy2gK7W",
           "slug" : "sum_amounts",
           "schema" : {
             "type" : "struct",
@@ -160,7 +160,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "d3Y3tGj8_E09h7mS1qmO8$$kNRcy3Enj6oMkT6G-igiO",
+          "id" : "7kh57VdE2TNJztwgMIei0$$eWteUN4TmPb5oDQe9pa5O",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -192,7 +192,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "usiitdm2U8UFhF572wvIL$$i6ciNb2fbLejr35ZCuMpJ##c_custkey", "usiitdm2U8UFhF572wvIL$$i6ciNb2fbLejr35ZCuMpJ##amounts", "usiitdm2U8UFhF572wvIL$$i6ciNb2fbLejr35ZCuMpJ##month" ]
+        "columnsSelector" : [ "_k483FVZpSoRb_QqY1YIe$$lPV7pPDevrsSP2Wy2gK7W##c_custkey", "_k483FVZpSoRb_QqY1YIe$$lPV7pPDevrsSP2Wy2gK7W##month", "_k483FVZpSoRb_QqY1YIe$$lPV7pPDevrsSP2Wy2gK7W##amounts" ]
       }
     },
     "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy" : {
@@ -253,7 +253,7 @@
       "metadata" : {
         "label" : "enrich_customers_1",
         "slug" : "enrich_customers_1",
-        "x" : 760,
+        "x" : 820,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
@@ -861,7 +861,7 @@
       "metadata" : {
         "label" : "final_report",
         "slug" : "final_report",
-        "x" : 960,
+        "x" : 1020,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
@@ -1157,7 +1157,7 @@
       "metadata" : {
         "label" : "sum_amounts",
         "slug" : "sum_amounts",
-        "x" : 380,
+        "x" : 360,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
@@ -1350,7 +1350,7 @@
         "pivotColumn" : null,
         "pivotValues" : [ ],
         "activeTab" : "aggregate",
-        "columnsSelector" : [ "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_totalprice", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##c_custkey", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_orderdate" ],
+        "columnsSelector" : [ "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_orderdate", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##c_custkey", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_totalprice" ],
         "groupBy" : [ {
           "target" : "c_custkey",
           "expression" : {

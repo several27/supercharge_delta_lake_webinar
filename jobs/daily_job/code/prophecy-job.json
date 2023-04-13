@@ -66,10 +66,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "uLOshaetBNxvfjU_03cCJ$$NJ2KgZEgSIXdsyvvWVM_v"
+          "id" : "uLOshaetBNxvfjU_03cCJ$$NJ2KgZEgSIXdsyvvWVM_v",
+          "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "amZAQaZKtmOUb9SxKi-EY$$J7yHVdugxy1-WMWSszzDB"
+          "id" : "amZAQaZKtmOUb9SxKi-EY$$J7yHVdugxy1-WMWSszzDB",
+          "slug" : ""
         } ]
       },
       "settings" : {
@@ -104,10 +106,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "in"
+          "id" : "in",
+          "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "out"
+          "id" : "out",
+          "slug" : ""
         } ]
       },
       "settings" : {
@@ -142,10 +146,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "MEwrcFReN4gqyDyvPkR2a$$LoH4B38LacxmC1_evB4xi"
+          "id" : "MEwrcFReN4gqyDyvPkR2a$$LoH4B38LacxmC1_evB4xi",
+          "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "-cjcoaXuXuekf9rZZ_8II$$E2B1k8UVZI9bZUKiPpULl"
+          "id" : "-cjcoaXuXuekf9rZZ_8II$$E2B1k8UVZI9bZUKiPpULl",
+          "slug" : ""
         } ]
       },
       "settings" : {
@@ -166,131 +172,30 @@
               "type" : "string",
               "value" : "enter_your_user_name"
             },
-            "optional" : false
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "enrich_customers_1",
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "user_name",
+                "kind" : {
+                  "type" : "string",
+                  "value" : "enter_your_user_name"
+                },
+                "optional" : false,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : true
           } ],
           "instances" : {
             "supercharge_delta_lake" : [ "default" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"
-        }
-      }
-    },
-    "TryzwNcmeGLSisowbDk-7$$TxzvwNLCHjPDXjNCYush5" : {
-      "id" : "TryzwNcmeGLSisowbDk-7$$TxzvwNLCHjPDXjNCYush5",
-      "component" : "Pipeline",
-      "metadata" : {
-        "label" : "mrr_reporting_config_1",
-        "slug" : "mrr_reporting_config",
-        "x" : -660,
-        "y" : -180
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "9QtnLnii2r01MaoAE1_l8$$k29YGqi0PCIM7HvdIhcpU"
-        } ],
-        "outputs" : [ {
-          "id" : "_cnEQvJtwkCx0MFlTfzWv$$EdzZzvXE9H2vmkVWRc5e9"
-        } ]
-      },
-      "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false
-        }
-      },
-      "properties" : {
-        "pipelineId" : "pipelines/mrr_reporting_config",
-        "configurations" : {
-          "schema" : [ {
-            "name" : "department",
-            "kind" : {
-              "type" : "string",
-              "value" : "marketing"
-            },
-            "optional" : false
-          }, {
-            "name" : "filter_condition",
-            "kind" : {
-              "type" : "spark_expression",
-              "value" : "c_mktsegment = 'marketing'"
-            },
-            "optional" : false
-          }, {
-            "name" : "discount",
-            "kind" : {
-              "type" : "float",
-              "value" : 0.1
-            },
-            "optional" : false
-          } ],
-          "instances" : {
-            "supercharge_delta_lake" : [ "default", "furniture" ]
-          },
-          "overrides" : { },
-          "selectedInstance" : "default"
-        }
-      }
-    },
-    "VCGeEPpEyACdcvDr026bh$$pJswJJzQHeqCLgyU_YqAV" : {
-      "id" : "VCGeEPpEyACdcvDr026bh$$pJswJJzQHeqCLgyU_YqAV",
-      "component" : "Pipeline",
-      "metadata" : {
-        "label" : "mrr_reporting_config",
-        "slug" : "mrr_reporting_config",
-        "x" : -660,
-        "y" : -340
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "FNypbt-WNGiYojZ_4S-9f$$OZaQMrtaXuHNacOmYXc3U"
-        } ],
-        "outputs" : [ {
-          "id" : "AFdXLeVZzrZg2DTJIciSD$$Ljcp555HWy_nQU3dof16Q"
-        } ]
-      },
-      "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false
-        }
-      },
-      "properties" : {
-        "pipelineId" : "pipelines/mrr_reporting_config",
-        "configurations" : {
-          "schema" : [ {
-            "name" : "department",
-            "kind" : {
-              "type" : "string",
-              "value" : "furniture"
-            },
-            "optional" : false
-          }, {
-            "name" : "filter_condition",
-            "kind" : {
-              "type" : "spark_expression",
-              "value" : "c_mktsegment = 'furniture'"
-            },
-            "optional" : false
-          }, {
-            "name" : "discount",
-            "kind" : {
-              "type" : "float",
-              "value" : 0.1
-            },
-            "optional" : false
-          } ],
-          "instances" : {
-            "supercharge_delta_lake" : [ "default", "furniture" ]
-          },
-          "overrides" : { },
-          "selectedInstance" : "furniture"
         }
       }
     },
@@ -305,10 +210,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "okn39YBoCLUajVq3fjJU5$$enxluIM2UoXRVbTP6qLa4"
+          "id" : "okn39YBoCLUajVq3fjJU5$$enxluIM2UoXRVbTP6qLa4",
+          "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "8SY1RcD5gZz9lEYNC93-J$$os5dldqF3o-JBYks20Mxt"
+          "id" : "8SY1RcD5gZz9lEYNC93-J$$os5dldqF3o-JBYks20Mxt",
+          "slug" : ""
         } ]
       },
       "settings" : {
@@ -343,10 +250,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "gE32j_u6G5977QG9E2pMb$$mLVQA8kNyHzIK5KdJgxY3"
+          "id" : "gE32j_u6G5977QG9E2pMb$$mLVQA8kNyHzIK5KdJgxY3",
+          "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "EdvV9_IbvVojpdyVn3Ndn$$nptqba_ifDVmbAUdavL6I"
+          "id" : "EdvV9_IbvVojpdyVn3Ndn$$nptqba_ifDVmbAUdavL6I",
+          "slug" : ""
         } ]
       },
       "settings" : {
