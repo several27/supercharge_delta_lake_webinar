@@ -28,22 +28,6 @@ pipelines:
       - datasets/bronze_customers
     subgraphs: []
     dependencies: {}
-  pipelines/ingest_orders:
-    name: ingest_orders
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2022-09-29 01:28:58'
-    modifiedAt: '2022-09-29 01:28:58'
-    datasets:
-      inputs:
-      - datasets/raw_orders
-      outputs:
-      - datasets/bronze_orders
-    subgraphs: []
-    dependencies: {}
   pipelines/cleanup_customers:
     name: cleanup_customers
     description: ''
