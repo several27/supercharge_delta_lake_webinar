@@ -163,3 +163,7 @@ Release notes
 *** Release notes for version: 74.0 ***
 
 Release
+
+*** Release notes for version: 75.0 ***
+
+Release notes
