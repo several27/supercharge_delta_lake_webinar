@@ -52,7 +52,7 @@ pipelines:
     artefactID: ''
     language: python
     createdAt: '2022-10-11 23:15:32'
-    modifiedAt: '2023-04-13 22:09:23'
+    modifiedAt: '2023-05-15 17:46:07'
     datasets:
       inputs:
       - datasets/customer_nations
@@ -100,6 +100,27 @@ pipelines:
       outputs:
       - datasets/final_table
     subgraphs: []
+    dependencies: {}
+  pipelines/mrr_reporting_abc:
+    name: mrr_reporting_abc
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-04-24 18:33:26'
+    modifiedAt: '2023-04-24 18:33:33'
+    datasets:
+      inputs:
+      - datasets/customer_nations
+      - datasets/nation
+      - datasets/regions
+      - datasets/silver_customers
+      - datasets/silver_orders
+      outputs:
+      - datasets/final_report
+    subgraphs:
+    - subgraphs/enrich_customers
     dependencies: {}
 datasets:
   datasets/customer_nations:
@@ -491,7 +512,7 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2022-09-29 01:34:28'
-    modifiedAt: '2023-04-12 16:22:54'
+    modifiedAt: '2023-05-15 17:47:52'
     author: maciej+webinar-2022@prophecy.io
   jobs/daily_prod_job:
     name: daily_prod_job
@@ -566,7 +587,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2022-09-29 03:48:30'
-    modifiedAt: '2023-04-12 16:08:53'
+    modifiedAt: '2023-05-12 04:30:48'
   subgraphs/customers_orders:
     name: customers_orders
     description: ''
@@ -586,6 +607,10 @@ subgraphs:
     createdAt: '2023-02-17 04:35:57'
     modifiedAt: '2023-02-17 04:35:57'
 sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies: []
 projectDependencies: {}

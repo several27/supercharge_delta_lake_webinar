@@ -231,9 +231,7 @@
         "pipelineId" : "pipelines/ingest_orders",
         "configurations" : {
           "schema" : [ ],
-          "instances" : {
-            "supercharge_delta_lake" : [ "default" ]
-          },
+          "instances" : { },
           "overrides" : { },
           "selectedInstance" : "default"
         }

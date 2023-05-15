@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 setup(
-    name = 'mrr_reporting',
+    name = 'mrr_reporting_abc',
     version = '1.0',
     packages = find_packages(include = ('mrr_reporting*', )) + ["prophecy_config_instances"],
     package_dir = {'prophecy_config_instances' : 'configs/resources/config'},
     package_data = {'prophecy_config_instances' : ['*.json', '*.py']},
     description = 'workflow',
     install_requires = [
-'prophecy-libs==1.5.0'],
+'prophecy-libs==1.4.8'],
     entry_points = {
 'console_scripts' : [
 'main = mrr_reporting.pipeline:main'], },

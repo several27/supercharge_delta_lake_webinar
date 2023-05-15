@@ -7,12 +7,12 @@ from prophecy.utils import *
 from mrr_reporting.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_silvers_orders = silvers_orders(spark)
     df_silver_customers_2_1 = silver_customers_2_1(spark)
+    df_silvers_orders = silvers_orders(spark)
     df_by_customer_id = by_customer_id(spark, df_silver_customers_2_1, df_silvers_orders)
     df_sum_amounts = sum_amounts(spark, df_by_customer_id)
-    df_round_amounts = round_amounts(spark, df_sum_amounts)
-    df_enrich_customers_1 = enrich_customers_1(spark, Config.enrich_customers_1, df_round_amounts)
+    df_clean_amounts = clean_amounts(spark, df_sum_amounts)
+    df_enrich_customers_1 = enrich_customers_1(spark, Config.enrich_customers_1, df_clean_amounts)
     final_report(spark, df_enrich_customers_1)
 
 def main():
@@ -24,9 +24,9 @@ def main():
                 .getOrCreate()\
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
-    spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/mrr_reporting")
+    spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/mrr_reporting_abc")
     
-    MetricsCollector.start(spark = spark, pipelineId = "pipelines/mrr_reporting")
+    MetricsCollector.start(spark = spark, pipelineId = "pipelines/mrr_reporting_abc")
     pipeline(spark)
     MetricsCollector.end(spark)
 
