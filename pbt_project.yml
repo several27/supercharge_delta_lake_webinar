@@ -52,7 +52,7 @@ pipelines:
     artefactID: ''
     language: python
     createdAt: '2022-10-11 23:15:32'
-    modifiedAt: '2023-05-15 17:46:07'
+    modifiedAt: '2023-05-16 18:09:09'
     datasets:
       inputs:
       - datasets/customer_nations
@@ -100,27 +100,6 @@ pipelines:
       outputs:
       - datasets/final_table
     subgraphs: []
-    dependencies: {}
-  pipelines/mrr_reporting_abc:
-    name: mrr_reporting_abc
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2023-04-24 18:33:26'
-    modifiedAt: '2023-04-24 18:33:33'
-    datasets:
-      inputs:
-      - datasets/customer_nations
-      - datasets/nation
-      - datasets/regions
-      - datasets/silver_customers
-      - datasets/silver_orders
-      outputs:
-      - datasets/final_report
-    subgraphs:
-    - subgraphs/enrich_customers
     dependencies: {}
 datasets:
   datasets/customer_nations:
@@ -587,7 +566,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2022-09-29 03:48:30'
-    modifiedAt: '2023-05-12 04:30:48'
+    modifiedAt: '2023-05-16 18:05:33'
   subgraphs/customers_orders:
     name: customers_orders
     description: ''
