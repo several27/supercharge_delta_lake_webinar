@@ -171,3 +171,7 @@ Release notes
 *** Release notes for version: 76.0 ***
 
 Release
+
+*** Release notes for version: 77.0 ***
+
+New release
