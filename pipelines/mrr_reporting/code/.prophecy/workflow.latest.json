@@ -96,13 +96,90 @@
     "target" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "targetPort" : "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B"
   }, {
-    "id" : "e9QRbazDKvnALZ4dxxILD",
+    "id" : "YDhgK6IL2DEZlf65nyKSo$$wgcqV5jHA_z-62irtiwpA",
+    "source" : "WbclXuxwZiR_hQPuZDzps$$BF7vUvQBnBB6pIlUScDJd",
+    "sourcePort" : "uTOs1hJxqKj3ou4xEfEjm$$iX-zRTTbQvyf4KXyqj3x9",
+    "target" : "TPovYIzZ3HyWM9_LAJZ8l$$wr77VuVECYvFzGc18CQQh",
+    "targetPort" : "JZVTnpeg9e5YugP3S4d8Z$$ZkMP15n56gI9_g2qDg_iH"
+  }, {
+    "id" : "mpEmg9JpEwxGBQ-htjbV0",
     "source" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "sourcePort" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
+    "target" : "WbclXuxwZiR_hQPuZDzps$$BF7vUvQBnBB6pIlUScDJd",
+    "targetPort" : "hZpCn6QAXLrzdfZn2HAAx$$AANUhW2r1OkW10OcLN7gr"
+  }, {
+    "id" : "anaozmaHJjstGRrSoOxr5",
+    "source" : "TPovYIzZ3HyWM9_LAJZ8l$$wr77VuVECYvFzGc18CQQh",
+    "sourcePort" : "gc0J5tnQrbSnVszUppoEQ$$6DZvCswol3U5z3Ojo0ZNB",
     "target" : "Q_QsK83A0auLuJ4sSjFKL$$qo24alVyAVs4lDWrXPYqa",
     "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$WTBPFzItS138klJwhpc7H"
   } ],
   "processes" : {
+    "TPovYIzZ3HyWM9_LAJZ8l$$wr77VuVECYvFzGc18CQQh" : {
+      "id" : "TPovYIzZ3HyWM9_LAJZ8l$$wr77VuVECYvFzGc18CQQh",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : 640,
+        "y" : -40,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JZVTnpeg9e5YugP3S4d8Z$$ZkMP15n56gI9_g2qDg_iH",
+          "slug" : "Limit_1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "month",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amounts",
+              "type" : "decimal(28,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "gc0J5tnQrbSnVszUppoEQ$$6DZvCswol3U5z3Ojo0ZNB",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "true"
+        }
+      }
+    },
     "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy" : {
       "id" : "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy",
       "component" : "Source",
@@ -1258,7 +1335,7 @@
         "pivotColumn" : null,
         "pivotValues" : [ ],
         "activeTab" : "aggregate",
-        "columnsSelector" : [ "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##c_custkey", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_orderdate", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_totalprice" ],
+        "columnsSelector" : [ "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_orderdate", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_totalprice", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##c_custkey" ],
         "groupBy" : [ {
           "target" : "c_custkey",
           "expression" : {
@@ -1276,6 +1353,67 @@
           "description" : "",
           "_row_id" : null
         } ]
+      }
+    },
+    "WbclXuxwZiR_hQPuZDzps$$BF7vUvQBnBB6pIlUScDJd" : {
+      "id" : "WbclXuxwZiR_hQPuZDzps$$BF7vUvQBnBB6pIlUScDJd",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "Limit_1",
+        "slug" : "Limit_1",
+        "x" : 420,
+        "y" : -40,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "hZpCn6QAXLrzdfZn2HAAx$$AANUhW2r1OkW10OcLN7gr",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "month",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amounts",
+              "type" : "decimal(28,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "uTOs1hJxqKj3ou4xEfEjm$$iX-zRTTbQvyf4KXyqj3x9",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "limit" : "10"
       }
     }
   },
