@@ -1,39 +1,44 @@
 {
-  "fabric_id" : "1034",
+  "fabric_id" : "1618",
   "components" : [ {
     "PipelineComponent" : {
-      "id" : "pipelines/ingest_orders",
-      "nodeName" : "ingest_orders",
       "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/ingest_orders.jar",
-      "language" : "scala"
+      "nodeName" : "ingest_orders",
+      "id" : "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf",
+      "language" : "scala",
+      "pipelineId" : "pipelines/ingest_orders"
     }
   }, {
     "PipelineComponent" : {
-      "id" : "pipelines/cleanup_orders",
-      "nodeName" : "cleanup_orders",
       "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/cleanup_orders-1.0-py3-none-any.whl",
-      "language" : "python"
+      "nodeName" : "cleanup_orders",
+      "id" : "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL",
+      "language" : "python",
+      "pipelineId" : "pipelines/cleanup_orders"
     }
   }, {
     "PipelineComponent" : {
-      "id" : "pipelines/ingest_customers",
-      "nodeName" : "ingest_customers",
       "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/ingest_customers-1.0-py3-none-any.whl",
-      "language" : "python"
+      "nodeName" : "ingest_customers",
+      "id" : "IoOmt7RB3YU_4PEDFeOz-$$dtznb1B7HhKw3bvpjPjWr",
+      "language" : "python",
+      "pipelineId" : "pipelines/ingest_customers"
     }
   }, {
     "PipelineComponent" : {
-      "id" : "pipelines/cleanup_customers",
-      "nodeName" : "cleanup_customers",
       "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/cleanup_customers-1.0-py3-none-any.whl",
-      "language" : "python"
+      "nodeName" : "cleanup_customers",
+      "id" : "2M0tSVe4al4RwltAcK-SU",
+      "language" : "python",
+      "pipelineId" : "pipelines/cleanup_customers"
     }
   }, {
     "PipelineComponent" : {
-      "id" : "pipelines/mrr_reporting",
-      "nodeName" : "mrr_reporting_1",
       "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/mrr_reporting-1.0-py3-none-any.whl",
-      "language" : "python"
+      "nodeName" : "mrr_reporting_1",
+      "id" : "Np4bZSoaA-LVJ8mN8XR4C$$bGRtAuPy--voJZBLDvfrI",
+      "language" : "python",
+      "pipelineId" : "pipelines/mrr_reporting"
     }
   } ],
   "request" : {
@@ -45,9 +50,32 @@
         "spark_version" : "11.3.x-scala2.12",
         "node_type_id" : "i3.xlarge",
         "driver_node_type_id" : "i3.xlarge",
-        "num_workers" : 2,
+        "num_workers" : 1,
         "spark_conf" : {
-          "prophecy.metadata.fabric.id" : "1034",
+          "prophecy.metadata.fabric.id" : "1618",
+          "prophecy.metadata.job.uri" : "__PROJECT_ID_PLACEHOLDER__/jobs/daily_job",
+          "prophecy.metadata.is.interactive.run" : "false",
+          "prophecy.project.id" : "__PROJECT_ID_PLACEHOLDER__",
+          "prophecy.execution.service.url" : "wss://execution.dp.app.prophecy.io/eventws",
+          "prophecy.packages.path" : "{\"pipelines/ingest_customers\":\"dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/ingest_customers-1.0-py3-none-any.whl\",\"pipelines/ingest_orders\":\"dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/ingest_orders.jar\",\"pipelines/cleanup_customers\":\"dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/cleanup_customers-1.0-py3-none-any.whl\",\"pipelines/mrr_reporting\":\"dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/mrr_reporting-1.0-py3-none-any.whl\",\"pipelines/cleanup_orders\":\"dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/cleanup_orders-1.0-py3-none-any.whl\"}",
+          "prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
+          "prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
+          "prophecy.execution.metrics.disabled" : false
+        },
+        "aws_attributes" : {
+          "first_on_demand" : 1,
+          "availability" : "SPOT_WITH_FALLBACK"
+        }
+      }
+    }, {
+      "job_cluster_key" : "Cluster_1",
+      "new_cluster" : {
+        "spark_version" : "11.3.x-scala2.12",
+        "node_type_id" : "i3.xlarge",
+        "driver_node_type_id" : "i3.xlarge",
+        "num_workers" : 1,
+        "spark_conf" : {
+          "prophecy.metadata.fabric.id" : "1618",
           "prophecy.metadata.job.uri" : "__PROJECT_ID_PLACEHOLDER__/jobs/daily_job",
           "prophecy.metadata.is.interactive.run" : "false",
           "prophecy.project.id" : "__PROJECT_ID_PLACEHOLDER__",
@@ -76,7 +104,7 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.20"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.24"
         }
       }, {
         "pypi" : {
@@ -100,7 +128,7 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.20"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.24"
         }
       }, {
         "pypi" : {
@@ -121,7 +149,7 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.20"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.24"
         }
       }, {
         "pypi" : {
@@ -137,7 +165,7 @@
       "depends_on" : [ {
         "task_key" : "ingest_customers"
       } ],
-      "job_cluster_key" : "daily_job_default_small",
+      "job_cluster_key" : "Cluster_1",
       "python_wheel_task" : {
         "package_name" : "cleanup_customers",
         "entry_point" : "main",
@@ -145,7 +173,7 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.20"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.24"
         }
       }, {
         "pypi" : {
@@ -171,7 +199,7 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.20"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.24"
         }
       }, {
         "pypi" : {
@@ -187,10 +215,12 @@
       "quartz_cron_expression" : "0 0 0 * * ? *",
       "timezone_id" : "GMT",
       "pause_status" : "PAUSED"
-    }
+    },
+    "access_control_list" : [ ]
   },
   "cluster_mode" : {
     "clusterMode" : "Single"
   },
-  "secret_scope" : "prophecy_jobs_2256"
+  "secret_scope" : "prophecy_jobs_4097",
+  "sorted_processes" : [ "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf", "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL", "IoOmt7RB3YU_4PEDFeOz-$$dtznb1B7HhKw3bvpjPjWr", "2M0tSVe4al4RwltAcK-SU", "Np4bZSoaA-LVJ8mN8XR4C$$bGRtAuPy--voJZBLDvfrI" ]
 }

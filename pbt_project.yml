@@ -20,7 +20,7 @@ pipelines:
     artefactID: ''
     language: python
     createdAt: '2022-09-29 01:19:30'
-    modifiedAt: '2023-03-09 14:25:08'
+    modifiedAt: '2023-05-30 16:56:23'
     datasets:
       inputs:
       - datasets/raw_customers
@@ -52,7 +52,7 @@ pipelines:
     artefactID: ''
     language: python
     createdAt: '2022-10-11 23:15:32'
-    modifiedAt: '2023-05-17 15:25:53'
+    modifiedAt: '2023-05-25 21:47:59'
     datasets:
       inputs:
       - datasets/customer_nations
@@ -467,7 +467,7 @@ jobs:
   jobs/daily_job:
     name: daily_job
     description: ''
-    fabricUID: 1034
+    fabricUID: 1618
     scheduler:
       Databricks: {}
     cloudProvider: null
@@ -487,11 +487,11 @@ jobs:
     - pipelines/cleanup_orders
     jobClusterMode:
       clusterMode:
-        Multi: {}
+        Single: {}
       clusterId: null
-    enabled: null
+    enabled: false
     createdAt: '2022-09-29 01:34:28'
-    modifiedAt: '2023-05-15 17:47:52'
+    modifiedAt: '2023-05-24 20:40:15'
     author: maciej+webinar-2022@prophecy.io
   jobs/daily_prod_job:
     name: daily_prod_job
@@ -566,7 +566,7 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2022-09-29 03:48:30'
-    modifiedAt: '2023-05-17 14:44:30'
+    modifiedAt: '2023-05-25 21:47:53'
   subgraphs/customers_orders:
     name: customers_orders
     description: ''

@@ -1,7 +1,7 @@
 {
   "metainfo" : {
     "type" : "Databricks",
-    "fabricId" : "1034",
+    "fabricId" : "1618",
     "jobId" : "jobs/daily_job",
     "name" : "daily_job",
     "schedule" : "0 0 0 * * ? *",
@@ -27,8 +27,8 @@
       }
     },
     "availableFabrics" : [ {
-      "id" : "1034",
-      "name" : "dev",
+      "id" : "1618",
+      "name" : "dev_e2",
       "clusterSizes" : {
         "default" : "small",
         "availableClusterSizes" : [ "small" ]
@@ -40,11 +40,11 @@
         "PublicCentral" : { }
       }
     }, {
-      "id" : "1394",
-      "name" : "dev-uc",
+      "id" : "1777",
+      "name" : "Product_workspace",
       "clusterSizes" : {
         "default" : "small",
-        "availableClusterSizes" : [ "small" ]
+        "availableClusterSizes" : [ "small", "Large" ]
       },
       "pylibsResolutionMode" : {
         "PublicCentral" : { }
@@ -52,7 +52,8 @@
       "scalalibsResolutionMode" : {
         "PublicCentral" : { }
       }
-    } ]
+    } ],
+    "accessControlList" : [ ]
   },
   "processes" : {
     "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL" : {
@@ -101,8 +102,8 @@
       "metadata" : {
         "label" : "cleanup_customers",
         "slug" : "cleanup_customers",
-        "x" : -140,
-        "y" : -120
+        "x" : 100,
+        "y" : 100
       },
       "ports" : {
         "inputs" : [ {
@@ -133,6 +134,26 @@
           "overrides" : { },
           "selectedInstance" : "default"
         }
+      },
+      "parent" : "GeidibyuEj-cGUx9fxRWB"
+    },
+    "GeidibyuEj-cGUx9fxRWB" : {
+      "id" : "GeidibyuEj-cGUx9fxRWB",
+      "component" : "Cluster",
+      "metadata" : {
+        "label" : "Cluster_1",
+        "slug" : "Cluster_1",
+        "x" : -240,
+        "y" : -220,
+        "width" : 280,
+        "height" : 280
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ]
+      },
+      "properties" : {
+        "clusterSize" : "small"
       }
     },
     "Np4bZSoaA-LVJ8mN8XR4C$$bGRtAuPy--voJZBLDvfrI" : {

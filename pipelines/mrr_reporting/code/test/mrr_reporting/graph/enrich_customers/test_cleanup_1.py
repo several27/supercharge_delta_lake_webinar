@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 from argparse import Namespace
 from prophecy.test import BaseTestCase
 from prophecy.test.utils import *
-from mrr_reporting.graph.enrich_customers_1.cleanup_1 import *
+from mrr_reporting.graph.enrich_customers.cleanup_1 import *
 from mrr_reporting.config.ConfigStore import *
 
 
@@ -13,14 +13,14 @@ class cleanup_1Test(BaseTestCase):
     def test_unit_test_1(self):
         dfIn0 = createDfFromResourceFiles(
             self.spark,
-            'test/resources/data/mrr_reporting/graph/enrich_customers_1/cleanup_1/in0/schema.json',
-            'test/resources/data/mrr_reporting/graph/enrich_customers_1/cleanup_1/in0/data/test_unit_test_1.json',
+            'test/resources/data/mrr_reporting/graph/enrich_customers/cleanup_1/in0/schema.json',
+            'test/resources/data/mrr_reporting/graph/enrich_customers/cleanup_1/in0/data/test_unit_test_1.json',
             'in0'
         )
         dfOut = createDfFromResourceFiles(
             self.spark,
-            'test/resources/data/mrr_reporting/graph/enrich_customers_1/cleanup_1/out/schema.json',
-            'test/resources/data/mrr_reporting/graph/enrich_customers_1/cleanup_1/out/data/test_unit_test_1.json',
+            'test/resources/data/mrr_reporting/graph/enrich_customers/cleanup_1/out/schema.json',
+            'test/resources/data/mrr_reporting/graph/enrich_customers/cleanup_1/out/data/test_unit_test_1.json',
             'out'
         )
         dfOutComputed = cleanup_1(self.spark, dfIn0)
