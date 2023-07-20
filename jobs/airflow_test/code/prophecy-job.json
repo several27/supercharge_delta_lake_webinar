@@ -1,0 +1,65 @@
+{
+  "metainfo" : {
+    "type" : "Prophecy",
+    "fabricId" : "3346",
+    "jobId" : "jobs/airflow_test",
+    "name" : "airflow_test",
+    "dagName" : "JXYWIiMHMiAyZcN7XOuJXw_",
+    "schedule" : "0 0/1 * * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "pool" : "KWdUsXmL",
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "3346",
+      "name" : "fabric-dev",
+      "trialStartDate" : 1689314078361
+    } ],
+    "catchup" : true,
+    "endDate" : "2023-08-04",
+    "scheduleTimeZone" : "UTC"
+  },
+  "processes" : {
+    "qgq5elM8fzT1hnWbHTwbd$$_IZVJ0J2y4jhVA-ao1sOw" : {
+      "id" : "qgq5elM8fzT1hnWbHTwbd$$_IZVJ0J2y4jhVA-ao1sOw",
+      "component" : "Slack",
+      "metadata" : {
+        "label" : "Slack_0",
+        "slug" : "Slack_0",
+        "x" : 140,
+        "y" : 160
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VA5ykwgdfGVthwXfgZJ7k$$dd7htxFrdgPVpQRLhHmrM",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "WpUT4kPY-X_naIDhfAuwk$$2MtvjIoIaKWeVivYUwWgf",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "channel" : "",
+        "text" : "",
+        "token" : null,
+        "slackConnectionId" : null,
+        "taskId" : null
+      }
+    }
+  },
+  "connections" : [ ]
+}

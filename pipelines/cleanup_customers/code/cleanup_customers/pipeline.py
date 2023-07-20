@@ -1,6 +1,7 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
+from prophecy.utils import *
 from cleanup_customers.config.ConfigStore import *
 from cleanup_customers.udfs.UDFs import *
 from prophecy.utils import *
@@ -20,11 +21,9 @@ def main():
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
     spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/cleanup_customers")
+    registerUDFs(spark)
     
-    MetricsCollector.start(
-        spark = spark,
-        pipelineId = spark.conf.get("prophecy.project.id") + "/" + "pipelines/cleanup_customers"
-    )
+    MetricsCollector.start(spark = spark, pipelineId = "pipelines/cleanup_customers")
     pipeline(spark)
     MetricsCollector.end(spark)
 

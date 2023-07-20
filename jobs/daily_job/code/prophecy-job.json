@@ -41,7 +41,7 @@
       }
     }, {
       "id" : "1777",
-      "name" : "Product_workspace",
+      "name" : "db_product",
       "clusterSizes" : {
         "default" : "small",
         "availableClusterSizes" : [ "small", "Large" ]
@@ -102,8 +102,8 @@
       "metadata" : {
         "label" : "cleanup_customers",
         "slug" : "cleanup_customers",
-        "x" : 100,
-        "y" : 100
+        "x" : -140,
+        "y" : -120
       },
       "ports" : {
         "inputs" : [ {
@@ -134,26 +134,6 @@
           "overrides" : { },
           "selectedInstance" : "default"
         }
-      },
-      "parent" : "GeidibyuEj-cGUx9fxRWB"
-    },
-    "GeidibyuEj-cGUx9fxRWB" : {
-      "id" : "GeidibyuEj-cGUx9fxRWB",
-      "component" : "Cluster",
-      "metadata" : {
-        "label" : "Cluster_1",
-        "slug" : "Cluster_1",
-        "x" : -240,
-        "y" : -220,
-        "width" : 280,
-        "height" : 280
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ ]
-      },
-      "properties" : {
-        "clusterSize" : "small"
       }
     },
     "Np4bZSoaA-LVJ8mN8XR4C$$bGRtAuPy--voJZBLDvfrI" : {
@@ -189,70 +169,35 @@
         "configurations" : {
           "schema" : [ {
             "name" : "user_name",
+            "optional" : false,
             "kind" : {
               "type" : "string",
               "value" : "enter_your_user_name"
             },
-            "optional" : false,
+            "isReferenced" : false,
             "isWorkflowNodeConfiguration" : false
           }, {
-            "name" : "enrich_customers_1",
+            "name" : "enrich_customers",
+            "optional" : false,
             "kind" : {
               "type" : "record",
               "fields" : [ {
                 "name" : "user_name",
+                "optional" : false,
                 "kind" : {
                   "type" : "string",
                   "value" : "enter_your_user_name"
                 },
-                "optional" : false,
+                "isReferenced" : false,
                 "isWorkflowNodeConfiguration" : false
               } ]
             },
-            "optional" : false,
+            "isReferenced" : false,
             "isWorkflowNodeConfiguration" : true
           } ],
           "instances" : {
             "supercharge_delta_lake" : [ "default" ]
           },
-          "overrides" : { },
-          "selectedInstance" : "default"
-        }
-      }
-    },
-    "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf" : {
-      "id" : "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf",
-      "component" : "Pipeline",
-      "metadata" : {
-        "label" : "ingest_orders",
-        "slug" : "ingest_orders",
-        "x" : -340,
-        "y" : 60
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "okn39YBoCLUajVq3fjJU5$$enxluIM2UoXRVbTP6qLa4",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "8SY1RcD5gZz9lEYNC93-J$$os5dldqF3o-JBYks20Mxt",
-          "slug" : ""
-        } ]
-      },
-      "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false
-        }
-      },
-      "properties" : {
-        "pipelineId" : "pipelines/ingest_orders",
-        "configurations" : {
-          "schema" : [ ],
-          "instances" : { },
           "overrides" : { },
           "selectedInstance" : "default"
         }
@@ -300,12 +245,6 @@
     }
   },
   "connections" : [ {
-    "id" : "ZTsoiITJGuMeeVKG1fXjz",
-    "source" : "SAE-DntKYZWCoX68hgldI$$QbHrgMcrm8KDB_0me10Lf",
-    "target" : "PFW_U3-QGUeMTSm6Vvwgc$$KYWUKSz4JBVtaTSXHClXL",
-    "sourcePort" : "8SY1RcD5gZz9lEYNC93-J$$os5dldqF3o-JBYks20Mxt",
-    "targetPort" : "uLOshaetBNxvfjU_03cCJ$$NJ2KgZEgSIXdsyvvWVM_v"
-  }, {
     "id" : "iP4cc-k56_uaze_gY-iRX",
     "source" : "2M0tSVe4al4RwltAcK-SU",
     "target" : "Np4bZSoaA-LVJ8mN8XR4C$$bGRtAuPy--voJZBLDvfrI",

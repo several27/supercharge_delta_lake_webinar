@@ -1,10 +1,11 @@
 {
   "metainfo" : {
     "type" : "Databricks",
-    "fabricId" : "1034",
-    "jobId" : "jobs/monthly_schedule",
-    "name" : "monthly_schedule",
+    "fabricId" : "1618",
+    "jobId" : "jobs/monthly_job",
+    "name" : "monthly_job",
     "schedule" : "0 0 0 1 * ? *",
+    "scheduleTimeZone" : "UTC",
     "jobClusterMode" : {
       "clusterMode" : "Single"
     },
@@ -42,7 +43,7 @@
       }
     }, {
       "id" : "1777",
-      "name" : "Product_workspace",
+      "name" : "db_product",
       "clusterSizes" : {
         "default" : "small",
         "availableClusterSizes" : [ "small", "Large" ]
@@ -56,12 +57,12 @@
     } ]
   },
   "processes" : {
-    "1ICL8DkTI-sz5P2KLTkOY" : {
-      "id" : "1ICL8DkTI-sz5P2KLTkOY",
+    "P6Xh-ypFAfjvwUs9iomlW" : {
+      "id" : "P6Xh-ypFAfjvwUs9iomlW",
       "component" : "Pipeline",
       "metadata" : {
-        "label" : "demo_day",
-        "slug" : "demo_day",
+        "label" : "mrr_reporting",
+        "slug" : "mrr_reporting",
         "x" : 100,
         "y" : 100
       },
@@ -85,9 +86,36 @@
         }
       },
       "properties" : {
-        "pipelineId" : "pipelines/demo_day",
+        "pipelineId" : "pipelines/mrr_reporting",
         "configurations" : {
-          "schema" : [ ],
+          "schema" : [ {
+            "name" : "user_name",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "enter_your_user_name"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "enrich_customers",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "user_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "enter_your_user_name"
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
+          } ],
           "instances" : {
             "supercharge_delta_lake" : [ "default" ]
           },
@@ -96,62 +124,22 @@
         }
       }
     },
-    "OEJqsc02hi1BhEZ0Iw6nC$$eY3JJdvcRKeKippsyVMWP" : {
-      "id" : "OEJqsc02hi1BhEZ0Iw6nC$$eY3JJdvcRKeKippsyVMWP",
-      "component" : "Pipeline",
-      "metadata" : {
-        "label" : "cleanup_customers",
-        "slug" : "cleanup_customers",
-        "x" : -100,
-        "y" : 0
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "5jdbVSDgPzQF_XZxDFlYz$$rt_o4rvzgU6TDIHJHCsoy",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "RlcOKx1sw3sicCKDkpxgN$$p7vJAOE0LvkeXPdLIj39-",
-          "slug" : ""
-        } ]
-      },
-      "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false
-        }
-      },
-      "properties" : {
-        "pipelineId" : "pipelines/cleanup_customers",
-        "configurations" : {
-          "schema" : [ ],
-          "instances" : {
-            "supercharge_delta_lake" : [ "default" ]
-          },
-          "overrides" : { },
-          "selectedInstance" : "default"
-        }
-      }
-    },
-    "acQrfQqGAAiqw4huhW0dq$$kqDG9G9gM0z5FOLPypK_k" : {
-      "id" : "acQrfQqGAAiqw4huhW0dq$$kqDG9G9gM0z5FOLPypK_k",
+    "87p7S034KyUEnPaoWupQb$$v6vC83DBrSDl5N6JvAp8x" : {
+      "id" : "87p7S034KyUEnPaoWupQb$$v6vC83DBrSDl5N6JvAp8x",
       "component" : "Pipeline",
       "metadata" : {
         "label" : "cleanup_orders",
         "slug" : "cleanup_orders",
-        "x" : -100,
-        "y" : 220
+        "x" : -120,
+        "y" : 0
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "SJaxgVMdiMhSBj8uz2Z8p$$aUg0fcF0SnUYmS3dCcLKa",
-          "slug" : ""
+          "id" : "Izy0YfqfqB75zE6aJysac$$qtENkXgMqSY9trGz66kTX",
+          "slug" : "in0"
         } ],
         "outputs" : [ {
-          "id" : "SK7SyCzTZn9HkGImgd-yP$$_WWCZnlmN0kbkUGZRNZ2B",
+          "id" : "7jRHAD9Ti8AkmrIFrscOZ$$3I2Ewj3X3CVXHWkKCPN2A",
           "slug" : ""
         } ]
       },
@@ -175,19 +163,59 @@
           "selectedInstance" : "default"
         }
       }
+    },
+    "uBprqHlyTibn16lfzdV85$$hjtygQmlDvnXNyENS77DT" : {
+      "id" : "uBprqHlyTibn16lfzdV85$$hjtygQmlDvnXNyENS77DT",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "cleanup_customers",
+        "slug" : "cleanup_customers",
+        "x" : -120,
+        "y" : 220
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BLc_PxKY0woQe4ya9TFSk$$RWhKU0sSc3kaGP_mqBCtI",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "taJwqyLkHYNTSkT6gLD2M$$9VDWNJ3sYdEKxHs8UwJuI",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/cleanup_customers",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
     }
   },
   "connections" : [ {
-    "id" : "4B6Dnbr4yLZUJ79OWa6xv",
-    "source" : "acQrfQqGAAiqw4huhW0dq$$kqDG9G9gM0z5FOLPypK_k",
-    "target" : "1ICL8DkTI-sz5P2KLTkOY",
-    "sourcePort" : "SK7SyCzTZn9HkGImgd-yP$$_WWCZnlmN0kbkUGZRNZ2B",
+    "id" : "jGtNQr7X9tbAdxyw70d2P$$6GO2ZDvFAQfdUvGo0U2SF",
+    "source" : "87p7S034KyUEnPaoWupQb$$v6vC83DBrSDl5N6JvAp8x",
+    "target" : "P6Xh-ypFAfjvwUs9iomlW",
+    "sourcePort" : "7jRHAD9Ti8AkmrIFrscOZ$$3I2Ewj3X3CVXHWkKCPN2A",
     "targetPort" : "in"
   }, {
-    "id" : "nmzjmeg1EwmJTlgth298b",
-    "source" : "OEJqsc02hi1BhEZ0Iw6nC$$eY3JJdvcRKeKippsyVMWP",
-    "target" : "1ICL8DkTI-sz5P2KLTkOY",
-    "sourcePort" : "RlcOKx1sw3sicCKDkpxgN$$p7vJAOE0LvkeXPdLIj39-",
+    "id" : "rQPWuKJgJnwpxOaIwrWPX",
+    "source" : "uBprqHlyTibn16lfzdV85$$hjtygQmlDvnXNyENS77DT",
+    "target" : "P6Xh-ypFAfjvwUs9iomlW",
+    "sourcePort" : "taJwqyLkHYNTSkT6gLD2M$$9VDWNJ3sYdEKxHs8UwJuI",
     "targetPort" : "in"
   } ]
 }

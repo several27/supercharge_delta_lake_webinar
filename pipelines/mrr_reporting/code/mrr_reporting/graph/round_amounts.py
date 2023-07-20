@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from mrr_reporting.config.ConfigStore import *
 from mrr_reporting.udfs.UDFs import *
 
-def silvers_orders(spark: SparkSession) -> DataFrame:
-    return spark.read.table(f"lakehouse.silver_orders")
+def round_amounts(spark: SparkSession, sum_amounts: DataFrame) -> DataFrame:
+    return sum_amounts.select(col("c_custkey"), col("month"), floor(col("amounts")).alias("amounts"))
