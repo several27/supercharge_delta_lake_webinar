@@ -1,0 +1,235 @@
+{
+  "metainfo" : {
+    "type" : "Prophecy",
+    "fabricId" : "3346",
+    "jobId" : "jobs/monthly_job_airflow",
+    "name" : "monthly_job_airflow",
+    "dagName" : "tE5wTpcqrmsPVWhsmfENIg_",
+    "schedule" : "0 0 1 * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "pool" : "KWdUsXmL",
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "3346",
+      "name" : "fabric-dev",
+      "trialStartDate" : 1689314078361
+    } ],
+    "catchup" : true,
+    "tags" : [ ],
+    "startDate" : "2023-08-03",
+    "endDate" : "2023-08-04",
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    }
+  },
+  "processes" : {
+    "kblf707tRtg01RNjyhpKn$$x0krV2O4wUnfV-g4OZJjs" : {
+      "id" : "kblf707tRtg01RNjyhpKn$$x0krV2O4wUnfV-g4OZJjs",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "ingest_customers",
+        "slug" : "ingest_customers",
+        "x" : 360,
+        "y" : 400
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "yi3QLOjqIRTqx9BMYE9M2$$WNsDRmgDTOqBkN5s_Ngx2",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "0a3PEyhRlm6uJGD1MqWi1$$6SLNxuTNVWdyB-7eH29MS",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "runJson" : null,
+        "databricksConnId" : "",
+        "clusterSize" : "1618/small",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "taskId" : null,
+        "pipelineId" : "pipelines/ingest_customers"
+      }
+    },
+    "jZCDsK6FfMB-wIbbxeXbv$$dtT9ACIrgMo1dalxmpjAV" : {
+      "id" : "jZCDsK6FfMB-wIbbxeXbv$$dtT9ACIrgMo1dalxmpjAV",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "cleanup_orders",
+        "slug" : "cleanup_orders",
+        "x" : 620,
+        "y" : 140
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "fEjPagBaGOyHk4dvHPFJg$$nbV-HTUnV1-MVjQyFToZk",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "_-gv-ZgM28KtXQT8eGor7$$Xg72ntbxoLxXcJg9vqR66",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "runJson" : null,
+        "databricksConnId" : "",
+        "clusterSize" : "1618/small",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "taskId" : null,
+        "pipelineId" : "pipelines/cleanup_orders"
+      }
+    },
+    "TQhFZGLyq6P-3QnfovvQ7$$mWFqu5VMVW3WSHjOndHUN" : {
+      "id" : "TQhFZGLyq6P-3QnfovvQ7$$mWFqu5VMVW3WSHjOndHUN",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "mrr_reporting",
+        "slug" : "mrr_reporting",
+        "x" : 920,
+        "y" : 400
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Ws68n_bFs08OXpwSa1cuY$$opTi85XwXtRqeJCQp3bxw",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "Ct3F4GjvSOObajQUKZNbl$$v9c9xp5bFMmu7RsKa90KE",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "runJson" : null,
+        "databricksConnId" : "",
+        "clusterSize" : "1618/small",
+        "configurations" : {
+          "schema" : [ {
+            "name" : "user_name",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "enter_your_user_name"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "enrich_customers",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "user_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "enter_your_user_name"
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
+          } ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "taskId" : null,
+        "pipelineId" : "pipelines/mrr_reporting"
+      }
+    },
+    "99akZIENojLS_7BkfbrP4$$FpnswZl-OiMB4hwVkh1e3" : {
+      "id" : "99akZIENojLS_7BkfbrP4$$FpnswZl-OiMB4hwVkh1e3",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "cleanup_customers",
+        "slug" : "cleanup_customers",
+        "x" : 620,
+        "y" : 400
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "OI6k6v-8JBrz2lRSdjcth$$xeVBMGDf9YFj3H84zBlsU",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "tyB9zDd81aw_D9unXx51g$$NDcOslzZbDla3ED-kpKZX",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "runJson" : null,
+        "databricksConnId" : "",
+        "clusterSize" : "1618/small",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "taskId" : null,
+        "pipelineId" : "pipelines/cleanup_customers"
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "8CUNxhaJzDM0p4oulO2Mp$$h-Vucu2QPOzhv26wMUM26",
+    "source" : "kblf707tRtg01RNjyhpKn$$x0krV2O4wUnfV-g4OZJjs",
+    "target" : "99akZIENojLS_7BkfbrP4$$FpnswZl-OiMB4hwVkh1e3",
+    "sourcePort" : "0a3PEyhRlm6uJGD1MqWi1$$6SLNxuTNVWdyB-7eH29MS",
+    "targetPort" : "OI6k6v-8JBrz2lRSdjcth$$xeVBMGDf9YFj3H84zBlsU"
+  }, {
+    "id" : "i4h4A0DQCkB5vr0aEP6-s$$p_VM_doBeA8IBfxfgl0MC",
+    "source" : "99akZIENojLS_7BkfbrP4$$FpnswZl-OiMB4hwVkh1e3",
+    "target" : "TQhFZGLyq6P-3QnfovvQ7$$mWFqu5VMVW3WSHjOndHUN",
+    "sourcePort" : "tyB9zDd81aw_D9unXx51g$$NDcOslzZbDla3ED-kpKZX",
+    "targetPort" : "Ws68n_bFs08OXpwSa1cuY$$opTi85XwXtRqeJCQp3bxw"
+  }, {
+    "id" : "VEoTTmKKAmN8mfCI8lxV-",
+    "source" : "jZCDsK6FfMB-wIbbxeXbv$$dtT9ACIrgMo1dalxmpjAV",
+    "target" : "TQhFZGLyq6P-3QnfovvQ7$$mWFqu5VMVW3WSHjOndHUN",
+    "sourcePort" : "_-gv-ZgM28KtXQT8eGor7$$Xg72ntbxoLxXcJg9vqR66",
+    "targetPort" : "Ws68n_bFs08OXpwSa1cuY$$opTi85XwXtRqeJCQp3bxw"
+  } ]
+}

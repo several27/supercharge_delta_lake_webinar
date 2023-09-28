@@ -1,13 +1,16 @@
 {
   "metainfo" : {
     "id" : "1",
+    "uri" : "pipelines/cleanup_orders",
     "language" : "python",
-    "fabricId" : "1034",
+    "fabricId" : "1618",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "python",
-      "udfs" : [ ]
+      "udfs" : [ ],
+      "functionPackageName" : "prophecy_webinar.supercharge_delta_lake.functions",
+      "sharedFunctionPackageNames" : [ ]
     },
     "udafs" : {
       "language" : "python",
@@ -18,15 +21,22 @@
         "type" : "record",
         "fields" : [ ]
       },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
       "fabrics" : { },
       "instances" : { },
-      "selected" : "default"
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
     },
     "sparkConf" : [ ],
     "hadoopConf" : [ ],
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -35,7 +45,8 @@
       "enabled" : false,
       "value" : 1000
     },
-    "topLevelPackage" : "cleanup_orders"
+    "topLevelPackage" : "cleanup_orders",
+    "configurationVersion" : "v1"
   },
   "connections" : [ {
     "id" : "NKG-OpmOJ2ca5aBHWQ1xY",
@@ -87,7 +98,93 @@
       "ports" : {
         "inputs" : [ {
           "id" : "cfq3cHOn0igOrnHCdkTR7$$fAbaiADwaHpJHxC5hJgQY",
-          "slug" : "in0"
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "o_orderkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderstatus",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_totalprice",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderdate",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderpriority",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_clerk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_shippriority",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],

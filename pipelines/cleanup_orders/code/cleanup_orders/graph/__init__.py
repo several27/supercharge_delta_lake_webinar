@@ -1,2 +1,2 @@
-from .silver_orders import *
-from .bronze_orders import *
+from .silver_orders import silver_orders
+from .bronze_orders import bronze_orders

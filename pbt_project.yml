@@ -71,9 +71,9 @@ pipelines:
     createdAt: '2022-09-29 01:31:06'
     datasets:
       inputs:
-      - 3436/datasets/bronze_orders
+      - datasets/bronze_orders
       outputs:
-      - 3436/datasets/silver_orders
+      - datasets/silver_orders
     subgraphs: []
     dependencies: {}
   pipelines/demo_day:
@@ -93,7 +93,8 @@ pipelines:
       - datasets/silver_orders
       outputs:
       - datasets/final_table
-    subgraphs: []
+    subgraphs:
+    - subgraphs/enrich_customers
     dependencies: {}
 datasets:
   datasets/customer_nations:
@@ -213,19 +214,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:32:05'
-  datasets/orders_merge:
-    name: orders_merge
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-11-09 16:35:17'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-11-09 16:35:17'
   datasets/nation:
     name: nation
     description: ''
@@ -278,141 +266,11 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:30:31'
-  datasets/maciej_customer_spendings:
-    name: maciej_customer_spendings
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2023-01-30 23:31:14'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2023-01-30 23:31:14'
-  datasets/final_table:
-    name: final_table
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2023-02-23 18:52:08'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2023-02-23 18:52:08'
-  datasets/text_input:
-    name: text_input
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-07 04:18:52'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: File
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-07 04:18:53'
-  datasets/silver_orders_1:
-    name: silver_orders_1
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-04 15:53:56'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-04 15:53:56'
-  datasets/silvers_orders_1:
-    name: silvers_orders_1
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-11 23:22:30'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-11 23:22:30'
-  datasets/silver_customers_2:
-    name: silver_customers_2
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-05 16:31:43'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-05 16:31:43'
-  datasets/silver_orders_3:
-    name: silver_orders_3
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-07 03:55:20'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: File
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-07 03:55:20'
-  datasets/qwe:
-    name: qwe
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2023-01-31 06:33:38'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Warehouse
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2023-01-31 06:33:38'
-  datasets/random_data:
-    name: random_data
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2023-03-01 20:12:37'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: File
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2023-03-01 20:12:37'
-  datasets/configurable_report:
-    name: configurable_report
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2023-03-13 20:27:58'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: File
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2023-03-13 20:27:58'
-  datasets/test_qwe:
-    name: test_qwe
+  datasets/department_table:
+    name: department_table
     description: ''
     author: maciej@prophecy.io
-    createdAt: '2023-06-28 07:15:47'
+    createdAt: '2023-08-30 04:58:20'
     mode: batch
     physicalDatasets:
       dev_e2:
@@ -420,81 +278,13 @@ datasets:
         datasetType: Database
         description: ''
         author: maciej@prophecy.io
-        createdAt: '2023-06-28 07:15:48'
-  datasets/test_1:
-    name: test_1
-    description: ''
-    author: maciej@prophecy.io
-    createdAt: '2023-06-28 07:17:29'
-    mode: batch
-    physicalDatasets:
-      dev_e2:
-        fabricId: 1618
-        datasetType: Database
-        description: ''
-        author: maciej@prophecy.io
-        createdAt: '2023-06-28 07:17:29'
+        createdAt: '2023-08-30 04:58:20'
 templates: {}
 jobs:
-  jobs/daily_job:
-    name: daily_job
+  jobs/monthly_job_db:
+    name: monthly_job_db
     description: ''
     fabricUID: 1618
-    scheduler:
-      Databricks: {}
-    cloudProvider: null
-    jobSize: small
-    scheduleCron: 0 0 0 * * ? *
-    timeout: null
-    alerting:
-      emails: maciej@prophecy.io
-      onStart: true
-      onSuccess: false
-      onFailure: true
-    pipelines:
-    - pipelines/cleanup_orders
-    - pipelines/cleanup_customers
-    - pipelines/mrr_reporting
-    - pipelines/ingest_customers
-    jobClusterMode:
-      clusterMode:
-        Single: {}
-      clusterId: null
-    enabled: false
-    createdAt: '2022-09-29 01:34:28'
-    author: maciej+webinar-2022@prophecy.io
-  jobs/daily_prod_job:
-    name: daily_prod_job
-    description: ''
-    fabricUID: 1132
-    scheduler:
-      Databricks: {}
-    cloudProvider: null
-    jobSize: small
-    scheduleCron: 0 0 0 * * ? *
-    timeout: null
-    alerting:
-      emails: ''
-      onStart: false
-      onSuccess: false
-      onFailure: false
-    pipelines:
-    - pipelines/ingest_customers
-    - pipelines/ingest_orders
-    - pipelines/cleanup_customers
-    - pipelines/mrr_reporting
-    - pipelines/cleanup_orders
-    jobClusterMode:
-      clusterMode:
-        Multi: {}
-      clusterId: null
-    enabled: false
-    createdAt: '2022-10-27 16:49:30'
-    author: maciej+webinar-admin-2022@prophecy.io
-  jobs/monthly_schedule:
-    name: monthly_schedule
-    description: ''
-    fabricUID: 1034
     scheduler:
       Databricks: {}
     cloudProvider: null
@@ -507,48 +297,26 @@ jobs:
       onSuccess: false
       onFailure: false
     pipelines:
-    - pipelines/demo_day
-    - pipelines/cleanup_customers
+    - pipelines/ingest_customers
     - pipelines/cleanup_orders
+    - pipelines/cleanup_customers
+    - pipelines/mrr_reporting
     jobClusterMode:
       clusterMode:
         Single: {}
       clusterId: null
-    enabled: null
-    createdAt: '2023-02-23 18:53:26'
-    author: maciej+webinar-2022@prophecy.io
-  jobs/airflow_test:
-    name: airflow_test
+    enabled: false
+    createdAt: '2023-08-08 19:30:30'
+    author: maciej@prophecy.io
+  jobs/monthly_job_airflow:
+    name: monthly_job_airflow
     description: ''
     fabricUID: 3346
     scheduler:
       Prophecy: {}
     cloudProvider: null
     jobSize: null
-    scheduleCron: 0 0/1 * * *
-    timeout: null
-    alerting:
-      emails: ''
-      onStart: false
-      onSuccess: false
-      onFailure: false
-    pipelines: []
-    jobClusterMode:
-      clusterMode:
-        Single: {}
-      clusterId: null
-    enabled: null
-    createdAt: '2023-07-14 05:56:17'
-    author: maciej@prophecy.io
-  jobs/monthly_job:
-    name: monthly_job
-    description: ''
-    fabricUID: 1618
-    scheduler:
-      Databricks: {}
-    cloudProvider: null
-    jobSize: small
-    scheduleCron: 0 0 0 1 * ? *
+    scheduleCron: 0 0 1 * *
     timeout: null
     alerting:
       emails: ''
@@ -556,20 +324,24 @@ jobs:
       onSuccess: false
       onFailure: false
     pipelines:
-    - pipelines/mrr_reporting
+    - pipelines/ingest_customers
     - pipelines/cleanup_orders
+    - pipelines/mrr_reporting
     - pipelines/cleanup_customers
     jobClusterMode:
       clusterMode:
         Single: {}
       clusterId: null
-    enabled: null
-    createdAt: '2023-07-20 21:47:10'
+    enabled: false
+    createdAt: '2023-08-08 19:31:06'
     author: maciej@prophecy.io
+gemContainer:
+  languageVersion: '3.10'
+  gemLibsVersion: 1.3.2.0
+  gems: {}
 functions:
   author: null
   createdAt: '2023-03-24 19:20:44'
-  gems: {}
   udfs: {}
   udafs: {}
   expressions: {}
@@ -582,14 +354,6 @@ subgraphs:
     artefactID: ''
     mode: batch
     createdAt: '2022-09-29 03:48:30'
-  subgraphs/customers_orders:
-    name: customers_orders
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    language: python
-    artefactID: ''
-    mode: batch
-    createdAt: '2022-12-14 21:18:35'
   subgraphs/data_cleanup:
     name: data_cleanup
     description: ''
@@ -605,5 +369,21 @@ sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies: []
-projectDependencies: {}
+projectDependencies:
+  '12654':
+    projectUID: 12654
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
+    version: 0.0.4
+    isDefault: true
+    author: null
+    createdAt: '2023-09-28 08:42:10'
+  '12655':
+    projectUID: 12655
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12655.git&subPath=
+    version: 0.0.2
+    isDefault: true
+    author: null
+    createdAt: '2023-09-28 08:42:10'
 pipelineConfigurations: {}

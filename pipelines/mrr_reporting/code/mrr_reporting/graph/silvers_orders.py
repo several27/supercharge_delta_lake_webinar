@@ -7,4 +7,4 @@ from mrr_reporting.config.ConfigStore import *
 from mrr_reporting.udfs.UDFs import *
 
 def silvers_orders(spark: SparkSession) -> DataFrame:
-    return spark.read.table(f"lakehouse.silver_orders")
+    return spark.read.table("`lakehouse`.`silver_orders`")

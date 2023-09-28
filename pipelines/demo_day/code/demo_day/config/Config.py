@@ -1,14 +1,19 @@
+from demo_day.graph.enrich_customers.config.Config import SubgraphConfig as enrich_customers_Config
 from prophecy.config import ConfigBase
-prophecy_spark_context = None
 
 
 class Config(ConfigBase):
 
-    def __init__(self, ):
+    def __init__(self, enrich_customers: dict=None, **kwargs):
         self.spark = None
-        self.update()
+        self.update(enrich_customers)
 
-    def update(self, ):
-        global prophecy_spark_context
-        prophecy_spark_context = self.spark
+    def update(self, enrich_customers: dict={}, **kwargs):
+        prophecy_spark = self.spark
+        self.enrich_customers = self.get_config_object(
+            prophecy_spark, 
+            enrich_customers_Config(prophecy_spark = prophecy_spark), 
+            enrich_customers, 
+            enrich_customers_Config
+        )
         pass

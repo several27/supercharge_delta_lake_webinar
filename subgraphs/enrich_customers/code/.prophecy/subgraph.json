@@ -38,7 +38,8 @@
       "isStreaming" : false
     } ],
     "selectedInputFields" : [ ],
-    "isCustomOutputSchema" : false
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
   },
   "properties" : {
     "packageName" : "enrich_customers"
@@ -113,7 +114,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "conditions" : [ {
@@ -206,6 +208,12 @@
         "allIn0" : null,
         "whereClause" : null,
         "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectId" : "12654",
+        "projectName" : "ProphecySparkBasicsPython",
+        "version" : "0.0.4"
       }
     },
     "Qi9M0IReFG82IosR2-wvm" : {
@@ -228,7 +236,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "format" : "delta",
@@ -308,6 +317,12 @@
         "datasetId" : "datasets/nation",
         "updated" : true,
         "currentDatasetId" : "datasets/nation",
+        "componentInfo" : {
+          "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/delta",
+          "projectId" : "12654",
+          "projectName" : "ProphecySparkBasicsPython",
+          "version" : "0.0.4"
+        },
         "dataset" : {
           "mergeCondition" : null,
           "minFlagCol" : null,
@@ -407,7 +422,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "importLanguage" : "python",
@@ -499,6 +515,12 @@
           "language" : "python"
         } ],
         "language" : "python"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectId" : "12654",
+        "projectName" : "ProphecySparkBasicsPython",
+        "version" : "0.0.4"
       }
     },
     "8eOw1j3e3CItKTNmDDtQC" : {
@@ -521,7 +543,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "format" : "delta",
@@ -596,6 +619,12 @@
         "datasetId" : "datasets/customer_nations",
         "updated" : true,
         "currentDatasetId" : "datasets/customer_nations",
+        "componentInfo" : {
+          "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/delta",
+          "projectId" : "12654",
+          "projectName" : "ProphecySparkBasicsPython",
+          "version" : "0.0.4"
+        },
         "dataset" : {
           "mergeCondition" : null,
           "minFlagCol" : null,
@@ -728,7 +757,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "format" : "delta",
@@ -803,6 +833,12 @@
         "datasetId" : "datasets/regions",
         "updated" : true,
         "currentDatasetId" : "datasets/regions",
+        "componentInfo" : {
+          "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/delta",
+          "projectId" : "12654",
+          "projectName" : "ProphecySparkBasicsPython",
+          "version" : "0.0.4"
+        },
         "dataset" : {
           "mergeCondition" : null,
           "minFlagCol" : null,

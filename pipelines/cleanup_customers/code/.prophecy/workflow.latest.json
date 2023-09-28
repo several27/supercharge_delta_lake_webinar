@@ -1,6 +1,7 @@
 {
   "metainfo" : {
     "id" : "1",
+    "uri" : "pipelines/cleanup_customers",
     "language" : "python",
     "fabricId" : "1618",
     "frontEndLanguage" : "sql",

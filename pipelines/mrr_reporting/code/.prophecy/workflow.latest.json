@@ -1,6 +1,10 @@
 {
   "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
     "id" : "1",
+    "uri" : "pipelines/mrr_reporting",
     "language" : "python",
     "fabricId" : "1618",
     "frontEndLanguage" : "sql",
@@ -9,7 +13,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "prophecy_webinar.supercharge_delta_lake.functions",
-      "sharedFunctionPackageNames" : [ ]
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -62,11 +66,19 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
-    "visualCodeInterimMode" : "Disabled",
+    "visualCodeInterimMode" : "Full",
     "recordsLimit" : {
       "enabled" : true,
       "value" : 10000
@@ -99,27 +111,118 @@
     "target" : "Rpvl6jvtf_w6aIiXt2rzp$$ZzebL3UCq6dvHxHzcRsO0",
     "targetPort" : "x4p0lYOIzMZWlOrk2iRK-$$G4IidmmJUpLdOfufmGcXs"
   }, {
-    "id" : "9wviUcorWY1_dd0RROXWm$$8Kjfc01FGgtDL4dcp4Kuv",
-    "source" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
-    "sourcePort" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
-    "target" : "M7YAEDgadj8hEOH8kmRfy$$xZuv7TjmXnx88lbJq0uxD",
-    "targetPort" : "F6Oc3D6U1kCp5QSbS4MSk$$WljsffzTV758nNnEwwQPX"
-  }, {
-    "id" : "bLJ5675iMRjodEyMVvWwT",
-    "source" : "M7YAEDgadj8hEOH8kmRfy$$xZuv7TjmXnx88lbJq0uxD",
-    "sourcePort" : "1NwmWCjfl1oaPEXgvaTXA$$fVZyDqPV0F84A2_zyWh8W",
+    "id" : "ByeGcoEq5Uwej2PaaIW5c$$iSy1Oq6Ot8S4T5ta7ZjD2",
+    "source" : "BzJA7ALfiS_uKJ_vtgjxv$$hTGXK8AUin5gduocpsR4q",
+    "sourcePort" : "EqkGx5buvxyHZTruinIiX$$Etp2OD2ZaFUcxxyyvF4To",
     "target" : "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT",
     "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$ngCqyWSuJcr4_hr9guVof"
+  }, {
+    "id" : "cnbiSTR34DPsE6qYedLOv$$bAtv2moXNL2BNmkFNy3Sp",
+    "source" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
+    "sourcePort" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
+    "target" : "BzJA7ALfiS_uKJ_vtgjxv$$hTGXK8AUin5gduocpsR4q",
+    "targetPort" : "W6i1yzsJ5oED5YV-LKcEc$$b1vN1RSJKsNzwb_zGVDQo"
   } ],
   "processes" : {
+    "BzJA7ALfiS_uKJ_vtgjxv$$hTGXK8AUin5gduocpsR4q" : {
+      "id" : "BzJA7ALfiS_uKJ_vtgjxv$$hTGXK8AUin5gduocpsR4q",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "round_amounts",
+        "slug" : "round_amounts",
+        "x" : 720,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "W6i1yzsJ5oED5YV-LKcEc$$b1vN1RSJKsNzwb_zGVDQo",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "month",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amounts",
+              "type" : "decimal(28,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "EqkGx5buvxyHZTruinIiX$$Etp2OD2ZaFUcxxyyvF4To",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "c_custkey",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_custkey"
+          },
+          "description" : ""
+        }, {
+          "target" : "month",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "month"
+          },
+          "description" : ""
+        }, {
+          "target" : "amounts",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "floor(amounts)"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "W6i1yzsJ5oED5YV-LKcEc$$b1vN1RSJKsNzwb_zGVDQo##amounts", "W6i1yzsJ5oED5YV-LKcEc$$b1vN1RSJKsNzwb_zGVDQo##month", "W6i1yzsJ5oED5YV-LKcEc$$b1vN1RSJKsNzwb_zGVDQo##c_custkey" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy" : {
       "id" : "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy",
       "component" : "Source",
       "metadata" : {
         "label" : "silver_customers_2_1",
         "slug" : "silver_customers_2_1",
-        "x" : -80,
-        "y" : 0,
+        "x" : 120,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -132,7 +235,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "datasetId" : "datasets/silver_customers"
@@ -144,8 +248,8 @@
       "metadata" : {
         "label" : "silvers_orders",
         "slug" : "silvers_orders",
-        "x" : -80,
-        "y" : 200,
+        "x" : 120,
+        "y" : 320,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -158,7 +262,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "datasetId" : "datasets/silver_orders"
@@ -170,8 +275,8 @@
       "metadata" : {
         "label" : "final_report",
         "slug" : "final_report",
-        "x" : 1000,
-        "y" : 100,
+        "x" : 1120,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -234,7 +339,8 @@
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "datasetId" : "datasets/final_report"
@@ -246,8 +352,8 @@
       "metadata" : {
         "label" : "by_customer_id",
         "slug" : "by_customer_id",
-        "x" : 160,
-        "y" : 100,
+        "x" : 320,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -429,7 +535,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "conditions" : [ {
@@ -458,6 +565,10 @@
         "allIn0" : null,
         "whereClause" : null,
         "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     },
     "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB" : {
@@ -466,8 +577,8 @@
       "metadata" : {
         "label" : "sum_amounts",
         "slug" : "sum_amounts",
-        "x" : 400,
-        "y" : 100,
+        "x" : 520,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -641,7 +752,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "allIns" : false,
@@ -677,6 +789,10 @@
           "description" : "",
           "_row_id" : null
         } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     },
     "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT" : {
@@ -685,8 +801,8 @@
       "metadata" : {
         "label" : "enrich_customers",
         "slug" : "enrich_customers",
-        "x" : 760,
-        "y" : 100,
+        "x" : 920,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -734,7 +850,8 @@
           "slug" : "out0"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "packageName" : "enrich_customers",
@@ -799,7 +916,8 @@
               "slug" : "out"
             } ],
             "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
           },
           "properties" : {
             "datasetId" : "datasets/customer_nations"
@@ -825,7 +943,8 @@
               "slug" : "out"
             } ],
             "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
           },
           "properties" : {
             "datasetId" : "datasets/nation"
@@ -904,7 +1023,8 @@
               "slug" : "out"
             } ],
             "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
           },
           "properties" : {
             "importLanguage" : "python",
@@ -947,6 +1067,10 @@
             "importString" : "",
             "activeTab" : "expressions",
             "columnsSelector" : [ ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsPython"
           }
         },
         "POGYtsQcVRaz-XBh40WU7$$015INLkZfpaQEArUSnoK9" : {
@@ -1163,7 +1287,8 @@
               "slug" : "out"
             } ],
             "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
           },
           "properties" : {
             "conditions" : [ {
@@ -1256,6 +1381,10 @@
             "allIn0" : null,
             "whereClause" : null,
             "headAlias" : "in0"
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Join",
+            "projectName" : "ProphecySparkBasicsPython"
           }
         },
         "wBzXOsVm1Ims8PFu5uirM$$jyxRbz5PBUB1gE-iyT7LG" : {
@@ -1278,7 +1407,8 @@
               "slug" : "out"
             } ],
             "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
           },
           "properties" : {
             "datasetId" : "datasets/regions"
@@ -1286,98 +1416,13 @@
         }
       },
       "externalDependencies" : [ ]
-    },
-    "M7YAEDgadj8hEOH8kmRfy$$xZuv7TjmXnx88lbJq0uxD" : {
-      "id" : "M7YAEDgadj8hEOH8kmRfy$$xZuv7TjmXnx88lbJq0uxD",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "round_amounts",
-        "slug" : "round_amounts",
-        "x" : 580,
-        "y" : 100,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "F6Oc3D6U1kCp5QSbS4MSk$$WljsffzTV758nNnEwwQPX",
-          "slug" : "sum_amounts",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "c_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "month",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "amounts",
-              "type" : "decimal(28,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "1NwmWCjfl1oaPEXgvaTXA$$fVZyDqPV0F84A2_zyWh8W",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
-        "expressions" : [ {
-          "target" : "c_custkey",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "c_custkey"
-          },
-          "description" : ""
-        }, {
-          "target" : "month",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "month"
-          },
-          "description" : ""
-        }, {
-          "target" : "amounts",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "floor(amounts)"
-          },
-          "description" : ""
-        } ],
-        "importString" : "",
-        "activeTab" : "expressions",
-        "columnsSelector" : [ "F6Oc3D6U1kCp5QSbS4MSk$$WljsffzTV758nNnEwwQPX##c_custkey", "F6Oc3D6U1kCp5QSbS4MSk$$WljsffzTV758nNnEwwQPX##amounts", "F6Oc3D6U1kCp5QSbS4MSk$$WljsffzTV758nNnEwwQPX##month" ]
-      }
     }
   },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],
     "selectedInputFields" : [ ],
-    "isCustomOutputSchema" : false
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
   }
 }
