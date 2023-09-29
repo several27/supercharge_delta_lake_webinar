@@ -21,7 +21,16 @@
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : false,
-          "isReferenced" : false
+          "isReferenced" : true
+        }, {
+          "name" : "test",
+          "kind" : {
+            "type" : "spark_expression",
+            "value" : "TRUE"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : true
         } ]
       }
     }
@@ -904,6 +913,32 @@
         "isNewDataset" : false,
         "disabled" : false,
         "datasetType" : "File"
+      }
+    },
+    "Bxal9enCUMfuXDtcSK1HO" : {
+      "id" : "Bxal9enCUMfuXDtcSK1HO",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : 960,
+        "y" : 1480,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "script" : "print(Config.test)",
+        "scriptMethodHeader" : "def Script(spark: SparkSession) -> None:",
+        "scriptMethodFooter" : "    return "
       }
     }
   },

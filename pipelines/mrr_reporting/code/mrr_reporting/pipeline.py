@@ -47,7 +47,6 @@ def pipeline(spark: SparkSession) -> None:
         "BzJA7ALfiS_uKJ_vtgjxv$$hTGXK8AUin5gduocpsR4q", 
         "EqkGx5buvxyHZTruinIiX$$Etp2OD2ZaFUcxxyyvF4To"
     )
-    Script_1(spark)
     df_enrich_customers = enrich_customers(spark, Config.enrich_customers, df_round_amounts)
     final_report(spark, df_enrich_customers)
 

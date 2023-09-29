@@ -37,5 +37,6 @@ class cleanup_1Test(BaseTestCase):
               config = None,
               overrideJson = None,
               defaultConfFile = None
-            )
+            ),
+            "configs/resources/config/mrr_reporting.conf"
         )

@@ -7,6 +7,7 @@ from .config import *
 
 def enrich_customers(spark: SparkSession, config: SubgraphConfig, in0: DataFrame) -> DataFrame:
     Config.update(config)
+    Script_1(spark)
     df_customer_nations_1 = customer_nations_1(spark)
     df_customer_nations_1 = collectMetrics(
         spark, 
