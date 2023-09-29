@@ -1,4 +1,6 @@
 version: 1
 configurations:
 - default
+- test
+- qwe
 dependencies: []

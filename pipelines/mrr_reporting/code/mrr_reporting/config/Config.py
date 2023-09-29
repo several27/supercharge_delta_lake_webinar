@@ -4,11 +4,11 @@ from prophecy.config import ConfigBase
 
 class Config(ConfigBase):
 
-    def __init__(self, user_name: str=None, enrich_customers: dict=None, **kwargs):
+    def __init__(self, user_name: str=None, enrich_customers: dict=None, test: str=None, **kwargs):
         self.spark = None
-        self.update(user_name, enrich_customers)
+        self.update(user_name, enrich_customers, test)
 
-    def update(self, user_name: str="enter_your_user_name", enrich_customers: dict={}, **kwargs):
+    def update(self, user_name: str="enter_your_user_name", enrich_customers: dict={}, test: str="TRUE", **kwargs):
         prophecy_spark = self.spark
         self.user_name = user_name
         self.enrich_customers = self.get_config_object(
@@ -17,4 +17,5 @@ class Config(ConfigBase):
             enrich_customers, 
             enrich_customers_Config
         )
+        self.test = test
         pass

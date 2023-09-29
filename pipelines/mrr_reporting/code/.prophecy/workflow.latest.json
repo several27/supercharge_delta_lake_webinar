@@ -49,6 +49,15 @@
           "optional" : false,
           "isWorkflowNodeConfiguration" : true,
           "isReferenced" : false
+        }, {
+          "name" : "test",
+          "kind" : {
+            "type" : "spark_expression",
+            "value" : "TRUE"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
         } ]
       },
       "oldCommon" : {
@@ -57,7 +66,7 @@
       },
       "fabrics" : { },
       "instances" : { },
-      "selected" : "default",
+      "selected" : "qwe",
       "nonEditable" : [ ],
       "isSubscribedPipelineWithPipelineConfigs" : false
     },
@@ -213,6 +222,32 @@
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "rYHB6K6QnsllMbvghLQSy$$l8Q-3H0k5ef19XJxjlBa-" : {
+      "id" : "rYHB6K6QnsllMbvghLQSy$$l8Q-3H0k5ef19XJxjlBa-",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : 620,
+        "y" : -20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "script" : "print(Config.test)",
+        "scriptMethodHeader" : "def Script(spark: SparkSession) -> None:",
+        "scriptMethodFooter" : "    return "
       }
     },
     "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy" : {
