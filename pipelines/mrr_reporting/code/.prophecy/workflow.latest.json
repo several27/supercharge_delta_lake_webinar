@@ -96,7 +96,7 @@
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
-    "visualCodeInterimMode" : "Full",
+    "visualCodeInterimMode" : "Disabled",
     "recordsLimit" : {
       "enabled" : true,
       "value" : 10000
@@ -129,25 +129,25 @@
     "target" : "Rpvl6jvtf_w6aIiXt2rzp$$ZzebL3UCq6dvHxHzcRsO0",
     "targetPort" : "x4p0lYOIzMZWlOrk2iRK-$$G4IidmmJUpLdOfufmGcXs"
   }, {
-    "id" : "ByeGcoEq5Uwej2PaaIW5c$$iSy1Oq6Ot8S4T5ta7ZjD2",
-    "source" : "BzJA7ALfiS_uKJ_vtgjxv$$hTGXK8AUin5gduocpsR4q",
-    "sourcePort" : "EqkGx5buvxyHZTruinIiX$$Etp2OD2ZaFUcxxyyvF4To",
-    "target" : "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT",
-    "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$ngCqyWSuJcr4_hr9guVof"
-  }, {
-    "id" : "cnbiSTR34DPsE6qYedLOv$$bAtv2moXNL2BNmkFNy3Sp",
+    "id" : "Cytufy8KR5RIcIIP45C2B$$9z6eF6wwAmmMFRARqjHDO",
     "source" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "sourcePort" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
-    "target" : "BzJA7ALfiS_uKJ_vtgjxv$$hTGXK8AUin5gduocpsR4q",
-    "targetPort" : "W6i1yzsJ5oED5YV-LKcEc$$b1vN1RSJKsNzwb_zGVDQo"
+    "target" : "Bg9hTwtlc7sKwDAZpUsfb$$dWt_ULuu7CRZLVxSAUhSJ",
+    "targetPort" : "nnKfxvBRm1FoFcqu30oOu$$t8H6Qr5wVW09IU4UFV01c"
+  }, {
+    "id" : "4bk2VDVxK7h4dYQgzbhoe$$tVUUw0_spT4C55KwR0oQU",
+    "source" : "Bg9hTwtlc7sKwDAZpUsfb$$dWt_ULuu7CRZLVxSAUhSJ",
+    "sourcePort" : "rY14zDKIdcl8K9n5UQNMG$$had98R8DiRTwNFKUKYmEJ",
+    "target" : "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT",
+    "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$ngCqyWSuJcr4_hr9guVof"
   } ],
   "processes" : {
-    "BzJA7ALfiS_uKJ_vtgjxv$$hTGXK8AUin5gduocpsR4q" : {
-      "id" : "BzJA7ALfiS_uKJ_vtgjxv$$hTGXK8AUin5gduocpsR4q",
+    "Bg9hTwtlc7sKwDAZpUsfb$$dWt_ULuu7CRZLVxSAUhSJ" : {
+      "id" : "Bg9hTwtlc7sKwDAZpUsfb$$dWt_ULuu7CRZLVxSAUhSJ",
       "component" : "Reformat",
       "metadata" : {
-        "label" : "round_amounts",
-        "slug" : "round_amounts",
+        "label" : "clear_amounts",
+        "slug" : "clear_amounts",
         "x" : 720,
         "y" : 220,
         "phase" : 0,
@@ -157,8 +157,8 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "W6i1yzsJ5oED5YV-LKcEc$$b1vN1RSJKsNzwb_zGVDQo",
-          "slug" : "in0",
+          "id" : "nnKfxvBRm1FoFcqu30oOu$$t8H6Qr5wVW09IU4UFV01c",
+          "slug" : "sum_amounts",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
@@ -193,7 +193,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "EqkGx5buvxyHZTruinIiX$$Etp2OD2ZaFUcxxyyvF4To",
+          "id" : "rY14zDKIdcl8K9n5UQNMG$$had98R8DiRTwNFKUKYmEJ",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -226,7 +226,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "W6i1yzsJ5oED5YV-LKcEc$$b1vN1RSJKsNzwb_zGVDQo##amounts", "W6i1yzsJ5oED5YV-LKcEc$$b1vN1RSJKsNzwb_zGVDQo##month", "W6i1yzsJ5oED5YV-LKcEc$$b1vN1RSJKsNzwb_zGVDQo##c_custkey" ]
+        "columnsSelector" : [ "nnKfxvBRm1FoFcqu30oOu$$t8H6Qr5wVW09IU4UFV01c##c_custkey", "nnKfxvBRm1FoFcqu30oOu$$t8H6Qr5wVW09IU4UFV01c##amounts", "nnKfxvBRm1FoFcqu30oOu$$t8H6Qr5wVW09IU4UFV01c##month" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Reformat",
@@ -914,32 +914,6 @@
         "targetPort" : "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV"
       } ],
       "processes" : {
-        "Bxal9enCUMfuXDtcSK1HO$$puOlvabBR5ttMDMTMGfNK" : {
-          "id" : "Bxal9enCUMfuXDtcSK1HO$$puOlvabBR5ttMDMTMGfNK",
-          "component" : "Script",
-          "metadata" : {
-            "label" : "Script_1",
-            "slug" : "Script_1",
-            "x" : 960,
-            "y" : 1480,
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false,
-            "isImported" : false
-          },
-          "ports" : {
-            "inputs" : [ ],
-            "outputs" : [ ],
-            "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : true,
-            "autoUpdateOnRun" : true
-          },
-          "properties" : {
-            "script" : "print(Config.test)",
-            "scriptMethodHeader" : "def Script(spark: SparkSession) -> None:",
-            "scriptMethodFooter" : "    return "
-          }
-        },
         "8eOw1j3e3CItKTNmDDtQC$$QidAPF8M-1JkxpPF2QZSZ" : {
           "id" : "8eOw1j3e3CItKTNmDDtQC$$QidAPF8M-1JkxpPF2QZSZ",
           "component" : "Source",
