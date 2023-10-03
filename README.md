@@ -43,3 +43,7 @@ The **Monthly Job Airflow** is a recurring task that runs on the cloud compute p
 2. **Monthly Job DB**
 
 The **Monthly Job DB** is another recurring task that runs on the cloud compute platform. This job is responsible for performing various database-related tasks on a monthly basis. By executing this job, we ensure that our databases remain up-to-date and optimized, contributing to improved performance and reliability. This job helps us to maintain the integrity of our data, ensuring that it is accurate and accessible when we need it.
+
+*** Release notes for version: 79.0 ***
+
+Latest release
