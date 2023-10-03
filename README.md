@@ -1,181 +1,45 @@
-# supercharge_delta_lake Repository
+## Pipelines
 
-*** Release notes for version: 1.0 ***
+### demo_day
 
-Initial structure for the cleanup and ingestion pipelines
+The **Demo Day** Spark pipeline is designed to showcase the capabilities of Prophecy's data processing and analysis tools. It leverages customer and order data to generate insights on customer spending patterns. The pipeline includes data transformation and enrichment steps, as well as the creation of a final table for analysis. Running the pipeline via Python in a Spark environment provides a powerful platform for data exploration and visualization.
 
-*** Release notes for version: 2.0 ***
+### cleanup_orders
 
-With reusable cleanup logic
+The **Cleanup Orders** Spark pipeline is designed to clean and transform raw order data, ensuring data quality and consistency. The pipeline leverages Python in a Spark environment to efficiently process large datasets. By running this pipeline, businesses can improve their data-driven decision-making and gain valuable insights into their operations.
 
-*** Release notes for version: 3.0 ***
+### mrr_reporting
 
-Fun demo!
+The **MRR Reporting** Spark pipeline generates a monthly recurring revenue report for a business. It extracts data from customer and order records, calculates the total revenue per customer, and enriches the report with additional customer information. Running the pipeline via Python in a Spark environment provides accurate and actionable insights for businesses to optimize their revenue streams.
 
-*** Release notes for version: 4.0 ***
+### cleanup_customers
 
-Demo
+The **Cleanup Customers** Spark pipeline is designed to clean and transform customer data, ensuring data quality and consistency. The pipeline leverages Python in a Spark environment to efficiently process large datasets. By standardizing and enriching customer data, businesses can improve decision-making and enhance customer experiences.
 
-*** Release notes for version: 5.0 ***
+### ingest_customers
 
-Pipeline push
+The **Ingest Customers** Spark pipeline is responsible for extracting and transforming raw customer data into a format that can be used for analysis. The pipeline utilizes various UDFs and configuration settings to ensure data quality and consistency. Running the pipeline via Python in a Spark environment provides businesses with a reliable and scalable solution for managing customer data.
 
-*** Release notes for version: 6.0 ***
+## Datasets
 
-Rlease
+1. **department_table**
+This dataset contains information about customers and their orders, including customer keys, names, addresses, nation keys, phone numbers, account balances, market segments, and comments. It also includes order keys, order statuses, total prices, order dates, order priorities, clerks, ship priorities, and comments. The format of this dataset is not specified, but it can be used for various data analysis tasks, such as identifying customer preferences, tracking order fulfillment, and evaluating sales performance.
 
-*** Release notes for version: 7.0 ***
+2. **bronze_orders**
+This dataset represents a collection of bronze orders, with each order containing a unique order key, customer key, order status, total price, order date, order priority, clerk name, shipping priority, and a comment. The absence of a specified format suggests that this dataset may be stored in a variety of formats, including but not limited to CSV, JSON, or Parquet. This dataset is valuable for analyzing customer orders, tracking sales trends, and identifying areas for improvement in the ordering process.
 
-Production release
+3. **bronze_customers**
+This dataset contains information about bronze-level customers, including their unique customer keys, names, addresses, nation keys, phone numbers, account balances, market segments, and comments. The absence of a specified format suggests that this dataset may be stored in a variety of formats, such as a database or a spreadsheet. This data is useful for analyzing customer behavior, identifying trends, and making informed business decisions based on customer characteristics and preferences.
 
-*** Release notes for version: 8.0 ***
+4. **silver_customers**
+This dataset contains information about silver customers, including their unique customer keys, names, addresses, nation keys, phone numbers, account balances, market segments, and comments. The data is not in any specific format and can be used for various analytical purposes, such as customer segmentation, market analysis, and performance evaluation. It provides valuable insights into customer behavior and preferences, enabling businesses to make informed decisions and improve their overall performance.
 
-Release
+## Jobs
 
-*** Release notes for version: 9.0 ***
+1. **Monthly Job Airflow**
 
-Release 
+The **Monthly Job Airflow** is a recurring task that runs on the cloud compute platform. This job is designed to automate and streamline various processes, ensuring that they are executed on a monthly basis. By leveraging the power of Airflow, we can easily manage and monitor this job, ensuring that it runs smoothly and efficiently. This job helps us to maintain consistency and accuracy in our operations, contributing to improved productivity and better decision-making.
 
-*** Release notes for version: 10.0 ***
+2. **Monthly Job DB**
 
-Latest and greatest release
-
-*** Release notes for version: 11.0 ***
-
-New pipeline
-
-*** Release notes for version: 12.0 ***
-
-My new changes to the pipeline
-
-*** Release notes for version: 13.0 ***
-
-Release
-
-*** Release notes for version: 14.0 ***
-
-New release
-
-*** Release notes for version: 15.0 ***
-
-Test
-
-*** Release notes for version: 0.16 ***
-
-Production release
-
-*** Release notes for version: 50.0 ***
-
-Release
-
-*** Release notes for version: 51.0 ***
-
-Latest release
-
-*** Release notes for version: 52.0 ***
-
-Latest release version
-
-*** Release notes for version: 53.0 ***
-
-This is my latest pipeline
-
-*** Release notes for version: 54.0 ***
-
-Production push
-
-*** Release notes for version: 55.0 ***
-
-This is a new release
-
-*** Release notes for version: 56.0 ***
-
-New version of the project
-
-*** Release notes for version: 57.0 ***
-
-Demo release
-
-*** Release notes for version: 58.0 ***
-
-Release notes
-
-*** Release notes for version: 59.0 ***
-
-Demo changes relase
-
-*** Release notes for version: 60.0 ***
-
-Release
-
-*** Release notes for version: 61.0 ***
-
-This is a new release
-
-*** Release notes for version: 62.0 ***
-
-New release with some changes
-
-*** Release notes for version: 63.0 ***
-
-Demo release 
-
-*** Release notes for version: 64.0 ***
-
-Some release notes
-
-*** Release notes for version: 65.0 ***
-
-Next release
-
-*** Release notes for version: 66.0 ***
-
-Some new release
-
-*** Release notes for version: 67.0 ***
-
-release
-
-*** Release notes for version: 68.0 ***
-
-New subgraph for data cleanup published
-
-*** Release notes for version: 69.0 ***
-
-Release notes
-
-*** Release notes for version: 70.0 ***
-
-Release
-
-*** Release notes for version: 71.0 ***
-
-Release notes
-
-*** Release notes for version: 72.0 ***
-
-Simple demo
-
-*** Release notes for version: 73.0 ***
-
-Release notes
-
-*** Release notes for version: 74.0 ***
-
-Release
-
-*** Release notes for version: 75.0 ***
-
-Release notes
-
-*** Release notes for version: 76.0 ***
-
-Release
-
-*** Release notes for version: 77.0 ***
-
-New release
-
-*** Release notes for version: 78.0 ***
-
-release notes
+The **Monthly Job DB** is another recurring task that runs on the cloud compute platform. This job is responsible for performing various database-related tasks on a monthly basis. By executing this job, we ensure that our databases remain up-to-date and optimized, contributing to improved performance and reliability. This job helps us to maintain the integrity of our data, ensuring that it is accurate and accessible when we need it.
