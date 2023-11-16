@@ -130,62 +130,62 @@
         "conditions" : [ {
           "alias" : "in1",
           "expression" : {
-            "format" : "sql",
-            "expression" : "in0.c_custkey = in1.c_custkey"
+            "format" : "python",
+            "expression" : "(col(\"in0.c_custkey\") == col(\"in1.c_custkey\"))"
           },
           "joinType" : "inner"
         }, {
           "alias" : "in2",
           "expression" : {
-            "format" : "sql",
-            "expression" : "in2.n_nationkey = in1.c_nationkey"
+            "format" : "python",
+            "expression" : "(col(\"in2.n_nationkey\") == col(\"in1.c_nationkey\"))"
           },
           "joinType" : "inner"
         }, {
           "alias" : "in3",
           "expression" : {
-            "format" : "sql",
-            "expression" : "in3.r_regionkey = in2.n_regionkey"
+            "format" : "python",
+            "expression" : "(col(\"in3.r_regionkey\") == col(\"in2.n_regionkey\"))"
           },
           "joinType" : "inner"
         } ],
         "expressions" : [ {
           "target" : "c_custkey",
           "expression" : {
-            "format" : "sql",
-            "expression" : "in0.c_custkey"
+            "format" : "python",
+            "expression" : "col(\"in0.c_custkey\")"
           },
           "description" : "",
           "_row_id" : null
         }, {
           "target" : "r_name",
           "expression" : {
-            "format" : "sql",
-            "expression" : "in3.r_name"
+            "format" : "python",
+            "expression" : "col(\"in3.r_name\")"
           },
           "description" : "",
           "_row_id" : null
         }, {
           "target" : "n_name",
           "expression" : {
-            "format" : "sql",
-            "expression" : "in2.n_name"
+            "format" : "python",
+            "expression" : "col(\"in2.n_name\")"
           },
           "description" : "",
           "_row_id" : null
         }, {
           "target" : "amounts",
           "expression" : {
-            "format" : "sql",
-            "expression" : "in0.amounts"
+            "format" : "python",
+            "expression" : "col(\"in0.amounts\")"
           },
           "description" : "",
           "_row_id" : null
         }, {
           "target" : "month",
           "expression" : {
-            "format" : "sql",
-            "expression" : "in0.month"
+            "format" : "python",
+            "expression" : "col(\"in0.month\")"
           },
           "description" : "",
           "_row_id" : null
@@ -439,40 +439,40 @@
         "expressions" : [ {
           "target" : "c_custkey",
           "expression" : {
-            "format" : "sql",
-            "expression" : "c_custkey"
+            "format" : "python",
+            "expression" : "col(\"c_custkey\")"
           },
           "description" : "",
           "_row_id" : "7256617185341760079"
         }, {
           "target" : "region",
           "expression" : {
-            "format" : "sql",
-            "expression" : "r_name"
+            "format" : "python",
+            "expression" : "col(\"r_name\")"
           },
           "description" : "",
           "_row_id" : "1441459692485903388"
         }, {
           "target" : "nation",
           "expression" : {
-            "format" : "sql",
-            "expression" : "n_name"
+            "format" : "python",
+            "expression" : "col(\"n_name\")"
           },
           "description" : "",
           "_row_id" : "452167873884562649"
         }, {
           "target" : "amounts",
           "expression" : {
-            "format" : "sql",
-            "expression" : "concat(format_number(amounts, 2), 'zł')"
+            "format" : "python",
+            "expression" : "concat(format_number(col(\"amounts\"), 2), lit(\"z\\u0142\"))"
           },
           "description" : "",
           "_row_id" : "3151924647430953915"
         }, {
           "target" : "month",
           "expression" : {
-            "format" : "sql",
-            "expression" : "CASE WHEN (month = 1) THEN 'January' WHEN (month = 2) THEN 'February' WHEN (month = 3) THEN 'March' WHEN (month = 4) THEN 'April' WHEN (month = 5) THEN 'May' WHEN (month = 6) THEN 'June' WHEN (month = 7) THEN 'July' WHEN (month = 8) THEN 'August' WHEN (month = 9) THEN 'September' WHEN (month = 10) THEN 'October' WHEN (month = 11) THEN 'November' ELSE 'December' END"
+            "format" : "python",
+            "expression" : "when((col(\"month\") == lit(1)), lit(\"January\")).when((col(\"month\") == lit(2)), lit(\"February\")).when((col(\"month\") == lit(3)), lit(\"March\")).when((col(\"month\") == lit(4)), lit(\"April\")).when((col(\"month\") == lit(5)), lit(\"May\")).when((col(\"month\") == lit(6)), lit(\"June\")).when((col(\"month\") == lit(7)), lit(\"July\")).when((col(\"month\") == lit(8)), lit(\"August\")).when((col(\"month\") == lit(9)), lit(\"September\")).when((col(\"month\") == lit(10)), lit(\"October\")).when((col(\"month\") == lit(11)), lit(\"November\")).otherwise(lit(\"December\"))"
           },
           "description" : "",
           "_row_id" : "4033432994837260750"

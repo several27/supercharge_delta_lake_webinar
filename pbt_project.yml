@@ -41,26 +41,6 @@ pipelines:
       - datasets/silver_customers
     subgraphs: []
     dependencies: {}
-  pipelines/mrr_reporting:
-    name: mrr_reporting
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2022-10-11 23:15:32'
-    datasets:
-      inputs:
-      - datasets/customer_nations
-      - datasets/nation
-      - datasets/regions
-      - datasets/silver_customers
-      - datasets/silver_orders
-      outputs:
-      - datasets/final_report
-    subgraphs:
-    - subgraphs/enrich_customers
-    dependencies: {}
   pipelines/cleanup_orders:
     name: cleanup_orders
     description: ''
@@ -93,6 +73,26 @@ pipelines:
       - datasets/silver_orders
       outputs:
       - datasets/final_table
+    subgraphs:
+    - subgraphs/enrich_customers
+    dependencies: {}
+  pipelines/mrr_reporting:
+    name: mrr_reporting
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2022-10-11 23:15:32'
+    datasets:
+      inputs:
+      - datasets/customer_nations
+      - datasets/nation
+      - datasets/regions
+      - datasets/silver_customers
+      - datasets/silver_orders
+      outputs:
+      - datasets/final_report
     subgraphs:
     - subgraphs/enrich_customers
     dependencies: {}
@@ -337,7 +337,7 @@ jobs:
     author: maciej@prophecy.io
 gemContainer:
   languageVersion: '3.10'
-  gemLibsVersion: 1.3.2.0
+  gemLibsVersion: 1.3.4.0
   gems: {}
 functions:
   author: null

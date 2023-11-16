@@ -9,43 +9,51 @@
     "phase" : 0,
     "cache" : false,
     "detailedStats" : false,
-    "isImported" : false
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    }
   },
   "ports" : {
     "inputs" : [ {
       "id" : "45mBlL5cItFPEQPP7ORt8",
-      "slug" : "in0"
+      "slug" : "in0",
+      "isStreaming" : false
     } ],
     "outputs" : [ {
       "id" : "Gj0ZWcgJMWVGMyMdWrV7A",
       "slug" : "out0"
     } ],
     "selectedInputFields" : [ ],
-    "isCustomOutputSchema" : false
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
   },
   "properties" : {
     "packageName" : "utilities"
   },
   "connections" : [ {
-    "id" : "iX-yaxeHJ5mhW-fecOZGy",
+    "id" : "8_ItOB_QYujEg7ZNS1zam",
     "source" : "RvK7ZL-zXdxOOdFyn6x_o",
     "sourcePort" : "7ZyG0_tjLOWlxJsqQRGVS",
     "target" : "tJyncp-l01YwrQjAQIdnW",
     "targetPort" : "3UCYxvifjC_V7s_4aXEFr"
   }, {
-    "id" : "FU63z4xniwq_ngjubp4CJ",
+    "id" : "2aOgUQ-5nPiu7BEmNXb6H",
     "source" : "tJyncp-l01YwrQjAQIdnW",
     "sourcePort" : "aNwSFdSsLs_8txFH_jxbR",
     "target" : "khdPuUgd7QfTVmzIsC8u9",
     "targetPort" : "ddO2meRYTn3Q4pUY1XtPd"
   }, {
-    "id" : "U2PmvCOEt6D8hZL_FLK-L",
+    "id" : "vJro8RaLb-3q_kx5FhsjY",
     "source" : "7D0YVfw5p-6_U6Qla-bQj",
     "sourcePort" : "45mBlL5cItFPEQPP7ORt8",
     "target" : "RvK7ZL-zXdxOOdFyn6x_o",
     "targetPort" : "afziDrsl3ChySGHzOn6Im"
   }, {
-    "id" : "q6qNk_XmXkgdUmfZnsrpf",
+    "id" : "d_ClxD6vevsiJogJXJt0X",
     "source" : "khdPuUgd7QfTVmzIsC8u9",
     "sourcePort" : "QvhmwPqKsgRuFsotH2uOh",
     "target" : "7D0YVfw5p-6_U6Qla-bQj",
@@ -75,7 +83,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "importLanguage" : "python",
@@ -107,6 +116,12 @@
         "importString" : "",
         "activeTab" : "expressions",
         "columnsSelector" : [ "t32XPo7TXLvsdMcaZtqGg$$BVAX-VGMOn8ASGCb4Of0Z##c_custkey", "t32XPo7TXLvsdMcaZtqGg$$BVAX-VGMOn8ASGCb4Of0Z##month", "t32XPo7TXLvsdMcaZtqGg$$BVAX-VGMOn8ASGCb4Of0Z##amounts" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectId" : "12654",
+        "projectName" : "ProphecySparkBasicsPython",
+        "version" : "0.0.4"
       }
     },
     "tJyncp-l01YwrQjAQIdnW" : {
@@ -132,7 +147,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "importLanguage" : "python",
@@ -172,6 +188,12 @@
         "importString" : "",
         "activeTab" : "expressions",
         "columnsSelector" : [ "cG4L7hzYRfsKbRwqRBmTA$$adjgN1nR6eOfUOgmByofd##month", "cG4L7hzYRfsKbRwqRBmTA$$adjgN1nR6eOfUOgmByofd##amounts", "cG4L7hzYRfsKbRwqRBmTA$$adjgN1nR6eOfUOgmByofd##c_custkey" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectId" : "12654",
+        "projectName" : "ProphecySparkBasicsPython",
+        "version" : "0.0.4"
       }
     },
     "RvK7ZL-zXdxOOdFyn6x_o" : {
@@ -197,7 +219,8 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       },
       "properties" : {
         "allIns" : false,
@@ -233,7 +256,14 @@
           "description" : "",
           "_row_id" : null
         } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectId" : "12654",
+        "projectName" : "ProphecySparkBasicsPython",
+        "version" : "0.0.4"
       }
     }
-  }
+  },
+  "externalDependencies" : [ ]
 }
