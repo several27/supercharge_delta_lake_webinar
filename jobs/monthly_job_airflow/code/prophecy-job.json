@@ -41,6 +41,82 @@
     }
   },
   "processes" : {
+    "2UvcrLGsKtvOFw1JcTdkv$$6eVdCRF7oY9YX_nWt4BMn" : {
+      "id" : "2UvcrLGsKtvOFw1JcTdkv$$6eVdCRF7oY9YX_nWt4BMn",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_1",
+        "slug" : "DBT_1",
+        "x" : 120,
+        "y" : -100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "7t0xQzORSZSO7_zIs2ycz$$0IrKdsNP-GMwB99G4xa98",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "AlzKbaQCOPTAyhwylQ0jx$$DKdBNbdgofS56zlL5BZCV",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : false,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : true,
+        "vars" : null,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : null,
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : null,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : false,
+        "printerWidth" : null,
+        "sqlFabricId" : null,
+        "gitEntityValue" : null,
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "models" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : false,
+        "noAnonymousUsageStats" : null,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null
+      }
+    },
     "kblf707tRtg01RNjyhpKn$$x0krV2O4wUnfV-g4OZJjs" : {
       "id" : "kblf707tRtg01RNjyhpKn$$x0krV2O4wUnfV-g4OZJjs",
       "component" : "Pipeline",
@@ -159,15 +235,33 @@
                   "type" : "string",
                   "value" : "enter_your_user_name"
                 },
-                "isReferenced" : false,
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "test",
+                "optional" : false,
+                "kind" : {
+                  "type" : "spark_expression",
+                  "value" : "TRUE"
+                },
+                "isReferenced" : true,
                 "isWorkflowNodeConfiguration" : false
               } ]
             },
             "isReferenced" : false,
             "isWorkflowNodeConfiguration" : true
+          }, {
+            "name" : "test",
+            "optional" : false,
+            "kind" : {
+              "type" : "spark_expression",
+              "value" : "TRUE"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
           } ],
           "instances" : {
-            "supercharge_delta_lake" : [ "default" ]
+            "supercharge_delta_lake" : [ "qwe", "default", "test" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"
