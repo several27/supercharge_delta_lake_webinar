@@ -188,19 +188,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-10-04 16:02:40'
-  datasets/final_report:
-    name: final_report
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-11 23:29:28'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-11 23:29:29'
   datasets/silver_orders:
     name: silver_orders
     description: ''
@@ -279,6 +266,19 @@ datasets:
         description: ''
         author: maciej@prophecy.io
         createdAt: '2023-08-30 04:58:20'
+  datasets/final_report:
+    name: final_report
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-10-11 23:29:28'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: Database
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-10-11 23:29:29'
 templates: {}
 jobs:
   jobs/monthly_job_db:
@@ -376,10 +376,10 @@ projectDependencies:
     projectUID: 12654
     projectName: ProphecySparkBasicsPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
-    version: 0.0.4
+    version: 0.0.7
     isDefault: true
     author: null
-    createdAt: '2023-09-28 08:42:10'
+    createdAt: '2023-12-06 05:06:59'
   '12655':
     projectUID: 12655
     projectName: ProphecyWarehousePython

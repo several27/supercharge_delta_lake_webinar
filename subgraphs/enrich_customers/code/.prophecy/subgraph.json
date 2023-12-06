@@ -54,37 +54,37 @@
     "packageName" : "enrich_customers"
   },
   "connections" : [ {
-    "id" : "xTbpIZVvZfYkiAmycUSHw",
+    "id" : "E9bU3Tax1jhI1ccgcJs6Y",
     "source" : "Q_QsK83A0auLuJ4sSjFKL",
     "sourcePort" : "tvZKte3CQLK3Li8SMvUeF",
     "target" : "POGYtsQcVRaz-XBh40WU7",
     "targetPort" : "l4ydD2E8oaVegeOayhb_Z"
   }, {
-    "id" : "XMDTa-Fis2opvVYjhIZSH",
+    "id" : "cuovaJ_64oMnGctUET1fW",
     "source" : "8eOw1j3e3CItKTNmDDtQC",
     "sourcePort" : "baY66HN4wc4uXEqdGmmMz",
     "target" : "POGYtsQcVRaz-XBh40WU7",
     "targetPort" : "Wab1XHZdecPHVYfGPvR5h"
   }, {
-    "id" : "P49O_Uc1MdCNi5-TYz0ii",
+    "id" : "Yysvhi8GhVf1_2FM1PY3h",
     "source" : "Qi9M0IReFG82IosR2-wvm",
     "sourcePort" : "_2-MowCcC6LB7xy-ervYI",
     "target" : "POGYtsQcVRaz-XBh40WU7",
     "targetPort" : "995x_Meu_IePSxRnCWOIO"
   }, {
-    "id" : "J66u92aSfCqS11-ubNhkn",
+    "id" : "jpacPkyLdutSdBzzbqOjx",
     "source" : "wBzXOsVm1Ims8PFu5uirM",
     "sourcePort" : "IVsTJWG5L38m_YcVGnxAp",
     "target" : "POGYtsQcVRaz-XBh40WU7",
     "targetPort" : "4jzP4BxIlNzll7uhXo70A"
   }, {
-    "id" : "OkrNWRP-bXIQsE3xX2iit",
+    "id" : "BHQ5JdN_sLTLQei7n9daO",
     "source" : "CctApCXIwu-ZGepAFrzZ6",
     "sourcePort" : "hutovkFDE9e5a1ulh67aD",
     "target" : "Q_QsK83A0auLuJ4sSjFKL",
     "targetPort" : "qXtxy441k4pcX3aLaORLS"
   }, {
-    "id" : "hd_kzSAdFgnbvN4lD5el3",
+    "id" : "ZrFARpZeVtiRyKzyi0bMS",
     "source" : "POGYtsQcVRaz-XBh40WU7",
     "sourcePort" : "5LNDDnlNXCSiiCfhTIIAT",
     "target" : "CctApCXIwu-ZGepAFrzZ6",
@@ -97,8 +97,8 @@
       "metadata" : {
         "label" : "with_nations_regions_1",
         "slug" : "with_nations_regions_1",
-        "x" : 860,
-        "y" : 1200,
+        "x" : 640,
+        "y" : 1240,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -191,38 +191,38 @@
           "_row_id" : null
         } ],
         "hints" : [ {
-          "id" : "l4ydD2E8oaVegeOayhb_Z$$1QJ0UzD4r1UYHsPXzVXs_$$_6vlMrS7lhSoV4WCiLfzj",
+          "id" : "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj",
           "alias" : "in0",
           "hintType" : "none",
           "propagateColumns" : false
         }, {
-          "id" : "Wab1XHZdecPHVYfGPvR5h$$wttvXGNRyLq57T3MtuciP$$_48r0LUXhr_4aVBkS-mIG",
+          "id" : "Wab1XHZdecPHVYfGPvR5h$$_48r0LUXhr_4aVBkS-mIG",
           "alias" : "in1",
           "hintType" : "none",
           "propagateColumns" : false
         }, {
-          "id" : "995x_Meu_IePSxRnCWOIO$$MSZZGaTg5RLmkucZmL52R$$PGCH98nw9EQwWwtQ1DMRW",
+          "id" : "995x_Meu_IePSxRnCWOIO$$PGCH98nw9EQwWwtQ1DMRW",
           "alias" : "in2",
           "hintType" : "none",
           "propagateColumns" : false
         }, {
-          "id" : "4jzP4BxIlNzll7uhXo70A$$h_V1X_e8CG5vZrU0Rf-cL$$QSPaV-WvGGTS1YUbFxxGP",
+          "id" : "4jzP4BxIlNzll7uhXo70A$$QSPaV-WvGGTS1YUbFxxGP",
           "alias" : "in3",
           "hintType" : "none",
           "propagateColumns" : false
         } ],
         "allIn1" : null,
         "activeTab" : "conditions",
-        "columnsSelector" : [ "995x_Meu_IePSxRnCWOIO$$MSZZGaTg5RLmkucZmL52R$$PGCH98nw9EQwWwtQ1DMRW##n_nationkey", "Wab1XHZdecPHVYfGPvR5h$$wttvXGNRyLq57T3MtuciP$$_48r0LUXhr_4aVBkS-mIG##c_nationkey", "Wab1XHZdecPHVYfGPvR5h$$wttvXGNRyLq57T3MtuciP$$_48r0LUXhr_4aVBkS-mIG##c_custkey", "995x_Meu_IePSxRnCWOIO$$MSZZGaTg5RLmkucZmL52R$$PGCH98nw9EQwWwtQ1DMRW##n_regionkey", "4jzP4BxIlNzll7uhXo70A$$h_V1X_e8CG5vZrU0Rf-cL$$QSPaV-WvGGTS1YUbFxxGP##r_regionkey", "l4ydD2E8oaVegeOayhb_Z$$1QJ0UzD4r1UYHsPXzVXs_$$_6vlMrS7lhSoV4WCiLfzj##c_custkey", "4jzP4BxIlNzll7uhXo70A$$h_V1X_e8CG5vZrU0Rf-cL$$QSPaV-WvGGTS1YUbFxxGP##r_name", "995x_Meu_IePSxRnCWOIO$$MSZZGaTg5RLmkucZmL52R$$PGCH98nw9EQwWwtQ1DMRW##n_name", "l4ydD2E8oaVegeOayhb_Z$$1QJ0UzD4r1UYHsPXzVXs_$$_6vlMrS7lhSoV4WCiLfzj##c_custkey", "l4ydD2E8oaVegeOayhb_Z$$1QJ0UzD4r1UYHsPXzVXs_$$_6vlMrS7lhSoV4WCiLfzj##month", "l4ydD2E8oaVegeOayhb_Z$$1QJ0UzD4r1UYHsPXzVXs_$$_6vlMrS7lhSoV4WCiLfzj##amounts" ],
+        "columnsSelector" : [ "995x_Meu_IePSxRnCWOIO$$PGCH98nw9EQwWwtQ1DMRW##n_regionkey", "995x_Meu_IePSxRnCWOIO$$PGCH98nw9EQwWwtQ1DMRW##n_nationkey", "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj##c_custkey", "Wab1XHZdecPHVYfGPvR5h$$_48r0LUXhr_4aVBkS-mIG##c_nationkey", "4jzP4BxIlNzll7uhXo70A$$QSPaV-WvGGTS1YUbFxxGP##r_regionkey", "Wab1XHZdecPHVYfGPvR5h$$_48r0LUXhr_4aVBkS-mIG##c_custkey", "995x_Meu_IePSxRnCWOIO$$PGCH98nw9EQwWwtQ1DMRW##n_name", "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj##month", "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj##c_custkey", "4jzP4BxIlNzll7uhXo70A$$QSPaV-WvGGTS1YUbFxxGP##r_name", "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj##amounts" ],
         "allIn0" : null,
         "whereClause" : null,
         "headAlias" : "in0"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Join",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Join",
         "projectId" : "12654",
         "projectName" : "ProphecySparkBasicsPython",
-        "version" : "0.0.4"
+        "version" : "0.0.7"
       }
     },
     "Qi9M0IReFG82IosR2-wvm" : {
@@ -231,8 +231,8 @@
       "metadata" : {
         "label" : "nation_1",
         "slug" : "nation_1",
-        "x" : 600,
-        "y" : 1440,
+        "x" : 380,
+        "y" : 1480,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -327,10 +327,10 @@
         "updated" : true,
         "currentDatasetId" : "datasets/nation",
         "componentInfo" : {
-          "gemId" : "gitUri=&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/delta",
+          "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/delta",
           "projectId" : "12654",
           "projectName" : "ProphecySparkBasicsPython",
-          "version" : "0.0.4"
+          "version" : "0.0.7"
         },
         "dataset" : {
           "mergeCondition" : null,
@@ -414,8 +414,8 @@
       "metadata" : {
         "label" : "cleanup_1",
         "slug" : "cleanup_1",
-        "x" : 1120,
-        "y" : 1200,
+        "x" : 900,
+        "y" : 1240,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -479,7 +479,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ ]
+        "columnsSelector" : [ "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV##n_name", "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV##amounts", "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV##r_name", "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV##c_custkey", "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV##month" ]
       },
       "test" : {
         "unitTests" : [ {
@@ -526,10 +526,10 @@
         "language" : "python"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectId" : "12654",
         "projectName" : "ProphecySparkBasicsPython",
-        "version" : "0.0.4"
+        "version" : "0.0.7"
       }
     },
     "8eOw1j3e3CItKTNmDDtQC" : {
@@ -538,8 +538,8 @@
       "metadata" : {
         "label" : "customer_nations_1",
         "slug" : "customer_nations_1",
-        "x" : 420,
-        "y" : 1280,
+        "x" : 200,
+        "y" : 1320,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -629,10 +629,10 @@
         "updated" : true,
         "currentDatasetId" : "datasets/customer_nations",
         "componentInfo" : {
-          "gemId" : "gitUri=&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/delta",
+          "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/delta",
           "projectId" : "12654",
           "projectName" : "ProphecySparkBasicsPython",
-          "version" : "0.0.4"
+          "version" : "0.0.7"
         },
         "dataset" : {
           "mergeCondition" : null,
@@ -752,8 +752,8 @@
       "metadata" : {
         "label" : "regions_1",
         "slug" : "regions_1",
-        "x" : 660,
-        "y" : 1620,
+        "x" : 440,
+        "y" : 1660,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -843,10 +843,10 @@
         "updated" : true,
         "currentDatasetId" : "datasets/regions",
         "componentInfo" : {
-          "gemId" : "gitUri=&subPath=&tag=0.0.4&projectSubscriptionProjectId=12654&path=gems/delta",
+          "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/delta",
           "projectId" : "12654",
           "projectName" : "ProphecySparkBasicsPython",
-          "version" : "0.0.4"
+          "version" : "0.0.7"
         },
         "dataset" : {
           "mergeCondition" : null,
