@@ -91,10 +91,9 @@ pipelines:
       - datasets/regions
       - datasets/silver_customers
       - datasets/silver_orders
-      outputs:
-      - datasets/final_report
+      outputs: []
     subgraphs:
-    - subgraphs/enrich_customers
+    - gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.1&projectSubscriptionProjectId=16366&path=subgraphs/enrich_customers
     dependencies: {}
 datasets:
   datasets/customer_nations:
@@ -201,19 +200,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:32:05'
-  datasets/nation:
-    name: nation
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-09-29 03:35:31'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: File
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-09-29 03:35:31'
   datasets/silver_customers:
     name: silver_customers
     description: ''
@@ -335,6 +321,32 @@ jobs:
     enabled: false
     createdAt: '2023-08-08 19:31:06'
     author: maciej@prophecy.io
+  jobs/daily_schedule:
+    name: daily_schedule
+    description: ''
+    fabricUID: 1618
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: 0 0 0 * * ? *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/mrr_reporting
+    - pipelines/cleanup_orders
+    - pipelines/cleanup_customers
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-12-07 18:42:02'
+    author: maciej@prophecy.io
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
@@ -347,23 +359,7 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
-subgraphs:
-  subgraphs/enrich_customers:
-    name: enrich_customers
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    language: python
-    artefactID: ''
-    mode: batch
-    createdAt: '2022-09-29 03:48:30'
-  subgraphs/data_cleanup:
-    name: data_cleanup
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    language: python
-    artefactID: ''
-    mode: batch
-    createdAt: '2023-02-17 04:35:57'
+subgraphs: {}
 sqlModels: {}
 sqlMacros: {}
 sqlSeeds: {}
@@ -388,4 +384,12 @@ projectDependencies:
     isDefault: true
     author: null
     createdAt: '2023-09-28 08:42:10'
+  '16366':
+    projectUID: 16366
+    projectName: data_enrichment
+    repositoryPath: gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/
+    version: data_enrichment/1.1
+    isDefault: false
+    author: null
+    createdAt: '2023-12-07 18:38:25'
 pipelineConfigurations: {}

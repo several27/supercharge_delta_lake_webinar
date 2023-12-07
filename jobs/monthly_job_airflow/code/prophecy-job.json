@@ -19,13 +19,17 @@
       "pool" : "KWdUsXmL",
       "do_xcom_push" : true
     },
-    "jobClusterMode" : {
-      "clusterMode" : "Single"
-    },
     "availableFabrics" : [ {
-      "id" : "3346",
-      "name" : "fabric-dev",
-      "trialStartDate" : 1689314078361
+      "id" : "6137",
+      "name" : "airflow-dev",
+      "trialStartDate" : 1697820960221
+    }, {
+      "id" : "7625",
+      "name" : "Airflow-PM",
+      "trialStartDate" : 1701854255900
+    }, {
+      "id" : "7627",
+      "name" : "Composer-qa"
     } ],
     "catchup" : true,
     "tags" : [ ],
@@ -38,7 +42,8 @@
       },
       "params" : { },
       "selected" : "default"
-    }
+    },
+    "airflowFunctions" : [ ]
   },
   "processes" : {
     "2UvcrLGsKtvOFw1JcTdkv$$6eVdCRF7oY9YX_nWt4BMn" : {
@@ -115,7 +120,9 @@
         "taskId" : null,
         "logPath" : null,
         "storeFailures" : null
-      }
+      },
+      "connections" : [ ],
+      "processes" : { }
     },
     "kblf707tRtg01RNjyhpKn$$x0krV2O4wUnfV-g4OZJjs" : {
       "id" : "kblf707tRtg01RNjyhpKn$$x0krV2O4wUnfV-g4OZJjs",
@@ -147,11 +154,16 @@
             "supercharge_delta_lake" : [ "default" ]
           },
           "overrides" : { },
-          "selectedInstance" : "default"
+          "selectedInstance" : {
+            "value" : "default",
+            "type" : "literal"
+          }
         },
         "taskId" : null,
         "pipelineId" : "pipelines/ingest_customers"
-      }
+      },
+      "connections" : [ ],
+      "processes" : { }
     },
     "jZCDsK6FfMB-wIbbxeXbv$$dtT9ACIrgMo1dalxmpjAV" : {
       "id" : "jZCDsK6FfMB-wIbbxeXbv$$dtT9ACIrgMo1dalxmpjAV",
@@ -183,11 +195,16 @@
             "supercharge_delta_lake" : [ "default" ]
           },
           "overrides" : { },
-          "selectedInstance" : "default"
+          "selectedInstance" : {
+            "value" : "default",
+            "type" : "literal"
+          }
         },
         "taskId" : null,
         "pipelineId" : "pipelines/cleanup_orders"
-      }
+      },
+      "connections" : [ ],
+      "processes" : { }
     },
     "TQhFZGLyq6P-3QnfovvQ7$$mWFqu5VMVW3WSHjOndHUN" : {
       "id" : "TQhFZGLyq6P-3QnfovvQ7$$mWFqu5VMVW3WSHjOndHUN",
@@ -224,33 +241,6 @@
             "isReferenced" : false,
             "isWorkflowNodeConfiguration" : false
           }, {
-            "name" : "enrich_customers",
-            "optional" : false,
-            "kind" : {
-              "type" : "record",
-              "fields" : [ {
-                "name" : "user_name",
-                "optional" : false,
-                "kind" : {
-                  "type" : "string",
-                  "value" : "enter_your_user_name"
-                },
-                "isReferenced" : true,
-                "isWorkflowNodeConfiguration" : false
-              }, {
-                "name" : "test",
-                "optional" : false,
-                "kind" : {
-                  "type" : "spark_expression",
-                  "value" : "TRUE"
-                },
-                "isReferenced" : true,
-                "isWorkflowNodeConfiguration" : false
-              } ]
-            },
-            "isReferenced" : false,
-            "isWorkflowNodeConfiguration" : true
-          }, {
             "name" : "test",
             "optional" : false,
             "kind" : {
@@ -264,11 +254,16 @@
             "supercharge_delta_lake" : [ "qwe", "default", "test" ]
           },
           "overrides" : { },
-          "selectedInstance" : "default"
+          "selectedInstance" : {
+            "value" : "default",
+            "type" : "literal"
+          }
         },
         "taskId" : null,
         "pipelineId" : "pipelines/mrr_reporting"
-      }
+      },
+      "connections" : [ ],
+      "processes" : { }
     },
     "99akZIENojLS_7BkfbrP4$$FpnswZl-OiMB4hwVkh1e3" : {
       "id" : "99akZIENojLS_7BkfbrP4$$FpnswZl-OiMB4hwVkh1e3",
@@ -300,11 +295,16 @@
             "supercharge_delta_lake" : [ "default" ]
           },
           "overrides" : { },
-          "selectedInstance" : "default"
+          "selectedInstance" : {
+            "value" : "default",
+            "type" : "literal"
+          }
         },
         "taskId" : null,
         "pipelineId" : "pipelines/cleanup_customers"
-      }
+      },
+      "connections" : [ ],
+      "processes" : { }
     }
   },
   "connections" : [ {

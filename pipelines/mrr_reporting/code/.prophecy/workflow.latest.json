@@ -16,7 +16,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "prophecy_webinar.supercharge_delta_lake.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "prophecy_webinar.supercharge_delta_lake.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -30,6 +30,15 @@
           "kind" : {
             "type" : "string",
             "value" : "enter_your_user_name"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "test",
+          "kind" : {
+            "type" : "spark_expression",
+            "value" : "TRUE"
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : false,
@@ -61,15 +70,6 @@
           "optional" : false,
           "isWorkflowNodeConfiguration" : true,
           "isReferenced" : false
-        }, {
-          "name" : "test",
-          "kind" : {
-            "type" : "spark_expression",
-            "value" : "TRUE"
-          },
-          "optional" : false,
-          "isWorkflowNodeConfiguration" : false,
-          "isReferenced" : false
         } ]
       },
       "oldCommon" : {
@@ -94,6 +94,10 @@
     }, {
       "projectUID" : "12655",
       "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "16366",
+      "projectName" : "data_enrichment",
       "externalDependencies" : [ ]
     } ],
     "isImported" : false,
@@ -126,23 +130,17 @@
     "target" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "targetPort" : "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B"
   }, {
-    "id" : "Bx7W0u7k7CCDI37xqtpX_",
-    "source" : "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT",
-    "sourcePort" : "qXtxy441k4pcX3aLaORLS$$aeQLb1WoDj3h6gOU88E0s",
-    "target" : "Rpvl6jvtf_w6aIiXt2rzp$$ZzebL3UCq6dvHxHzcRsO0",
-    "targetPort" : "x4p0lYOIzMZWlOrk2iRK-$$G4IidmmJUpLdOfufmGcXs"
-  }, {
     "id" : "e45LT_Fc1C4jXM4-n6Xsl$$Ij5S0pibzPSxbZZ_Mw3wY",
     "source" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "sourcePort" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
     "target" : "UX9D0LC3-GbTOXGjgNOhh$$If-uUVGZaFmpG6HGrX9SD",
     "targetPort" : "_axBIPgTvYNeKC7yaDmXM$$MUhE40BG7fck31sLHf88_"
   }, {
-    "id" : "vT7nL2l-bHdOGYJYEv2Pa$$OUUk06uK1ELhNDr50FwNk",
+    "id" : "TrVNopHdN7BLNkn3rJSzZ$$qjoasjDJnHr8DncdHu-L7",
     "source" : "UX9D0LC3-GbTOXGjgNOhh$$If-uUVGZaFmpG6HGrX9SD",
     "sourcePort" : "UJPyzAo4mAR5rvO_qexkp$$Y_yN1tGObJQLLXToHGHib",
-    "target" : "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT",
-    "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$ngCqyWSuJcr4_hr9guVof"
+    "target" : "Q_QsK83A0auLuJ4sSjFKL$$tAV6iXhJzy5hOVXPux0wb",
+    "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$c88ShK7bvalHGJj9nx6aS"
   } ],
   "processes" : {
     "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy" : {
@@ -151,8 +149,8 @@
       "metadata" : {
         "label" : "silver_customers_2_1",
         "slug" : "silver_customers_2_1",
-        "x" : 120,
-        "y" : 180,
+        "x" : 60,
+        "y" : 140,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -178,8 +176,8 @@
       "metadata" : {
         "label" : "silvers_orders",
         "slug" : "silvers_orders",
-        "x" : 120,
-        "y" : 380,
+        "x" : 60,
+        "y" : 340,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -199,14 +197,14 @@
         "datasetId" : "datasets/silver_orders"
       }
     },
-    "Rpvl6jvtf_w6aIiXt2rzp$$ZzebL3UCq6dvHxHzcRsO0" : {
-      "id" : "Rpvl6jvtf_w6aIiXt2rzp$$ZzebL3UCq6dvHxHzcRsO0",
-      "component" : "Target",
+    "Q_QsK83A0auLuJ4sSjFKL$$tAV6iXhJzy5hOVXPux0wb" : {
+      "id" : "Q_QsK83A0auLuJ4sSjFKL$$tAV6iXhJzy5hOVXPux0wb",
+      "component" : "Subgraph",
       "metadata" : {
-        "label" : "final_report",
-        "slug" : "final_report",
-        "x" : 1160,
-        "y" : 280,
+        "label" : "enrich_customers",
+        "slug" : "enrich_customers",
+        "x" : 900,
+        "y" : 240,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -214,7 +212,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "x4p0lYOIzMZWlOrk2iRK-$$G4IidmmJUpLdOfufmGcXs",
+          "id" : "tvZKte3CQLK3Li8SMvUeF$$c88ShK7bvalHGJj9nx6aS",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
@@ -228,17 +226,8 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "region",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "nation",
-              "type" : "string",
+              "name" : "month",
+              "type" : "integer",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -247,17 +236,8 @@
               }
             }, {
               "name" : "amounts",
-              "type" : "string",
+              "type" : "decimal(27,0)",
               "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "month",
-              "type" : "string",
-              "nullable" : false,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
@@ -267,14 +247,577 @@
           },
           "isStreaming" : false
         } ],
-        "outputs" : [ ],
+        "outputs" : [ {
+          "id" : "qXtxy441k4pcX3aLaORLS$$La3y_qvJUZIOtdBRVJqex",
+          "slug" : "out0"
+        } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "datasetId" : "datasets/final_report"
-      }
+        "packageName" : "enrich_customers",
+        "externalId" : "gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.1&projectSubscriptionProjectId=16366&path=subgraphs/enrich_customers",
+        "name" : "enrich_customers"
+      },
+      "connections" : [ {
+        "id" : "8LmAyyA28j_Q1GI9RWvGi",
+        "source" : "Q_QsK83A0auLuJ4sSjFKL$$tAV6iXhJzy5hOVXPux0wb",
+        "sourcePort" : "tvZKte3CQLK3Li8SMvUeF$$c88ShK7bvalHGJj9nx6aS",
+        "target" : "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv",
+        "targetPort" : "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y"
+      }, {
+        "id" : "kqjTWkEzwgEwPXXAbYSna",
+        "source" : "8eOw1j3e3CItKTNmDDtQC$$tacHz8bPvHAU5h7TWuWsO",
+        "sourcePort" : "baY66HN4wc4uXEqdGmmMz$$ZjHlo5ns1Twxs7bE9ESx0",
+        "target" : "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv",
+        "targetPort" : "Wab1XHZdecPHVYfGPvR5h$$zNG2yHN1EzGQtQ7IW7g4w"
+      }, {
+        "id" : "z-qq-hg2F-lPMElhSA1mS",
+        "source" : "Qi9M0IReFG82IosR2-wvm$$X2CwZYl3PaugB0KHpQNRf",
+        "sourcePort" : "_2-MowCcC6LB7xy-ervYI$$btY8Du005G3Edp2jyQLrP",
+        "target" : "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv",
+        "targetPort" : "995x_Meu_IePSxRnCWOIO$$wepqDTgrZRVjV9SwzAXlB"
+      }, {
+        "id" : "85Bhna2ZEUx8Sscg1Qfg_",
+        "source" : "wBzXOsVm1Ims8PFu5uirM$$3MMBDXpj4ihD3T-kpkctd",
+        "sourcePort" : "IVsTJWG5L38m_YcVGnxAp$$zCEEeRDTtTbCm225FGvJV",
+        "target" : "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv",
+        "targetPort" : "4jzP4BxIlNzll7uhXo70A$$2WgfVSDIwOl-tYp8KL_gL"
+      }, {
+        "id" : "9FLxkGWGViBbX0VtTgSoy",
+        "source" : "CctApCXIwu-ZGepAFrzZ6$$-nHkAgd-aTZ4cRZMEYn9N",
+        "sourcePort" : "hutovkFDE9e5a1ulh67aD$$lBdkFQQB6mNECEsOkD1yb",
+        "target" : "Q_QsK83A0auLuJ4sSjFKL$$tAV6iXhJzy5hOVXPux0wb",
+        "targetPort" : "qXtxy441k4pcX3aLaORLS$$La3y_qvJUZIOtdBRVJqex"
+      }, {
+        "id" : "HBqzGBC8eYh8y7jZ-o3QV",
+        "source" : "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv",
+        "sourcePort" : "5LNDDnlNXCSiiCfhTIIAT$$gi5QNkTVZRmSEZ4JWOQ2u",
+        "target" : "CctApCXIwu-ZGepAFrzZ6$$-nHkAgd-aTZ4cRZMEYn9N",
+        "targetPort" : "ONgzseq5exaxU9nXExHrf$$gYX6iyFMRid_2WUvcoAUo"
+      } ],
+      "processes" : {
+        "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv" : {
+          "id" : "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv",
+          "component" : "Join",
+          "metadata" : {
+            "label" : "with_nations_regions_1",
+            "slug" : "with_nations_regions_1",
+            "x" : 860,
+            "y" : 1200,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "c_custkey",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "month",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "amounts",
+                  "type" : "decimal(27,0)",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            }, {
+              "id" : "Wab1XHZdecPHVYfGPvR5h$$zNG2yHN1EzGQtQ7IW7g4w",
+              "slug" : "in1",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "c_custkey",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "c_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "c_address",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "c_nationkey",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "c_phone",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "c_acctbal",
+                  "type" : "decimal(18,2)",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "c_mktsegment",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "c_comment",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            }, {
+              "id" : "995x_Meu_IePSxRnCWOIO$$wepqDTgrZRVjV9SwzAXlB",
+              "slug" : "in2",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "n_nationkey",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "n_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "n_regionkey",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "n_comment",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            }, {
+              "id" : "4jzP4BxIlNzll7uhXo70A$$2WgfVSDIwOl-tYp8KL_gL",
+              "slug" : "in3",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "r_regionkey",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "r_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "r_comment",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "5LNDDnlNXCSiiCfhTIIAT$$gi5QNkTVZRmSEZ4JWOQ2u",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "conditions" : [ {
+              "alias" : "in1",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in0.c_custkey = in1.c_custkey"
+              },
+              "joinType" : "inner"
+            }, {
+              "alias" : "in2",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in2.n_nationkey = in1.c_nationkey"
+              },
+              "joinType" : "inner"
+            }, {
+              "alias" : "in3",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in3.r_regionkey = in2.n_regionkey"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "target" : "c_custkey",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in0.c_custkey"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "r_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in3.r_name"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "n_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in2.n_name"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "amounts",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in0.amounts"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "month",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in0.month"
+              },
+              "description" : "",
+              "_row_id" : null
+            } ],
+            "hints" : [ {
+              "id" : "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y$$_6vlMrS7lhSoV4WCiLfzj",
+              "alias" : "in0",
+              "hintType" : "none",
+              "propagateColumns" : false
+            }, {
+              "id" : "Wab1XHZdecPHVYfGPvR5h$$zNG2yHN1EzGQtQ7IW7g4w$$_48r0LUXhr_4aVBkS-mIG",
+              "alias" : "in1",
+              "hintType" : "none",
+              "propagateColumns" : false
+            }, {
+              "id" : "995x_Meu_IePSxRnCWOIO$$wepqDTgrZRVjV9SwzAXlB$$PGCH98nw9EQwWwtQ1DMRW",
+              "alias" : "in2",
+              "hintType" : "none",
+              "propagateColumns" : false
+            }, {
+              "id" : "4jzP4BxIlNzll7uhXo70A$$2WgfVSDIwOl-tYp8KL_gL$$QSPaV-WvGGTS1YUbFxxGP",
+              "alias" : "in3",
+              "hintType" : "none",
+              "propagateColumns" : false
+            } ],
+            "allIn1" : null,
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "995x_Meu_IePSxRnCWOIO$$wepqDTgrZRVjV9SwzAXlB$$PGCH98nw9EQwWwtQ1DMRW##n_nationkey", "Wab1XHZdecPHVYfGPvR5h$$zNG2yHN1EzGQtQ7IW7g4w$$_48r0LUXhr_4aVBkS-mIG##c_nationkey", "Wab1XHZdecPHVYfGPvR5h$$zNG2yHN1EzGQtQ7IW7g4w$$_48r0LUXhr_4aVBkS-mIG##c_custkey", "995x_Meu_IePSxRnCWOIO$$wepqDTgrZRVjV9SwzAXlB$$PGCH98nw9EQwWwtQ1DMRW##n_regionkey", "4jzP4BxIlNzll7uhXo70A$$2WgfVSDIwOl-tYp8KL_gL$$QSPaV-WvGGTS1YUbFxxGP##r_regionkey", "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y$$_6vlMrS7lhSoV4WCiLfzj##c_custkey", "4jzP4BxIlNzll7uhXo70A$$2WgfVSDIwOl-tYp8KL_gL$$QSPaV-WvGGTS1YUbFxxGP##r_name", "995x_Meu_IePSxRnCWOIO$$wepqDTgrZRVjV9SwzAXlB$$PGCH98nw9EQwWwtQ1DMRW##n_name", "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y$$_6vlMrS7lhSoV4WCiLfzj##c_custkey", "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y$$_6vlMrS7lhSoV4WCiLfzj##month", "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y$$_6vlMrS7lhSoV4WCiLfzj##amounts" ],
+            "allIn0" : null,
+            "whereClause" : null,
+            "headAlias" : "in0"
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Join",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "CctApCXIwu-ZGepAFrzZ6$$-nHkAgd-aTZ4cRZMEYn9N" : {
+          "id" : "CctApCXIwu-ZGepAFrzZ6$$-nHkAgd-aTZ4cRZMEYn9N",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "cleanup_1",
+            "slug" : "cleanup_1",
+            "x" : 1120,
+            "y" : 1200,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "ONgzseq5exaxU9nXExHrf$$gYX6iyFMRid_2WUvcoAUo",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "c_custkey",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "r_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "n_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "amounts",
+                  "type" : "decimal(27,0)",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "month",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "hutovkFDE9e5a1ulh67aD$$lBdkFQQB6mNECEsOkD1yb",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "importLanguage" : "python",
+            "expressions" : [ {
+              "target" : "c_custkey",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "c_custkey"
+              },
+              "description" : ""
+            }, {
+              "target" : "region",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "r_name"
+              },
+              "description" : ""
+            }, {
+              "target" : "nation",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "n_name"
+              },
+              "description" : ""
+            }, {
+              "target" : "amounts",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "concat(format_number(amounts, 2), 'zł')"
+              },
+              "description" : ""
+            }, {
+              "target" : "month",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "CASE WHEN (month = 1) THEN 'January' WHEN (month = 2) THEN 'February' WHEN (month = 3) THEN 'March' WHEN (month = 4) THEN 'April' WHEN (month = 5) THEN 'May' WHEN (month = 6) THEN 'June' WHEN (month = 7) THEN 'July' WHEN (month = 8) THEN 'August' WHEN (month = 9) THEN 'September' WHEN (month = 10) THEN 'October' WHEN (month = 11) THEN 'November' ELSE 'December' END"
+              },
+              "description" : ""
+            } ],
+            "importString" : "",
+            "activeTab" : "expressions",
+            "columnsSelector" : [ ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "Qi9M0IReFG82IosR2-wvm$$X2CwZYl3PaugB0KHpQNRf" : {
+          "id" : "Qi9M0IReFG82IosR2-wvm$$X2CwZYl3PaugB0KHpQNRf",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "nation_1",
+            "slug" : "nation_1",
+            "x" : 600,
+            "y" : 1440,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "_2-MowCcC6LB7xy-ervYI$$btY8Du005G3Edp2jyQLrP",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/nation"
+          }
+        },
+        "wBzXOsVm1Ims8PFu5uirM$$3MMBDXpj4ihD3T-kpkctd" : {
+          "id" : "wBzXOsVm1Ims8PFu5uirM$$3MMBDXpj4ihD3T-kpkctd",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "regions_1",
+            "slug" : "regions_1",
+            "x" : 660,
+            "y" : 1620,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "IVsTJWG5L38m_YcVGnxAp$$zCEEeRDTtTbCm225FGvJV",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/regions"
+          }
+        },
+        "8eOw1j3e3CItKTNmDDtQC$$tacHz8bPvHAU5h7TWuWsO" : {
+          "id" : "8eOw1j3e3CItKTNmDDtQC$$tacHz8bPvHAU5h7TWuWsO",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "customer_nations_1",
+            "slug" : "customer_nations_1",
+            "x" : 420,
+            "y" : 1280,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "baY66HN4wc4uXEqdGmmMz$$ZjHlo5ns1Twxs7bE9ESx0",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/customer_nations"
+          }
+        }
+      },
+      "externalDependencies" : [ ]
     },
     "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc" : {
       "id" : "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc",
@@ -282,8 +825,8 @@
       "metadata" : {
         "label" : "by_customer_id",
         "slug" : "by_customer_id",
-        "x" : 320,
-        "y" : 280,
+        "x" : 260,
+        "y" : 240,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -507,8 +1050,8 @@
       "metadata" : {
         "label" : "sum_amounts",
         "slug" : "sum_amounts",
-        "x" : 520,
-        "y" : 280,
+        "x" : 460,
+        "y" : 240,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -701,7 +1244,7 @@
         "pivotColumn" : null,
         "pivotValues" : [ ],
         "activeTab" : "aggregate",
-        "columnsSelector" : [ "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_totalprice", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_orderdate", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##c_custkey" ],
+        "columnsSelector" : [ "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_orderdate", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_totalprice", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##c_custkey" ],
         "groupBy" : [ {
           "target" : "c_custkey",
           "expression" : {
@@ -731,8 +1274,8 @@
       "metadata" : {
         "label" : "floor_amounts",
         "slug" : "floor_amounts",
-        "x" : 740,
-        "y" : 280,
+        "x" : 680,
+        "y" : 240,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -815,628 +1358,6 @@
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
-    },
-    "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT" : {
-      "id" : "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT",
-      "component" : "Subgraph",
-      "metadata" : {
-        "label" : "enrich_customers",
-        "slug" : "enrich_customers",
-        "x" : 940,
-        "y" : 280,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "tvZKte3CQLK3Li8SMvUeF$$ngCqyWSuJcr4_hr9guVof",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "c_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "month",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "amounts",
-              "type" : "decimal(27,0)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "qXtxy441k4pcX3aLaORLS$$aeQLb1WoDj3h6gOU88E0s",
-          "slug" : "out0"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "packageName" : "enrich_customers",
-        "externalId" : "subgraphs/enrich_customers",
-        "name" : "enrich_customers"
-      },
-      "connections" : [ {
-        "id" : "E9bU3Tax1jhI1ccgcJs6Y",
-        "source" : "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT",
-        "sourcePort" : "tvZKte3CQLK3Li8SMvUeF$$ngCqyWSuJcr4_hr9guVof",
-        "target" : "POGYtsQcVRaz-XBh40WU7$$015INLkZfpaQEArUSnoK9",
-        "targetPort" : "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj"
-      }, {
-        "id" : "cuovaJ_64oMnGctUET1fW",
-        "source" : "8eOw1j3e3CItKTNmDDtQC$$QidAPF8M-1JkxpPF2QZSZ",
-        "sourcePort" : "baY66HN4wc4uXEqdGmmMz$$ToN2MRvkITIYUNQ0uxNLk",
-        "target" : "POGYtsQcVRaz-XBh40WU7$$015INLkZfpaQEArUSnoK9",
-        "targetPort" : "Wab1XHZdecPHVYfGPvR5h$$_48r0LUXhr_4aVBkS-mIG"
-      }, {
-        "id" : "Yysvhi8GhVf1_2FM1PY3h",
-        "source" : "Qi9M0IReFG82IosR2-wvm$$ZI3ClZC_jrgzpU5b49VIO",
-        "sourcePort" : "_2-MowCcC6LB7xy-ervYI$$7VzHnjb0r4aV2d04CfRHZ",
-        "target" : "POGYtsQcVRaz-XBh40WU7$$015INLkZfpaQEArUSnoK9",
-        "targetPort" : "995x_Meu_IePSxRnCWOIO$$PGCH98nw9EQwWwtQ1DMRW"
-      }, {
-        "id" : "jpacPkyLdutSdBzzbqOjx",
-        "source" : "wBzXOsVm1Ims8PFu5uirM$$jyxRbz5PBUB1gE-iyT7LG",
-        "sourcePort" : "IVsTJWG5L38m_YcVGnxAp$$lyR0Ci4IK1ZjfCX4VdOIV",
-        "target" : "POGYtsQcVRaz-XBh40WU7$$015INLkZfpaQEArUSnoK9",
-        "targetPort" : "4jzP4BxIlNzll7uhXo70A$$QSPaV-WvGGTS1YUbFxxGP"
-      }, {
-        "id" : "BHQ5JdN_sLTLQei7n9daO",
-        "source" : "CctApCXIwu-ZGepAFrzZ6$$VS7CDY_E-16hSS4Pdb35a",
-        "sourcePort" : "hutovkFDE9e5a1ulh67aD$$nNN_RfTjkTI2epB8XYXrp",
-        "target" : "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT",
-        "targetPort" : "qXtxy441k4pcX3aLaORLS$$aeQLb1WoDj3h6gOU88E0s"
-      }, {
-        "id" : "ZrFARpZeVtiRyKzyi0bMS",
-        "source" : "POGYtsQcVRaz-XBh40WU7$$015INLkZfpaQEArUSnoK9",
-        "sourcePort" : "5LNDDnlNXCSiiCfhTIIAT$$PqRk7BZ4kYt5PRJRGfjPK",
-        "target" : "CctApCXIwu-ZGepAFrzZ6$$VS7CDY_E-16hSS4Pdb35a",
-        "targetPort" : "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV"
-      } ],
-      "processes" : {
-        "8eOw1j3e3CItKTNmDDtQC$$QidAPF8M-1JkxpPF2QZSZ" : {
-          "id" : "8eOw1j3e3CItKTNmDDtQC$$QidAPF8M-1JkxpPF2QZSZ",
-          "component" : "Source",
-          "metadata" : {
-            "label" : "customer_nations_1",
-            "slug" : "customer_nations_1",
-            "x" : 200,
-            "y" : 1320,
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false,
-            "isImported" : false
-          },
-          "ports" : {
-            "inputs" : [ ],
-            "outputs" : [ {
-              "id" : "baY66HN4wc4uXEqdGmmMz$$ToN2MRvkITIYUNQ0uxNLk",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false,
-            "autoUpdateOnRun" : false
-          },
-          "properties" : {
-            "datasetId" : "datasets/customer_nations"
-          }
-        },
-        "Qi9M0IReFG82IosR2-wvm$$ZI3ClZC_jrgzpU5b49VIO" : {
-          "id" : "Qi9M0IReFG82IosR2-wvm$$ZI3ClZC_jrgzpU5b49VIO",
-          "component" : "Source",
-          "metadata" : {
-            "label" : "nation_1",
-            "slug" : "nation_1",
-            "x" : 380,
-            "y" : 1480,
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false,
-            "isImported" : false
-          },
-          "ports" : {
-            "inputs" : [ ],
-            "outputs" : [ {
-              "id" : "_2-MowCcC6LB7xy-ervYI$$7VzHnjb0r4aV2d04CfRHZ",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false,
-            "autoUpdateOnRun" : false
-          },
-          "properties" : {
-            "datasetId" : "datasets/nation"
-          }
-        },
-        "CctApCXIwu-ZGepAFrzZ6$$VS7CDY_E-16hSS4Pdb35a" : {
-          "id" : "CctApCXIwu-ZGepAFrzZ6$$VS7CDY_E-16hSS4Pdb35a",
-          "component" : "Reformat",
-          "metadata" : {
-            "label" : "cleanup_1",
-            "slug" : "cleanup_1",
-            "x" : 900,
-            "y" : 1240,
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false,
-            "isImported" : false
-          },
-          "ports" : {
-            "inputs" : [ {
-              "id" : "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV",
-              "slug" : "in0",
-              "schema" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "c_custkey",
-                  "type" : "long",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "r_name",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "n_name",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "amounts",
-                  "type" : "decimal(27,0)",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "month",
-                  "type" : "integer",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "isStreaming" : false
-            } ],
-            "outputs" : [ {
-              "id" : "hutovkFDE9e5a1ulh67aD$$nNN_RfTjkTI2epB8XYXrp",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false,
-            "autoUpdateOnRun" : false
-          },
-          "properties" : {
-            "importLanguage" : "python",
-            "expressions" : [ {
-              "target" : "c_custkey",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "c_custkey"
-              },
-              "description" : ""
-            }, {
-              "target" : "region",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "r_name"
-              },
-              "description" : ""
-            }, {
-              "target" : "nation",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "n_name"
-              },
-              "description" : ""
-            }, {
-              "target" : "amounts",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "concat(format_number(amounts, 2), 'zł')"
-              },
-              "description" : ""
-            }, {
-              "target" : "month",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "CASE WHEN (month = 1) THEN 'January' WHEN (month = 2) THEN 'February' WHEN (month = 3) THEN 'March' WHEN (month = 4) THEN 'April' WHEN (month = 5) THEN 'May' WHEN (month = 6) THEN 'June' WHEN (month = 7) THEN 'July' WHEN (month = 8) THEN 'August' WHEN (month = 9) THEN 'September' WHEN (month = 10) THEN 'October' WHEN (month = 11) THEN 'November' ELSE 'December' END"
-              },
-              "description" : ""
-            } ],
-            "importString" : "",
-            "activeTab" : "expressions",
-            "columnsSelector" : [ "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV##n_name", "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV##amounts", "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV##r_name", "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV##c_custkey", "ONgzseq5exaxU9nXExHrf$$F04O8bnlKeBNYeDkgQlEV##month" ]
-          },
-          "componentInfo" : {
-            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",
-            "projectName" : "ProphecySparkBasicsPython"
-          }
-        },
-        "POGYtsQcVRaz-XBh40WU7$$015INLkZfpaQEArUSnoK9" : {
-          "id" : "POGYtsQcVRaz-XBh40WU7$$015INLkZfpaQEArUSnoK9",
-          "component" : "Join",
-          "metadata" : {
-            "label" : "with_nations_regions_1",
-            "slug" : "with_nations_regions_1",
-            "x" : 640,
-            "y" : 1240,
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false,
-            "isImported" : false
-          },
-          "ports" : {
-            "inputs" : [ {
-              "id" : "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj",
-              "slug" : "in0",
-              "schema" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "c_custkey",
-                  "type" : "long",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "month",
-                  "type" : "integer",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "amounts",
-                  "type" : "decimal(27,0)",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "isStreaming" : false
-            }, {
-              "id" : "Wab1XHZdecPHVYfGPvR5h$$_48r0LUXhr_4aVBkS-mIG",
-              "slug" : "in1",
-              "schema" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "c_custkey",
-                  "type" : "long",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "c_name",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "c_address",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "c_nationkey",
-                  "type" : "long",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "c_phone",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "c_acctbal",
-                  "type" : "decimal(18,2)",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "c_mktsegment",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "c_comment",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "isStreaming" : false
-            }, {
-              "id" : "995x_Meu_IePSxRnCWOIO$$PGCH98nw9EQwWwtQ1DMRW",
-              "slug" : "in2",
-              "schema" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "n_nationkey",
-                  "type" : "long",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "n_name",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "n_regionkey",
-                  "type" : "long",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "n_comment",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "isStreaming" : false
-            }, {
-              "id" : "4jzP4BxIlNzll7uhXo70A$$QSPaV-WvGGTS1YUbFxxGP",
-              "slug" : "in3",
-              "schema" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "r_regionkey",
-                  "type" : "long",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "r_name",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "r_comment",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "isStreaming" : false
-            } ],
-            "outputs" : [ {
-              "id" : "5LNDDnlNXCSiiCfhTIIAT$$PqRk7BZ4kYt5PRJRGfjPK",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false,
-            "autoUpdateOnRun" : false
-          },
-          "properties" : {
-            "conditions" : [ {
-              "alias" : "in1",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "(in0.c_custkey = in1.c_custkey)"
-              },
-              "joinType" : "inner"
-            }, {
-              "alias" : "in2",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "(in2.n_nationkey = in1.c_nationkey)"
-              },
-              "joinType" : "inner"
-            }, {
-              "alias" : "in3",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "(in3.r_regionkey = in2.n_regionkey)"
-              },
-              "joinType" : "inner"
-            } ],
-            "expressions" : [ {
-              "target" : "c_custkey",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "in0.c_custkey"
-              },
-              "description" : "",
-              "_row_id" : null
-            }, {
-              "target" : "r_name",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "in3.r_name"
-              },
-              "description" : "",
-              "_row_id" : null
-            }, {
-              "target" : "n_name",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "in2.n_name"
-              },
-              "description" : "",
-              "_row_id" : null
-            }, {
-              "target" : "amounts",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "in0.amounts"
-              },
-              "description" : "",
-              "_row_id" : null
-            }, {
-              "target" : "month",
-              "expression" : {
-                "format" : "sql",
-                "expression" : "in0.month"
-              },
-              "description" : "",
-              "_row_id" : null
-            } ],
-            "hints" : [ {
-              "id" : "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj",
-              "alias" : "in0",
-              "hintType" : "none",
-              "propagateColumns" : false
-            }, {
-              "id" : "Wab1XHZdecPHVYfGPvR5h$$_48r0LUXhr_4aVBkS-mIG",
-              "alias" : "in1",
-              "hintType" : "none",
-              "propagateColumns" : false
-            }, {
-              "id" : "995x_Meu_IePSxRnCWOIO$$PGCH98nw9EQwWwtQ1DMRW",
-              "alias" : "in2",
-              "hintType" : "none",
-              "propagateColumns" : false
-            }, {
-              "id" : "4jzP4BxIlNzll7uhXo70A$$QSPaV-WvGGTS1YUbFxxGP",
-              "alias" : "in3",
-              "hintType" : "none",
-              "propagateColumns" : false
-            } ],
-            "allIn1" : null,
-            "activeTab" : "conditions",
-            "columnsSelector" : [ "995x_Meu_IePSxRnCWOIO$$PGCH98nw9EQwWwtQ1DMRW##n_regionkey", "995x_Meu_IePSxRnCWOIO$$PGCH98nw9EQwWwtQ1DMRW##n_nationkey", "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj##c_custkey", "Wab1XHZdecPHVYfGPvR5h$$_48r0LUXhr_4aVBkS-mIG##c_nationkey", "4jzP4BxIlNzll7uhXo70A$$QSPaV-WvGGTS1YUbFxxGP##r_regionkey", "Wab1XHZdecPHVYfGPvR5h$$_48r0LUXhr_4aVBkS-mIG##c_custkey", "995x_Meu_IePSxRnCWOIO$$PGCH98nw9EQwWwtQ1DMRW##n_name", "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj##month", "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj##c_custkey", "4jzP4BxIlNzll7uhXo70A$$QSPaV-WvGGTS1YUbFxxGP##r_name", "l4ydD2E8oaVegeOayhb_Z$$_6vlMrS7lhSoV4WCiLfzj##amounts" ],
-            "allIn0" : null,
-            "whereClause" : null,
-            "headAlias" : "in0"
-          },
-          "componentInfo" : {
-            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Join",
-            "projectName" : "ProphecySparkBasicsPython"
-          }
-        },
-        "wBzXOsVm1Ims8PFu5uirM$$jyxRbz5PBUB1gE-iyT7LG" : {
-          "id" : "wBzXOsVm1Ims8PFu5uirM$$jyxRbz5PBUB1gE-iyT7LG",
-          "component" : "Source",
-          "metadata" : {
-            "label" : "regions_1",
-            "slug" : "regions_1",
-            "x" : 440,
-            "y" : 1660,
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false,
-            "isImported" : false
-          },
-          "ports" : {
-            "inputs" : [ ],
-            "outputs" : [ {
-              "id" : "IVsTJWG5L38m_YcVGnxAp$$lyR0Ci4IK1ZjfCX4VdOIV",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false,
-            "autoUpdateOnRun" : false
-          },
-          "properties" : {
-            "datasetId" : "datasets/regions"
-          }
-        }
-      },
-      "externalDependencies" : [ ]
     }
   },
   "ports" : {

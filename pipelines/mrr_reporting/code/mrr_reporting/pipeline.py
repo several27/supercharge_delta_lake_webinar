@@ -14,7 +14,6 @@ def pipeline(spark: SparkSession) -> None:
     df_sum_amounts = sum_amounts(spark, df_by_customer_id)
     df_floor_amounts = floor_amounts(spark, df_sum_amounts)
     df_enrich_customers = enrich_customers(spark, Config.enrich_customers, df_floor_amounts)
-    final_report(spark, df_enrich_customers)
 
 def main():
     spark = SparkSession.builder\
