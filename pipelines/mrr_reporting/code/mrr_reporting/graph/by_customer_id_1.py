@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from mrr_reporting.config.ConfigStore import *
 from mrr_reporting.udfs.UDFs import *
 
-def floor_amounts(spark: SparkSession, sum_amounts: DataFrame) -> DataFrame:
-    return sum_amounts.select(col("c_custkey"), col("month"), floor(col("amounts")).alias("amounts"))
+def by_customer_id_1(spark: SparkSession, in0: DataFrame, in1: DataFrame, ) -> DataFrame:
+    return in0.alias("in0").join(in1.alias("in1"), (col("in0.c_custkey") == col("in1.o_custkey")), "inner")

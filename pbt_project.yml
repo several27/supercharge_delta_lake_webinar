@@ -86,14 +86,10 @@ pipelines:
     createdAt: '2022-10-11 23:15:32'
     datasets:
       inputs:
-      - datasets/customer_nations
-      - datasets/nation
-      - datasets/regions
       - datasets/silver_customers
       - datasets/silver_orders
       outputs: []
-    subgraphs:
-    - gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.1&projectSubscriptionProjectId=16366&path=subgraphs/enrich_customers
+    subgraphs: []
     dependencies: {}
 datasets:
   datasets/customer_nations:
@@ -297,7 +293,7 @@ jobs:
   jobs/monthly_job_airflow:
     name: monthly_job_airflow
     description: ''
-    fabricUID: 3346
+    fabricUID: 7627
     scheduler:
       Prophecy: {}
     cloudProvider: null
@@ -316,7 +312,7 @@ jobs:
     - pipelines/cleanup_customers
     jobClusterMode:
       clusterMode:
-        Single: {}
+        Multi: {}
       clusterId: null
     enabled: false
     createdAt: '2023-08-08 19:31:06'
@@ -350,7 +346,18 @@ jobs:
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
-  gems: {}
+  gems:
+    gems/Limit2:
+      name: Limit2
+      category: Transform
+      subCategory: ''
+      description: null
+      author: maciej@prophecy.io
+      mode: batch
+      files:
+      - prophecy_webinar_supercharge_delta_lake/gems/Limit2.py
+      dependencies: null
+      createdAt: '2024-01-30 21:59:43'
   dependencies: null
 functions:
   author: null
@@ -372,10 +379,10 @@ projectDependencies:
     projectUID: 12654
     projectName: ProphecySparkBasicsPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
-    version: 0.0.7
+    version: 0.1.2
     isDefault: true
     author: null
-    createdAt: '2023-12-06 05:06:59'
+    createdAt: '2024-01-30 18:31:32'
   '12655':
     projectUID: 12655
     projectName: ProphecyWarehousePython
@@ -384,12 +391,6 @@ projectDependencies:
     isDefault: true
     author: null
     createdAt: '2023-09-28 08:42:10'
-  '16366':
-    projectUID: 16366
-    projectName: data_enrichment
-    repositoryPath: gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/
-    version: data_enrichment/1.1
-    isDefault: false
-    author: null
-    createdAt: '2023-12-07 18:38:25'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
