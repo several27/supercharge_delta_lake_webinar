@@ -4,3 +4,5 @@ configurations:
 - default
 - test
 dependencies: []
+pipelineVersion:
+  version: '2'

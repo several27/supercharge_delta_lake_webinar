@@ -3,13 +3,19 @@
     "migrationVersions" : {
       "gemBuilderVersion" : "v1"
     },
+    "functions" : { },
     "codeGenConfiguration" : {
-      "editableConfig" : false
+      "editableConfig" : false,
+      "plibVersion" : {
+        "mavenVersion" : "8.0.29",
+        "pyPiVersion" : "1.9.9"
+      },
+      "instrumentationEnabled" : true
     },
     "id" : "1",
     "uri" : "pipelines/mrr_reporting",
     "language" : "python",
-    "fabricId" : "1618",
+    "fabricId" : "1777",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -51,7 +57,7 @@
       },
       "fabrics" : { },
       "instances" : { },
-      "selected" : "qwe",
+      "selected" : "default",
       "nonEditable" : [ ],
       "isSubscribedPipelineWithPipelineConfigs" : false
     },
@@ -60,607 +66,54 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
     "isImported" : false,
-    "interimMode" : "Full",
+    "interimMode" : "Vanilla",
     "interimModeEnabled" : true,
-    "visualCodeInterimMode" : "Disabled",
+    "visualCodeInterimMode" : "Vanilla",
     "recordsLimit" : {
       "enabled" : true,
       "value" : 10000
     },
     "topLevelPackage" : "mrr_reporting",
-    "configurationVersion" : "v1"
+    "configurationVersion" : "v2"
   },
   "connections" : [ {
-    "id" : "nxIFf2bFdL1TnMjduDL0U",
-    "source" : "pO5YHh3nZnXt-eVREgBwa$$wwag5Zt9iWd0hs9tAbgd7",
-    "sourcePort" : "OyKr4T8s7EaPCbahzQCaf$$txJeJUgRyd8-KmtA5nW_3",
-    "target" : "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc",
-    "targetPort" : "rxD22Q4qOC90N0Zmua4pL$$f9Klkw_MyTM6m9EueTx67"
-  }, {
-    "id" : "Hd24xhzDYrqaj06Yq1PJd",
+    "id" : "NLElb9rsM-HMnJ4nn8A-6$$yOK-n_q18YqyHsFrkq93p",
     "source" : "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy",
     "sourcePort" : "iG3b_lBYNrvozN1jayuau$$OImvC0aVAhhf3irvxPGZu",
-    "target" : "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc",
-    "targetPort" : "rO09ozwMBm_SlbxvVxHYc$$1fOOHaegJlTT04hywlsDb"
+    "target" : "Eq_r9SLzUFTo60MQA84I1$$oHpZ6MrqeHdeCKpspXfKT",
+    "targetPort" : "sDkO4W9prpqOvnzvrB14s$$EnhiFOibzBxkMLD8MbR1I"
   }, {
-    "id" : "Y8RGH8L75yT8d0LCnBaKg$$MXUi3fGRqs6Hbf_ObfxHM",
-    "source" : "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc",
-    "sourcePort" : "SVDH8nbIU0lEXyN3Fff9w$$V4vo6JH4H9bou1_ig4XgO",
-    "target" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
-    "targetPort" : "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B"
-  }, {
-    "id" : "h3vtKar4Q38IW8_PexKUF$$ToCBH1kcX8CaI6Wmr6wQL",
-    "source" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
-    "sourcePort" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
-    "target" : "RhJi1eyxaFtVnRYENPAps$$lkaebgCgmObC_VCrtZlf3",
-    "targetPort" : "5lEVar-2naZCubk1rCBAU$$iH0JsTU8SZbGuzEUGkDXu"
-  }, {
-    "id" : "1g_v0K1tIMHbw8DW9kPD2$$TnBDLUobECJYtcb0h0Tkb",
-    "source" : "RhJi1eyxaFtVnRYENPAps$$lkaebgCgmObC_VCrtZlf3",
-    "sourcePort" : "f1ydvG0hCY8WNC-qAzT9P$$0fO9hbq9t1IhK1y0ovmFz",
-    "target" : "Xvq8jQsbUWBd2tLatJRhG$$MYe0pTVUbqWMtyzdF54cd",
-    "targetPort" : "hOnlfqX392PRkl65M00X_$$YYMuOC7V0iREEM-cEehj-"
-  }, {
-    "id" : "DtixDOWVuyNj91kbEFH0v",
-    "source" : "q92hTFtAc8dc-zmVgkvFW$$3jey5xkTPONeBmuB1szpD",
-    "sourcePort" : "h0f5ORCLkEwaJx1M525vc$$P49aE4-dGA9hnFzCyMK_e",
-    "target" : "7t3nF6Q8WnLYqx4ZD9Shd$$RwLvJSwc53Q6u6M2DLhZf",
-    "targetPort" : "Okn0tI5akOIku_qt0IyGQ$$SQnY8vkFWu3GXOBNFSY9Q"
-  }, {
-    "id" : "V0vUXBr2Fsyq2FgVfr66q",
-    "source" : "U-s8VWhA26u696bFPpEpS$$vWGY2iXIRyWHASa3lbwpN",
-    "sourcePort" : "nrvPurzKv_Px9zjlrKGEo$$0siE65_9BgK5YXByX1XDG",
-    "target" : "7t3nF6Q8WnLYqx4ZD9Shd$$RwLvJSwc53Q6u6M2DLhZf",
-    "targetPort" : "O79yVfprk43n-KJJhE-Xe$$xkHCN4s6usBpwLHLxco8r"
-  }, {
-    "id" : "M2KGQ8QNC6SrFvYeYXFmQ",
-    "source" : "7t3nF6Q8WnLYqx4ZD9Shd$$RwLvJSwc53Q6u6M2DLhZf",
-    "sourcePort" : "IB0R58EkGgyDLeuBQ9MlW$$uAxP0mqe5r6Iu5xPCfbu6",
-    "target" : "f_JnT9DDERKL8Osq8jItK$$GL3gOrbbOQCDL8UlqkWr1",
-    "targetPort" : "tDU_3Dt6JstHit3N8SX7N$$JBGY9GSxtIYLrH5Udg4Yw"
-  }, {
-    "id" : "ERR32DztIKelkfew4hOe_",
-    "source" : "f_JnT9DDERKL8Osq8jItK$$GL3gOrbbOQCDL8UlqkWr1",
-    "sourcePort" : "nFh9vqFwmUzOZ36fHykWH$$oKbYX5Q1Nq-OUc4tDDG3Y",
-    "target" : "wn0cywCGh5IkbqLksMnXJ$$5Uo1vTD9WS1Z9C2_lKmYH",
-    "targetPort" : "zYss9Z_6ObEAhR9VQj5yl$$o-ad-K8bXQvZ3VUMcNbuB"
-  }, {
-    "id" : "XZrgJi1Ip1AryhqWzXOu8",
-    "source" : "wn0cywCGh5IkbqLksMnXJ$$5Uo1vTD9WS1Z9C2_lKmYH",
-    "sourcePort" : "r3Z4xk0xBxDV8NUuhMQ4_$$llXIropBxspt5_8YEDkHb",
-    "target" : "b--Sp61OLPd6AFfzvtFWr$$HduO2cvTH-nwRtSN889rZ",
-    "targetPort" : "NeO934eS33xdJsetPCn6c$$G2r7K3qtquWvKIlD0xNMZ"
+    "id" : "iX7HY5gfNnaIB9fLhFsHP$$EhipuiyZnC9kLfEJqz2GW",
+    "source" : "Eq_r9SLzUFTo60MQA84I1$$oHpZ6MrqeHdeCKpspXfKT",
+    "sourcePort" : "W-fNp5Rld6i5DPA3LZxMm$$Cr9oOIDY66pwSqw4IUR7I",
+    "target" : "BsQZJWY74gHotWjNsgtpF$$3kU39ghRO6lSzH3Y424W_",
+    "targetPort" : "F2rReAZ9oWm6Z-nXy2gwk$$pCMptwvCXEaLqRTNesd4P"
   } ],
   "processes" : {
-    "Xvq8jQsbUWBd2tLatJRhG$$MYe0pTVUbqWMtyzdF54cd" : {
-      "id" : "Xvq8jQsbUWBd2tLatJRhG$$MYe0pTVUbqWMtyzdF54cd",
-      "component" : "Limit2",
-      "metadata" : {
-        "label" : "limit_100",
-        "slug" : "limit_100",
-        "x" : 900,
-        "y" : 240,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "hOnlfqX392PRkl65M00X_$$YYMuOC7V0iREEM-cEehj-",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "c_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "month",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "amounts",
-              "type" : "decimal(28,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "1CnJ003wXeJou6fBV7UqH$$5GNoKDMP3MthzlOCAxam0",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "limit" : "100"
-      },
-      "componentInfo" : {
-        "gemId" : "gems/Limit2",
-        "projectName" : "supercharge_delta_lake"
-      }
-    },
-    "7t3nF6Q8WnLYqx4ZD9Shd$$RwLvJSwc53Q6u6M2DLhZf" : {
-      "id" : "7t3nF6Q8WnLYqx4ZD9Shd$$RwLvJSwc53Q6u6M2DLhZf",
-      "component" : "Join",
-      "metadata" : {
-        "label" : "by_customer_id_1",
-        "slug" : "by_customer_id_1",
-        "x" : 300,
-        "y" : 640,
-        "phase" : 1,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "O79yVfprk43n-KJJhE-Xe$$xkHCN4s6usBpwLHLxco8r",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "c_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_address",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_nationkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_acctbal",
-              "type" : "decimal(18,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_mktsegment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_comment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        }, {
-          "id" : "Okn0tI5akOIku_qt0IyGQ$$SQnY8vkFWu3GXOBNFSY9Q",
-          "slug" : "in1",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "o_orderkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderstatus",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_totalprice",
-              "type" : "decimal(18,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderdate",
-              "type" : "date",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderpriority",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_clerk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_shippriority",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_comment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "IB0R58EkGgyDLeuBQ9MlW$$uAxP0mqe5r6Iu5xPCfbu6",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "conditions" : [ {
-          "alias" : "in1",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "(in0.c_custkey = in1.o_custkey)"
-          },
-          "joinType" : "inner"
-        } ],
-        "expressions" : [ ],
-        "hints" : [ {
-          "id" : "O79yVfprk43n-KJJhE-Xe$$xkHCN4s6usBpwLHLxco8r",
-          "alias" : "in0",
-          "hintType" : "none",
-          "propagateColumns" : false
-        }, {
-          "id" : "Okn0tI5akOIku_qt0IyGQ$$SQnY8vkFWu3GXOBNFSY9Q",
-          "alias" : "in1",
-          "hintType" : "none",
-          "propagateColumns" : false
-        } ],
-        "allIn1" : null,
-        "activeTab" : "conditions",
-        "columnsSelector" : [ "Okn0tI5akOIku_qt0IyGQ$$SQnY8vkFWu3GXOBNFSY9Q##o_custkey", "O79yVfprk43n-KJJhE-Xe$$xkHCN4s6usBpwLHLxco8r##c_custkey" ],
-        "allIn0" : null,
-        "whereClause" : null,
-        "headAlias" : "in0"
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Join",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "f_JnT9DDERKL8Osq8jItK$$GL3gOrbbOQCDL8UlqkWr1" : {
-      "id" : "f_JnT9DDERKL8Osq8jItK$$GL3gOrbbOQCDL8UlqkWr1",
-      "component" : "Aggregate",
-      "metadata" : {
-        "label" : "sum_amounts_1",
-        "slug" : "sum_amounts_1",
-        "x" : 520,
-        "y" : 640,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "tDU_3Dt6JstHit3N8SX7N$$JBGY9GSxtIYLrH5Udg4Yw",
-          "slug" : "by_customer_id",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "c_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_address",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_nationkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_acctbal",
-              "type" : "decimal(18,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_mktsegment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_comment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderstatus",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_totalprice",
-              "type" : "decimal(18,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderdate",
-              "type" : "date",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderpriority",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_clerk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_shippriority",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_comment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "nFh9vqFwmUzOZ36fHykWH$$oKbYX5Q1Nq-OUc4tDDG3Y",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "allIns" : false,
-        "doPivot" : false,
-        "aggregate" : [ {
-          "target" : "amounts",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "sum(o_totalprice)"
-          },
-          "description" : "",
-          "_row_id" : null
-        } ],
-        "allowSelection" : true,
-        "pivotColumn" : null,
-        "pivotValues" : [ ],
-        "activeTab" : "aggregate",
-        "columnsSelector" : [ "tDU_3Dt6JstHit3N8SX7N$$JBGY9GSxtIYLrH5Udg4Yw##o_orderdate", "tDU_3Dt6JstHit3N8SX7N$$JBGY9GSxtIYLrH5Udg4Yw##o_totalprice", "tDU_3Dt6JstHit3N8SX7N$$JBGY9GSxtIYLrH5Udg4Yw##c_custkey" ],
-        "groupBy" : [ {
-          "target" : "c_custkey",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "c_custkey"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "month",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "month(o_orderdate)"
-          },
-          "description" : "",
-          "_row_id" : null
-        } ]
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Aggregate",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
     "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy" : {
       "id" : "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy",
       "component" : "Source",
       "metadata" : {
         "label" : "silver_customers_2_1",
         "slug" : "silver_customers_2_1",
-        "x" : 60,
-        "y" : 140,
+        "x" : -220,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Retrieves customer data from the 'customers' table.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ ],
@@ -673,26 +126,99 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "datasetId" : "datasets/silver_customers"
+        "datasetId" : "datasets/customers_new"
       }
     },
-    "pO5YHh3nZnXt-eVREgBwa$$wwag5Zt9iWd0hs9tAbgd7" : {
-      "id" : "pO5YHh3nZnXt-eVREgBwa$$wwag5Zt9iWd0hs9tAbgd7",
-      "component" : "Source",
+    "Eq_r9SLzUFTo60MQA84I1$$oHpZ6MrqeHdeCKpspXfKT" : {
+      "id" : "Eq_r9SLzUFTo60MQA84I1$$oHpZ6MrqeHdeCKpspXfKT",
+      "component" : "Reformat",
       "metadata" : {
-        "label" : "silvers_orders",
-        "slug" : "silvers_orders",
-        "x" : 60,
-        "y" : 340,
+        "label" : "reformatted_silver_customers",
+        "slug" : "reformatted_silver_customers",
+        "x" : 0,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Reformats silver customer data, selecting specific columns for further analysis.",
+        "autoUpdateComment" : true
       },
       "ports" : {
-        "inputs" : [ ],
+        "inputs" : [ {
+          "id" : "sDkO4W9prpqOvnzvrB14s$$EnhiFOibzBxkMLD8MbR1I",
+          "slug" : "silver_customers_2_1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The unique identifier for the customer",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The first name of the customer",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The last name of the customer",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_order",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The date of the customer's first order",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "most_recent_order",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of the most recent order placed by the customer",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "total_orders",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The total number of orders placed by the customer",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_lifetime_value",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The total value of purchases made by the customer throughout their lifetime",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
         "outputs" : [ {
-          "id" : "OyKr4T8s7EaPCbahzQCaf$$txJeJUgRyd8-KmtA5nW_3",
+          "id" : "W-fNp5Rld6i5DPA3LZxMm$$Cr9oOIDY66pwSqw4IUR7I",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -700,17 +226,74 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "datasetId" : "datasets/silver_orders"
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "customer_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customer_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "first_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "last_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "last_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "first_order",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "first_order"
+          },
+          "description" : ""
+        }, {
+          "target" : "most_recent_order",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "most_recent_order"
+          },
+          "description" : ""
+        }, {
+          "target" : "total_orders",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "total_orders"
+          },
+          "description" : ""
+        }, {
+          "target" : "customer_lifetime_value",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customer_lifetime_value"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "sDkO4W9prpqOvnzvrB14s$$EnhiFOibzBxkMLD8MbR1I##most_recent_order", "sDkO4W9prpqOvnzvrB14s$$EnhiFOibzBxkMLD8MbR1I##last_name", "sDkO4W9prpqOvnzvrB14s$$EnhiFOibzBxkMLD8MbR1I##customer_id", "sDkO4W9prpqOvnzvrB14s$$EnhiFOibzBxkMLD8MbR1I##first_order", "sDkO4W9prpqOvnzvrB14s$$EnhiFOibzBxkMLD8MbR1I##total_orders", "sDkO4W9prpqOvnzvrB14s$$EnhiFOibzBxkMLD8MbR1I##customer_lifetime_value", "sDkO4W9prpqOvnzvrB14s$$EnhiFOibzBxkMLD8MbR1I##first_name" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.25&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc" : {
-      "id" : "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc",
-      "component" : "Join",
+    "BsQZJWY74gHotWjNsgtpF$$3kU39ghRO6lSzH3Y424W_" : {
+      "id" : "BsQZJWY74gHotWjNsgtpF$$3kU39ghRO6lSzH3Y424W_",
+      "component" : "Target",
       "metadata" : {
-        "label" : "by_customer_id",
-        "slug" : "by_customer_id",
-        "x" : 300,
-        "y" : 240,
+        "label" : "test_output",
+        "slug" : "test_output",
+        "x" : 200,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -718,510 +301,70 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "rO09ozwMBm_SlbxvVxHYc$$1fOOHaegJlTT04hywlsDb",
+          "id" : "F2rReAZ9oWm6Z-nXy2gwk$$pCMptwvCXEaLqRTNesd4P",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "c_custkey",
+              "name" : "customer_id",
               "type" : "long",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "The unique identifier for the customer",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "c_name",
+              "name" : "first_name",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "The first name of the customer",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "c_address",
+              "name" : "last_name",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "The last name of the customer",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "c_nationkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_acctbal",
-              "type" : "decimal(18,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_mktsegment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_comment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        }, {
-          "id" : "rxD22Q4qOC90N0Zmua4pL$$f9Klkw_MyTM6m9EueTx67",
-          "slug" : "in1",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "o_orderkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderstatus",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_totalprice",
-              "type" : "decimal(18,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderdate",
+              "name" : "first_order",
               "type" : "date",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "The date of the customer's first order",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "o_orderpriority",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_clerk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_shippriority",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_comment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "SVDH8nbIU0lEXyN3Fff9w$$V4vo6JH4H9bou1_ig4XgO",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "conditions" : [ {
-          "alias" : "in1",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "(in0.c_custkey = in1.o_custkey)"
-          },
-          "joinType" : "inner"
-        } ],
-        "expressions" : [ ],
-        "hints" : [ {
-          "id" : "rO09ozwMBm_SlbxvVxHYc$$1fOOHaegJlTT04hywlsDb",
-          "alias" : "in0",
-          "hintType" : "none",
-          "propagateColumns" : false
-        }, {
-          "id" : "rxD22Q4qOC90N0Zmua4pL$$f9Klkw_MyTM6m9EueTx67",
-          "alias" : "in1",
-          "hintType" : "none",
-          "propagateColumns" : false
-        } ],
-        "allIn1" : null,
-        "activeTab" : "conditions",
-        "columnsSelector" : [ "rxD22Q4qOC90N0Zmua4pL$$f9Klkw_MyTM6m9EueTx67##o_custkey", "rO09ozwMBm_SlbxvVxHYc$$1fOOHaegJlTT04hywlsDb##c_custkey" ],
-        "allIn0" : null,
-        "whereClause" : null,
-        "headAlias" : "in0"
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Join",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB" : {
-      "id" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
-      "component" : "Aggregate",
-      "metadata" : {
-        "label" : "sum_amounts",
-        "slug" : "sum_amounts",
-        "x" : 520,
-        "y" : 240,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B",
-          "slug" : "by_customer_id",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "c_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_address",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_nationkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_acctbal",
-              "type" : "decimal(18,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_mktsegment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_comment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderstatus",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_totalprice",
-              "type" : "decimal(18,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_orderdate",
+              "name" : "most_recent_order",
               "type" : "date",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "Date of the most recent order placed by the customer",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "o_orderpriority",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_clerk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_shippriority",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "o_comment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "allIns" : false,
-        "doPivot" : false,
-        "aggregate" : [ {
-          "target" : "amounts",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "sum(o_totalprice)"
-          },
-          "description" : "",
-          "_row_id" : null
-        } ],
-        "allowSelection" : true,
-        "pivotColumn" : null,
-        "pivotValues" : [ ],
-        "activeTab" : "aggregate",
-        "columnsSelector" : [ "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##c_custkey", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_totalprice", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_orderdate" ],
-        "groupBy" : [ {
-          "target" : "c_custkey",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "c_custkey"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "month",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "month(o_orderdate)"
-          },
-          "description" : "",
-          "_row_id" : null
-        } ]
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Aggregate",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "q92hTFtAc8dc-zmVgkvFW$$3jey5xkTPONeBmuB1szpD" : {
-      "id" : "q92hTFtAc8dc-zmVgkvFW$$3jey5xkTPONeBmuB1szpD",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "silvers_orders_1",
-        "slug" : "silvers_orders_1",
-        "x" : 60,
-        "y" : 740,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "h0f5ORCLkEwaJx1M525vc$$P49aE4-dGA9hnFzCyMK_e",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/silver_orders"
-      }
-    },
-    "wn0cywCGh5IkbqLksMnXJ$$5Uo1vTD9WS1Z9C2_lKmYH" : {
-      "id" : "wn0cywCGh5IkbqLksMnXJ$$5Uo1vTD9WS1Z9C2_lKmYH",
-      "component" : "Limit",
-      "metadata" : {
-        "label" : "limit_sum_amounts_1",
-        "slug" : "limit_sum_amounts_1",
-        "x" : 700,
-        "y" : 640,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "zYss9Z_6ObEAhR9VQj5yl$$o-ad-K8bXQvZ3VUMcNbuB",
-          "slug" : "sum_amounts",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "c_custkey",
+              "name" : "total_orders",
               "type" : "long",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "The total number of orders placed by the customer",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "month",
-              "type" : "integer",
+              "name" : "customer_lifetime_value",
+              "type" : "double",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "amounts",
-              "type" : "decimal(28,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
+                "description" : "The total value of purchases made by the customer throughout their lifetime",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -1229,179 +372,13 @@
           },
           "isStreaming" : false
         } ],
-        "outputs" : [ {
-          "id" : "r3Z4xk0xBxDV8NUuhMQ4_$$llXIropBxspt5_8YEDkHb",
-          "slug" : "out"
-        } ],
+        "outputs" : [ ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "limit" : "100"
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Limit",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "U-s8VWhA26u696bFPpEpS$$vWGY2iXIRyWHASa3lbwpN" : {
-      "id" : "U-s8VWhA26u696bFPpEpS$$vWGY2iXIRyWHASa3lbwpN",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "silver_customers_2_1_1",
-        "slug" : "silver_customers_2_1_1",
-        "x" : 60,
-        "y" : 540,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "nrvPurzKv_Px9zjlrKGEo$$0siE65_9BgK5YXByX1XDG",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/silver_customers"
-      }
-    },
-    "b--Sp61OLPd6AFfzvtFWr$$HduO2cvTH-nwRtSN889rZ" : {
-      "id" : "b--Sp61OLPd6AFfzvtFWr$$HduO2cvTH-nwRtSN889rZ",
-      "component" : "Limit2",
-      "metadata" : {
-        "label" : "limit_100_1",
-        "slug" : "limit_100_1",
-        "x" : 900,
-        "y" : 640,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "NeO934eS33xdJsetPCn6c$$G2r7K3qtquWvKIlD0xNMZ",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "c_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "month",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "amounts",
-              "type" : "decimal(28,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "zQIpqt0C_hsQao8w399XW$$cR5WDm6mYMzFgnwsngZ6D",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "limit" : "100"
-      },
-      "componentInfo" : {
-        "gemId" : "gems/Limit2",
-        "projectName" : "supercharge_delta_lake"
-      }
-    },
-    "RhJi1eyxaFtVnRYENPAps$$lkaebgCgmObC_VCrtZlf3" : {
-      "id" : "RhJi1eyxaFtVnRYENPAps$$lkaebgCgmObC_VCrtZlf3",
-      "component" : "Limit",
-      "metadata" : {
-        "label" : "limit_sum_amounts",
-        "slug" : "limit_sum_amounts",
-        "x" : 700,
-        "y" : 240,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "5lEVar-2naZCubk1rCBAU$$iH0JsTU8SZbGuzEUGkDXu",
-          "slug" : "sum_amounts",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "c_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "month",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "amounts",
-              "type" : "decimal(28,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "f1ydvG0hCY8WNC-qAzT9P$$0fO9hbq9t1IhK1y0ovmFz",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "limit" : "100"
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Limit",
-        "projectName" : "ProphecySparkBasicsPython"
+        "datasetId" : "datasets/test_output"
       }
     }
   },

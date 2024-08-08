@@ -7,5 +7,5 @@ from mrr_reporting.config.ConfigStore import *
 from mrr_reporting.udfs.UDFs import *
 
 @instrument
-def silver_customers_2_1(spark: SparkSession) -> DataFrame:
-    return spark.read.table("`main`.`maciej`.`customers`")
+def test_output(spark: SparkSession, in0: DataFrame):
+    in0.write.format("delta").mode("overwrite").saveAsTable("`main`.`maciej`.`2024_08_07_output`")

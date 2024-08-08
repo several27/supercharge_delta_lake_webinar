@@ -1,2 +1,0 @@
-from .bronze_customers_1 import bronze_customers_1
-from .raw_customers import raw_customers

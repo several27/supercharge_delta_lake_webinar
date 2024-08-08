@@ -1,2 +1,0 @@
-from .bronze_customers_0 import bronze_customers_0
-from .silver_customers import silver_customers
