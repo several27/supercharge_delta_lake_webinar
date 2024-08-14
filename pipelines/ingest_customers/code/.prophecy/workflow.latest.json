@@ -1,8 +1,5 @@
 {
   "metainfo" : {
-    "migrationVersions" : {
-      "gemBuilderVersion" : "v1"
-    },
     "id" : "1",
     "uri" : "pipelines/ingest_customers",
     "language" : "python",
@@ -13,7 +10,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "prophecy_webinar.supercharge_delta_lake.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+      "sharedFunctionPackageNames" : [ ]
     },
     "udafs" : {
       "language" : "python",
@@ -39,15 +36,7 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "12654",
-      "projectName" : "ProphecySparkBasicsPython",
-      "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "12655",
-      "projectName" : "ProphecyWarehousePython",
-      "externalDependencies" : [ ]
-    } ],
+    "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -87,8 +76,7 @@
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
+        "isCustomOutputSchema" : false
       },
       "properties" : {
         "datasetId" : "datasets/raw_customers"
@@ -191,8 +179,7 @@
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
+        "isCustomOutputSchema" : false
       },
       "properties" : {
         "datasetId" : "datasets/bronze_customers"
@@ -203,7 +190,6 @@
     "inputs" : [ ],
     "outputs" : [ ],
     "selectedInputFields" : [ ],
-    "isCustomOutputSchema" : false,
-    "autoUpdateOnRun" : false
+    "isCustomOutputSchema" : false
   }
 }

@@ -13,7 +13,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "prophecy_webinar.supercharge_delta_lake.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "prophecy_webinar.supercharge_delta_lake.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -46,10 +46,6 @@
     }, {
       "projectUID" : "12655",
       "projectName" : "ProphecyWarehousePython",
-      "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "16366",
-      "projectName" : "data_enrichment",
       "externalDependencies" : [ ]
     } ],
     "isImported" : false,

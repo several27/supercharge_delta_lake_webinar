@@ -3,10 +3,8 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from prophecy.utils import *
 from prophecy.libs import typed_lit
-from mrr_reporting.config.ConfigStore import *
+from .config import *
 from mrr_reporting.udfs.UDFs import *
 
-def limit_100(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    df1 = in0.limit(100)
-
-    return df1.limit(100)
+def nation_1(spark: SparkSession) -> DataFrame:
+    return spark.read.format("delta").load("dbfs:/databricks-datasets/tpch/delta-001/nation/")
