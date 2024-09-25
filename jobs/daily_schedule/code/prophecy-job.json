@@ -27,73 +27,7 @@
         "onSuccess" : false,
         "onFailure" : false
       }
-    },
-    "availableFabrics" : [ {
-      "id" : "1777",
-      "name" : "db_product",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "Large" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "7624",
-      "name" : "guides-dev",
-      "clusterSizes" : {
-        "default" : "small1",
-        "availableClusterSizes" : [ "small1" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "1618",
-      "name" : "dev_e2",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "6834",
-      "name" : "lab-samples-dbx",
-      "clusterSizes" : {
-        "default" : "sumit-lab-samples",
-        "availableClusterSizes" : [ "sumit-lab-samples" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "5659",
-      "name" : "dev_guides",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    } ]
+    }
   },
   "processes" : {
     "X21Wm-HfNcyPfKZGCn_Tz" : {
@@ -174,7 +108,7 @@
             "isWorkflowNodeConfiguration" : true
           } ],
           "instances" : {
-            "supercharge_delta_lake" : [ "qwe", "default", "test" ]
+            "supercharge_delta_lake" : [ "default", "test", "qwe" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"

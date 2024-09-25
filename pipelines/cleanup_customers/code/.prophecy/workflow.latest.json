@@ -3,6 +3,14 @@
     "migrationVersions" : {
       "gemBuilderVersion" : "v1"
     },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : false,
+      "plibVersion" : {
+        "mavenVersion" : "8.0.31",
+        "pyPiVersion" : "1.9.9"
+      }
+    },
     "id" : "1",
     "uri" : "pipelines/cleanup_customers",
     "language" : "python",
@@ -13,7 +21,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "prophecy_webinar.supercharge_delta_lake.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "prophecy.data_quality.functions", "prophecy_webinar.supercharge_delta_lake.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -47,6 +55,14 @@
       "projectUID" : "12655",
       "projectName" : "ProphecyWarehousePython",
       "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "32699",
+      "projectName" : "ProphecySparkDataQualityPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "16366",
+      "projectName" : "data_enrichment",
+      "externalDependencies" : [ ]
     } ],
     "isImported" : false,
     "interimMode" : "Full",
@@ -57,7 +73,7 @@
       "value" : 1000
     },
     "topLevelPackage" : "cleanup_customers",
-    "configurationVersion" : "v1"
+    "configurationVersion" : "v2"
   },
   "connections" : [ {
     "id" : "fxHBfFwZfohGld6Q5hYi0",

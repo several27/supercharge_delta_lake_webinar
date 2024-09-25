@@ -3,20 +3,26 @@
     "migrationVersions" : {
       "gemBuilderVersion" : "v1"
     },
+    "functions" : { },
     "codeGenConfiguration" : {
-      "editableConfig" : false
+      "editableConfig" : false,
+      "plibVersion" : {
+        "mavenVersion" : "8.0.31",
+        "pyPiVersion" : "1.9.9"
+      }
     },
     "id" : "1",
     "uri" : "pipelines/mrr_reporting",
+    "sourceSuggestions" : [ ],
     "language" : "python",
-    "fabricId" : "1618",
+    "fabricId" : "1777",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "prophecy_webinar.supercharge_delta_lake.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "prophecy_webinar.supercharge_delta_lake.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "prophecy.data_quality.functions", "prophecy_webinar.supercharge_delta_lake.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -96,6 +102,10 @@
       "projectName" : "ProphecyWarehousePython",
       "externalDependencies" : [ ]
     }, {
+      "projectUID" : "32699",
+      "projectName" : "ProphecySparkDataQualityPython",
+      "externalDependencies" : [ ]
+    }, {
       "projectUID" : "16366",
       "projectName" : "data_enrichment",
       "externalDependencies" : [ ]
@@ -109,7 +119,7 @@
       "value" : 10000
     },
     "topLevelPackage" : "mrr_reporting",
-    "configurationVersion" : "v1"
+    "configurationVersion" : "v2"
   },
   "connections" : [ {
     "id" : "nxIFf2bFdL1TnMjduDL0U",
@@ -257,41 +267,41 @@
       },
       "properties" : {
         "packageName" : "enrich_customers",
-        "externalId" : "gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.1&projectSubscriptionProjectId=16366&path=subgraphs/enrich_customers",
+        "externalId" : "gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.2&projectSubscriptionProjectId=16366&path=subgraphs/enrich_customers",
         "name" : "enrich_customers"
       },
       "connections" : [ {
-        "id" : "8LmAyyA28j_Q1GI9RWvGi",
+        "id" : "ApLyPZcOn3if-olpfJi_E",
         "source" : "Q_QsK83A0auLuJ4sSjFKL$$tAV6iXhJzy5hOVXPux0wb",
         "sourcePort" : "tvZKte3CQLK3Li8SMvUeF$$c88ShK7bvalHGJj9nx6aS",
         "target" : "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv",
         "targetPort" : "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y"
       }, {
-        "id" : "kqjTWkEzwgEwPXXAbYSna",
+        "id" : "4038QOAfzPFyEE15xjvv2",
         "source" : "8eOw1j3e3CItKTNmDDtQC$$tacHz8bPvHAU5h7TWuWsO",
         "sourcePort" : "baY66HN4wc4uXEqdGmmMz$$ZjHlo5ns1Twxs7bE9ESx0",
         "target" : "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv",
         "targetPort" : "Wab1XHZdecPHVYfGPvR5h$$zNG2yHN1EzGQtQ7IW7g4w"
       }, {
-        "id" : "z-qq-hg2F-lPMElhSA1mS",
+        "id" : "-C8LPRQecu7YQYHSjZIpr",
         "source" : "Qi9M0IReFG82IosR2-wvm$$X2CwZYl3PaugB0KHpQNRf",
         "sourcePort" : "_2-MowCcC6LB7xy-ervYI$$btY8Du005G3Edp2jyQLrP",
         "target" : "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv",
         "targetPort" : "995x_Meu_IePSxRnCWOIO$$wepqDTgrZRVjV9SwzAXlB"
       }, {
-        "id" : "85Bhna2ZEUx8Sscg1Qfg_",
+        "id" : "vKQAN97Pt9riou6M9vNSr",
         "source" : "wBzXOsVm1Ims8PFu5uirM$$3MMBDXpj4ihD3T-kpkctd",
         "sourcePort" : "IVsTJWG5L38m_YcVGnxAp$$zCEEeRDTtTbCm225FGvJV",
         "target" : "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv",
         "targetPort" : "4jzP4BxIlNzll7uhXo70A$$2WgfVSDIwOl-tYp8KL_gL"
       }, {
-        "id" : "9FLxkGWGViBbX0VtTgSoy",
+        "id" : "y_fEBN4u2jNR79j8i7IlA",
         "source" : "CctApCXIwu-ZGepAFrzZ6$$-nHkAgd-aTZ4cRZMEYn9N",
         "sourcePort" : "hutovkFDE9e5a1ulh67aD$$lBdkFQQB6mNECEsOkD1yb",
         "target" : "Q_QsK83A0auLuJ4sSjFKL$$tAV6iXhJzy5hOVXPux0wb",
         "targetPort" : "qXtxy441k4pcX3aLaORLS$$La3y_qvJUZIOtdBRVJqex"
       }, {
-        "id" : "HBqzGBC8eYh8y7jZ-o3QV",
+        "id" : "UP-iitpuvY-Ok5UO-JmmF",
         "source" : "POGYtsQcVRaz-XBh40WU7$$RtquCpaTVerT_kGFy2bMv",
         "sourcePort" : "5LNDDnlNXCSiiCfhTIIAT$$gi5QNkTVZRmSEZ4JWOQ2u",
         "target" : "CctApCXIwu-ZGepAFrzZ6$$-nHkAgd-aTZ4cRZMEYn9N",
@@ -580,29 +590,29 @@
               "_row_id" : null
             } ],
             "hints" : [ {
-              "id" : "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y$$_6vlMrS7lhSoV4WCiLfzj",
+              "id" : "l4ydD2E8oaVegeOayhb_Z$$uP_WJjE1zswB_Szfg7j8P",
               "alias" : "in0",
               "hintType" : "none",
               "propagateColumns" : false
             }, {
-              "id" : "Wab1XHZdecPHVYfGPvR5h$$zNG2yHN1EzGQtQ7IW7g4w$$_48r0LUXhr_4aVBkS-mIG",
+              "id" : "Wab1XHZdecPHVYfGPvR5h$$pLKX8f0v2JP25sZiNfG8n",
               "alias" : "in1",
               "hintType" : "none",
               "propagateColumns" : false
             }, {
-              "id" : "995x_Meu_IePSxRnCWOIO$$wepqDTgrZRVjV9SwzAXlB$$PGCH98nw9EQwWwtQ1DMRW",
+              "id" : "995x_Meu_IePSxRnCWOIO$$CuCJZILChiEJQMbXfIMWG",
               "alias" : "in2",
               "hintType" : "none",
               "propagateColumns" : false
             }, {
-              "id" : "4jzP4BxIlNzll7uhXo70A$$2WgfVSDIwOl-tYp8KL_gL$$QSPaV-WvGGTS1YUbFxxGP",
+              "id" : "4jzP4BxIlNzll7uhXo70A$$pkqdD0QAPkK9qjVS_WhRS",
               "alias" : "in3",
               "hintType" : "none",
               "propagateColumns" : false
             } ],
             "allIn1" : null,
-            "activeTab" : "conditions",
-            "columnsSelector" : [ "995x_Meu_IePSxRnCWOIO$$wepqDTgrZRVjV9SwzAXlB$$PGCH98nw9EQwWwtQ1DMRW##n_nationkey", "Wab1XHZdecPHVYfGPvR5h$$zNG2yHN1EzGQtQ7IW7g4w$$_48r0LUXhr_4aVBkS-mIG##c_nationkey", "Wab1XHZdecPHVYfGPvR5h$$zNG2yHN1EzGQtQ7IW7g4w$$_48r0LUXhr_4aVBkS-mIG##c_custkey", "995x_Meu_IePSxRnCWOIO$$wepqDTgrZRVjV9SwzAXlB$$PGCH98nw9EQwWwtQ1DMRW##n_regionkey", "4jzP4BxIlNzll7uhXo70A$$2WgfVSDIwOl-tYp8KL_gL$$QSPaV-WvGGTS1YUbFxxGP##r_regionkey", "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y$$_6vlMrS7lhSoV4WCiLfzj##c_custkey", "4jzP4BxIlNzll7uhXo70A$$2WgfVSDIwOl-tYp8KL_gL$$QSPaV-WvGGTS1YUbFxxGP##r_name", "995x_Meu_IePSxRnCWOIO$$wepqDTgrZRVjV9SwzAXlB$$PGCH98nw9EQwWwtQ1DMRW##n_name", "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y$$_6vlMrS7lhSoV4WCiLfzj##c_custkey", "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y$$_6vlMrS7lhSoV4WCiLfzj##month", "l4ydD2E8oaVegeOayhb_Z$$0huq8dy1pxrfXzTNa1E_Y$$_6vlMrS7lhSoV4WCiLfzj##amounts" ],
+            "activeTab" : "expressions",
+            "columnsSelector" : [ "Wab1XHZdecPHVYfGPvR5h$$pLKX8f0v2JP25sZiNfG8n##c_nationkey", "4jzP4BxIlNzll7uhXo70A$$pkqdD0QAPkK9qjVS_WhRS##r_regionkey", "995x_Meu_IePSxRnCWOIO$$CuCJZILChiEJQMbXfIMWG##n_nationkey", "995x_Meu_IePSxRnCWOIO$$CuCJZILChiEJQMbXfIMWG##n_regionkey", "Wab1XHZdecPHVYfGPvR5h$$pLKX8f0v2JP25sZiNfG8n##c_custkey", "4jzP4BxIlNzll7uhXo70A$$pkqdD0QAPkK9qjVS_WhRS##r_name", "995x_Meu_IePSxRnCWOIO$$CuCJZILChiEJQMbXfIMWG##n_name" ],
             "allIn0" : null,
             "whereClause" : null,
             "headAlias" : "in0"
@@ -759,7 +769,7 @@
             "autoUpdateOnRun" : false
           },
           "properties" : {
-            "datasetId" : "datasets/nation"
+            "datasetId" : "gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.2&projectSubscriptionProjectId=16366&path=datasets/nation"
           }
         },
         "wBzXOsVm1Ims8PFu5uirM$$3MMBDXpj4ihD3T-kpkctd" : {
@@ -786,7 +796,7 @@
             "autoUpdateOnRun" : false
           },
           "properties" : {
-            "datasetId" : "datasets/regions"
+            "datasetId" : "gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.2&projectSubscriptionProjectId=16366&path=datasets/regions"
           }
         },
         "8eOw1j3e3CItKTNmDDtQC$$tacHz8bPvHAU5h7TWuWsO" : {
@@ -813,11 +823,10 @@
             "autoUpdateOnRun" : false
           },
           "properties" : {
-            "datasetId" : "datasets/customer_nations"
+            "datasetId" : "gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.2&projectSubscriptionProjectId=16366&path=datasets/customer_nations"
           }
         }
-      },
-      "externalDependencies" : [ ]
+      }
     },
     "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc" : {
       "id" : "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc",
@@ -1053,7 +1062,7 @@
         "x" : 460,
         "y" : 240,
         "phase" : 0,
-        "cache" : false,
+        "cache" : true,
         "detailedStats" : false,
         "isImported" : false
       },
@@ -1244,7 +1253,7 @@
         "pivotColumn" : null,
         "pivotValues" : [ ],
         "activeTab" : "aggregate",
-        "columnsSelector" : [ "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_orderdate", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_totalprice", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##c_custkey" ],
+        "columnsSelector" : [ "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##c_custkey", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_orderdate", "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B##o_totalprice" ],
         "groupBy" : [ {
           "target" : "c_custkey",
           "expression" : {
@@ -1279,7 +1288,9 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Rounds down transaction amounts for better financial reporting.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -1352,7 +1363,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "_axBIPgTvYNeKC7yaDmXM$$MUhE40BG7fck31sLHf88_##amounts", "_axBIPgTvYNeKC7yaDmXM$$MUhE40BG7fck31sLHf88_##month", "_axBIPgTvYNeKC7yaDmXM$$MUhE40BG7fck31sLHf88_##c_custkey" ]
+        "columnsSelector" : [ "_axBIPgTvYNeKC7yaDmXM$$MUhE40BG7fck31sLHf88_##c_custkey", "_axBIPgTvYNeKC7yaDmXM$$MUhE40BG7fck31sLHf88_##amounts", "_axBIPgTvYNeKC7yaDmXM$$MUhE40BG7fck31sLHf88_##month" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Reformat",

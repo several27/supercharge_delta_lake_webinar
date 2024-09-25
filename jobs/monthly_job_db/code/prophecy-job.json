@@ -27,73 +27,7 @@
         "onSuccess" : false,
         "onFailure" : false
       }
-    },
-    "availableFabrics" : [ {
-      "id" : "1777",
-      "name" : "db_product",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "Large" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "7624",
-      "name" : "guides-dev",
-      "clusterSizes" : {
-        "default" : "small1",
-        "availableClusterSizes" : [ "small1" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "1618",
-      "name" : "dev_e2",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "6834",
-      "name" : "lab-samples-dbx",
-      "clusterSizes" : {
-        "default" : "sumit-lab-samples",
-        "availableClusterSizes" : [ "sumit-lab-samples" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "5659",
-      "name" : "dev_guides",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    } ]
+    }
   },
   "processes" : {
     "wqPVsM3Wra2Fs8hrNbnvU$$0FSBX0IvP9v74BuST7dW3" : {
@@ -225,9 +159,36 @@
             },
             "isReferenced" : false,
             "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "enrich_customers",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "user_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "enter_your_user_name"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "test",
+                "optional" : false,
+                "kind" : {
+                  "type" : "spark_expression",
+                  "value" : "TRUE"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
           } ],
           "instances" : {
-            "supercharge_delta_lake" : [ "qwe", "default", "test" ]
+            "supercharge_delta_lake" : [ "default", "test", "qwe" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"

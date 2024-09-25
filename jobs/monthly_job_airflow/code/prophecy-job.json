@@ -19,22 +19,10 @@
       "pool" : "KWdUsXmL",
       "do_xcom_push" : true
     },
-    "availableFabrics" : [ {
-      "id" : "6137",
-      "name" : "airflow-dev",
-      "trialStartDate" : 1697820960221
-    }, {
-      "id" : "7625",
-      "name" : "Airflow-PM",
-      "trialStartDate" : 1701854255900
-    }, {
-      "id" : "7627",
-      "name" : "Composer-qa"
-    } ],
-    "catchup" : true,
-    "tags" : [ ],
-    "startDate" : "2023-08-03",
     "endDate" : "2023-08-04",
+    "catchup" : true,
+    "startDate" : "2023-08-03",
+    "tags" : [ ],
     "scheduleTimeZone" : "UTC",
     "dagParams" : {
       "instances" : {
@@ -43,12 +31,18 @@
       "params" : { },
       "selected" : "default"
     },
-    "airflowFunctions" : [ ]
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false
+    }
   },
   "processes" : {
     "2UvcrLGsKtvOFw1JcTdkv$$6eVdCRF7oY9YX_nWt4BMn" : {
       "id" : "2UvcrLGsKtvOFw1JcTdkv$$6eVdCRF7oY9YX_nWt4BMn",
-      "component" : "DBT",
+      "component" : "Model",
       "metadata" : {
         "label" : "DBT_1",
         "slug" : "DBT_1",
@@ -126,7 +120,7 @@
     },
     "kblf707tRtg01RNjyhpKn$$x0krV2O4wUnfV-g4OZJjs" : {
       "id" : "kblf707tRtg01RNjyhpKn$$x0krV2O4wUnfV-g4OZJjs",
-      "component" : "Pipeline",
+      "component" : "DatabricksPipeline",
       "metadata" : {
         "label" : "ingest_customers",
         "slug" : "ingest_customers",
@@ -160,14 +154,17 @@
           }
         },
         "taskId" : null,
-        "pipelineId" : "pipelines/ingest_customers"
+        "pipelineId" : {
+          "type" : "literal",
+          "value" : "pipelines/ingest_customers"
+        }
       },
       "connections" : [ ],
       "processes" : { }
     },
     "jZCDsK6FfMB-wIbbxeXbv$$dtT9ACIrgMo1dalxmpjAV" : {
       "id" : "jZCDsK6FfMB-wIbbxeXbv$$dtT9ACIrgMo1dalxmpjAV",
-      "component" : "Pipeline",
+      "component" : "DatabricksPipeline",
       "metadata" : {
         "label" : "cleanup_orders",
         "slug" : "cleanup_orders",
@@ -201,14 +198,17 @@
           }
         },
         "taskId" : null,
-        "pipelineId" : "pipelines/cleanup_orders"
+        "pipelineId" : {
+          "type" : "literal",
+          "value" : "pipelines/cleanup_orders"
+        }
       },
       "connections" : [ ],
       "processes" : { }
     },
     "TQhFZGLyq6P-3QnfovvQ7$$mWFqu5VMVW3WSHjOndHUN" : {
       "id" : "TQhFZGLyq6P-3QnfovvQ7$$mWFqu5VMVW3WSHjOndHUN",
-      "component" : "Pipeline",
+      "component" : "DatabricksPipeline",
       "metadata" : {
         "label" : "mrr_reporting",
         "slug" : "mrr_reporting",
@@ -249,9 +249,36 @@
             },
             "isReferenced" : false,
             "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "enrich_customers",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "user_name",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "enter_your_user_name"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "test",
+                "optional" : false,
+                "kind" : {
+                  "type" : "spark_expression",
+                  "value" : "TRUE"
+                },
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
           } ],
           "instances" : {
-            "supercharge_delta_lake" : [ "qwe", "default", "test" ]
+            "supercharge_delta_lake" : [ "qwe", "test", "default" ]
           },
           "overrides" : { },
           "selectedInstance" : {
@@ -260,14 +287,17 @@
           }
         },
         "taskId" : null,
-        "pipelineId" : "pipelines/mrr_reporting"
+        "pipelineId" : {
+          "type" : "literal",
+          "value" : "pipelines/mrr_reporting"
+        }
       },
       "connections" : [ ],
       "processes" : { }
     },
     "99akZIENojLS_7BkfbrP4$$FpnswZl-OiMB4hwVkh1e3" : {
       "id" : "99akZIENojLS_7BkfbrP4$$FpnswZl-OiMB4hwVkh1e3",
-      "component" : "Pipeline",
+      "component" : "DatabricksPipeline",
       "metadata" : {
         "label" : "cleanup_customers",
         "slug" : "cleanup_customers",
@@ -301,7 +331,10 @@
           }
         },
         "taskId" : null,
-        "pipelineId" : "pipelines/cleanup_customers"
+        "pipelineId" : {
+          "type" : "literal",
+          "value" : "pipelines/cleanup_customers"
+        }
       },
       "connections" : [ ],
       "processes" : { }

@@ -1,0 +1,506 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.0.31",
+        "pyPiVersion" : "1.9.9"
+      }
+    },
+    "id" : "1",
+    "uri" : "pipelines/mrr_reporting_2",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "mrr_reporting_2",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true
+    },
+    "language" : "python",
+    "fabricId" : "1618",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "prophecy_webinar.supercharge_delta_lake.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "prophecy.data_quality.functions", "prophecy_webinar.supercharge_delta_lake.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "32699",
+      "projectName" : "ProphecySparkDataQualityPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "16366",
+      "projectName" : "data_enrichment",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "mrr_reporting_2",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "JLttA2c2",
+    "source" : "DeNs7Rls",
+    "sourcePort" : "KfPDBbFY",
+    "target" : "N9iuCHw8",
+    "targetPort" : "hvzyUI6v"
+  }, {
+    "id" : "ayz9D4xR",
+    "source" : "N9iuCHw8",
+    "sourcePort" : "Y4ZvkkCk",
+    "target" : "Ow5omFnt",
+    "targetPort" : "Iut5uQFs"
+  }, {
+    "id" : "OMm5rXlS",
+    "source" : "Z30qcDNb",
+    "sourcePort" : "eW2a3KmG",
+    "target" : "N9iuCHw8",
+    "targetPort" : "nEe8mUJt"
+  } ],
+  "processes" : {
+    "Ow5omFnt" : {
+      "id" : "Ow5omFnt",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "total_spent_by_customer",
+        "slug" : "total_spent_by_customer",
+        "x" : 420,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Iut5uQFs",
+          "slug" : "customer_order_details",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "C_CUSTKEY",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "C_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "O_TOTALPRICE",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "soI66pzl",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "TOTAL_SPENT",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "SUM(o_totalprice)"
+          },
+          "description" : ""
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ {
+          "target" : "C_CUSTKEY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "C_CUSTKEY"
+          },
+          "description" : ""
+        }, {
+          "target" : "C_NAME",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "C_NAME"
+          },
+          "description" : ""
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "Z30qcDNb" : {
+      "id" : "Z30qcDNb",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "bronze_customers",
+        "slug" : "bronze_customers",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "eW2a3KmG",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bronze_customers"
+      }
+    },
+    "N9iuCHw8" : {
+      "id" : "N9iuCHw8",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "customer_order_details",
+        "slug" : "customer_order_details",
+        "x" : 220,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nEe8mUJt",
+          "slug" : "bronze_customers",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_address",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_nationkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_acctbal",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_mktsegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "hvzyUI6v",
+          "slug" : "bronze_orders",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "o_orderkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderstatus",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_totalprice",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderdate",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderpriority",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_clerk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_shippriority",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "Y4ZvkkCk",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "bronze_orders",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "bronze_customers.c_custkey = bronze_orders.o_custkey"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "target" : "C_CUSTKEY",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "bronze_customers.c_custkey"
+          },
+          "description" : ""
+        }, {
+          "target" : "C_NAME",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "bronze_customers.c_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "O_TOTALPRICE",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "bronze_orders.o_totalprice"
+          },
+          "description" : ""
+        } ],
+        "hints" : [ {
+          "id" : "in0",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "in1",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "bronze_customers"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "DeNs7Rls" : {
+      "id" : "DeNs7Rls",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "bronze_orders",
+        "slug" : "bronze_orders",
+        "x" : 20,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "KfPDBbFY",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bronze_orders"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

@@ -1,0 +1,54 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: customer_id
+    type: long
+    nullable: true
+    metadata:
+      description: Unique identifier for each customer
+      mappings: []
+      tags: []
+  - name: first_name
+    type: string
+    nullable: true
+    metadata:
+      description: The first name of the customer
+      mappings: []
+      tags: []
+  - name: last_name
+    type: string
+    nullable: true
+    metadata:
+      description: The last name of the customer
+      mappings: []
+      tags: []
+  - name: first_order
+    type: date
+    nullable: true
+    metadata:
+      description: Date when the customer made their first order
+      mappings: []
+      tags: []
+  - name: most_recent_order
+    type: date
+    nullable: true
+    metadata:
+      description: Date of the customer's most recent order
+      mappings: []
+      tags: []
+  - name: number_of_orders
+    type: long
+    nullable: true
+    metadata:
+      description: Total number of orders placed by the customer
+      mappings: []
+      tags: []
+  - name: customer_lifetime_value
+    type: double
+    nullable: true
+    metadata:
+      description: The total revenue expected from a customer throughout their relationship
+        with the business.
+      mappings: []
+      tags: []

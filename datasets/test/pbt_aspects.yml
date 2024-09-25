@@ -1,0 +1,32 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: customer_id
+    type: long
+    nullable: true
+    metadata:
+      description: Unique identifier for each customer
+      mappings: []
+      tags: []
+  - name: first_name
+    type: string
+    nullable: true
+    metadata:
+      description: The first name of the customer
+      mappings: []
+      tags: []
+  - name: last_name
+    type: string
+    nullable: true
+    metadata:
+      description: The last name of the customer
+      mappings: []
+      tags: []
+  - name: updated_at
+    type: timestamp
+    nullable: true
+    metadata:
+      description: Timestamp indicating when the customer record was last updated
+      mappings: []
+      tags: []

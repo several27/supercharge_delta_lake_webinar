@@ -49,12 +49,15 @@
           "spark.prophecy.metadata.job.uri" : "__PROJECT_ID_PLACEHOLDER__/jobs/monthly_job_db",
           "spark.prophecy.metadata.is.interactive.run" : "false",
           "spark.prophecy.project.id" : "__PROJECT_ID_PLACEHOLDER__",
-          "spark.prophecy.metadata.user.id" : 6,
-          "spark.prophecy.tasks" : "{\"ingest_customers\":\"pipelines/ingest_customers\",\"cleanup_orders\":\"pipelines/cleanup_orders\",\"mrr_reporting\":\"pipelines/mrr_reporting\",\"cleanup_customers\":\"pipelines/cleanup_customers\"}",
+          "spark.prophecy.metadata.user.id" : "6",
+          "spark.prophecy.tasks" : "H4sIAAAAAAAAAKtWysxLTy0uiU8uLS7Jz00tKlayUirILEjNycxLLdbHkNRRSs5JTcwrLYjPL0pBV40mpaOUW1QUX5RakF9UAjQIRSmqDMJU7M7AlK0FALoavLm5AAAA",
           "spark.prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
           "spark.prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
-          "spark.prophecy.execution.metrics.disabled" : false,
-          "spark.prophecy.execution.service.url" : "wss://execution.dp.app.prophecy.io/eventws"
+          "spark.prophecy.execution.metrics.disabled" : "false",
+          "spark.prophecy.execution.metrics.component-metrics.table" : "main.maciej.prophecy_component_runs",
+          "spark.prophecy.execution.metrics.pipeline-metrics.table" : "main.maciej.prophecy_pipeline_runs",
+          "spark.prophecy.execution.service.url" : "wss://execution.dp.app.prophecy.io/eventws",
+          "spark.prophecy.execution.metrics.interims.table" : "main.maciej.prophecy_interims"
         }
       }
     } ],
@@ -69,17 +72,16 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.1.40"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.0.31"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.7.0"
+          "package" : "prophecy-libs==1.9.9"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/ingest_customers-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { },
-      "max_retries" : 0
+      "email_notifications" : { }
     }, {
       "task_key" : "cleanup_orders",
       "job_cluster_key" : "monthly_job_db_default_small",
@@ -90,17 +92,16 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.1.40"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.0.31"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.7.0"
+          "package" : "prophecy-libs==1.9.9"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/cleanup_orders-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { },
-      "max_retries" : 0
+      "email_notifications" : { }
     }, {
       "task_key" : "cleanup_customers",
       "depends_on" : [ {
@@ -114,17 +115,16 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.1.40"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.0.31"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.7.0"
+          "package" : "prophecy-libs==1.9.9"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/cleanup_customers-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { },
-      "max_retries" : 0
+      "email_notifications" : { }
     }, {
       "task_key" : "mrr_reporting",
       "depends_on" : [ {
@@ -140,17 +140,16 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.1.40"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.0.31"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.7.0"
+          "package" : "prophecy-libs==1.9.9"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/mrr_reporting-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { },
-      "max_retries" : 0
+      "email_notifications" : { }
     } ],
     "max_concurrent_runs" : 1,
     "schedule" : {

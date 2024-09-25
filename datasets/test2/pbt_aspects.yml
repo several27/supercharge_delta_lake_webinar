@@ -1,0 +1,60 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: c_custkey
+    type: long
+    nullable: true
+    metadata:
+      description: Unique identifier for each customer
+      mappings: []
+      tags: []
+  - name: c_name
+    type: string
+    nullable: true
+    metadata:
+      description: The name of the customer
+      mappings: []
+      tags: []
+  - name: c_address
+    type: string
+    nullable: true
+    metadata:
+      description: The address of the customer
+      mappings: []
+      tags: []
+  - name: c_nationkey
+    type: long
+    nullable: true
+    metadata:
+      description: The unique identifier for the customer's nation.
+      mappings: []
+      tags: []
+  - name: c_phone
+    type: string
+    nullable: true
+    metadata:
+      description: The contact phone number of the customer
+      mappings: []
+      tags: []
+  - name: c_acctbal
+    type: decimal(18,2)
+    nullable: true
+    metadata:
+      description: The account balance of the customer
+      mappings: []
+      tags: []
+  - name: c_mktsegment
+    type: string
+    nullable: true
+    metadata:
+      description: The market segment to which the customer belongs
+      mappings: []
+      tags: []
+  - name: c_comment
+    type: string
+    nullable: true
+    metadata:
+      description: Comments or notes associated with the customer
+      mappings: []
+      tags: []

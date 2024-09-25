@@ -56,26 +56,6 @@ pipelines:
       - datasets/silver_orders
     subgraphs: []
     dependencies: {}
-  pipelines/demo_day:
-    name: demo_day
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2023-02-23 18:44:09'
-    datasets:
-      inputs:
-      - datasets/customer_nations
-      - datasets/nation
-      - datasets/regions
-      - datasets/silver_customers
-      - datasets/silver_orders
-      outputs:
-      - datasets/final_table
-    subgraphs:
-    - subgraphs/enrich_customers
-    dependencies: {}
   pipelines/mrr_reporting:
     name: mrr_reporting
     description: ''
@@ -86,14 +66,29 @@ pipelines:
     createdAt: '2022-10-11 23:15:32'
     datasets:
       inputs:
-      - datasets/customer_nations
-      - datasets/nation
-      - datasets/regions
       - datasets/silver_customers
       - datasets/silver_orders
+      - gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.2&projectSubscriptionProjectId=16366&path=datasets/customer_nations
+      - gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.2&projectSubscriptionProjectId=16366&path=datasets/nation
+      - gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.2&projectSubscriptionProjectId=16366&path=datasets/regions
       outputs: []
     subgraphs:
-    - gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.1&projectSubscriptionProjectId=16366&path=subgraphs/enrich_customers
+    - gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/&tag=data_enrichment/1.2&projectSubscriptionProjectId=16366&path=subgraphs/enrich_customers
+    dependencies: {}
+  pipelines/mrr_reporting_2:
+    name: mrr_reporting_2
+    description: ''
+    author: maciej@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-08-21 23:07:58'
+    datasets:
+      inputs:
+      - datasets/bronze_customers
+      - datasets/bronze_orders
+      outputs: []
+    subgraphs: []
     dependencies: {}
 datasets:
   datasets/customer_nations:
@@ -109,45 +104,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 03:37:12'
-  datasets/regions:
-    name: regions
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-09-29 03:35:00'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: File
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-09-29 03:35:00'
-  datasets/report_gold:
-    name: report_gold
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-07 04:03:31'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-07 04:03:31'
-  datasets/report:
-    name: report
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-24 16:12:02'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Warehouse
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-24 16:12:02'
   datasets/raw_customers:
     name: raw_customers
     description: ''
@@ -161,32 +117,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:28:34'
-  datasets/raw_orders:
-    name: raw_orders
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-09-29 01:30:06'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: File
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-09-29 01:30:06'
-  datasets/gold_report:
-    name: gold_report
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-04 16:02:40'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-04 16:02:40'
   datasets/silver_orders:
     name: silver_orders
     description: ''
@@ -239,11 +169,11 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:30:31'
-  datasets/department_table:
-    name: department_table
+  datasets/test:
+    name: test
     description: ''
     author: maciej@prophecy.io
-    createdAt: '2023-08-30 04:58:20'
+    createdAt: '2024-09-05 01:12:09'
     mode: batch
     physicalDatasets:
       dev_e2:
@@ -251,20 +181,33 @@ datasets:
         datasetType: Database
         description: ''
         author: maciej@prophecy.io
-        createdAt: '2023-08-30 04:58:20'
-  datasets/final_report:
-    name: final_report
+        createdAt: '2024-09-05 01:12:09'
+  datasets/default_customer:
+    name: default_customer
     description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-11 23:29:28'
+    author: maciej@prophecy.io
+    createdAt: '2024-09-05 01:13:44'
     mode: batch
     physicalDatasets:
-      dev:
-        fabricId: 1034
+      dev_e2:
+        fabricId: 1618
         datasetType: Database
         description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-11 23:29:29'
+        author: maciej@prophecy.io
+        createdAt: '2024-09-05 01:13:44'
+  datasets/test2:
+    name: test2
+    description: ''
+    author: maciej@prophecy.io
+    createdAt: '2024-09-05 01:40:38'
+    mode: batch
+    physicalDatasets:
+      guides_dev_anon:
+        fabricId: 17040
+        datasetType: Database
+        description: ''
+        author: maciej@prophecy.io
+        createdAt: '2024-09-05 01:40:38'
 templates: {}
 jobs:
   jobs/monthly_job_db:
@@ -294,6 +237,8 @@ jobs:
     enabled: false
     createdAt: '2023-08-08 19:30:30'
     author: maciej@prophecy.io
+    models: []
+    sqlProjects: []
   jobs/monthly_job_airflow:
     name: monthly_job_airflow
     description: ''
@@ -321,6 +266,8 @@ jobs:
     enabled: false
     createdAt: '2023-08-08 19:31:06'
     author: maciej@prophecy.io
+    models: []
+    sqlProjects: []
   jobs/daily_schedule:
     name: daily_schedule
     description: ''
@@ -347,6 +294,8 @@ jobs:
     enabled: null
     createdAt: '2023-12-07 18:42:02'
     author: maciej@prophecy.io
+    models: []
+    sqlProjects: []
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
@@ -359,14 +308,29 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
+  businessRules: {}
 subgraphs: {}
 sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
 sqlMacros: {}
 sqlSeeds: {}
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
-dependencies: []
+dependencies:
+- type: plibMaven
+  modifiedAt: '2024-08-21T23:07:59.892694Z'
+  name: plibMaven
+  version: 8.0.31
+  id: '1331718660'
+  createdAt: '2024-08-21T23:07:59.892661Z'
+- type: plibPypi
+  modifiedAt: '2024-08-21T23:07:59.892736Z'
+  name: plibPypi
+  version: 1.9.9
+  id: '881602919'
+  createdAt: '2024-08-21T23:07:59.892727Z'
 projectDependencies:
   '12654':
     projectUID: 12654
@@ -388,8 +352,18 @@ projectDependencies:
     projectUID: 16366
     projectName: data_enrichment
     repositoryPath: gitUri=http://gitserver:3000/qaBmFHEl_team_4097/M2yhwd8U_project_data_enrichment.git&subPath=/
-    version: data_enrichment/1.1
+    version: data_enrichment/1.2
     isDefault: false
     author: null
-    createdAt: '2023-12-07 18:38:25'
+    createdAt: '2024-09-05 20:11:32'
+  '32699':
+    projectUID: 32699
+    projectName: ProphecySparkDataQualityPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/gLsx7fee_project_32699.git&subPath=
+    version: 0.0.1
+    isDefault: false
+    author: null
+    createdAt: '2024-09-06 01:21:37'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}

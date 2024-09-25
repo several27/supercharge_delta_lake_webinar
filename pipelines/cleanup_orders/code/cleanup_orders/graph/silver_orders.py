@@ -7,4 +7,12 @@ from cleanup_orders.config.ConfigStore import *
 from cleanup_orders.udfs.UDFs import *
 
 def silver_orders(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("error").saveAsTable(f"lakehouse.silver_orders")
+    from pyspark.sql.utils import AnalysisException
+
+    try:
+        desc_table = spark.sql("describe formatted `lakehouse`.`silver_orders`")
+        table_exists = True
+    except AnalysisException as e:
+        table_exists = False
+
+    in0.write.format("delta").mode("error").saveAsTable("`lakehouse`.`silver_orders`")
