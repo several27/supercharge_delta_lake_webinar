@@ -76,6 +76,21 @@ pipelines:
     subgraphs:
     - subgraphs/enrich_customers
     dependencies: {}
+  pipelines/ingest_orders:
+    name: ingest_orders
+    description: ''
+    author: maciej@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-10-01 21:01:43'
+    datasets:
+      inputs:
+      - datasets/raw_orders
+      outputs:
+      - datasets/bronze_orders
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/customer_nations:
     name: customer_nations
@@ -307,17 +322,17 @@ sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies:
 - type: plibMaven
-  modifiedAt: '2024-10-01T19:42:21.429275Z'
+  modifiedAt: '2024-10-01T21:01:45.269311Z'
   name: plibMaven
   version: 8.2.1
-  id: '193641757'
-  createdAt: '2024-10-01T19:42:21.429207Z'
+  id: '905579213'
+  createdAt: '2024-10-01T21:01:45.269263Z'
 - type: plibPypi
-  modifiedAt: '2024-10-01T19:42:21.429339Z'
+  modifiedAt: '2024-10-01T21:01:45.269421Z'
   name: plibPypi
   version: 1.9.16
-  id: '1771707623'
-  createdAt: '2024-10-01T19:42:21.429322Z'
+  id: '1275015262'
+  createdAt: '2024-10-01T21:01:45.269403Z'
 projectDependencies:
   '12654':
     projectUID: 12654

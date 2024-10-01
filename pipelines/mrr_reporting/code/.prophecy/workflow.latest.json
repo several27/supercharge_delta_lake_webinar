@@ -106,7 +106,7 @@
     "interimModeEnabled" : true,
     "visualCodeInterimMode" : "Disabled",
     "recordsLimit" : {
-      "enabled" : false,
+      "enabled" : true,
       "value" : 10000
     },
     "topLevelPackage" : "mrr_reporting",
@@ -125,12 +125,6 @@
     "target" : "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc",
     "targetPort" : "rO09ozwMBm_SlbxvVxHYc$$1fOOHaegJlTT04hywlsDb"
   }, {
-    "id" : "Y8RGH8L75yT8d0LCnBaKg$$MXUi3fGRqs6Hbf_ObfxHM",
-    "source" : "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc",
-    "sourcePort" : "SVDH8nbIU0lEXyN3Fff9w$$V4vo6JH4H9bou1_ig4XgO",
-    "target" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
-    "targetPort" : "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B"
-  }, {
     "id" : "Bx7W0u7k7CCDI37xqtpX_",
     "source" : "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT",
     "sourcePort" : "qXtxy441k4pcX3aLaORLS$$aeQLb1WoDj3h6gOU88E0s",
@@ -142,6 +136,18 @@
     "sourcePort" : "uhL8QtHGZrzOYy73BMscN$$TMVKLa4xkkt-T1icsFFas",
     "target" : "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT",
     "targetPort" : "tvZKte3CQLK3Li8SMvUeF$$ngCqyWSuJcr4_hr9guVof"
+  }, {
+    "id" : "9d_bD2jbc92S1451pRRKp$$62pdDHNE-QWbS3XEZaqmW",
+    "source" : "OZ1fXfONc7dlwERNlEvlV$$6eEd0VyCCEOJQgvFe2Anc",
+    "sourcePort" : "SVDH8nbIU0lEXyN3Fff9w$$V4vo6JH4H9bou1_ig4XgO",
+    "target" : "KioQDk-7cMbtWCDYKFCn9$$L36heqaB-UTUX7FqQ-I2W",
+    "targetPort" : "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc"
+  }, {
+    "id" : "uIHN9tRF3O4Uzmg-ELMlR$$UcCl8G9WIx8y7mCDQMOWD",
+    "source" : "KioQDk-7cMbtWCDYKFCn9$$L36heqaB-UTUX7FqQ-I2W",
+    "sourcePort" : "JY_46PtICzZC1lAT0GkVa$$wuE29Eg3K0YDw8QdfrEb9",
+    "target" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
+    "targetPort" : "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B"
   } ],
   "processes" : {
     "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy" : {
@@ -506,7 +512,7 @@
       "metadata" : {
         "label" : "sum_amounts",
         "slug" : "sum_amounts",
-        "x" : 520,
+        "x" : 680,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
@@ -520,6 +526,15 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
+              "name" : "month",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
               "name" : "c_custkey",
               "type" : "long",
               "nullable" : true,
@@ -721,6 +736,330 @@
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.30&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "KioQDk-7cMbtWCDYKFCn9$$L36heqaB-UTUX7FqQ-I2W" : {
+      "id" : "KioQDk-7cMbtWCDYKFCn9$$L36heqaB-UTUX7FqQ-I2W",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "extract_order_month",
+        "slug" : "extract_order_month",
+        "x" : 500,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Extracts and organizes order details by month, providing insights into customer transactions and preferences.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc",
+          "slug" : "by_customer_id",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_address",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_nationkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_acctbal",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_mktsegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderstatus",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_totalprice",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderdate",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderpriority",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_clerk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_shippriority",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "JY_46PtICzZC1lAT0GkVa$$wuE29Eg3K0YDw8QdfrEb9",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "month",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "month(to_date(o_orderdate))"
+          },
+          "description" : ""
+        }, {
+          "target" : "c_custkey",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_custkey"
+          },
+          "description" : ""
+        }, {
+          "target" : "c_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "c_address",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_address"
+          },
+          "description" : ""
+        }, {
+          "target" : "c_nationkey",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_nationkey"
+          },
+          "description" : ""
+        }, {
+          "target" : "c_phone",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_phone"
+          },
+          "description" : ""
+        }, {
+          "target" : "c_acctbal",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_acctbal"
+          },
+          "description" : ""
+        }, {
+          "target" : "c_mktsegment",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_mktsegment"
+          },
+          "description" : ""
+        }, {
+          "target" : "c_comment",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_comment"
+          },
+          "description" : ""
+        }, {
+          "target" : "o_orderkey",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "o_orderkey"
+          },
+          "description" : ""
+        }, {
+          "target" : "o_custkey",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "o_custkey"
+          },
+          "description" : ""
+        }, {
+          "target" : "o_orderstatus",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "o_orderstatus"
+          },
+          "description" : ""
+        }, {
+          "target" : "o_totalprice",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "o_totalprice"
+          },
+          "description" : ""
+        }, {
+          "target" : "o_orderdate",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "o_orderdate"
+          },
+          "description" : ""
+        }, {
+          "target" : "o_orderpriority",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "o_orderpriority"
+          },
+          "description" : ""
+        }, {
+          "target" : "o_clerk",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "o_clerk"
+          },
+          "description" : ""
+        }, {
+          "target" : "o_shippriority",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "o_shippriority"
+          },
+          "description" : ""
+        }, {
+          "target" : "o_comment",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "o_comment"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderpriority", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderdate", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_comment", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_custkey", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_shippriority", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_acctbal", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_totalprice", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_clerk", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_nationkey", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderstatus", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_address", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_phone", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_custkey", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_comment", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_name", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_mktsegment", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderkey" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.30&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },

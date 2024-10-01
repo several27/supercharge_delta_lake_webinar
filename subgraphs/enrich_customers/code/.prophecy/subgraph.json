@@ -394,6 +394,11 @@
           "activeTab" : "whenMatched",
           "maxFlagCol" : null,
           "matchedConditionDelete" : null,
+          "additionalProperties" : {
+            "copilot" : {
+              "datasetDescriptionStatus" : "fromUser"
+            }
+          },
           "matchedActionDelete" : "ignore",
           "timestampAsOf" : null,
           "mergeSchema" : null,
@@ -732,6 +737,11 @@
           "activeTab" : "whenMatched",
           "maxFlagCol" : null,
           "matchedConditionDelete" : null,
+          "additionalProperties" : {
+            "copilot" : {
+              "datasetDescriptionStatus" : "fromUser"
+            }
+          },
           "matchedActionDelete" : "ignore",
           "timestampAsOf" : null,
           "mergeSchema" : null,
@@ -901,6 +911,11 @@
           "activeTab" : "whenMatched",
           "maxFlagCol" : null,
           "matchedConditionDelete" : null,
+          "additionalProperties" : {
+            "copilot" : {
+              "datasetDescriptionStatus" : "fromUser"
+            }
+          },
           "matchedActionDelete" : "ignore",
           "timestampAsOf" : null,
           "mergeSchema" : null,

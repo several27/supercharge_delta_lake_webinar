@@ -10,7 +10,8 @@ def pipeline(spark: SparkSession) -> None:
     df_silver_customers_2_1 = silver_customers_2_1(spark)
     df_silvers_orders = silvers_orders(spark)
     df_by_customer_id = by_customer_id(spark, df_silver_customers_2_1, df_silvers_orders)
-    df_sum_amounts = sum_amounts(spark, df_by_customer_id)
+    df_extract_order_month = extract_order_month(spark, df_by_customer_id)
+    df_sum_amounts = sum_amounts(spark, df_extract_order_month)
     df_enrich_customers = enrich_customers(spark, Config.enrich_customers, df_sum_amounts)
     final_report(spark, df_enrich_customers)
 
