@@ -7,4 +7,4 @@ from cleanup_orders.config.ConfigStore import *
 from cleanup_orders.udfs.UDFs import *
 
 def silver_orders(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("error").saveAsTable(f"lakehouse.silver_orders")
+    in0.write.format("delta").mode("error").saveAsTable("`lakehouse`.`silver_orders`")

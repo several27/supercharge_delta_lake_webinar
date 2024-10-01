@@ -7,11 +7,11 @@ setup(
     package_data = {'prophecy_config_instances' : ['*.json', '*.py', '*.conf']},
     description = 'workflow',
     install_requires = [
-'prophecy-libs==1.5.10'],
+'prophecy-libs==1.9.16'],
     entry_points = {
 'console_scripts' : [
 'main = ingest_customers.pipeline:main'], },
     data_files = [(".prophecy", [".prophecy/workflow.latest.json"])],
     extras_require = {
-'test' : ['pytest', 'pytest-html'], }
+'test' : ['pytest', 'pytest-html', 'pytest-cov'], }
 )

@@ -3,6 +3,14 @@
     "migrationVersions" : {
       "gemBuilderVersion" : "v1"
     },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : false,
+      "plibVersion" : {
+        "mavenVersion" : "8.2.1",
+        "pyPiVersion" : "1.9.16"
+      }
+    },
     "id" : "1",
     "uri" : "pipelines/cleanup_customers",
     "language" : "python",
@@ -57,7 +65,7 @@
       "value" : 1000
     },
     "topLevelPackage" : "cleanup_customers",
-    "configurationVersion" : "v1"
+    "configurationVersion" : "v2"
   },
   "connections" : [ {
     "id" : "fxHBfFwZfohGld6Q5hYi0",

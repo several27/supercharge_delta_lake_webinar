@@ -27,34 +27,7 @@
         "onSuccess" : false,
         "onFailure" : false
       }
-    },
-    "availableFabrics" : [ {
-      "id" : "1618",
-      "name" : "dev_e2",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "1777",
-      "name" : "db_product",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "Large" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    } ]
+    }
   },
   "processes" : {
     "wqPVsM3Wra2Fs8hrNbnvU$$0FSBX0IvP9v74BuST7dW3" : {
@@ -189,15 +162,33 @@
                   "type" : "string",
                   "value" : "enter_your_user_name"
                 },
-                "isReferenced" : false,
+                "isReferenced" : true,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "test",
+                "optional" : false,
+                "kind" : {
+                  "type" : "spark_expression",
+                  "value" : "TRUE"
+                },
+                "isReferenced" : true,
                 "isWorkflowNodeConfiguration" : false
               } ]
             },
             "isReferenced" : false,
             "isWorkflowNodeConfiguration" : true
+          }, {
+            "name" : "test",
+            "optional" : false,
+            "kind" : {
+              "type" : "spark_expression",
+              "value" : "TRUE"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
           } ],
           "instances" : {
-            "supercharge_delta_lake" : [ "default" ]
+            "supercharge_delta_lake" : [ "default", "qwe", "test" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"

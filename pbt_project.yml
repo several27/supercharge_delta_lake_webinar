@@ -56,26 +56,6 @@ pipelines:
       - datasets/silver_orders
     subgraphs: []
     dependencies: {}
-  pipelines/demo_day:
-    name: demo_day
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2023-02-23 18:44:09'
-    datasets:
-      inputs:
-      - datasets/customer_nations
-      - datasets/nation
-      - datasets/regions
-      - datasets/silver_customers
-      - datasets/silver_orders
-      outputs:
-      - datasets/final_table
-    subgraphs:
-    - subgraphs/enrich_customers
-    dependencies: {}
   pipelines/mrr_reporting:
     name: mrr_reporting
     description: ''
@@ -123,32 +103,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 03:35:00'
-  datasets/report_gold:
-    name: report_gold
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-07 04:03:31'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-07 04:03:31'
-  datasets/report:
-    name: report
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-24 16:12:02'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Warehouse
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-24 16:12:02'
   datasets/raw_customers:
     name: raw_customers
     description: ''
@@ -175,19 +129,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:30:06'
-  datasets/gold_report:
-    name: gold_report
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-04 16:02:40'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-04 16:02:40'
   datasets/final_report:
     name: final_report
     description: ''
@@ -266,19 +207,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:30:31'
-  datasets/department_table:
-    name: department_table
-    description: ''
-    author: maciej@prophecy.io
-    createdAt: '2023-08-30 04:58:20'
-    mode: batch
-    physicalDatasets:
-      dev_e2:
-        fabricId: 1618
-        datasetType: Database
-        description: ''
-        author: maciej@prophecy.io
-        createdAt: '2023-08-30 04:58:20'
 templates: {}
 jobs:
   jobs/monthly_job_db:
@@ -308,10 +236,12 @@ jobs:
     enabled: false
     createdAt: '2023-08-08 19:30:30'
     author: maciej@prophecy.io
+    models: []
+    sqlProjects: []
   jobs/monthly_job_airflow:
     name: monthly_job_airflow
     description: ''
-    fabricUID: 3346
+    fabricUID: 7627
     scheduler:
       Prophecy: {}
     cloudProvider: null
@@ -330,21 +260,26 @@ jobs:
     - pipelines/cleanup_customers
     jobClusterMode:
       clusterMode:
-        Single: {}
+        Multi: {}
       clusterId: null
     enabled: false
     createdAt: '2023-08-08 19:31:06'
     author: maciej@prophecy.io
+    models: []
+    sqlProjects: []
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
   gems: {}
+  dependencies: null
 functions:
   author: null
   createdAt: '2023-03-24 19:20:44'
   udfs: {}
   udafs: {}
   expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
 subgraphs:
   subgraphs/enrich_customers:
     name: enrich_customers
@@ -363,27 +298,43 @@ subgraphs:
     mode: batch
     createdAt: '2023-02-17 04:35:57'
 sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
 sqlMacros: {}
 sqlSeeds: {}
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
-dependencies: []
+dependencies:
+- type: plibMaven
+  modifiedAt: '2024-10-01T19:42:21.429275Z'
+  name: plibMaven
+  version: 8.2.1
+  id: '193641757'
+  createdAt: '2024-10-01T19:42:21.429207Z'
+- type: plibPypi
+  modifiedAt: '2024-10-01T19:42:21.429339Z'
+  name: plibPypi
+  version: 1.9.16
+  id: '1771707623'
+  createdAt: '2024-10-01T19:42:21.429322Z'
 projectDependencies:
   '12654':
     projectUID: 12654
     projectName: ProphecySparkBasicsPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
-    version: 0.0.4
+    version: 0.2.30
     isDefault: true
     author: null
-    createdAt: '2023-09-28 08:42:10'
+    createdAt: '2024-10-01 20:53:41'
   '12655':
     projectUID: 12655
     projectName: ProphecyWarehousePython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12655.git&subPath=
-    version: 0.0.2
+    version: 0.0.8
     isDefault: true
     author: null
-    createdAt: '2023-09-28 08:42:10'
+    createdAt: '2024-10-01 20:53:52'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
