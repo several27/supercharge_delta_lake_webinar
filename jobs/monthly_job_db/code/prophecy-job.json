@@ -141,54 +141,9 @@
       "properties" : {
         "pipelineId" : "pipelines/mrr_reporting",
         "configurations" : {
-          "schema" : [ {
-            "name" : "user_name",
-            "optional" : false,
-            "kind" : {
-              "type" : "string",
-              "value" : "enter_your_user_name"
-            },
-            "isReferenced" : false,
-            "isWorkflowNodeConfiguration" : false
-          }, {
-            "name" : "enrich_customers",
-            "optional" : false,
-            "kind" : {
-              "type" : "record",
-              "fields" : [ {
-                "name" : "user_name",
-                "optional" : false,
-                "kind" : {
-                  "type" : "string",
-                  "value" : "enter_your_user_name"
-                },
-                "isReferenced" : true,
-                "isWorkflowNodeConfiguration" : false
-              }, {
-                "name" : "test",
-                "optional" : false,
-                "kind" : {
-                  "type" : "spark_expression",
-                  "value" : "TRUE"
-                },
-                "isReferenced" : true,
-                "isWorkflowNodeConfiguration" : false
-              } ]
-            },
-            "isReferenced" : false,
-            "isWorkflowNodeConfiguration" : true
-          }, {
-            "name" : "test",
-            "optional" : false,
-            "kind" : {
-              "type" : "spark_expression",
-              "value" : "TRUE"
-            },
-            "isReferenced" : false,
-            "isWorkflowNodeConfiguration" : false
-          } ],
+          "schema" : [ ],
           "instances" : {
-            "supercharge_delta_lake" : [ "default", "qwe", "test" ]
+            "supercharge_delta_lake" : [ "default", "test" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"

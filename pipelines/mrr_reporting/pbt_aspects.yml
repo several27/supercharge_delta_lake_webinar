@@ -1,8 +1,6 @@
 version: 1
-configurations:
-- qwe
-- default
-- test
-dependencies: []
 pipelineVersion:
   version: '2'
+configurations:
+- default
+- test

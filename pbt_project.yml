@@ -56,26 +56,6 @@ pipelines:
       - datasets/silver_orders
     subgraphs: []
     dependencies: {}
-  pipelines/mrr_reporting:
-    name: mrr_reporting
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2022-10-11 23:15:32'
-    datasets:
-      inputs:
-      - datasets/customer_nations
-      - datasets/nation
-      - datasets/regions
-      - datasets/silver_customers
-      - datasets/silver_orders
-      outputs:
-      - datasets/final_report
-    subgraphs:
-    - subgraphs/enrich_customers
-    dependencies: {}
   pipelines/ingest_orders:
     name: ingest_orders
     description: ''
@@ -89,6 +69,19 @@ pipelines:
       - datasets/raw_orders
       outputs:
       - datasets/bronze_orders
+    subgraphs: []
+    dependencies: {}
+  pipelines/mrr_reporting:
+    name: mrr_reporting
+    description: ''
+    author: maciej@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-10-01 21:03:15'
+    datasets:
+      inputs: []
+      outputs: []
     subgraphs: []
     dependencies: {}
 datasets:
@@ -322,17 +315,17 @@ sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies:
 - type: plibMaven
-  modifiedAt: '2024-10-01T21:01:45.269311Z'
+  modifiedAt: '2024-10-01T21:03:17.337176Z'
   name: plibMaven
   version: 8.2.1
-  id: '905579213'
-  createdAt: '2024-10-01T21:01:45.269263Z'
+  id: '419981921'
+  createdAt: '2024-10-01T21:03:17.337138Z'
 - type: plibPypi
-  modifiedAt: '2024-10-01T21:01:45.269421Z'
+  modifiedAt: '2024-10-01T21:03:17.337218Z'
   name: plibPypi
   version: 1.9.16
-  id: '1275015262'
-  createdAt: '2024-10-01T21:01:45.269403Z'
+  id: '871635044'
+  createdAt: '2024-10-01T21:03:17.337208Z'
 projectDependencies:
   '12654':
     projectUID: 12654
