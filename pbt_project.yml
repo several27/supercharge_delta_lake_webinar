@@ -80,9 +80,16 @@ pipelines:
     language: python
     createdAt: '2024-10-01 21:03:15'
     datasets:
-      inputs: []
-      outputs: []
-    subgraphs: []
+      inputs:
+      - datasets/customer_nations
+      - datasets/nation
+      - datasets/regions
+      - datasets/silver_customers
+      - datasets/silver_orders
+      outputs:
+      - datasets/final_report_j
+    subgraphs:
+    - subgraphs/enrich_customers
     dependencies: {}
 datasets:
   datasets/customer_nations:
@@ -215,37 +222,21 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:30:31'
+  datasets/final_report_j:
+    name: final_report_j
+    description: ''
+    author: maciej@prophecy.io
+    createdAt: '2024-10-01 21:56:09'
+    mode: batch
+    physicalDatasets:
+      dev_e2:
+        fabricId: 1618
+        datasetType: Database
+        description: ''
+        author: maciej@prophecy.io
+        createdAt: '2024-10-01 21:56:09'
 templates: {}
 jobs:
-  jobs/monthly_job_db:
-    name: monthly_job_db
-    description: ''
-    fabricUID: 1618
-    scheduler:
-      Databricks: {}
-    cloudProvider: null
-    jobSize: small
-    scheduleCron: 0 0 0 1 * ? *
-    timeout: null
-    alerting:
-      emails: ''
-      onStart: false
-      onSuccess: false
-      onFailure: false
-    pipelines:
-    - pipelines/ingest_customers
-    - pipelines/cleanup_orders
-    - pipelines/cleanup_customers
-    - pipelines/mrr_reporting
-    jobClusterMode:
-      clusterMode:
-        Single: {}
-      clusterId: null
-    enabled: false
-    createdAt: '2023-08-08 19:30:30'
-    author: maciej@prophecy.io
-    models: []
-    sqlProjects: []
   jobs/monthly_job_airflow:
     name: monthly_job_airflow
     description: ''
@@ -272,6 +263,36 @@ jobs:
       clusterId: null
     enabled: false
     createdAt: '2023-08-08 19:31:06'
+    author: maciej@prophecy.io
+    models: []
+    sqlProjects: []
+  jobs/monthly_job_db:
+    name: monthly_job_db
+    description: ''
+    fabricUID: 1618
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: 0 20 12 * * ? *
+    timeout: null
+    alerting:
+      emails: maciej@prophecy.io
+      onStart: true
+      onSuccess: true
+      onFailure: true
+    pipelines:
+    - pipelines/ingest_customers
+    - pipelines/ingest_orders
+    - pipelines/cleanup_customers
+    - pipelines/mrr_reporting
+    - pipelines/cleanup_orders
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: true
+    createdAt: '2024-10-05 19:14:30'
     author: maciej@prophecy.io
     models: []
     sqlProjects: []

@@ -4,59 +4,53 @@
     "fabricId" : "1618",
     "jobId" : "jobs/monthly_job_db",
     "name" : "monthly_job_db",
-    "schedule" : "0 0 0 1 * ? *",
-    "scheduleTimeZone" : "UTC",
+    "schedule" : "0 20 12 * * ? *",
+    "scheduleTimeZone" : "America/Creston",
     "jobClusterMode" : {
       "clusterMode" : "Single"
     },
-    "enabled" : false,
+    "enabled" : true,
     "defaultClusterSize" : "small",
     "alerting" : {
+      "emails" : "maciej@prophecy.io",
+      "onStart" : true,
+      "onSuccess" : true,
+      "onFailure" : true
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
       "emails" : "",
       "onStart" : false,
       "onSuccess" : false,
       "onFailure" : false
-    },
-    "maxConcurrentRuns" : 1,
-    "processDefaultSettings" : {
-      "type" : "Inherited",
-      "retries" : 0,
-      "alerting" : {
-        "emails" : "",
-        "onStart" : false,
-        "onSuccess" : false,
-        "onFailure" : false
-      }
     }
   },
   "processes" : {
-    "wqPVsM3Wra2Fs8hrNbnvU$$0FSBX0IvP9v74BuST7dW3" : {
-      "id" : "wqPVsM3Wra2Fs8hrNbnvU$$0FSBX0IvP9v74BuST7dW3",
+    "zkrgZcYj4yYE1ix7tv4TB$$-o1faEzUqUN8fUAy8HjS0" : {
+      "id" : "zkrgZcYj4yYE1ix7tv4TB$$-o1faEzUqUN8fUAy8HjS0",
       "component" : "Pipeline",
       "metadata" : {
         "label" : "ingest_customers",
         "slug" : "ingest_customers",
-        "x" : 280,
-        "y" : 200
+        "x" : -660,
+        "y" : -200
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "teR-Ve3nqZ8axGIAw8fr2$$JYhaf4nD3yzAe_HZNBp8z",
+          "id" : "c1VrqzPsiZYSsPJTZSQNa$$dp8Tu6lVRyQatpQSs_4c0",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "QRXOpXG13eLat_ftooWvA$$DAfcg5Qneh9OGCZjNqs1A",
+          "id" : "hGQ35HvdBTByduGHOVO2V$$1TMmT8NifiSpv9LP-tIFm",
           "slug" : ""
         } ]
       },
       "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false
-        }
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
       },
       "properties" : {
         "pipelineId" : "pipelines/ingest_customers",
@@ -70,36 +64,33 @@
         }
       }
     },
-    "0NGXRCJiUjxL4xXcz21fB$$Bi8C5Pl4EwIa06aoWagRX" : {
-      "id" : "0NGXRCJiUjxL4xXcz21fB$$Bi8C5Pl4EwIa06aoWagRX",
+    "ZEkdJMrCgXsq7sGc_Z0CJ$$XZWzaWDPrdi1yLIME7DoX" : {
+      "id" : "ZEkdJMrCgXsq7sGc_Z0CJ$$XZWzaWDPrdi1yLIME7DoX",
       "component" : "Pipeline",
       "metadata" : {
-        "label" : "cleanup_orders",
-        "slug" : "cleanup_orders",
-        "x" : 500,
-        "y" : 460
+        "label" : "ingest_orders",
+        "slug" : "ingest_orders",
+        "x" : -660,
+        "y" : 60
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "jVxLHIai9sjfGekC_4Ds-$$6kXlC083MkduU89EPZeDW",
-          "slug" : ""
+          "id" : "2hXDBv3ZRzaHaO-L0AgFt$$iD38MbpalGMC37y4lGTQO",
+          "slug" : "in0"
         } ],
         "outputs" : [ {
-          "id" : "kvSbDfst-brrriJoL0T6i$$y4FkdMoUMRXbgBc65ierN",
+          "id" : "J7oqM4EbVEj6qqum26rNX$$lPdYJok-hXdqmKMUzp39F",
           "slug" : ""
         } ]
       },
       "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false
-        }
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
       },
       "properties" : {
-        "pipelineId" : "pipelines/cleanup_orders",
+        "pipelineId" : "pipelines/ingest_orders",
         "configurations" : {
           "schema" : [ ],
           "instances" : {
@@ -110,38 +101,44 @@
         }
       }
     },
-    "40Fi7saTcubpqmsSI2tGo$$n0jlkBlbi1gFse3NjKO3U" : {
-      "id" : "40Fi7saTcubpqmsSI2tGo$$n0jlkBlbi1gFse3NjKO3U",
+    "WuHw8G78PTJhx8wklrv_R$$eg9IazQp6jJouzzju1g3F" : {
+      "id" : "WuHw8G78PTJhx8wklrv_R$$eg9IazQp6jJouzzju1g3F",
       "component" : "Pipeline",
       "metadata" : {
         "label" : "mrr_reporting",
         "slug" : "mrr_reporting",
-        "x" : 720,
-        "y" : 340
+        "x" : -180,
+        "y" : -60
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "jTyNMC78aff5-aNPhHOQ8$$ztcwzMIMGtiCVTeyYNf8C",
+          "id" : "uIV2reghWThIr1e4zjFtq$$C-LS5OMJ1c_TVSYNQ095n",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "UOwfWwfSLChhWO8zM0Wdi$$ryJEbySzLVQsrlXfiN8LK",
+          "id" : "xKxLAO94Bo51vIh8R6HZu$$jMTxzbyLbCogV_jbeTYJ8",
           "slug" : ""
         } ]
       },
       "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false
-        }
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
       },
       "properties" : {
         "pipelineId" : "pipelines/mrr_reporting",
         "configurations" : {
-          "schema" : [ ],
+          "schema" : [ {
+            "name" : "enrich_customers",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
+          } ],
           "instances" : {
             "supercharge_delta_lake" : [ "default", "test" ]
           },
@@ -150,33 +147,30 @@
         }
       }
     },
-    "coZmsoRAOUjbEbaTWlYBg$$9JTuhTpA3ZVNOVkHX-M3D" : {
-      "id" : "coZmsoRAOUjbEbaTWlYBg$$9JTuhTpA3ZVNOVkHX-M3D",
+    "EeRD3TTEHFQnASLnIAClv$$7wM6ENUPQ9ixjJJIN2JXA" : {
+      "id" : "EeRD3TTEHFQnASLnIAClv$$7wM6ENUPQ9ixjJJIN2JXA",
       "component" : "Pipeline",
       "metadata" : {
         "label" : "cleanup_customers",
         "slug" : "cleanup_customers",
-        "x" : 500,
-        "y" : 200
+        "x" : -440,
+        "y" : -200
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "yT_d_yxRzyvty99oU60no$$EUZ3lKuzX2P1y8wO2EcPF",
-          "slug" : ""
+          "id" : "u5ZdIlm7eUWZGXIlbZymm$$UVCyIAkNYlfknQXeJ9qJj",
+          "slug" : "ingest_customers"
         } ],
         "outputs" : [ {
-          "id" : "i1cr_mLuJyDSzAw6JKQAi$$-YmoDfobLcxYG2noHTf8g",
+          "id" : "xCJv8S-Ds7m9wtI2t7f_M$$WQczTCIVYyqtnuIrQ4Z0j",
           "slug" : ""
         } ]
       },
       "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false
-        }
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
       },
       "properties" : {
         "pipelineId" : "pipelines/cleanup_customers",
@@ -189,25 +183,68 @@
           "selectedInstance" : "default"
         }
       }
+    },
+    "lfm0S33nNF_rLiX4OaP-g$$gxNJsqAveNg-CPD9HwI5l" : {
+      "id" : "lfm0S33nNF_rLiX4OaP-g$$gxNJsqAveNg-CPD9HwI5l",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "cleanup_orders",
+        "slug" : "cleanup_orders",
+        "x" : -440,
+        "y" : 60
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "cS2dKd_J1MpYcIc3H1hcK$$pG6abeJPHBUXY80tAG7S7",
+          "slug" : "ingest_orders"
+        } ],
+        "outputs" : [ {
+          "id" : "r7b73iLiiVCv3EOkGglnJ$$0msP8jCalpdusUpY79EP6",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/cleanup_orders",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "supercharge_delta_lake" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
     }
   },
   "connections" : [ {
-    "id" : "pR2vpK_z18vh-vuo9rCsN$$Nfjvoe6drBjU318Avj890",
-    "source" : "wqPVsM3Wra2Fs8hrNbnvU$$0FSBX0IvP9v74BuST7dW3",
-    "target" : "coZmsoRAOUjbEbaTWlYBg$$9JTuhTpA3ZVNOVkHX-M3D",
-    "sourcePort" : "QRXOpXG13eLat_ftooWvA$$DAfcg5Qneh9OGCZjNqs1A",
-    "targetPort" : "yT_d_yxRzyvty99oU60no$$EUZ3lKuzX2P1y8wO2EcPF"
+    "id" : "d2XoZiQ3dBwZsuQo3O4WP$$Y7-rMpLZUXBNHEtGgX3wC",
+    "source" : "ZEkdJMrCgXsq7sGc_Z0CJ$$XZWzaWDPrdi1yLIME7DoX",
+    "target" : "lfm0S33nNF_rLiX4OaP-g$$gxNJsqAveNg-CPD9HwI5l",
+    "sourcePort" : "J7oqM4EbVEj6qqum26rNX$$lPdYJok-hXdqmKMUzp39F",
+    "targetPort" : "cS2dKd_J1MpYcIc3H1hcK$$pG6abeJPHBUXY80tAG7S7"
   }, {
-    "id" : "73ZJFd1IUGgJ9TF5aYRq-",
-    "source" : "0NGXRCJiUjxL4xXcz21fB$$Bi8C5Pl4EwIa06aoWagRX",
-    "target" : "40Fi7saTcubpqmsSI2tGo$$n0jlkBlbi1gFse3NjKO3U",
-    "sourcePort" : "kvSbDfst-brrriJoL0T6i$$y4FkdMoUMRXbgBc65ierN",
-    "targetPort" : "jTyNMC78aff5-aNPhHOQ8$$ztcwzMIMGtiCVTeyYNf8C"
+    "id" : "nTg7Cavim1m0Kqd8T-_Nb$$Xg9Otu0-NcdV6Lo1cPL81",
+    "source" : "zkrgZcYj4yYE1ix7tv4TB$$-o1faEzUqUN8fUAy8HjS0",
+    "target" : "EeRD3TTEHFQnASLnIAClv$$7wM6ENUPQ9ixjJJIN2JXA",
+    "sourcePort" : "hGQ35HvdBTByduGHOVO2V$$1TMmT8NifiSpv9LP-tIFm",
+    "targetPort" : "u5ZdIlm7eUWZGXIlbZymm$$UVCyIAkNYlfknQXeJ9qJj"
   }, {
-    "id" : "smfAv-41q1RWiq3JBoDyE",
-    "source" : "coZmsoRAOUjbEbaTWlYBg$$9JTuhTpA3ZVNOVkHX-M3D",
-    "target" : "40Fi7saTcubpqmsSI2tGo$$n0jlkBlbi1gFse3NjKO3U",
-    "sourcePort" : "i1cr_mLuJyDSzAw6JKQAi$$-YmoDfobLcxYG2noHTf8g",
-    "targetPort" : "jTyNMC78aff5-aNPhHOQ8$$ztcwzMIMGtiCVTeyYNf8C"
+    "id" : "GjwoE8fps5_Grcc1bMSSM",
+    "source" : "EeRD3TTEHFQnASLnIAClv$$7wM6ENUPQ9ixjJJIN2JXA",
+    "target" : "WuHw8G78PTJhx8wklrv_R$$eg9IazQp6jJouzzju1g3F",
+    "sourcePort" : "xCJv8S-Ds7m9wtI2t7f_M$$WQczTCIVYyqtnuIrQ4Z0j",
+    "targetPort" : "uIV2reghWThIr1e4zjFtq$$C-LS5OMJ1c_TVSYNQ095n"
+  }, {
+    "id" : "T_FM2MiRGShRmn1B7i9l7",
+    "source" : "lfm0S33nNF_rLiX4OaP-g$$gxNJsqAveNg-CPD9HwI5l",
+    "target" : "WuHw8G78PTJhx8wklrv_R$$eg9IazQp6jJouzzju1g3F",
+    "sourcePort" : "r7b73iLiiVCv3EOkGglnJ$$0msP8jCalpdusUpY79EP6",
+    "targetPort" : "uIV2reghWThIr1e4zjFtq$$C-LS5OMJ1c_TVSYNQ095n"
   } ]
 }

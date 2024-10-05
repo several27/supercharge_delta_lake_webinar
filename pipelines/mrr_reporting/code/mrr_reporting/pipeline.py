@@ -4,9 +4,16 @@ from pyspark.sql.types import *
 from mrr_reporting.config.ConfigStore import *
 from mrr_reporting.functions import *
 from prophecy.utils import *
+from mrr_reporting.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_silver_orders = silver_orders(spark)
+    df_silver_customers = silver_customers(spark)
+    df_by_c_custkey_c_comment = by_c_custkey_c_comment(spark, df_silver_customers, df_silver_orders)
+    df_reformat_order_customer_data = reformat_order_customer_data(spark, df_by_c_custkey_c_comment)
+    df_total_amount_by_month_and_customer = total_amount_by_month_and_customer(spark, df_reformat_order_customer_data)
+    df_enrich_customers = enrich_customers(spark, Config.enrich_customers, df_total_amount_by_month_and_customer)
+    final_report_j(spark, df_enrich_customers)
 
 def main():
     spark = SparkSession.builder\
