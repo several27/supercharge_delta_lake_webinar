@@ -11,6 +11,26 @@ buildSystemDetails:
   author: null
   createdAt: '2023-03-24 19:20:44'
 pipelines:
+  pipelines/mrr_reporting:
+    name: mrr_reporting
+    description: ''
+    author: maciej@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-10-01 21:03:15'
+    datasets:
+      inputs:
+      - datasets/customer_nations
+      - datasets/nation
+      - datasets/regions
+      - datasets/silver_customers
+      - datasets/silver_orders
+      outputs:
+      - datasets/final_report_j
+    subgraphs:
+    - subgraphs/enrich_customers
+    dependencies: {}
   pipelines/ingest_customers:
     name: ingest_customers
     description: ''
@@ -71,26 +91,6 @@ pipelines:
       - datasets/bronze_orders
     subgraphs: []
     dependencies: {}
-  pipelines/mrr_reporting:
-    name: mrr_reporting
-    description: ''
-    author: maciej@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2024-10-01 21:03:15'
-    datasets:
-      inputs:
-      - datasets/customer_nations
-      - datasets/nation
-      - datasets/regions
-      - datasets/silver_customers
-      - datasets/silver_orders
-      outputs:
-      - datasets/final_report_j
-    subgraphs:
-    - subgraphs/enrich_customers
-    dependencies: {}
 datasets:
   datasets/customer_nations:
     name: customer_nations
@@ -144,19 +144,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:30:06'
-  datasets/final_report:
-    name: final_report
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-10-11 23:29:28'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: Database
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-10-11 23:29:29'
   datasets/silver_orders:
     name: silver_orders
     description: ''
@@ -170,19 +157,6 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:32:05'
-  datasets/nation:
-    name: nation
-    description: ''
-    author: maciej+webinar-2022@prophecy.io
-    createdAt: '2022-09-29 03:35:31'
-    mode: batch
-    physicalDatasets:
-      dev:
-        fabricId: 1034
-        datasetType: File
-        description: ''
-        author: maciej+webinar-2022@prophecy.io
-        createdAt: '2022-09-29 03:35:31'
   datasets/silver_customers:
     name: silver_customers
     description: ''
@@ -222,6 +196,58 @@ datasets:
         description: ''
         author: maciej+webinar-2022@prophecy.io
         createdAt: '2022-09-29 01:30:31'
+  datasets/final_report:
+    name: final_report
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-10-11 23:29:28'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: Database
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-10-11 23:29:29'
+  datasets/test_output:
+    name: test_output
+    description: ''
+    author: maciej@prophecy.io
+    createdAt: '2024-08-07 21:32:44'
+    mode: batch
+    physicalDatasets:
+      db_product:
+        fabricId: 1777
+        datasetType: Database
+        description: ''
+        author: maciej@prophecy.io
+        createdAt: '2024-08-07 21:32:44'
+  datasets/customers_new:
+    name: customers_new
+    description: ''
+    author: maciej@prophecy.io
+    createdAt: '2024-08-07 21:43:48'
+    mode: batch
+    physicalDatasets:
+      db_product:
+        fabricId: 1777
+        datasetType: Database
+        description: ''
+        author: maciej@prophecy.io
+        createdAt: '2024-08-07 21:43:48'
+  datasets/nation:
+    name: nation
+    description: ''
+    author: maciej+webinar-2022@prophecy.io
+    createdAt: '2022-09-29 03:35:31'
+    mode: batch
+    physicalDatasets:
+      dev:
+        fabricId: 1034
+        datasetType: File
+        description: ''
+        author: maciej+webinar-2022@prophecy.io
+        createdAt: '2022-09-29 03:35:31'
   datasets/final_report_j:
     name: final_report_j
     description: ''
@@ -237,6 +263,31 @@ datasets:
         createdAt: '2024-10-01 21:56:09'
 templates: {}
 jobs:
+  jobs/2024_08_07_vanilla_schedule_test:
+    name: 2024_08_07_vanilla_schedule_test
+    description: ''
+    fabricUID: 1777
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: 0 0 0/1 * * ? *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: true
+    createdAt: '2024-08-08 01:48:23'
+    author: maciej@prophecy.io
+    models: []
+    sqlProjects: []
   jobs/monthly_job_airflow:
     name: monthly_job_airflow
     description: ''
@@ -299,7 +350,31 @@ jobs:
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
-  gems: {}
+  gems:
+    gems/Limit2:
+      name: Limit2
+      category: Transform
+      subCategory: ''
+      description: null
+      author: maciej@prophecy.io
+      mode: batch
+      files:
+      - prophecy_webinar_supercharge_delta_lake/gems/Limit2.py
+      gemType: ComponentGem
+      dependencies: null
+      createdAt: '2024-01-30 21:59:43'
+    gems/CubeGem:
+      name: CubeGem
+      category: Transform
+      subCategory: ''
+      description: null
+      author: maciej@prophecy.io
+      mode: batch
+      files:
+      - prophecy_webinar_supercharge_delta_lake/gems/CubeGem.py
+      gemType: ComponentGem
+      dependencies: null
+      createdAt: '2024-02-01 19:27:23'
   dependencies: null
 functions:
   author: null
