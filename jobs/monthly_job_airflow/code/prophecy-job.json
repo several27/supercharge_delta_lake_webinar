@@ -151,7 +151,16 @@
         "databricksConnId" : "",
         "clusterSize" : "1618/small",
         "configurations" : {
-          "schema" : [ ],
+          "schema" : [ {
+            "name" : "enrich_customers",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
+          } ],
           "instances" : {
             "supercharge_delta_lake" : [ "default", "test" ]
           },
