@@ -263,31 +263,6 @@ datasets:
         createdAt: '2024-10-01 21:56:09'
 templates: {}
 jobs:
-  jobs/2024_08_07_vanilla_schedule_test:
-    name: 2024_08_07_vanilla_schedule_test
-    description: ''
-    fabricUID: 1777
-    scheduler:
-      Databricks: {}
-    cloudProvider: null
-    jobSize: small
-    scheduleCron: 0 0 0/1 * * ? *
-    timeout: null
-    alerting:
-      emails: ''
-      onStart: false
-      onSuccess: false
-      onFailure: false
-    pipelines: []
-    jobClusterMode:
-      clusterMode:
-        Single: {}
-      clusterId: null
-    enabled: true
-    createdAt: '2024-08-08 01:48:23'
-    author: maciej@prophecy.io
-    models: []
-    sqlProjects: []
   jobs/monthly_job_airflow:
     name: monthly_job_airflow
     description: ''
