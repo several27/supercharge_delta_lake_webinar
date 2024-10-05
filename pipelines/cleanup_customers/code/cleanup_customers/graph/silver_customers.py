@@ -8,4 +8,4 @@ from cleanup_customers.udfs.UDFs import *
 
 @instrument
 def silver_customers(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("error").saveAsTable("`lakehouse`.`silver_customers`")
+    in0.write.format("delta").mode("overwrite").saveAsTable("`lakehouse`.`silver_customers`")

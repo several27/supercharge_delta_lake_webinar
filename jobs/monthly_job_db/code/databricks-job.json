@@ -187,7 +187,7 @@
     } ],
     "max_concurrent_runs" : 1,
     "schedule" : {
-      "quartz_cron_expression" : "0 40 12 * * ? *",
+      "quartz_cron_expression" : "0 5 13 * * ? *",
       "timezone_id" : "America/Creston",
       "pause_status" : "UNPAUSED"
     }
