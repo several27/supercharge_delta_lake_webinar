@@ -300,7 +300,7 @@ jobs:
       Databricks: {}
     cloudProvider: null
     jobSize: small
-    scheduleCron: 0 20 12 * * ? *
+    scheduleCron: 0 40 12 * * ? *
     timeout: null
     alerting:
       emails: maciej@prophecy.io

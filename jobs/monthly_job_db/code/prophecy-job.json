@@ -4,11 +4,12 @@
     "fabricId" : "1618",
     "jobId" : "jobs/monthly_job_db",
     "name" : "monthly_job_db",
-    "schedule" : "0 20 12 * * ? *",
+    "schedule" : "0 40 12 * * ? *",
     "scheduleTimeZone" : "America/Creston",
     "jobClusterMode" : {
       "clusterMode" : "Single"
     },
+    "scheduleHelp" : "At 12:40 pm, every day, every year",
     "enabled" : true,
     "defaultClusterSize" : "small",
     "alerting" : {

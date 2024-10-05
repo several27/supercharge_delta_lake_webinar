@@ -10,6 +10,7 @@
         "mavenVersion" : "8.2.1",
         "pyPiVersion" : "1.9.16"
       },
+      "instrumentationEnabled" : true,
       "sparkConfigJinjaEnabled" : true
     },
     "id" : "1",
@@ -66,7 +67,7 @@
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
-    "visualCodeInterimMode" : "Disabled",
+    "visualCodeInterimMode" : "Vanilla",
     "recordsLimit" : {
       "enabled" : false,
       "value" : 1000

@@ -9,12 +9,13 @@
       "plibVersion" : {
         "mavenVersion" : "8.2.1",
         "pyPiVersion" : "1.9.16"
-      }
+      },
+      "instrumentationEnabled" : true
     },
     "id" : "1",
     "uri" : "pipelines/cleanup_customers",
     "language" : "python",
-    "fabricId" : "1777",
+    "fabricId" : "1618",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -59,7 +60,7 @@
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
-    "visualCodeInterimMode" : "Disabled",
+    "visualCodeInterimMode" : "Vanilla",
     "recordsLimit" : {
       "enabled" : false,
       "value" : 1000
