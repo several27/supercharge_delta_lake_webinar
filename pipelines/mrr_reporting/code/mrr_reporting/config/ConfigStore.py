@@ -6,8 +6,8 @@ Config: ConfigClass = ConfigClass()
 
 class Utils:
     @staticmethod
-    def initializeFromArgs(spark: SparkSession, args, default_conf="mrr_reporting.conf"):
+    def initializeFromArgs(spark: SparkSession, args):
         global Config
         Config.updateSpark(spark)
-        conf = parse_config(args, default_conf)
+        conf = parse_config(args)
         Config.update(**conf)

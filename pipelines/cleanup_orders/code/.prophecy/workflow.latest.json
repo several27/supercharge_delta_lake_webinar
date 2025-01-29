@@ -14,7 +14,8 @@
       "plibVersion" : {
         "mavenVersion" : "8.2.1",
         "pyPiVersion" : "1.9.16"
-      }
+      },
+      "instrumentationEnabled" : true
     },
     "id" : "1",
     "uri" : "pipelines/cleanup_orders",
@@ -68,7 +69,7 @@
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
-    "visualCodeInterimMode" : "Disabled",
+    "visualCodeInterimMode" : "Vanilla",
     "recordsLimit" : {
       "enabled" : false,
       "value" : 1000
@@ -90,8 +91,8 @@
       "metadata" : {
         "label" : "bronze_orders",
         "slug" : "bronze_orders",
-        "x" : 198,
-        "y" : 265.2,
+        "x" : 200,
+        "y" : 260,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -117,8 +118,8 @@
       "metadata" : {
         "label" : "silver_orders",
         "slug" : "silver_orders",
-        "x" : 420.79999999999995,
-        "y" : 264.40000000000003,
+        "x" : 420,
+        "y" : 260,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,

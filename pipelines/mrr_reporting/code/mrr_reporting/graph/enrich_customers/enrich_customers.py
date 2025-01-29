@@ -2,10 +2,10 @@ from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from prophecy.utils import *
-from mrr_reporting.udfs import *
 from . import *
 from .config import *
 
+@instrument
 def enrich_customers(spark: SparkSession, subgraph_config: SubgraphConfig, in0: DataFrame) -> DataFrame:
     Config.update(subgraph_config)
     df_customer_nations_1 = customer_nations_1(spark)

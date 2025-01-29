@@ -18,9 +18,11 @@ def main():
                 .appName("Prophecy Pipeline")\
                 .getOrCreate()
     Utils.initializeFromArgs(spark, parse_args())
+    MetricsCollector.initializeMetrics(spark)
+    spark.conf.set("prophecy.collect.basic.stats", "true")
+    spark.conf.set("spark.sql.legacy.allowUntypedScalaUDF", "true")
     spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/ingest_customers")
     registerUDFs(spark)
-    
     MetricsCollector.instrument(spark = spark, pipelineId = "pipelines/ingest_customers", config = Config)(pipeline)
 
 if __name__ == "__main__":
