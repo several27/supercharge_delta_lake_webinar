@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 from prophecy.utils import *
 from prophecy.libs import typed_lit
 from .config import *
-from mrr_reporting.udfs.UDFs import *
+from mrr_reporting.udfs import *
 
 def with_nations_regions_1(
         spark: SparkSession,

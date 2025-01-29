@@ -91,6 +91,19 @@ pipelines:
       - datasets/bronze_orders
     subgraphs: []
     dependencies: {}
+  pipelines/mrr_reporting_2:
+    name: mrr_reporting_2
+    description: ''
+    author: maciej@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-01-29 00:56:00'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/customer_nations:
     name: customer_nations
@@ -294,7 +307,15 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
-  businessRules: {}
+  businessRules:
+    businessRules/test_rule:
+      name: test_rule
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: maciej@prophecy.io
+      createdAt: '2022-12-15 18:04:50'
 subgraphs:
   subgraphs/enrich_customers:
     name: enrich_customers
@@ -350,6 +371,14 @@ projectDependencies:
     isDefault: true
     author: null
     createdAt: '2024-10-01 20:53:52'
+  '32699':
+    projectUID: 32699
+    projectName: ProphecySparkDataQualityPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/gLsx7fee_project_32699.git&subPath=
+    version: 0.0.3
+    isDefault: false
+    author: null
+    createdAt: '2025-01-14 22:19:26'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}

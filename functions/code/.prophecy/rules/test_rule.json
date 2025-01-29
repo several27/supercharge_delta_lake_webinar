@@ -1,0 +1,1 @@
+{"parameters":[{"name":"test","type":"string","nullable":false,"metadata":{"description":"","mappings":[],"tags":[]}}],"outputs":[{"name":"new_rule"}],"data":[{"inputs":[{"name":"test","expression":{"format":"sql","expression":"= 1"}}],"outputs":[{"name":"new_rule","expression":{"format":"sql","expression":"true = true"}}],"description":""}],"description":""}

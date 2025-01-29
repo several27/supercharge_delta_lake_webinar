@@ -55,7 +55,7 @@
           "spark.prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
           "spark.prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
           "spark.prophecy.execution.metrics.disabled" : "false",
-          "spark.prophecy.execution.service.url" : "wss://execution.dp.app.prophecy.io/eventws"
+          "spark.prophecy.execution.service.url" : "wss://app.prophecy.io/execution/eventws"
         },
         "aws_attributes" : { }
       }
@@ -80,7 +80,8 @@
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/ingest_customers-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { }
+      "email_notifications" : { },
+      "max_retries" : 0
     }, {
       "task_key" : "cleanup_orders",
       "job_cluster_key" : "monthly_job_db_default_small",
@@ -100,7 +101,8 @@
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/cleanup_orders-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { }
+      "email_notifications" : { },
+      "max_retries" : 0
     }, {
       "task_key" : "cleanup_customers",
       "depends_on" : [ {
@@ -123,7 +125,8 @@
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/cleanup_customers-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { }
+      "email_notifications" : { },
+      "max_retries" : 0
     }, {
       "task_key" : "mrr_reporting",
       "depends_on" : [ {
@@ -148,7 +151,8 @@
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/mrr_reporting-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { }
+      "email_notifications" : { },
+      "max_retries" : 0
     } ],
     "max_concurrent_runs" : 1,
     "schedule" : {

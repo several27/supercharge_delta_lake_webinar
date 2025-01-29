@@ -3,7 +3,12 @@
     "migrationVersions" : {
       "gemBuilderVersion" : "v1"
     },
-    "functions" : { },
+    "functions" : {
+      "businessRules" : {
+        "rules" : [ ],
+        "sharedRules" : [ ]
+      }
+    },
     "codeGenConfiguration" : {
       "editableConfig" : false,
       "plibVersion" : {
@@ -21,7 +26,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "prophecy_webinar.supercharge_delta_lake.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.data_quality.functions", "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -48,6 +53,10 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
     "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "32699",
+      "projectName" : "ProphecySparkDataQualityPython",
+      "externalDependencies" : [ ]
+    }, {
       "projectUID" : "12654",
       "projectName" : "ProphecySparkBasicsPython",
       "externalDependencies" : [ ]
@@ -213,5 +222,22 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.metainfo.functions.businessRules.rules[0].data",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing data for the case when all the inputs are `Any`",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }

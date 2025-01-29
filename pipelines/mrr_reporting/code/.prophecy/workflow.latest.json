@@ -3,7 +3,12 @@
     "migrationVersions" : {
       "gemBuilderVersion" : "v1"
     },
-    "functions" : { },
+    "functions" : {
+      "businessRules" : {
+        "rules" : [ ],
+        "sharedRules" : [ ]
+      }
+    },
     "codeGenConfiguration" : {
       "editableConfig" : false,
       "plibVersion" : {
@@ -21,7 +26,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "prophecy_webinar.supercharge_delta_lake.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.data_quality.functions", "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -93,6 +98,10 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
     "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "32699",
+      "projectName" : "ProphecySparkDataQualityPython",
+      "externalDependencies" : [ ]
+    }, {
       "projectUID" : "12654",
       "projectName" : "ProphecySparkBasicsPython",
       "externalDependencies" : [ ]
@@ -148,16 +157,130 @@
     "sourcePort" : "JY_46PtICzZC1lAT0GkVa$$wuE29Eg3K0YDw8QdfrEb9",
     "target" : "-VL0ws3hNDRC027Xt5Pi5$$K_PD3mlYT6eYM2givfYyB",
     "targetPort" : "OQ1Kh96XRenbkPv8M4UpV$$S7YfWkPMTrAw36I_0RL5B"
+  }, {
+    "id" : "L6Oo0YlgQEZ1XTiaVQqDX",
+    "source" : "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy",
+    "sourcePort" : "iG3b_lBYNrvozN1jayuau$$OImvC0aVAhhf3irvxPGZu",
+    "target" : "rcZelo-iUWxQDaDLqsw10$$Kn4LPIrGU7vjZAF97cUxp",
+    "targetPort" : "WsoS_iusng0uK7ZKHz7e3$$EPg-ubDns9oqmhjfnVa9P"
   } ],
   "processes" : {
+    "shoT0JY0c0ZtG9XELftMK$$MlHfzj9b2lJW5rG3UDv2k" : {
+      "id" : "shoT0JY0c0ZtG9XELftMK$$MlHfzj9b2lJW5rG3UDv2k",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "create_customer_dataframe",
+        "slug" : "create_customer_dataframe",
+        "x" : 500,
+        "y" : -160,
+        "phase" : 1,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Generates a customer data table for analysis, facilitating customer-related insights and decision-making.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "z2kD_eBCeQrIGUca51o1b$$P4ecyxv_3v94oKG3sLUTd",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_address",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_nationkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_acctbal",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_mktsegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "script" : "# from pyspark.sql import Row\n\n# # Sample customer data\n# customer_data = [\n#     Row(customer_id=1, name=\"John Doe\", age=30, email=\"john.doe@example.com\"),\n#     Row(customer_id=2, name=\"Jane Smith\", age=25, email=\"jane.smith@example.com\"),\n#     Row(customer_id=3, name=\"Sam Brown\", age=40, email=\"sam.brown@example.com\")\n# ]\n\n# # Create DataFrame from sample data\n# out0 = spark.createDataFrame(customer_data)\n\nout0 = spark.sql(\"select * from test_view\")\n",
+        "scriptMethodHeader" : "def Script(spark: SparkSession) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
     "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy" : {
       "id" : "MypoFqL88fNcV5-mfyFvL$$STT-zlwIUB5G5yYtXluEy",
       "component" : "Source",
       "metadata" : {
         "label" : "silver_customers_2_1",
         "slug" : "silver_customers_2_1",
-        "x" : 120,
-        "y" : 120,
+        "x" : 100,
+        "y" : 20,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -183,8 +306,8 @@
       "metadata" : {
         "label" : "silvers_orders",
         "slug" : "silvers_orders",
-        "x" : 120,
-        "y" : 320,
+        "x" : 100,
+        "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -210,8 +333,8 @@
       "metadata" : {
         "label" : "final_report",
         "slug" : "final_report",
-        "x" : 1120,
-        "y" : 220,
+        "x" : 1100,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -287,8 +410,8 @@
       "metadata" : {
         "label" : "by_customer_id",
         "slug" : "by_customer_id",
-        "x" : 320,
-        "y" : 220,
+        "x" : 300,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -496,7 +619,7 @@
         } ],
         "allIn1" : null,
         "activeTab" : "conditions",
-        "columnsSelector" : [ "rO09ozwMBm_SlbxvVxHYc$$1fOOHaegJlTT04hywlsDb##c_custkey", "rxD22Q4qOC90N0Zmua4pL$$f9Klkw_MyTM6m9EueTx67##o_custkey" ],
+        "columnsSelector" : [ "rxD22Q4qOC90N0Zmua4pL$$f9Klkw_MyTM6m9EueTx67##o_custkey", "rO09ozwMBm_SlbxvVxHYc$$1fOOHaegJlTT04hywlsDb##c_custkey" ],
         "allIn0" : null,
         "whereClause" : null,
         "headAlias" : "in0"
@@ -512,8 +635,8 @@
       "metadata" : {
         "label" : "sum_amounts",
         "slug" : "sum_amounts",
-        "x" : 680,
-        "y" : 220,
+        "x" : 660,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -745,8 +868,8 @@
       "metadata" : {
         "label" : "extract_order_month",
         "slug" : "extract_order_month",
-        "x" : 500,
-        "y" : 220,
+        "x" : 480,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -1056,11 +1179,199 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderpriority", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderdate", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_comment", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_custkey", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_shippriority", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_acctbal", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_totalprice", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_clerk", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_nationkey", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderstatus", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_address", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_phone", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_custkey", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_comment", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_name", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_mktsegment", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderkey" ]
+        "columnsSelector" : [ "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_address", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderstatus", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_clerk", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_comment", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_mktsegment", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_shippriority", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderdate", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_comment", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_custkey", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_totalprice", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderpriority", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_name", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_custkey", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_acctbal", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##o_orderkey", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_nationkey", "PtERBX904Nirmqa2vipcf$$8hF8H-VXF6TRYHkcCFfkc##c_phone" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.30&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "rcZelo-iUWxQDaDLqsw10$$Kn4LPIrGU7vjZAF97cUxp" : {
+      "id" : "rcZelo-iUWxQDaDLqsw10$$Kn4LPIrGU7vjZAF97cUxp",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "create_temp_view",
+        "slug" : "create_temp_view",
+        "x" : 320,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Creates a temporary view for data analysis, enabling easier querying and manipulation of the dataset.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "WsoS_iusng0uK7ZKHz7e3$$EPg-ubDns9oqmhjfnVa9P",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_address",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_nationkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_acctbal",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_mktsegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "rG3ZdMN_wqbotiVdO80Zk$$4uyNUyZLBLJMQPRNpma8z",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_address",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_nationkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_acctbal",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_mktsegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "script" : "in0.createOrReplaceTempView(\"test_view\")\nout0 = in0\n",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
       }
     },
     "Q_QsK83A0auLuJ4sSjFKL$$qJIcXbii_v9WOuZtKSdxT" : {
@@ -1069,8 +1380,8 @@
       "metadata" : {
         "label" : "enrich_customers",
         "slug" : "enrich_customers",
-        "x" : 900,
-        "y" : 220,
+        "x" : 880,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -1691,5 +2002,22 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.metainfo.functions.businessRules.rules[0].data",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing data for the case when all the inputs are `Any`",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }
