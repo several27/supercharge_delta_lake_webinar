@@ -171,7 +171,7 @@
       "metadata" : {
         "label" : "create_customer_dataframe",
         "slug" : "create_customer_dataframe",
-        "x" : 500,
+        "x" : 600,
         "y" : -160,
         "phase" : 1,
         "cache" : false,
