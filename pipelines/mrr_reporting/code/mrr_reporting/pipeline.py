@@ -14,6 +14,7 @@ def pipeline(spark: SparkSession) -> None:
     df_total_amount_by_month_and_customer = total_amount_by_month_and_customer(spark, df_reformat_order_customer_data)
     df_enrich_customers = enrich_customers(spark, Config.enrich_customers, df_total_amount_by_month_and_customer)
     final_report_j(spark, df_enrich_customers)
+    df_data_quality_check_out0, df_data_quality_check_out1 = data_quality_check(spark, df_by_c_custkey_c_comment)
 
 def main():
     spark = SparkSession.builder\

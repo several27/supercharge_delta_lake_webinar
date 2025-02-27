@@ -92,8 +92,7 @@
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/ingest_customers-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { },
-      "max_retries" : 0
+      "email_notifications" : { }
     }, {
       "task_key" : "ingest_orders",
       "job_cluster_key" : "monthly_job_db_default_small",
@@ -113,8 +112,7 @@
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/ingest_orders-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { },
-      "max_retries" : 0
+      "email_notifications" : { }
     }, {
       "task_key" : "cleanup_customers",
       "depends_on" : [ {
@@ -137,8 +135,7 @@
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/cleanup_customers-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { },
-      "max_retries" : 0
+      "email_notifications" : { }
     }, {
       "task_key" : "cleanup_orders",
       "depends_on" : [ {
@@ -186,8 +183,7 @@
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/mrr_reporting-1.0-py3-none-any.whl"
       } ],
-      "email_notifications" : { },
-      "max_retries" : 0
+      "email_notifications" : { }
     } ],
     "max_concurrent_runs" : 1,
     "schedule" : {

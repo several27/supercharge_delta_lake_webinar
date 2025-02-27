@@ -25,7 +25,7 @@ def cleanup_orders(ti=None, params=None, **context):
               "spark.prophecy.execution.metrics.disabled": "false", 
               "spark.databricks.isv.product": "prophecy", 
               "spark.prophecy.metadata.job.branch": "__PROJECT_RELEASE_VERSION_PLACEHOLDER__", 
-              "spark.prophecy.execution.service.url": "wss://execution.dp.app.prophecy.io/eventws"
+              "spark.prophecy.execution.service.url": "wss://app.prophecy.io/execution/eventws"
             }, 
             "driver_node_type_id": "i3.xlarge", 
             "aws_attributes": {}

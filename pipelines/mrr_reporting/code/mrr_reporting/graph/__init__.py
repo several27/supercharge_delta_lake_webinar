@@ -3,5 +3,6 @@ from .by_c_custkey_c_comment import by_c_custkey_c_comment
 from .silver_orders import silver_orders
 from .enrich_customers import enrich_customers
 from .total_amount_by_month_and_customer import total_amount_by_month_and_customer
+from .data_quality_check import data_quality_check
 from .final_report_j import final_report_j
 from .silver_customers import silver_customers

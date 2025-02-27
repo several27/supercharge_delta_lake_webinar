@@ -29,7 +29,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "prophecy_webinar.supercharge_delta_lake.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.data_quality.functions", "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -65,6 +65,10 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
     "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "32699",
+      "projectName" : "ProphecySparkDataQualityPython",
+      "externalDependencies" : [ ]
+    }, {
       "projectUID" : "12654",
       "projectName" : "ProphecySparkBasicsPython",
       "externalDependencies" : [ ]
@@ -120,6 +124,12 @@
     "sourcePort" : "qXtxy441k4pcX3aLaORLS$$T9np7AnLsJDsxglLIftIe",
     "target" : "-pI1cnSDnfLwHRGLi6AG-$$8bjhl_SqNakU-UT_CAjT4",
     "targetPort" : "TsDWZTo4-tRwQBStMuyU0$$xIT02-e7e9kJDVH0FBE1K"
+  }, {
+    "id" : "dnbbjWDSjW09Y5IBkZRFd",
+    "source" : "KzFk6i1GQHV5pLuyx7BIG$$dBrqQ2DgVo10THXpAGz1Q",
+    "sourcePort" : "HkyypJc9QmRciq0QQRrWb$$PdzQ00qpdjUtfWvZmGqgq",
+    "target" : "DjT_WVDq1cm1t6iYTXi64$$AeL6yIGJw4OCbWk1K8YD2",
+    "targetPort" : "JqcaYJIqop2-nOJyQAJ1_$$tN_gwMFrocHJJ0Wrq_pvn"
   } ],
   "processes" : {
     "lrK4hoZ_Yvj7rFBSC8cEs" : {
@@ -1511,6 +1521,440 @@
             "datasetId" : "datasets/regions"
           }
         }
+      }
+    },
+    "DjT_WVDq1cm1t6iYTXi64$$AeL6yIGJw4OCbWk1K8YD2" : {
+      "id" : "DjT_WVDq1cm1t6iYTXi64$$AeL6yIGJw4OCbWk1K8YD2",
+      "component" : "DataQualityCheck",
+      "metadata" : {
+        "label" : "data_quality_check",
+        "slug" : "data_quality_check",
+        "x" : 20,
+        "y" : -260,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Conducts data quality checks to ensure that essential order data is complete, helping to maintain data integrity and reliability for business decisions.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JqcaYJIqop2-nOJyQAJ1_$$tN_gwMFrocHJJ0Wrq_pvn",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "o_orderkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderstatus",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_totalprice",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderdate",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_orderpriority",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_clerk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "o_shippriority",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_custkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_comment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_mktsegment",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_address",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_nationkey",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_acctbal",
+              "type" : "decimal(18,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "b6YZX4Fu220KsxzPqBydJ$$RdT7dVRPq-uVw-_BzILrc",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "ZNH9IMhbPnryXqvpGDauo$$k3mW0O37mWXiTYDL2I7pW",
+          "slug" : "out1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "dq_check" : [ {
+          "AddIsLessThanCheckColumnToConst" : {
+            "left_column" : "",
+            "const_value" : "",
+            "hint" : ""
+          },
+          "AddIsLessThanOrEqualToCheckColumnToConst" : {
+            "left_column" : "",
+            "const_value" : "",
+            "hint" : ""
+          },
+          "AddHasStandardDeviationCheck" : {
+            "columns" : [ ],
+            "threshold" : "",
+            "hint" : ""
+          },
+          "AddIsGreaterThanOrEqualToCheckColumnToConst" : {
+            "left_column" : "",
+            "const_value" : "",
+            "hint" : ""
+          },
+          "AddIsLessThanCheckColumnToColumn" : {
+            "left_column" : "",
+            "right_column" : "",
+            "hint" : ""
+          },
+          "AddDistinctCountCheck" : {
+            "columns" : [ ],
+            "threshold" : "",
+            "hint" : ""
+          },
+          "AddRowCountCheck" : {
+            "threshold" : "",
+            "hint" : ""
+          },
+          "AddIsPositiveCheck" : {
+            "columns" : [ ],
+            "threshold" : "",
+            "hint" : ""
+          },
+          "AddHasSumCheck" : {
+            "columns" : [ ],
+            "threshold" : "",
+            "hint" : ""
+          },
+          "AddIsGreaterThanCheckColumnToColumn" : {
+            "left_column" : "",
+            "right_column" : "",
+            "hint" : ""
+          },
+          "AddHasDataTypeCheck" : {
+            "columns" : [ ],
+            "dataType" : "",
+            "hint" : ""
+          },
+          "AddCompletenessCheck" : {
+            "columns" : [ "o_orderkey" ],
+            "threshold" : "",
+            "hint" : ""
+          },
+          "AddHasMinMaxLengthCheck" : {
+            "columns" : [ ],
+            "minLength" : "",
+            "maxLength" : "",
+            "hint" : ""
+          },
+          "AddIsGreaterThanCheckColumnToConst" : {
+            "left_column" : "",
+            "const_value" : "",
+            "hint" : ""
+          },
+          "AddHasMeanCheck" : {
+            "columns" : [ ],
+            "threshold" : "",
+            "hint" : ""
+          },
+          "AddLookupCheck" : {
+            "columns" : [ ],
+            "lookup_list" : [ ],
+            "threshold" : "",
+            "hint" : ""
+          },
+          "AddIsLessThanOrEqualToCheckColumnToColumn" : {
+            "left_column" : "",
+            "right_column" : "",
+            "hint" : ""
+          },
+          "AddIsGreaterThanOrEqualToCheckColumnToColumn" : {
+            "left_column" : "",
+            "right_column" : "",
+            "hint" : ""
+          },
+          "kind" : "AddCompletenessCheck",
+          "AddIsUniqueCheck" : {
+            "columns" : [ ],
+            "hint" : ""
+          },
+          "AddIsNonNegativeCheck" : {
+            "columns" : [ ],
+            "threshold" : "",
+            "hint" : ""
+          }
+        } ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "o_orderkey",
+            "type" : "long",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "o_orderstatus",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "o_totalprice",
+            "type" : "decimal(18,2)",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "o_orderdate",
+            "type" : "date",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "o_orderpriority",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "o_clerk",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "o_shippriority",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c_phone",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c_custkey",
+            "type" : "long",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c_comment",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c_mktsegment",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c_address",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c_nationkey",
+            "type" : "long",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c_acctbal",
+            "type" : "decimal(18,2)",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "activeTab" : "dq_check_tab",
+        "columnsSelector" : [ ],
+        "minFailedChecks" : "",
+        "postAction" : "continue_execution"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/gLsx7fee_project_32699.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=32699&path=gems/dataQualityCheck",
+        "projectName" : "ProphecySparkDataQualityPython"
       }
     },
     "IwTErSGY" : {

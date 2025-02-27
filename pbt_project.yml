@@ -430,10 +430,10 @@ projectDependencies:
     projectUID: 32699
     projectName: ProphecySparkDataQualityPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/gLsx7fee_project_32699.git&subPath=
-    version: 0.0.3
+    version: 0.0.4
     isDefault: false
     author: null
-    createdAt: '2025-01-14 22:19:26'
+    createdAt: '2025-02-27 18:19:41'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
