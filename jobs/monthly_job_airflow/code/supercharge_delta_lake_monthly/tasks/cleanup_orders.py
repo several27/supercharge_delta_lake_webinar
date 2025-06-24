@@ -35,7 +35,7 @@ def cleanup_orders(ti=None, params=None, **context):
             "entry_point": "main", 
             "parameters": ["-i", "default", "-O", "{}"]
           }, 
-          "libraries": [{"maven" : {"coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.2.1"}},                          {"pypi" : {"package" : "prophecy-libs==1.9.16"}},                          {
+          "libraries": [{"maven" : {"coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.10.1"}},                          {"pypi" : {"package" : "prophecy-libs==1.9.49"}},                          {
                            "whl": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/cleanup_orders-1.0-py3-none-any.whl"
                          }]
         },

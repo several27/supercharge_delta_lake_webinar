@@ -1,7 +1,8 @@
 {
   "metainfo" : {
     "migrationVersions" : {
-      "gemBuilderVersion" : "v1"
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
     },
     "functions" : {
       "businessRules" : {
@@ -12,8 +13,8 @@
     "codeGenConfiguration" : {
       "editableConfig" : true,
       "plibVersion" : {
-        "mavenVersion" : "8.2.1",
-        "pyPiVersion" : "1.9.16"
+        "mavenVersion" : "8.10.1",
+        "pyPiVersion" : "1.9.49"
       },
       "sparkConfigJinjaEnabled" : true
     },
@@ -23,7 +24,7 @@
       "applicationName" : "mrr_reporting_2",
       "hasApplication" : true,
       "isFunctionsPackageDirDefined" : true,
-      "isNullValuesInUnitTestsEnabled" : false
+      "isNullValuesInUnitTestsEnabled" : true
     },
     "language" : "python",
     "fabricId" : "1618",

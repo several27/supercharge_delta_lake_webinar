@@ -400,40 +400,47 @@ dependencies:
 - type: plibMaven
   modifiedAt: '2024-10-01T21:01:45.269311Z'
   name: plibMaven
-  version: 8.2.1
+  version: 8.10.1
   id: '905579213'
   createdAt: '2024-10-01T21:01:45.269263Z'
+  entity: Project
+  enabled: true
 - type: plibPypi
-  modifiedAt: '2024-10-01T21:01:45.269421Z'
-  name: plibPypi
-  version: 1.9.16
+  modifiedAt: '2025-06-22T07:35:40.032Z'
+  name: ProphecyLibsPython
+  version: 1.9.49
   id: '1275015262'
   createdAt: '2024-10-01T21:01:45.269403Z'
+  enabled: true
+  description: Default dependency for Prophecy Libs
+  editable: true
+  scope: Project
+  entity: Project
 projectDependencies:
   '12654':
     projectUID: 12654
     projectName: ProphecySparkBasicsPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
-    version: 0.2.30
+    version: 0.2.46
     isDefault: true
     author: null
-    createdAt: '2024-10-01 20:53:41'
+    createdAt: '2025-06-22 07:35:40'
   '12655':
     projectUID: 12655
     projectName: ProphecyWarehousePython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12655.git&subPath=
-    version: 0.0.8
+    version: 0.0.10
     isDefault: true
     author: null
-    createdAt: '2024-10-01 20:53:52'
+    createdAt: '2025-06-22 07:35:40'
   '32699':
     projectUID: 32699
     projectName: ProphecySparkDataQualityPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/gLsx7fee_project_32699.git&subPath=
-    version: 0.0.4
+    version: 0.0.6
     isDefault: false
     author: null
-    createdAt: '2025-02-27 18:19:41'
+    createdAt: '2025-06-22 07:35:40'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}

@@ -1,7 +1,8 @@
 {
   "metainfo" : {
     "migrationVersions" : {
-      "gemBuilderVersion" : "v1"
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
     },
     "functions" : {
       "businessRules" : {
@@ -12,8 +13,8 @@
     "codeGenConfiguration" : {
       "editableConfig" : true,
       "plibVersion" : {
-        "mavenVersion" : "8.2.1",
-        "pyPiVersion" : "1.9.16"
+        "mavenVersion" : "8.10.1",
+        "pyPiVersion" : "1.9.49"
       },
       "instrumentationEnabled" : true,
       "sparkConfigJinjaEnabled" : true
@@ -24,7 +25,8 @@
     "pipelineSettingsInfo" : {
       "applicationName" : "ingest_orders",
       "hasApplication" : true,
-      "isFunctionsPackageDirDefined" : true
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true
     },
     "language" : "python",
     "fabricId" : "1618",

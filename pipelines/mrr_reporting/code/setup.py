@@ -7,7 +7,7 @@ setup(
     package_data = {'prophecy_config_instances' : ['*.json', '*.py', '*.conf']},
     description = 'workflow',
     install_requires = [
-'prophecy-libs==1.9.16'],
+'prophecy-libs==1.9.49'],
     entry_points = {
 'console_scripts' : [
 'main = mrr_reporting.pipeline:main'], },
